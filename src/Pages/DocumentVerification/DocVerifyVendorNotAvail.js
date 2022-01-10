@@ -73,42 +73,33 @@ const DocVerifyVendorNotAvail = () => {
               <CRow className="">
                 <CCol md={3}>
                   <CFormLabel htmlFor="vType">Vehicle Type</CFormLabel>
-                  <CFormInput name="vType" size="sm" id="" value="Hire" readOnly />
+                  <CFormInput name="vType" size="sm" id="vType" value="Hire" readOnly />
                 </CCol>
 
                 <CCol md={3}>
                   <CFormLabel htmlFor="vNum">Vehicle Number</CFormLabel>
-                  <CFormInput name="vNum" size="sm" id="" value="TNAD123465" readOnly />
+                  <CFormInput name="vNum" size="sm" id="vNum" value="TNAD123465" readOnly />
                 </CCol>
 
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="vCap">Vehicle Capacity In MTS</CFormLabel>
-                  <CFormInput name="vCap" size="sm" id="" value="10" readOnly />
+                  <CFormInput name="vCap" size="sm" id="vCap" value="10" readOnly />
                 </CCol>
-
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="vaNum">Vehicle Arriving Number</CFormLabel>
-                  <CFormInput name="vaNum" size="sm" id="" value="11123" readOnly />
-                </CCol>
-              </CRow>
-
-              <CRow className="">
-
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="dName">Driver Name</CFormLabel>
-                  <CFormInput name="dName" size="sm" id="" value="Naga Raj" readOnly />
+                  <CFormInput name="dName" size="sm" id="dName" value="Naga Raj" readOnly />
                 </CCol>
 
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="dMob">Driver Contact Number</CFormLabel>
-                  <CFormInput name="dMob" size="sm" id="" value="9135362456" readOnly />
+                  <CFormInput name="dMob" size="sm" id="dMob" value="9135362456" readOnly />
                 </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="gateInDateTime">Gate-In Date & Time</CFormLabel>
                   <CFormInput
                     name="gateInDateTime"
                     size="sm"
-                    id=""
+                    id="gateInDateTime"
                     value="21 Sep 2021 12:00:00 PM"
                     readOnly
                   />
@@ -118,71 +109,72 @@ const DocVerifyVendorNotAvail = () => {
                   <CFormInput
                     name="inspectionDateTime"
                     size="sm"
-                    id=""
+                    id="inspectionDateTime"
                     value="21 Sep 2021 12:00:00 PM"
                     readOnly
                   />
                 </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="panNum">PAN Card Number*</CFormLabel>
-                  <CFormInput name="panNum" size="sm" id="" value="" />
+                  <CFormInput name="panNum" size="sm" id="panNum" value="" />
                 </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="ownerName">Owner Name*</CFormLabel>
-                  <CFormInput name="ownerName" size="sm" id="" value="" />
+                  <CFormInput name="ownerName" size="sm" id="ownerName" value="" />
                 </CCol>
 
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="ownerMob">Owner Mobile Number*</CFormLabel>
-                  <CFormInput name="ownerName" size="sm" id="" value="" />
+                  <CFormInput name="ownerMob" size="sm" id="ownerMob" value="" />
                 </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="aadharCard">Aadhar Card*</CFormLabel>
-                  <CFormInput type="file" name="aadharCard" size="sm" id="" />
+                  <CFormInput type="file" name="aadharCard" size="sm" id="aadhar" />
                 </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="bankPass">Bank Pass Book*</CFormLabel>
-                  <CFormInput type="file" name="bankPass" size="sm" id="" />
+                  <CFormInput type="file" name="bankPass" size="sm" id="bankPass" />
                 </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="panCard">Pan Card*</CFormLabel>
-                  <CFormInput type="file" name="panCard" size="sm" id="" />
+                  <CFormInput type="file" name="panCard" size="sm" id="panCard" />
                 </CCol>
 
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="license">License Copy*</CFormLabel>
-                  <CFormInput type="file" name="license" size="sm" id="" />
+                  <CFormInput type="file" name="license" size="sm" id="license" />
                 </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="rcFront">RC Copy - Front*</CFormLabel>
-                  <CFormInput type="file" name="rcFront" size="sm" id="" />
+                  <CFormInput type="file" name="rcFront" size="sm" id="rcFront" />
                 </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="rcBack">RC Copy - Back*</CFormLabel>
-                  <CFormInput type="file" name="rcBack" size="sm" id="" />
+                  <CFormInput type="file" name="rcBack" size="sm" id="rcBack" />
                 </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="insurance">Insurance Copy*</CFormLabel>
-                  <CFormInput type="file" name="insurance" size="sm" id="" />
+                  <CFormInput type="file" name="insurance" size="sm" id="insurance" />
                 </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="TDSfront">TDS Declaration Form - Front*</CFormLabel>
-                  <CFormInput type="file" name="TDSfront" size="sm" id="" />
+                  <CFormInput type="file" name="TDSfront" size="sm" id="TDSfront" />
                 </CCol>
 
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="TDSback">TDS Declaration Form - Back* </CFormLabel>
-                  <CFormInput type="file" name="TDSback" size="sm" id="" />
+                  <CFormInput type="file" name="TDSback" size="sm" id="TDSback" />
                 </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="transportShed">Transporter Shed Sheet*</CFormLabel>
-                  <CFormInput type="file" name="transportShed" size="sm" id="" />
+                  <CFormInput type="file" name="transportShed" size="sm" id="transportShed" />
                 </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="shedName">Shed Name*</CFormLabel>
                   <CFormSelect
                     size="sm"
                     name="shedName"
+                    id='shedName'
                     className=""
                     aria-label="Small select example"
                   >
@@ -191,18 +183,19 @@ const DocVerifyVendorNotAvail = () => {
                   </CFormSelect>
                 </CCol>
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="freigthRate">Shed Mobile Number*</CFormLabel>
-                  <CFormInput type="text" name="freigthRate" size="sm" id="" />
+                  <CFormLabel htmlFor="shedownerMob">Shed Mobile Number*</CFormLabel>
+                  <CFormInput type="text" name="shedownerMob" size="sm" id="shedownerMob" />
                 </CCol>
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="freigthRate">Shed WhatsApp Number</CFormLabel>
-                  <CFormInput type="text" name="freigthRate" size="sm" id="" />
+                  <CFormLabel htmlFor="shedownerWhatsapp">Shed WhatsApp Number</CFormLabel>
+                  <CFormInput type="text" name="shedownerWhatsapp" size="sm" id="shedownerWhatsapp" />
                 </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="insuranceValid">Insurance Validity*</CFormLabel>
                   <CFormSelect
                     size="sm"
                     name="insuranceValid"
+                    id='insuranceValid'
                     className=""
                     aria-label="Small select example"
                   >
@@ -213,11 +206,11 @@ const DocVerifyVendorNotAvail = () => {
                 </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="freigthRate">Freight Rate Per Ton*</CFormLabel>
-                  <CFormInput type="text" name="freigthRate" size="sm" id="" />
+                  <CFormInput type="text" name="freigthRate" size="sm" id="freigthRate" />
                 </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="remarks">Remarks</CFormLabel>
-                  <CFormTextarea id="exampleFormControlTextarea1" rows="1"></CFormTextarea>
+                  <CFormTextarea id="remarks" rows="1"></CFormTextarea>
                 </CCol>
               </CRow>
 

@@ -175,6 +175,7 @@ const ParkingYardGate = () => {
                 <CFormSelect
                   size="sm"
                   name="vehicleType"
+                  id="vType" 
                   onFocus={onFocus}
                   onBlur={onBlur}
                   onChange={handleChange}
@@ -193,10 +194,11 @@ const ParkingYardGate = () => {
               </CCol>
               {values.vehicleType == 1 && (
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Vehicle Number*</CFormLabel>
+                  <CFormLabel htmlFor="vNum">Vehicle Number*</CFormLabel>
                   <CFormSelect
                     size="sm"
-                    name="VehicleNumber"
+                    name="vNum"
+                    id="vNum"
                     onFocus={onFocus}
                     onBlur={onBlur}
                     onChange={handleChange}
@@ -214,16 +216,17 @@ const ParkingYardGate = () => {
               )}
               {values.vehicleType == 1 && (
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Vehicle Capacity In MTS*</CFormLabel>
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+                  <CFormLabel htmlFor="vCap">Vehicle Capacity In MTS*</CFormLabel>
+                  <CFormInput size="sm" id="vCap" value="" readOnly />
                 </CCol>
               )}
               {values.vehicleType == 1 && (
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Driver Name*</CFormLabel>
+                  <CFormLabel htmlFor="dName">Driver Name*</CFormLabel>
                   <CFormSelect
                     size="sm"
-                    name="DriverName"
+                    name="dName"
+                    id="dName"
                     onFocus={onFocus}
                     onBlur={onBlur}
                     onChange={handleChange}
@@ -241,14 +244,14 @@ const ParkingYardGate = () => {
               )}
               {values.vehicleType == 1 && (
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Driver Contact Number*</CFormLabel>
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+                  <CFormLabel htmlFor="dMob">Driver Contact Number*</CFormLabel>
+                  <CFormInput size="sm" id="dMob" value="" readOnly />
                 </CCol>
               )}
               {values.vehicleType == 1 && (
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Odometer KM*</CFormLabel>
-                  <CFormInput size="sm" id="inputAddress" value="" />
+                  <CFormLabel htmlFor="OdometerKM">Odometer KM*</CFormLabel>
+                  <CFormInput size="sm" id="OdometerKM" value="" />
                 </CCol>
               )}
               {values.vehicleType == 1 && (
@@ -268,20 +271,20 @@ const ParkingYardGate = () => {
                     value={values.odometerPhoto}
                     className={`${errors.odometerPhoto && 'is-invalid'}`}
                     size="sm"
-                    id="formFileSm"
+                    id="odoImg"
                   />
                 </CCol>
               )}
               {values.vehicleType == 3 && (
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Vehicle Number*</CFormLabel>
-                  <CFormInput size="sm" id="inputAddress" value="" />
+                  <CFormLabel htmlFor="vNum">Vehicle Number*</CFormLabel>
+                  <CFormInput size="sm" id="vNum" value="" />
                 </CCol>
               )}
               {values.vehicleType == 3 && (
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Vehicle Capacity In MTS*</CFormLabel>
-                  <CFormSelect size="sm" name="vCap" className="" aria-label="Small select example">
+                  <CFormLabel htmlFor="vCap">Vehicle Capacity In MTS*</CFormLabel>
+                  <CFormSelect size="sm" name="vCap" id="vCap" className="" aria-label="Small select example">
                     <option hidden>Select...</option>
                     <option value="10">10</option>
                     <option value="12">12</option>
@@ -293,20 +296,20 @@ const ParkingYardGate = () => {
               )}
               {values.vehicleType == 3 && (
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Driver Name*</CFormLabel>
-                  <CFormInput size="sm" id="inputAddress" value="" />
+                  <CFormLabel htmlFor="dName">Driver Name*</CFormLabel>
+                  <CFormInput size="sm" id="dName" value="" />
                 </CCol>
               )}
               {values.vehicleType == 3 && (
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Driver Contact Number*</CFormLabel>
-                  <CFormInput size="sm" id="inputAddress" value="" />
+                  <CFormLabel htmlFor="dMob">Driver Contact Number*</CFormLabel>
+                  <CFormInput size="sm" id="dMob" value="" />
                 </CCol>
               )}
               {values.vehicleType == 3 && (
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Vehicle Body*</CFormLabel>
-                  <CFormSelect size="sm" name="vCap" className="" aria-label="Small select example">
+                  <CFormLabel htmlFor="VBody">Vehicle Body*</CFormLabel>
+                  <CFormSelect size="sm" name="VBody" id="VBody" className="" aria-label="Small select example">
                     <option hidden>Select...</option>
                     <option value="1">Open</option>
                     <option value="2">Closed</option>
@@ -315,20 +318,20 @@ const ParkingYardGate = () => {
               )}
               {values.vehicleType == 4 && (
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Vehicle Number*</CFormLabel>
-                  <CFormInput size="sm" id="inputAddress" value="" />
+                  <CFormLabel htmlFor="vNum">Vehicle Number*</CFormLabel>
+                  <CFormInput size="sm" id="vNum" value="" />
                 </CCol>
               )}
               {values.vehicleType == 4 && (
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Party Name*</CFormLabel>
-                  <CFormInput size="sm" id="inputAddress" value="" />
+                  <CFormLabel htmlFor="pName">Party Name*</CFormLabel>
+                  <CFormInput size="sm" id="pName" value="" />
                 </CCol>
               )}
               {values.vehicleType == 4 && (
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Vehicle Capacity In MTS*</CFormLabel>
-                  <CFormSelect size="sm" name="vCap" className="" aria-label="Small select example">
+                  <CFormLabel htmlFor="vCap">Vehicle Capacity In MTS*</CFormLabel>
+                  <CFormSelect size="sm" name="vCap" id="vCap" className="" aria-label="Small select example">
                     <option hidden>Select...</option>
                     <option value="10">10</option>
                     <option value="12">12</option>
@@ -340,20 +343,20 @@ const ParkingYardGate = () => {
               )}
               {values.vehicleType == 4 && (
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Driver Name*</CFormLabel>
-                  <CFormInput size="sm" id="inputAddress" value="" />
+                  <CFormLabel htmlFor="dName">Driver Name*</CFormLabel>
+                  <CFormInput size="sm" id="dName" value="" />
                 </CCol>
               )}
               {values.vehicleType == 4 && (
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Driver Contact Number*</CFormLabel>
-                  <CFormInput size="sm" id="inputAddress" value="" />
+                  <CFormLabel htmlFor="dMob">Driver Contact Number*</CFormLabel>
+                  <CFormInput size="sm" id="dMob" value="" />
                 </CCol>
               )}
               {values.vehicleType == 4 && (
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Vehicle Body*</CFormLabel>
-                  <CFormSelect size="sm" name="vCap" className="" aria-label="Small select example">
+                  <CFormLabel htmlFor="VBody">Vehicle Body*</CFormLabel>
+                  <CFormSelect size="sm" name="VBody" id="VBody" className="" aria-label="Small select example">
                     <option hidden>Select...</option>
                     <option value="1">Open</option>
                     <option value="2">Closed</option>
@@ -364,7 +367,7 @@ const ParkingYardGate = () => {
                 <CFormLabel htmlFor="remarks">Remarks</CFormLabel>
                 <CFormTextarea
                   name="remarks"
-                  id="exampleFormControlTextarea1"
+                  id="remarks"
                   rows="1"
                 ></CFormTextarea>
               </CCol>

@@ -58,21 +58,21 @@ const VehicleMaintainence = () => {
             <CForm className="container p-3" onSubmit={'handleSubmit'}>
               <CRow>
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Vehicle No*</CFormLabel>
+                  <CFormLabel htmlFor="vNum">Vehicle No*</CFormLabel>
 
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+                  <CFormInput size="sm" id="vNum" value="" readOnly />
                 </CCol>
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Driver Name*</CFormLabel>
-                  <CFormSelect size="sm" name="maintenenceBy" className="">
+                  <CFormLabel htmlFor="dName">Driver Name*</CFormLabel>
+                  <CFormSelect size="sm" name="dName" id='dName' className="">
                     <option value="" hidden>
                       Select ...
                     </option>
                     <option value="inHouse" onClick={() => setoutSide(false)}>
-                      Ram
+                      Kumar
                     </option>
                     <option value="outSide" onClick={() => setoutSide(true)}>
-                      Kumar
+                      Raj
                     </option>
                   </CFormSelect>
                 </CCol>
@@ -84,7 +84,7 @@ const VehicleMaintainence = () => {
                     )}
                   </CFormLabel>
 
-                  <CFormSelect size="sm" name="maintenenceType" className="">
+                  <CFormSelect size="sm" name="maintenenceType" id='maintenenceType' className="">
                     <option value="" hidden>
                       Select Maintenance Type
                     </option>
@@ -94,7 +94,7 @@ const VehicleMaintainence = () => {
                 </CCol>
                 <CCol className="mb-3" md={3}>
                   <CFormLabel htmlFor="maintenenceBy">Maintenance By *</CFormLabel>
-                  <CFormSelect size="sm" name="maintenenceBy" className="">
+                  <CFormSelect size="sm" name="maintenenceBy" id='maintenenceBy' className="">
                     <option value="" hidden>
                       Select Maintenance By
                     </option>
@@ -108,7 +108,7 @@ const VehicleMaintainence = () => {
                 </CCol>
                 <CCol className="mb-3" md={3}>
                   <CFormLabel htmlFor="workOrder">Work Order *</CFormLabel>
-                  <CFormSelect size="sm" name="workOrder" className="">
+                  <CFormSelect size="sm" name="workOrder" id='workOrder' className="">
                     <option value="" hidden>
                       Select...
                     </option>
@@ -119,7 +119,7 @@ const VehicleMaintainence = () => {
                 </CCol>
                 <CCol className="mb-3" md={3}>
                   <CFormLabel htmlFor="vendorName">Vendor Name *</CFormLabel>
-                  <CFormSelect size="sm" name="vendorName" className="">
+                  <CFormSelect size="sm" name="vendorName" id='vendorName' className="">
 
                     <option value="" hidden>
                       Select...
@@ -130,18 +130,18 @@ const VehicleMaintainence = () => {
                   </CFormSelect>
                 </CCol>
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Maintainence Start Date& Time*</CFormLabel>
+                  <CFormLabel htmlFor="MaintenanceStart">Maintainence Start Date& Time*</CFormLabel>
 
-                  <CFormInput size="sm" id="" type="datetime-local" />
+                  <CFormInput size="sm" id="MaintenanceStart" type="datetime-local" />
                 </CCol>
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Maintainence End Date& Time*</CFormLabel>
+                  <CFormLabel htmlFor="MaintenanceEnd">Maintainence End Date& Time*</CFormLabel>
 
-                  <CFormInput size="sm" id="" type="datetime-local" />
+                  <CFormInput size="sm" id="MaintenanceEnd" type="datetime-local" />
                 </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="remarks">Remarks</CFormLabel>
-                  <CFormTextarea id="exampleFormControlTextarea1" rows="1"></CFormTextarea>
+                  <CFormTextarea id="remarks" rows="1"></CFormTextarea>
                 </CCol>
               </CRow>
 

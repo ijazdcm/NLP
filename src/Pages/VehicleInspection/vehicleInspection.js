@@ -70,7 +70,7 @@ const VehicleInspection = () => {
                   <CFormInput
                     name="vType"
                     size="sm"
-                    id=""
+                    id="vType"
                     value="Contract"
                     placeholder=""
                     readOnly
@@ -82,7 +82,7 @@ const VehicleInspection = () => {
                   <CFormInput
                     name="vNum"
                     size="sm"
-                    id=""
+                    id="vNum"
                     value="TN90AE3902"
                     placeholder=""
                     readOnly
@@ -91,7 +91,7 @@ const VehicleInspection = () => {
 
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="vCap">Vehicle Capacity In MTS</CFormLabel>
-                  <CFormInput name="vCap" size="sm" id="" value="10" placeholder="10" readOnly />
+                  <CFormInput name="vCap" size="sm" id="vCap" value="10" placeholder="10" readOnly />
                 </CCol>
 
                 {/* <CCol xs={12} md={3}>
@@ -100,20 +100,21 @@ const VehicleInspection = () => {
                 </CCol> */}
 
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">
+                  <CFormLabel htmlFor="dName">
                     Driver Name*
-                    {errors.vehicleType && (
-                      <span className="help text-danger">{errors.vehicleType}</span>
+                    {errors.dName && (
+                      <span className="help text-danger">{errors.dName}</span>
                     )}
                   </CFormLabel>
                   <CFormSelect
                     size="sm"
-                    name="vehicleType"
+                    name="dName"
+                    id='dName'
                     onFocus={onFocus}
                     onBlur={onBlur}
                     onChange={handleChange}
-                    value={values.vehicleType}
-                    className={`${errors.vehicleType && 'is-invalid'}`}
+                    value={values.dName}
+                    className={`${errors.dName && 'is-invalid'}`}
                     aria-label="Small select example"
                   >
                     <option value="" hidden>
@@ -131,11 +132,11 @@ const VehicleInspection = () => {
               <CRow className="">
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="dMob">Driver Contact Number</CFormLabel>
-                  <CFormInput name="dMob" size="sm" id="" value="9443194657" readOnly />
+                  <CFormInput name="dMob" size="sm" id="dMob" value="9443194657" readOnly />
                 </CCol>
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="dMob">Odometer KM</CFormLabel>
-                  <CFormInput name="dMob" size="sm" id="" value="189736" readOnly />
+                  <CFormLabel htmlFor="OdometerKM">Odometer KM</CFormLabel>
+                  <CFormInput name="OdometerKM" size="sm" id="OdometerKM" value="189736" readOnly />
                 </CCol>
 
                 <CCol xs={12} md={3}>
@@ -145,6 +146,7 @@ const VehicleInspection = () => {
                     className="w-100 m-0"
                     color="info"
                     size="sm"
+                    id='odoImg'
                     style={border}
                   >
                     <span className="float-start">
@@ -175,7 +177,7 @@ const VehicleInspection = () => {
                   <CFormInput
                     name="gateInDateTime"
                     size="sm"
-                    id=""
+                    id="gateInDateTime"
                     value="21 Sep 2021 12:00:00 PM"
                     readOnly
                   />
@@ -358,36 +360,31 @@ const VehicleInspection = () => {
                   </CButtonGroup>
                 </CCol>
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="prevLoad">Previous Load Details *</CFormLabel>
-                  <br />
-                  <CButtonGroup role="group" aria-label="Basic checkbox toggle button group">
-                    <CFormCheck
-                      type="radio"
-                      button={{ color: 'primary', variant: 'outline' }}
-                      name="btnradio"
-                      id="btnradio17"
-                      autoComplete="off"
-                      label="Yes"
-                    />
-                    <CFormCheck
-                      type="radio"
-                      button={{ color: 'primary', variant: 'outline' }}
-                      name="btnradio"
-                      id="btnradio18"
-                      autoComplete="off"
-                      label="No"
-                    />
-                  </CButtonGroup>
+                  <CFormLabel htmlFor="prevLoad">Vehicle Fit For Loading *</CFormLabel>
+                  <CFormSelect
+                    size="sm"
+                    name="prevLoad"
+                    id='prevLoad'
+                    onFocus={onFocus}
+                    onBlur={onBlur}
+                    onChange={handleChange}
+                    value={values.prevLoad}
+                    className={`${errors.prevLoad && 'is-invalid'}`}
+                    aria-label="Small select example"
+                  >
+                    <option value="" hidden>
+                      Select...
+                    </option>
+                    <option value="1">Select LP</option>
+                  </CFormSelect>
                 </CCol>
-              </CRow>
-              <CRow>
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="vFitLoad">Vehicle Fit For Loading *</CFormLabel>
-                  <CFormInput name="vFitLoad" size="sm" id="" value="No" />
-                </CCol>
+                 <CCol xs={12} md={3}>
+                    <CFormLabel htmlFor="vFitLoad">Vehicle Fit For Loading *</CFormLabel>
+                    <CFormInput name="vFitLoad" size="sm" id="vFitLoad" value="No" />
+                 </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="remarks">Remarks</CFormLabel>
-                  <CFormTextarea id="exampleFormControlTextarea1" rows="1"></CFormTextarea>
+                  <CFormTextarea id="remarks" rows="1"></CFormTextarea>
                 </CCol>
               </CRow>
 
