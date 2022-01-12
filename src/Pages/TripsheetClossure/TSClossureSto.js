@@ -88,17 +88,29 @@ const TSClossureSto = () => {
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">Vehicle Capacity</CFormLabel>
 
+<<<<<<< HEAD
                   <CFormInput size="sm" id="inputAddress"  readOnly />
+=======
+                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                 </CCol>
                 {/* <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">Tripsheet No.</CFormLabel>
 
+<<<<<<< HEAD
                   <CFormInput size="sm" id="inputAddress"  readOnly />
+=======
+                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                 </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">TS Date & Time</CFormLabel>
 
+<<<<<<< HEAD
                   <CFormInput size="sm" id="inputAddress"  readOnly />
+=======
+                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                 </CCol> */}
                 <CCol md={3}>
                   <CFormLabel htmlFor="inputAddress">Driver Name*</CFormLabel>
@@ -115,17 +127,29 @@ const TSClossureSto = () => {
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">Driver Code</CFormLabel>
 
+<<<<<<< HEAD
                   <CFormInput size="sm" id="inputAddress"  readOnly />
+=======
+                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                 </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">Driver Mobile Number</CFormLabel>
 
+<<<<<<< HEAD
                   <CFormInput size="sm" id="inputAddress"  readOnly />
+=======
+                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                 </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">Opening KM</CFormLabel>
 
+<<<<<<< HEAD
                   <CFormInput size="sm" id="inputAddress"  readOnly />
+=======
+                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                 </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">Opening Odometer Photo</CFormLabel>
@@ -164,7 +188,11 @@ const TSClossureSto = () => {
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">Trip KM</CFormLabel>
 
+<<<<<<< HEAD
                   <CFormInput size="sm" id="inputAddress"  readOnly />
+=======
+                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                 </CCol>
               </CRow>
 
@@ -206,7 +234,11 @@ const TSClossureSto = () => {
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">Diesel Qty.</CFormLabel>
 
+<<<<<<< HEAD
                   <CFormInput size="sm" id="inputAddress"  readOnly />
+=======
+                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                 </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">Diesel Rate</CFormLabel>
@@ -219,7 +251,11 @@ const TSClossureSto = () => {
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">Diesel Amount</CFormLabel>
 
+<<<<<<< HEAD
                   <CFormInput size="sm" id="inputAddress"  readOnly />
+=======
+                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                 </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">Diesel Invoice*</CFormLabel>

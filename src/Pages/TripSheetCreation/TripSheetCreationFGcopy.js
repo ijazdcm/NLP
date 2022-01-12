@@ -45,28 +45,44 @@ const TripSheetCreationFG = () => {
                             Vehicle Type
                             {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
                         </CFormLabel>
+<<<<<<< HEAD
                         <CFormInput size="sm" id="inputAddress"  readOnly />
+=======
+                        <CFormInput size="sm" id="inputAddress" value="" readOnly />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                     </CCol>
                     <CCol xs={12} md={3}>
                         <CFormLabel htmlFor="inputAddress">
                             Vehicle Number
                             {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
                         </CFormLabel>
+<<<<<<< HEAD
                         <CFormInput size="sm" id="inputAddress"  readOnly />
+=======
+                        <CFormInput size="sm" id="inputAddress" value="" readOnly />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                     </CCol>
                     <CCol xs={12} md={3}>
                         <CFormLabel htmlFor="inputAddress">
                             Vehicle Capacity
                             {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
                         </CFormLabel>
+<<<<<<< HEAD
                         <CFormInput size="sm" id="inputAddress"  readOnly />
+=======
+                        <CFormInput size="sm" id="inputAddress" value="" readOnly />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                     </CCol>
                     <CCol xs={12} md={3}>
                         <CFormLabel htmlFor="inputAddress">
                             VA Number
                             {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
                         </CFormLabel>
+<<<<<<< HEAD
                         <CFormInput size="sm" id="inputAddress"  readOnly />
+=======
+                        <CFormInput size="sm" id="inputAddress" value="" readOnly />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                     </CCol>
                 </CRow>
                 <CRow className="">
@@ -85,7 +101,11 @@ const TripSheetCreationFG = () => {
                             className={`${errors.vehicleType && 'is-invalid'}`}
                             aria-label="Small select example"
                         >
+<<<<<<< HEAD
                             <option  hidden>
+=======
+                            <option value="" hidden>
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                                 Select...
                             </option>
 
@@ -101,14 +121,22 @@ const TripSheetCreationFG = () => {
                             Driver Cell No.
                             {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
                         </CFormLabel>
+<<<<<<< HEAD
                         <CFormInput size="sm" id="inputAddress"  readOnly />
+=======
+                        <CFormInput size="sm" id="inputAddress" value="" readOnly />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                     </CCol>
                     <CCol xs={12} md={3}>
                         <CFormLabel htmlFor="inputAddress">
                             Odometer KM
                             {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
                         </CFormLabel>
+<<<<<<< HEAD
                         <CFormInput size="sm" id="inputAddress"  readOnly />
+=======
+                        <CFormInput size="sm" id="inputAddress" value="" readOnly />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                     </CCol>
                     <CCol xs={12} md={3}>
                         <CFormLabel htmlFor="inputAddress">
@@ -152,28 +180,44 @@ const TripSheetCreationFG = () => {
                             Gate-In Date & Time
                             {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
                         </CFormLabel>
+<<<<<<< HEAD
                         <CFormInput size="sm" id="inputAddress" type="datetime-local"  readOnly />
+=======
+                        <CFormInput size="sm" id="inputAddress" type="datetime-local" value="" readOnly />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                     </CCol>
                     <CCol xs={12} md={3}>
                         <CFormLabel htmlFor="inputAddress">
                             Inspection Date & Time
                             {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
                         </CFormLabel>
+<<<<<<< HEAD
                         <CFormInput size="sm" id="inputAddress" type="datetime-local"  readOnly />
+=======
+                        <CFormInput size="sm" id="inputAddress" type="datetime-local" value="" readOnly />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                     </CCol>
                     <CCol xs={12} md={3}>
                         <CFormLabel htmlFor="inputAddress">
                             Doc. Verification Date & Time
                             {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
                         </CFormLabel>
+<<<<<<< HEAD
                         <CFormInput size="sm" type="datetime-local" id="inputAddress"  readOnly />
+=======
+                        <CFormInput size="sm" type="datetime-local" id="inputAddress" value="" readOnly />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                     </CCol>
                     <CCol xs={12} md={3}>
                         <CFormLabel htmlFor="inputAddress">
                             Shed Name
                             {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
                         </CFormLabel>
+<<<<<<< HEAD
                         <CFormInput size="sm" id="inputAddress"  readOnly />
+=======
+                        <CFormInput size="sm" id="inputAddress" value="" readOnly />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                     </CCol>
                 </CRow>
                 <CRow className="">
@@ -182,14 +226,22 @@ const TripSheetCreationFG = () => {
                             Owner Name
                             {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
                         </CFormLabel>
+<<<<<<< HEAD
                         <CFormInput size="sm" id="inputAddress" type="text"  readOnly />
+=======
+                        <CFormInput size="sm" id="inputAddress" type="text" value="" readOnly />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                     </CCol>
                     <CCol xs={12} md={3}>
                         <CFormLabel htmlFor="inputAddress">
                             Owner Mobile Number
                             {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
                         </CFormLabel>
+<<<<<<< HEAD
                         <CFormInput size="sm" id="inputAddress" type="text"  readOnly />
+=======
+                        <CFormInput size="sm" id="inputAddress" type="text" value="" readOnly />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                     </CCol>
                     <CCol xs={12} md={3}>
                         <CFormLabel htmlFor="inputAddress">
@@ -206,7 +258,11 @@ const TripSheetCreationFG = () => {
                             className={`${errors.vehicleType && 'is-invalid'}`}
                             aria-label="Small select example"
                         >
+<<<<<<< HEAD
                             <option  hidden>
+=======
+                            <option value="" hidden>
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                                 Select...
                             </option>
                             <option value="1">Yes</option>
@@ -218,14 +274,22 @@ const TripSheetCreationFG = () => {
                             Loading Quantity in Tons
                             {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
                         </CFormLabel>
+<<<<<<< HEAD
                         <CFormInput size="sm" id="inputAddress" type="text"  />
+=======
+                        <CFormInput size="sm" id="inputAddress" type="text" value="" />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                     </CCol>
                     <CCol xs={12} md={3}>
                         <CFormLabel htmlFor="inputAddress">
                             Freight Amount
                             {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
                         </CFormLabel>
+<<<<<<< HEAD
                         <CFormInput size="sm" id="inputAddress" type="text"  readOnly />
+=======
+                        <CFormInput size="sm" id="inputAddress" type="text" value="" readOnly />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                     </CCol>
                     <CCol xs={12} md={3}>
                         <CFormLabel htmlFor="remarks">Remarks*</CFormLabel>

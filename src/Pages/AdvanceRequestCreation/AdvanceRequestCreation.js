@@ -53,44 +53,72 @@ const ParkingYardGate = () => {
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">Vehicle Type</CFormLabel>
 
+<<<<<<< HEAD
                   <CFormInput size="sm" id="inputAddress"  readOnly />
+=======
+                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                 </CCol>
 
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">Vehicle Number</CFormLabel>
 
+<<<<<<< HEAD
                   <CFormInput size="sm" id="inputAddress"  readOnly />
+=======
+                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                 </CCol>
 
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">Vehicle Capacity</CFormLabel>
 
+<<<<<<< HEAD
                   <CFormInput size="sm" id="inputAddress"  readOnly />
+=======
+                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                 </CCol>
 
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">VA Number</CFormLabel>
 
+<<<<<<< HEAD
                   <CFormInput size="sm" id="inputAddress"  readOnly />
+=======
+                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                 </CCol>
               </CRow>
               <CRow className="">
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">Driver Name</CFormLabel>
 
+<<<<<<< HEAD
                   <CFormInput size="sm" id="inputAddress"  readOnly />
+=======
+                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                 </CCol>
 
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">Driver Mobile Number</CFormLabel>
 
+<<<<<<< HEAD
                   <CFormInput size="sm" id="inputAddress"  readOnly />
+=======
+                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                 </CCol>
 
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">Odometer KM</CFormLabel>
 
+<<<<<<< HEAD
                   <CFormInput size="sm" id="inputAddress"  readOnly />
+=======
+                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                 </CCol>
 
                 <CCol xs={12} md={3}>
@@ -111,44 +139,72 @@ const ParkingYardGate = () => {
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">Gate-In Date & Time</CFormLabel>
 
+<<<<<<< HEAD
                   <CFormInput size="sm" id="inputAddress"  readOnly />
+=======
+                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                 </CCol>
 
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">Vehicle Inspection Date & Time</CFormLabel>
 
+<<<<<<< HEAD
                   <CFormInput size="sm" id="inputAddress"  readOnly />
+=======
+                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                 </CCol>
 
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">Doc. Verification Date & Time</CFormLabel>
 
+<<<<<<< HEAD
                   <CFormInput size="sm" id="inputAddress"  readOnly />
+=======
+                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                 </CCol>
 
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">Tripsheet Number</CFormLabel>
 
+<<<<<<< HEAD
                   <CFormInput size="sm" id="inputAddress"  readOnly />
+=======
+                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                 </CCol>
               </CRow>
               <CRow className="">
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">Shed Name</CFormLabel>
 
+<<<<<<< HEAD
                   <CFormInput size="sm" id="inputAddress"  readOnly />
+=======
+                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                 </CCol>
 
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">Owner Name</CFormLabel>
 
+<<<<<<< HEAD
                   <CFormInput size="sm" id="inputAddress"  readOnly />
+=======
+                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                 </CCol>
 
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">Owner Cell Number</CFormLabel>
 
+<<<<<<< HEAD
                   <CFormInput size="sm" id="inputAddress"  readOnly />
+=======
+                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                 </CCol>
               </CRow>
 
@@ -156,18 +212,30 @@ const ParkingYardGate = () => {
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">Vendor Code</CFormLabel>
 
+<<<<<<< HEAD
                   <CFormInput size="sm" id="inputAddress"  readOnly />
+=======
+                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                 </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">Driver Outstanding</CFormLabel>
 
+<<<<<<< HEAD
                   <CFormInput size="sm" id="inputAddress"  readOnly />
+=======
+                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                 </CCol>
 
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">Advance Request Form</CFormLabel>
 
+<<<<<<< HEAD
                   <CFormInput type="file" size="sm" id="inputAddress"  />
+=======
+                  <CFormInput type="file" size="sm" id="inputAddress" value="" />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                 </CCol>
 
                 <CCol xs={12} md={3}>
@@ -177,7 +245,11 @@ const ParkingYardGate = () => {
                       <span className="help text-danger">{errors.OdometerKm}</span>
                     )}
                   </CFormLabel>
+<<<<<<< HEAD
                   <CFormInput size="sm" id="inputAddress"  readOnly />
+=======
+                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                   {/* <CFormInput
                     name="Order Qty"
                     onFocus={onFocus}
@@ -193,27 +265,47 @@ const ParkingYardGate = () => {
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">Driver Name</CFormLabel>
 
+<<<<<<< HEAD
                   <CFormInput type="text" size="sm" id="inputAddress"  readOnly />
+=======
+                  <CFormInput type="text" size="sm" id="inputAddress" value="" readOnly />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                 </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">Vendor Code</CFormLabel>
 
+<<<<<<< HEAD
                   <CFormInput type="text" size="sm" id="inputAddress"  readOnly />
+=======
+                  <CFormInput type="text" size="sm" id="inputAddress" value="" readOnly />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                 </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">Current Outstanding</CFormLabel>
 
+<<<<<<< HEAD
                   <CFormInput type="text" size="sm" id="inputAddress"  readOnly />
+=======
+                  <CFormInput type="text" size="sm" id="inputAddress" value="" readOnly />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                 </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">Total Freight Amount</CFormLabel>
 
+<<<<<<< HEAD
                   <CFormInput type="text" size="sm" id="inputAddress"  readOnly />
+=======
+                  <CFormInput type="text" size="sm" id="inputAddress" value="" readOnly />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                 </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">80% Advance Amount</CFormLabel>
 
+<<<<<<< HEAD
                   <CFormInput type="text" size="sm" id="inputAddress"  readOnly />
+=======
+                  <CFormInput type="text" size="sm" id="inputAddress" value="" readOnly />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                 </CCol>
 
                 <CCol xs={12} md={3}>

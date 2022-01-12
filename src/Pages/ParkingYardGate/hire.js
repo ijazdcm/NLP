@@ -71,24 +71,40 @@ const ParkingYardGate = () => {
                   <CCol md={3}>
                     <CFormLabel htmlFor="vNum">Vehicle No*</CFormLabel>
 
+<<<<<<< HEAD
                     <CFormInput size="sm" id="vNum"  />
+=======
+                    <CFormInput size="sm" id="vNum" value="" />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                   </CCol>
 
                   <CCol xs={12} md={3}>
                     <CFormLabel htmlFor="vCap">Vehicle Capacity*</CFormLabel>
 
+<<<<<<< HEAD
                     <CFormInput size="sm" id="vCap"  />
+=======
+                    <CFormInput size="sm" id="vCap" value="" />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                   </CCol>
 
                   <CCol xs={12} md={3}>
                     <CFormLabel htmlFor="dName">Driver Name*</CFormLabel>
+<<<<<<< HEAD
                     <CFormInput size="sm" id="driverNme" className="mb-3"  />
+=======
+                    <CFormInput size="sm" id="driverNme" className="mb-3" value="" />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                   </CCol>
                 </CRow>
                 <CRow>
                   <CCol xs={12} md={3}>
                     <CFormLabel htmlFor="dNum">Driver Mobile No*</CFormLabel>
+<<<<<<< HEAD
                     <CFormInput size="sm" id="driverNum"  />
+=======
+                    <CFormInput size="sm" id="driverNum" value="" />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                   </CCol>
 
                   <CCol xs={12} md={3}>

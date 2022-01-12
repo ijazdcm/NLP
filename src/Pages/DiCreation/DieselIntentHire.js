@@ -51,6 +51,7 @@ const DieselIntentHire = () => {
             <CForm className="container p-3" onSubmit={handleSubmit}>
               <CRow className="">
                 <CCol xs={12} md={3}>
+<<<<<<< HEAD
                   <CFormLabel htmlFor="vType">Vehicle Type</CFormLabel>
 
                   <CFormInput size="sm" id="vType"  readOnly />
@@ -66,16 +67,38 @@ const DieselIntentHire = () => {
                   <CFormLabel htmlFor="vCap">Vehicle Capacity</CFormLabel>
 
                   <CFormInput size="sm" id="vCap"  readOnly />
+=======
+                  <CFormLabel htmlFor="inputAddress">Vehicle Type</CFormLabel>
+
+                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+                </CCol>
+
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">Vehicle Number</CFormLabel>
+
+                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+                </CCol>
+
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">Vehicle Capacity</CFormLabel>
+
+                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                 </CCol>
 
                 {/* <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">VA Number</CFormLabel>
 
+<<<<<<< HEAD
                   <CFormInput size="sm" id="inputAddress"  readOnly />
+=======
+                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                 </CCol>
               </CRow>
               <CRow className=""> */}
                 <CCol xs={12} md={3}>
+<<<<<<< HEAD
                   <CFormLabel htmlFor="dName">Driver Name</CFormLabel>
 
                   <CFormInput size="sm" id="dName"  readOnly />
@@ -97,10 +120,34 @@ const DieselIntentHire = () => {
                   <CFormLabel htmlFor="inspectionDateTime">Inspection Time</CFormLabel>
 
                   <CFormInput size="sm" id="inspectionDateTime"  readOnly />
+=======
+                  <CFormLabel htmlFor="inputAddress">Driver Name</CFormLabel>
+
+                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+                </CCol>
+
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">Driver Mobile Number</CFormLabel>
+
+                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+                </CCol>
+
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">Gate-In Time</CFormLabel>
+
+                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+                </CCol>
+
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">Inspection Time</CFormLabel>
+
+                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                 </CCol>
                 {/* </CRow>
               <CRow className=""> */}
                 <CCol xs={12} md={3}>
+<<<<<<< HEAD
                   <CFormLabel htmlFor="verifyDate">Doc. Verify Time</CFormLabel>
 
                   <CFormInput size="sm" id="verifyDate"  readOnly />
@@ -122,10 +169,34 @@ const DieselIntentHire = () => {
                   <CFormLabel htmlFor="ownerName">Owner Name</CFormLabel>
 
                   <CFormInput size="sm" id="ownerName"  readOnly />
+=======
+                  <CFormLabel htmlFor="inputAddress">Doc. Verify Time</CFormLabel>
+
+                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+                </CCol>
+
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">Tripsheet Number</CFormLabel>
+
+                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+                </CCol>
+
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">Shed Name</CFormLabel>
+
+                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+                </CCol>
+
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">Owner Name</CFormLabel>
+
+                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                 </CCol>
                 {/* </CRow>
               <CRow className=""> */}
                 <CCol xs={12} md={3}>
+<<<<<<< HEAD
                   <CFormLabel htmlFor="ownerMob">Owner Mobile Number</CFormLabel>
 
                   <CFormInput size="sm" id="ownerMob"  readOnly />
@@ -134,6 +205,16 @@ const DieselIntentHire = () => {
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="vName">Vendor Name*</CFormLabel>
                   <CFormSelect size="sm" className=""id='vName' aria-label="Small select example">
+=======
+                  <CFormLabel htmlFor="inputAddress">Owner Mobile Number</CFormLabel>
+
+                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+                </CCol>
+
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">Vendor Name*</CFormLabel>
+                  <CFormSelect size="sm" className="" aria-label="Small select example">
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                     <option hidden>Select...</option>
 
                     <option value="1">select</option>
@@ -143,6 +224,7 @@ const DieselIntentHire = () => {
                 </CCol>
 
                 <CCol xs={12} md={3}>
+<<<<<<< HEAD
                   <CFormLabel htmlFor="vCode">Vendor Code</CFormLabel>
 
                   <CFormInput size="sm" id="vCode"   readOnly />
@@ -152,6 +234,17 @@ const DieselIntentHire = () => {
                   <CFormLabel htmlFor="dLtr">Diesel Liters</CFormLabel>
 
                   <CFormInput size="sm" id="dLtr"  readOnly />
+=======
+                  <CFormLabel htmlFor="inputAddress">Vendor Code</CFormLabel>
+
+                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+                </CCol>
+
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">Diesel Liters</CFormLabel>
+
+                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                 </CCol>
                 {/* </CRow>
               <CRow className=""> */}
@@ -159,7 +252,11 @@ const DieselIntentHire = () => {
                   <CFormLabel htmlFor="remarks">Remarks*</CFormLabel>
                   <CFormTextarea
                     name="remarks"
+<<<<<<< HEAD
                     id="remarks"
+=======
+                    id="exampleFormControlTextarea1"
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                     rows="1"
                   ></CFormTextarea>
                 </CCol>

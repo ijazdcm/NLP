@@ -64,49 +64,89 @@ const ShedMaster = () => {
                         <CForm className="row g-3 m-2 p-1" onSubmit={handleSubmit}>
                             <CRow className="mb-md-2">
                                 <CCol md={3}>
+<<<<<<< HEAD
                                     <CFormLabel htmlFor="dVendor">Diesel Vendor Name*</CFormLabel>
                                     <CFormInput
                                         name="dVendor"
                                         size="sm"
                                         id="dVendor"
+=======
+                                    <CFormLabel htmlFor="vNum">Diesel Vendor Name*</CFormLabel>
+                                    <CFormInput
+                                        name="vNum"
+                                        size="sm"
+                                        id=""
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                                         placeholder=""
                                     />
                                 </CCol>
                                 <CCol md={3}>
+<<<<<<< HEAD
                                     <CFormLabel htmlFor="dCode">Diesel Vendor Code*</CFormLabel>
                                     <CFormInput
                                         name="dCode"
                                         size="sm"
                                         id="dCode"
+=======
+                                    <CFormLabel htmlFor="vNum">Diesel Vendor Code*</CFormLabel>
+                                    <CFormInput
+                                        name="vNum"
+                                        size="sm"
+                                        id=""
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                                         placeholder=""
                                     />
                                 </CCol>
                                 <CCol md={3}>
+<<<<<<< HEAD
                                     <CFormLabel htmlFor="dMob">Diesel Vendor Mobile Number 1*</CFormLabel>
                                     <CFormInput
                                         name="dMob"
                                         size="sm"
                                         id="dMob"
+=======
+                                    <CFormLabel htmlFor="vNum">Diesel Vendor Mobile Number 1*</CFormLabel>
+                                    <CFormInput
+                                        name="vNum"
+                                        size="sm"
+                                        id=""
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                                         placeholder=""
                                     />
                                 </CCol>
                                 <CCol md={3}>
+<<<<<<< HEAD
                                     <CFormLabel htmlFor="dMob1">Diesel Vendor Mobile Number 2*</CFormLabel>
                                     <CFormInput
                                         name="dMob1"
                                         size="sm"
                                         id="dMob1"
+=======
+                                    <CFormLabel htmlFor="vNum">Diesel Vendor Mobile Number 2*</CFormLabel>
+                                    <CFormInput
+                                        name="vNum"
+                                        size="sm"
+                                        id=""
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                                         placeholder=""
                                     />
                                 </CCol>
                             </CRow>
                             <CRow className="mb-md-2">
                                 <CCol md={3}>
+<<<<<<< HEAD
                                     <CFormLabel htmlFor="mail">Diesel Vendor Mail ID*</CFormLabel>
                                     <CFormInput
                                         name="mail"
                                         size="sm"
                                         id="mail"
+=======
+                                    <CFormLabel htmlFor="vNum">Diesel Vendor Mail ID*</CFormLabel>
+                                    <CFormInput
+                                        name="vNum"
+                                        size="sm"
+                                        id=""
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                                         placeholder=""
                                     />
                                 </CCol>

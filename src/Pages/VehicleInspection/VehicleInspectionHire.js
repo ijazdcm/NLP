@@ -70,7 +70,11 @@ const VehicleInspectionHire = () => {
                                     <CFormInput
                                         name="vType"
                                         size="sm"
+<<<<<<< HEAD
                                         id="vType"
+=======
+                                        id=""
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                                         value="Contract"
                                         placeholder=""
                                         readOnly
@@ -82,7 +86,11 @@ const VehicleInspectionHire = () => {
                                     <CFormInput
                                         name="vNum"
                                         size="sm"
+<<<<<<< HEAD
                                         id="vNum"
+=======
+                                        id=""
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                                         value="TN90AE3902"
                                         placeholder=""
                                         readOnly
@@ -91,7 +99,11 @@ const VehicleInspectionHire = () => {
 
                                 <CCol xs={12} md={3}>
                                     <CFormLabel htmlFor="vCap">Vehicle Capacity In MTS</CFormLabel>
+<<<<<<< HEAD
                                     <CFormInput name="vCap" size="sm" id="vCap" value="10" placeholder="10" readOnly />
+=======
+                                    <CFormInput name="vCap" size="sm" id="" value="10" placeholder="10" readOnly />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                                 </CCol>
 
                                 {/* <CCol xs={12} md={3}>
@@ -100,14 +112,22 @@ const VehicleInspectionHire = () => {
                   </CCol> */}
 
                                 <CCol xs={12} md={3}>
+<<<<<<< HEAD
                                     <CFormLabel htmlFor="dName">
                                         Driver Name*
                                         {errors.dName && (
                                             <span className="help text-danger">{errors.dName}</span>
+=======
+                                    <CFormLabel htmlFor="inputAddress">
+                                        Driver Name*
+                                        {errors.vehicleType && (
+                                            <span className="help text-danger">{errors.vehicleType}</span>
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                                         )}
                                     </CFormLabel>
                                     <CFormSelect
                                         size="sm"
+<<<<<<< HEAD
                                         name="dName"
                                         id='dName'
                                         onFocus={onFocus}
@@ -118,6 +138,17 @@ const VehicleInspectionHire = () => {
                                         aria-label="Small select example"
                                     >
                                         <option  hidden>
+=======
+                                        name="vehicleType"
+                                        onFocus={onFocus}
+                                        onBlur={onBlur}
+                                        onChange={handleChange}
+                                        value={values.vehicleType}
+                                        className={`${errors.vehicleType && 'is-invalid'}`}
+                                        aria-label="Small select example"
+                                    >
+                                        <option value="" hidden>
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                                             Select...
                                         </option>
 
@@ -132,7 +163,11 @@ const VehicleInspectionHire = () => {
                             <CRow className="">
                                 <CCol xs={12} md={3}>
                                     <CFormLabel htmlFor="dMob">Driver Contact Number</CFormLabel>
+<<<<<<< HEAD
                                     <CFormInput name="dMob" size="sm" id="dMob" value="9443194657" readOnly />
+=======
+                                    <CFormInput name="dMob" size="sm" id="" value="9443194657" readOnly />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                                 </CCol>
 
                                 <CCol xs={12} md={3}>
@@ -140,7 +175,11 @@ const VehicleInspectionHire = () => {
                                     <CFormInput
                                         name="gateInDateTime"
                                         size="sm"
+<<<<<<< HEAD
                                         id="gateInDateTime"
+=======
+                                        id=""
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                                         value="21 Sep 2021 12:00:00 PM"
                                         readOnly
                                     />
@@ -320,6 +359,7 @@ const VehicleInspectionHire = () => {
                                 </CCol>
                                 <CCol xs={12} md={3}>
                                     <CFormLabel htmlFor="prevLoad">Previous Load Details *</CFormLabel>
+<<<<<<< HEAD
                                     <CFormSelect
                                         size="sm"
                                         name="prevLoad"
@@ -336,6 +376,27 @@ const VehicleInspectionHire = () => {
                                         </option>
                                         <option value="1">Select LP</option>
                                                     </CFormSelect>
+=======
+                                    <br />
+                                    <CButtonGroup role="group" aria-label="Basic checkbox toggle button group">
+                                        <CFormCheck
+                                            type="radio"
+                                            button={{ color: 'primary', variant: 'outline' }}
+                                            name="btnradio"
+                                            id="btnradio17"
+                                            autoComplete="off"
+                                            label="Yes"
+                                        />
+                                        <CFormCheck
+                                            type="radio"
+                                            button={{ color: 'primary', variant: 'outline' }}
+                                            name="btnradio"
+                                            id="btnradio18"
+                                            autoComplete="off"
+                                            label="No"
+                                        />
+                                    </CButtonGroup>
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                                 </CCol>
                                 <CCol xs={12} md={3}>
                                     <CFormLabel htmlFor="vFitLoad">Vehicle Fit For Loading *</CFormLabel>
@@ -343,7 +404,11 @@ const VehicleInspectionHire = () => {
                                 </CCol>
                                 <CCol xs={12} md={3}>
                                     <CFormLabel htmlFor="remarks">Remarks</CFormLabel>
+<<<<<<< HEAD
                                     <CFormTextarea id="remarks" rows="1"></CFormTextarea>
+=======
+                                    <CFormTextarea id="exampleFormControlTextarea1" rows="1"></CFormTextarea>
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                                 </CCol>
                             </CRow>
 

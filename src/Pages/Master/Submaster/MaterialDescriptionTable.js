@@ -92,7 +92,11 @@ const MaterialDescriptionTable = () => {
                                         <CFormLabel htmlFor="inputAddress">
                                             Material Description
                                         </CFormLabel>
+<<<<<<< HEAD
                                         <CFormInput size="sm" id="inputAddress"  />
+=======
+                                        <CFormInput size="sm" id="inputAddress" value="" />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                                     </CCol>
                                 </CRow>
                             </CModalBody>

@@ -52,6 +52,7 @@ const AdvanceOwn = () => {
             <CForm className="container p-3" onSubmit={handleSubmit}>
               <CRow className="">
                 <CCol xs={12} md={3}>
+<<<<<<< HEAD
                   <CFormLabel htmlFor="vType">Vehicle Type</CFormLabel>
 
                   <CFormInput size="sm" id="vType"  readOnly />
@@ -67,16 +68,38 @@ const AdvanceOwn = () => {
                   <CFormLabel htmlFor="vCap">Vehicle Capacity</CFormLabel>
 
                   <CFormInput size="sm" id="vCap"  readOnly />
+=======
+                  <CFormLabel htmlFor="inputAddress">Vehicle Type</CFormLabel>
+
+                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+                </CCol>
+
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">Vehicle Number</CFormLabel>
+
+                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+                </CCol>
+
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">Vehicle Capacity</CFormLabel>
+
+                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                 </CCol>
 
                 {/* <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">VA Number</CFormLabel>
 
+<<<<<<< HEAD
                   <CFormInput size="sm" id="inputAddress"  readOnly />
+=======
+                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                 </CCol>
               </CRow>
               <CRow className=""> */}
                 <CCol xs={12} md={3}>
+<<<<<<< HEAD
                   <CFormLabel htmlFor="dName">Driver Name</CFormLabel>
 
                   <CFormInput size="sm" id="dName"  readOnly />
@@ -96,12 +119,36 @@ const AdvanceOwn = () => {
 
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="odoIMG">Odometer Photo</CFormLabel>
+=======
+                  <CFormLabel htmlFor="inputAddress">Driver Name</CFormLabel>
+
+                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+                </CCol>
+
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">Driver Mobile Number</CFormLabel>
+
+                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+                </CCol>
+
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">Odometer KM</CFormLabel>
+
+                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+                </CCol>
+
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">Odometer Photo</CFormLabel>
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                   <CButton
                     // onClick={() => setVisible(!visible)}
                     className="w-100"
                     color="info"
                     size="sm"
+<<<<<<< HEAD
                     id='odoIMG'
+=======
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                   >
                     <span className="float-start">
                       <i className="fa fa-eye" aria-hidden="true"></i> &nbsp;View
@@ -111,6 +158,7 @@ const AdvanceOwn = () => {
               {/* </CRow>
               <CRow className=""> */}
                 <CCol xs={12} md={3}>
+<<<<<<< HEAD
                   <CFormLabel htmlFor="gateInDateTime">Gate-In Date & Time</CFormLabel>
 
                   <CFormInput size="sm" id="gateInDateTime"  readOnly />
@@ -132,10 +180,34 @@ const AdvanceOwn = () => {
                   <CFormLabel htmlFor="tNum">Tripsheet Number</CFormLabel>
 
                   <CFormInput size="sm" id="tNum"  readOnly />
+=======
+                  <CFormLabel htmlFor="inputAddress">Gate-In Date & Time</CFormLabel>
+
+                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+                </CCol>
+
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">Vehicle Inspection Date & Time</CFormLabel>
+
+                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+                </CCol>
+
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">Doc. Verification Date & Time</CFormLabel>
+
+                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+                </CCol>
+
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">Tripsheet Number</CFormLabel>
+
+                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                 </CCol>
               {/* </CRow>
               <CRow className=""> */}
                 <CCol xs={12} md={3}>
+<<<<<<< HEAD
                   <CFormLabel htmlFor="vCode">Vendor Code</CFormLabel>
 
                   <CFormInput size="sm" id="vCode"  readOnly />
@@ -160,6 +232,32 @@ const AdvanceOwn = () => {
                     )}
                   </CFormLabel>
                   <CFormInput size="sm" id="inputAddress"  readOnly />
+=======
+                  <CFormLabel htmlFor="inputAddress">Vendor Code</CFormLabel>
+
+                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+                </CCol>
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">Driver Outstanding</CFormLabel>
+
+                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+                </CCol>
+
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">Advance Request Form</CFormLabel>
+
+                  <CFormInput type="file" size="sm" id="inputAddress" value="" />
+                </CCol>
+
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">
+                    Advance Amount*
+                    {errors.OdometerKm && (
+                      <span className="help text-danger">{errors.OdometerKm}</span>
+                    )}
+                  </CFormLabel>
+                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                   {/* <CFormInput
                       name="Order Qty"
                       onFocus={onFocus}
@@ -172,6 +270,7 @@ const AdvanceOwn = () => {
                     /> */}
                 </CCol>
                 <CCol xs={12} md={3}>
+<<<<<<< HEAD
                   <CFormLabel htmlFor="sTon">Shipment Tonnage*</CFormLabel>
 
                   <CFormInput type="text" size="sm" id="sTon"  readOnly />
@@ -196,12 +295,41 @@ const AdvanceOwn = () => {
                 </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="otp">OTP Generate</CFormLabel>
+=======
+                  <CFormLabel htmlFor="inputAddress">Shipment Tonnage*</CFormLabel>
+
+                  <CFormInput type="text" size="sm" id="inputAddress" value="" readOnly />
+                </CCol>
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">
+                    Expected Delivery Date & Time*
+                    {errors.AdvancePaymentMode && (
+                      <span className="help text-danger">{errors.AdvancePaymentMode}</span>
+                    )}
+                  </CFormLabel>
+                  <CFormInput size="sm" type="datetime-local" id="inputAddress" readOnly />
+                </CCol>
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">
+                    Expected Return Date & Time*
+                    {errors.AdvancePaymentMode && (
+                      <span className="help text-danger">{errors.AdvancePaymentMode}</span>
+                    )}
+                  </CFormLabel>
+                  <CFormInput size="sm" type="datetime-local" id="inputAddress" readOnly />
+                </CCol>
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">OTP Generate</CFormLabel>
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                   <CButton
                     // onClick={() => setVisible(!visible)}
                     className="w-100"
                     color="info"
                     size="sm"
+<<<<<<< HEAD
                     id='otp'
+=======
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                   >
                     <span className="float-start">
                       <i className="fa fa-key" aria-hidden="true"></i> &nbsp;Click Here To Generate
@@ -210,14 +338,24 @@ const AdvanceOwn = () => {
                   </CButton>
                 </CCol>
                 <CCol xs={12} md={3}>
+<<<<<<< HEAD
                   <CFormLabel htmlFor="enterOtp">Enter OTP*</CFormLabel>
 
                   <CFormInput size="sm" id="enterOtp" />
+=======
+                  <CFormLabel htmlFor="inputAddress">Enter OTP*</CFormLabel>
+
+                  <CFormInput size="sm" id="inputAddress" />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                 </CCol>
 
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="remarks">Remarks</CFormLabel>
+<<<<<<< HEAD
                   <CFormTextarea id="remarks" rows="1"></CFormTextarea>
+=======
+                  <CFormTextarea id="exampleFormControlTextarea1" rows="1"></CFormTextarea>
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                 </CCol>
               </CRow>
 

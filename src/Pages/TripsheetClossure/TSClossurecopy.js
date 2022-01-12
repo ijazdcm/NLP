@@ -377,7 +377,11 @@ const TSClossure = () => {
                         className={`${errors.DefectType && 'is-invalid'}`}
                         aria-label="Small select example"
                       >
+<<<<<<< HEAD
                         <option >Select Types</option>
+=======
+                        <option value="">Select Types</option>
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
 
                         <option value="1">Unloading Charges</option>
 
@@ -440,7 +444,11 @@ const TSClossure = () => {
                         className={`mb-3 ${errors.DefectType2 && 'is-invalid'}`}
                         aria-label="Small select example"
                       >
+<<<<<<< HEAD
                         <option >Select Types</option>
+=======
+                        <option value="">Select Types</option>
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
 
                         <option value="1">Unloading Charges</option>
 
@@ -850,7 +858,11 @@ const TSClossure = () => {
                           className={`${errors.DefectType && 'is-invalid'}`}
                           aria-label="Small select example"
                         >
+<<<<<<< HEAD
                           <option >Select Types</option>
+=======
+                          <option value="">Select Types</option>
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
 
                           <option value="1">Unloading Charges</option>
 
@@ -913,7 +925,11 @@ const TSClossure = () => {
                           className={`${errors.DefectType && 'is-invalid'}`}
                           aria-label="Small select example"
                         >
+<<<<<<< HEAD
                           <option >Select Types</option>
+=======
+                          <option value="">Select Types</option>
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
 
                           <option value="1">Unloading Charges</option>
 
@@ -976,7 +992,11 @@ const TSClossure = () => {
                           className={`${errors.DefectType && 'is-invalid'}`}
                           aria-label="Small select example"
                         >
+<<<<<<< HEAD
                           <option >Select Types</option>
+=======
+                          <option value="">Select Types</option>
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
 
                           <option value="1">Unloading Charges</option>
 

@@ -8,26 +8,45 @@ import {
   CRow,
   CTabContent,
   CTabPane,
+<<<<<<< HEAD
   CFormSelect
+=======
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
 } from '@coreui/react'
 import React from 'react'
 import { Link } from 'react-router-dom'
 
+<<<<<<< HEAD
 const RJcustomerCreationConfirmation = () => {
   return (
     <>
        <CCard>
+=======
+const RJcustomerCreationConfrimation = () => {
+  return (
+    <>
+      <CCard>
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
         <CTabContent>
           <CTabPane role="tabpanel" aria-labelledby="home-tab" visible={true}>
             <CForm className="container p-3">
               <CRow className="">
                 <CCol xs={12} md={3}>
+<<<<<<< HEAD
                   <CFormLabel htmlFor="cName">Customer Name</CFormLabel>
                   <CFormInput size="sm" id="cName"  readOnly/>
                 </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="cMob">Customer Mobile Number</CFormLabel>
                   <CFormInput size="sm" id="cMob"  readOnly/>
+=======
+                  <CFormLabel htmlFor="inputAddress">Customer Name</CFormLabel>
+                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+                </CCol>
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">Customer Mobile Number</CFormLabel>
+                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                 </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">PAN Card Attatchment</CFormLabel>
@@ -52,12 +71,21 @@ const RJcustomerCreationConfirmation = () => {
                   </CButton>
                 </CCol>
                 <CCol xs={12} md={3}>
+<<<<<<< HEAD
                   <CFormLabel htmlFor="panCard">PAN Number</CFormLabel>
                   <CFormInput size="sm" id="panCard"  readOnly/>
                 </CCol>
               </CRow>
               <CRow className="">
               <CCol xs={12} md={3}>
+=======
+                  <CFormLabel htmlFor="inputAddress">PAN Number</CFormLabel>
+                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+                </CCol>
+              </CRow>
+              <CRow className="">
+                <CCol xs={12} md={3}>
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                   <CFormLabel htmlFor="inputAddress">Aadhar Card</CFormLabel>
                   <CButton
                     // onClick={() => setAdharVisible(!adharvisible)}
@@ -80,8 +108,13 @@ const RJcustomerCreationConfirmation = () => {
                   </CButton>
                 </CCol>
                 <CCol xs={12} md={3}>
+<<<<<<< HEAD
                   <CFormLabel htmlFor="aadharCard">Aadhar Number</CFormLabel>
                   <CFormInput size="sm" id="aadharCard"  readOnly/>
+=======
+                  <CFormLabel htmlFor="inputAddress">Aadhar Number</CFormLabel>
+                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                 </CCol>
 
                 <CCol xs={12} md={3}>
@@ -107,6 +140,7 @@ const RJcustomerCreationConfirmation = () => {
                   </CButton>
                 </CCol>
                 <CCol xs={12} md={3}>
+<<<<<<< HEAD
               <CFormLabel htmlFor="bankName">Bank Name</CFormLabel>
               <CFormInput size="sm" id="bankName"  readOnly/>
             </CCol>
@@ -129,10 +163,36 @@ const RJcustomerCreationConfirmation = () => {
                   <CFormLabel htmlFor="Street">Street Name</CFormLabel>
 
                   <CFormInput size="sm" id="Street"  readOnly/>
+=======
+                  <CFormLabel htmlFor="inputAddress">Bank Name</CFormLabel>
+
+                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
                 </CCol>
               </CRow>
               <CRow className="">
                 <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">Bank Branch</CFormLabel>
+                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+                </CCol>
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">Bank IFCS Code</CFormLabel>
+                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+                </CCol>
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">Bank Account Number</CFormLabel>
+                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+                </CCol>
+
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">Street Name</CFormLabel>
+
+                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
+                </CCol>
+              </CRow>
+              <CRow className="">
+                <CCol xs={12} md={3}>
+<<<<<<< HEAD
                   <CFormLabel htmlFor="Area">Area Name</CFormLabel>
                   <CFormInput size="sm" id="Area"  readOnly/>
                 </CCol>
@@ -147,10 +207,27 @@ const RJcustomerCreationConfirmation = () => {
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="State">State</CFormLabel>
                   <CFormInput size="sm" id="State"  readOnly/>
+=======
+                  <CFormLabel htmlFor="inputAddress">Area Name</CFormLabel>
+                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+                </CCol>
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">City</CFormLabel>
+                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+                </CCol>
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">District</CFormLabel>
+                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+                </CCol>
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">State</CFormLabel>
+                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                 </CCol>
               </CRow>
               <CRow className="">
                 <CCol xs={12} md={3}>
+<<<<<<< HEAD
                   <CFormLabel htmlFor="postalCode">Postal Code</CFormLabel>
                   <CFormInput size="sm" id="postalCode"  readOnly/>
                 </CCol>
@@ -165,13 +242,33 @@ const RJcustomerCreationConfirmation = () => {
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="Payment">Payment Terms</CFormLabel>
                   <CFormInput size="sm" id="Payment"  readOnly/>
+=======
+                  <CFormLabel htmlFor="inputAddress">Postal Code</CFormLabel>
+                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+                </CCol>
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">Region</CFormLabel>
+                  <CFormInput size="sm" id="inputAddress" value="Auto" readOnly />
+                </CCol>
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">GST Number</CFormLabel>
+                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+                </CCol>
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">Payment Terms</CFormLabel>
+                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                 </CCol>
               </CRow>
 
               <CRow className="">
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">Remarks</CFormLabel>
+<<<<<<< HEAD
                   <CFormInput size="sm" id="inputAddress"  readOnly/>
+=======
+                  <CFormInput size="sm" id="inputAddress" value=""  />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                 </CCol>
               </CRow>
               <CRow className="mt-3">
@@ -183,7 +280,11 @@ const RJcustomerCreationConfirmation = () => {
                     className="px-3 text-white"
                     type="button"
                   >
+<<<<<<< HEAD
                     <Link to="/RJcustomerCreationApprovalHome"> Previous</Link>
+=======
+                    <Link to="/RJcustomerCreationConfrimationHome"> Previous</Link>
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                   </CButton>
                 </CCol>
                 <CCol className="offset-md-6 d-md-flex justify-content-end" xs={12} sm={12} md={3}>
@@ -215,4 +316,8 @@ const RJcustomerCreationConfirmation = () => {
   )
 }
 
+<<<<<<< HEAD
 export default RJcustomerCreationConfirmation
+=======
+export default RJcustomerCreationConfrimation
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a

@@ -23,6 +23,7 @@ const RJcustomerCreation = () => {
             <CForm className="container p-3">
               <CRow className="">
                 <CCol xs={12} md={3}>
+<<<<<<< HEAD
                   <CFormLabel htmlFor="cName">Customer Name</CFormLabel>
                   <CFormInput size="sm" id="cName"  />
                 </CCol>
@@ -37,10 +38,27 @@ const RJcustomerCreation = () => {
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="panCard">PAN Number</CFormLabel>
                   <CFormInput size="sm" id="panCard"  />
+=======
+                  <CFormLabel htmlFor="inputAddress">Customer Name</CFormLabel>
+                  <CFormInput size="sm" id="inputAddress" value="" />
+                </CCol>
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">Customer Mobile Number</CFormLabel>
+                  <CFormInput size="sm" id="inputAddress" value="" />
+                </CCol>
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">PAN Card Attatchment</CFormLabel>
+                  <CFormInput size="sm" type="file" id="inputAddress" value="" />
+                </CCol>
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">PAN Number</CFormLabel>
+                  <CFormInput size="sm" id="inputAddress" value="" />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                 </CCol>
               </CRow>
               <CRow className="">
                 <CCol xs={12} md={3}>
+<<<<<<< HEAD
                   <CFormLabel htmlFor="AadharCopy">Aadhar Card</CFormLabel>
                   <CFormInput size="sm" type="file" id="AadharCopy"  />
                 </CCol>
@@ -85,10 +103,49 @@ const RJcustomerCreation = () => {
                   <CFormLabel htmlFor="Street">Street Name</CFormLabel>
 
                   <CFormInput size="sm" id="Street"  />
+=======
+                  <CFormLabel htmlFor="inputAddress">Aadhar Card</CFormLabel>
+                  <CFormInput size="sm" type="file" id="inputAddress" value="" />
+                </CCol>
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">Aadhar Number</CFormLabel>
+                  <CFormInput size="sm" id="inputAddress" value="" />
+                </CCol>
+
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">Bank Passbook</CFormLabel>
+                  <CFormInput size="sm" type="file" id="inputAddress" value="" />
+                </CCol>
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">Bank Name</CFormLabel>
+
+                  <CFormInput size="sm" id="inputAddress" value="" />
                 </CCol>
               </CRow>
               <CRow className="">
                 <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">Bank Branch</CFormLabel>
+                  <CFormInput size="sm" id="inputAddress" value="" />
+                </CCol>
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">Bank IFSC Code</CFormLabel>
+                  <CFormInput size="sm" id="inputAddress" value="" />
+                </CCol>
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">Bank Account Number</CFormLabel>
+                  <CFormInput size="sm" id="inputAddress" value="" />
+                </CCol>
+
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">Street Name</CFormLabel>
+
+                  <CFormInput size="sm" id="inputAddress" value="" />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
+                </CCol>
+              </CRow>
+              <CRow className="">
+                <CCol xs={12} md={3}>
+<<<<<<< HEAD
                   <CFormLabel htmlFor="Area">Area Name</CFormLabel>
                   <CFormInput size="sm" id="Area"  />
                 </CCol>
@@ -103,10 +160,27 @@ const RJcustomerCreation = () => {
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="State">State</CFormLabel>
                   <CFormInput size="sm" id="State"  />
+=======
+                  <CFormLabel htmlFor="inputAddress">Area Name</CFormLabel>
+                  <CFormInput size="sm" id="inputAddress" value="" />
+                </CCol>
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">City</CFormLabel>
+                  <CFormInput size="sm" id="inputAddress" value="" />
+                </CCol>
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">District</CFormLabel>
+                  <CFormInput size="sm" id="inputAddress" value="" />
+                </CCol>
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">State</CFormLabel>
+                  <CFormInput size="sm" id="inputAddress" value="" />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                 </CCol>
               </CRow>
               <CRow className="">
                 <CCol xs={12} md={3}>
+<<<<<<< HEAD
                   <CFormLabel htmlFor="postalCode">Postal Code</CFormLabel>
                   <CFormInput size="sm" id="postalCode"  />
                 </CCol>
@@ -121,13 +195,33 @@ const RJcustomerCreation = () => {
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="Payment">Payment Terms</CFormLabel>
                   <CFormInput size="sm" id="Payment"  />
+=======
+                  <CFormLabel htmlFor="inputAddress">Postal Code</CFormLabel>
+                  <CFormInput size="sm" id="inputAddress" value="" />
+                </CCol>
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">Region</CFormLabel>
+                  <CFormInput size="sm" id="inputAddress" value="Auto" readOnly />
+                </CCol>
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">GST Number</CFormLabel>
+                  <CFormInput size="sm" id="inputAddress" value="" />
+                </CCol>
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="inputAddress">Payment Terms</CFormLabel>
+                  <CFormInput size="sm" id="inputAddress" value="" />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                 </CCol>
               </CRow>
 
               <CRow className="">
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">Remarks</CFormLabel>
+<<<<<<< HEAD
                   <CFormInput size="sm" id="inputAddress"  />
+=======
+                  <CFormInput size="sm" id="inputAddress" value="" />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                 </CCol>
               </CRow>
               <CRow className="mt-3">

@@ -63,7 +63,11 @@ const VehicleMaster = () => {
                         <CForm className="row g-3 m-2 p-1" onSubmit={handleSubmit}>
                             <CRow className="mb-md-1">
                                 <CCol md={3}>
+<<<<<<< HEAD
                                     <CFormLabel htmlFor="vType">
+=======
+                                    <CFormLabel htmlFor="vehicleType">
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                                         Vehicle Type*{' '}
                                         {errors.vehicleType && (
                                             <span className="help text-danger">{errors.vehicleType}</span>
@@ -72,16 +76,25 @@ const VehicleMaster = () => {
 
                                     <CFormSelect
                                         size="sm"
+<<<<<<< HEAD
                                         name="vType"
+=======
+                                        name="vehicleType"
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                                         onFocus={onFocus}
                                         onBlur={onBlur}
                                         onChange={handleChange}
                                         value={values.vehicleType}
                                         className={`mb-1 ${errors.vehicleType && 'is-invalid'}`}
                                         aria-label="Small select example"
+<<<<<<< HEAD
                                         id='vType'
                                     >
                                         <option >Select ...</option>
+=======
+                                    >
+                                        <option value="">Select ...</option>
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
 
                                         <option value="1">Own</option>
 
@@ -97,14 +110,22 @@ const VehicleMaster = () => {
                                     <CFormInput
                                         name="vNum"
                                         size="sm"
+<<<<<<< HEAD
                                         id="vNum"
+=======
+                                        id=""
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                                         placeholder=""
 
                                     />
                                 </CCol>
 
                                 <CCol md={3}>
+<<<<<<< HEAD
                                     <CFormLabel htmlFor="vCap">
+=======
+                                    <CFormLabel htmlFor="VehicleCapacity">
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                                         Vehicle Capacity*{' '}
                                         {errors.VehicleCapacity && (
                                             <span className="help text-danger">{errors.VehicleCapacity}</span>
@@ -113,16 +134,25 @@ const VehicleMaster = () => {
 
                                     <CFormSelect
                                         size="sm"
+<<<<<<< HEAD
                                         name="vCap"
+=======
+                                        name="VehicleCapacity"
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                                         onFocus={onFocus}
                                         onBlur={onBlur}
                                         onChange={handleChange}
                                         value={values.VehicleCapacity}
                                         className={`mb-1 ${errors.VehicleCapacity && 'is-invalid'}`}
                                         aria-label="Small select example"
+<<<<<<< HEAD
                                         id='vCap'
                                     >
                                         <option >Select ...</option>
+=======
+                                    >
+                                        <option value="">Select ...</option>
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
 
                                         <option value="1">10</option>
 
@@ -136,7 +166,11 @@ const VehicleMaster = () => {
                                     </CFormSelect>
                                 </CCol>
                                 <CCol md={3}>
+<<<<<<< HEAD
                                     <CFormLabel htmlFor="vBody">
+=======
+                                    <CFormLabel htmlFor="VehicleCapacity">
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                                         Vehicle Body Type*{' '}
                                         {errors.VehicleBodyType && (
                                             <span className="help text-danger">{errors.VehicleBodyType}</span>
@@ -144,8 +178,12 @@ const VehicleMaster = () => {
                                     </CFormLabel>
                                     <CFormSelect
                                         size="sm"
+<<<<<<< HEAD
                                         name="vBody"
                                         id='vBody'
+=======
+                                        name="VehicleBodyType"
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                                         onFocus={onFocus}
                                         onBlur={onBlur}
                                         onChange={handleChange}
@@ -153,7 +191,11 @@ const VehicleMaster = () => {
                                         className={`mb-1 ${errors.VehicleBodyType && 'is-invalid'}`}
                                         aria-label="Small select example"
                                     >
+<<<<<<< HEAD
                                         <option >Select ...</option>
+=======
+                                        <option value="">Select ...</option>
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
 
                                         <option value="1">Open</option>
 
@@ -164,7 +206,11 @@ const VehicleMaster = () => {
                             </CRow>
                             <CRow className="mb-md-1">
                                 <CCol md={3}>
+<<<<<<< HEAD
                                     <CFormLabel htmlFor="rcFront">
+=======
+                                    <CFormLabel htmlFor="formFileSm">
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                                         RC Copy Front*{' '}
                                         {errors.RCCopyFront && (
                                             <span className="help text-danger">{errors.RCCopyFront}</span>
@@ -172,6 +218,7 @@ const VehicleMaster = () => {
                                     </CFormLabel>
                                     <CFormInput
                                         type="file"
+<<<<<<< HEAD
                                         name="rcFront"
                                         size="sm"
                                         id="rcFront"
@@ -179,6 +226,15 @@ const VehicleMaster = () => {
                                 </CCol>
                                 <CCol md={3}>
                                     <CFormLabel htmlFor="rcBack">
+=======
+                                        name="RCCopyFront"
+                                        size="sm"
+                                        id="formFileSm"
+                                    />
+                                </CCol>
+                                <CCol md={3}>
+                                    <CFormLabel htmlFor="formFileSm">
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                                         RC Copy Back*{' '}
                                         {errors.RCCopyBack && (
                                             <span className="help text-danger">{errors.RCCopyBack}</span>
@@ -186,6 +242,7 @@ const VehicleMaster = () => {
                                     </CFormLabel>
                                     <CFormInput
                                         type="file"
+<<<<<<< HEAD
                                         name="rcBack"
                                         size="sm"
                                         id="rcBack"
@@ -193,6 +250,15 @@ const VehicleMaster = () => {
                                 </CCol>
                                 <CCol md={3}>
                                     <CFormLabel htmlFor="iFront">
+=======
+                                        name="RCCopyBack"
+                                        size="sm"
+                                        id="formFileSm"
+                                    />
+                                </CCol>
+                                <CCol md={3}>
+                                    <CFormLabel htmlFor="formFileSm">
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                                         Insurance Copy Front*{' '}
                                         {errors.InsuranceCopyFront && (
                                             <span className="help text-danger">{errors.InsuranceCopyFront}</span>
@@ -200,6 +266,7 @@ const VehicleMaster = () => {
                                     </CFormLabel>
                                     <CFormInput
                                         type="file"
+<<<<<<< HEAD
                                         name="iFront"
                                         size="sm"
                                         id="iFront"
@@ -207,6 +274,15 @@ const VehicleMaster = () => {
                                 </CCol>
                                 <CCol md={3}>
                                     <CFormLabel htmlFor="iBack">
+=======
+                                        name="InsuranceCopyFront"
+                                        size="sm"
+                                        id="formFileSm"
+                                    />
+                                </CCol>
+                                <CCol md={3}>
+                                    <CFormLabel htmlFor="formFileSm">
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                                         Insurance Copy Back*{' '}
                                         {errors.InsuranceCopyBack && (
                                             <span className="help text-danger">{errors.InsuranceCopyBack}</span>
@@ -214,21 +290,32 @@ const VehicleMaster = () => {
                                     </CFormLabel>
                                     <CFormInput
                                         type="file"
+<<<<<<< HEAD
                                         name="iBack"
                                         size="sm"
                                         id="iBack"
+=======
+                                        name="InsuranceCopyBack"
+                                        size="sm"
+                                        id="formFileSm"
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                                     />
                                 </CCol>
                             </CRow>
                             <CRow className="mb-md-1">
                                 <CCol md={3}>
+<<<<<<< HEAD
                                     <CFormLabel htmlFor="iValidaitiy">Insurance Validity*</CFormLabel>
+=======
+                                    <CFormLabel>Insurance Validity*</CFormLabel>
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                                     <CFormInput
                                         // name="date-input"
                                         // type="date"
                                         // size="sm"
                                         // id="date-input"
                                         // locate="pt-br"
+<<<<<<< HEAD
                                         // 
                                         // placeholder=""
                                         type="date" size="sm" id="iValidaitiy" name="fecha-hasta" placeholder="date"
@@ -238,6 +325,17 @@ const VehicleMaster = () => {
                                     <CFormLabel htmlFor="fcvalid">FC Validity*</CFormLabel>
                                     <CFormInput
                                         type="date" size="sm" id="fcvalid" name="fcvalid" placeholder="date"
+=======
+                                        // value=""
+                                        // placeholder=""
+                                        type="date" size="sm" id="fecha-hasta" name="fecha-hasta" placeholder="date"
+                                    />
+                                </CCol>
+                                <CCol md={3}>
+                                    <CFormLabel >FC Validity*</CFormLabel>
+                                    <CFormInput
+                                        type="date" size="sm" id="fecha-hasta" name="fecha-hasta" placeholder="date"
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
 
                                     />
                                 </CCol>

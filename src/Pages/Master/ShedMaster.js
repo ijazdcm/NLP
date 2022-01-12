@@ -27,7 +27,10 @@ import {
     CModalTitle,
     CModalBody,
     CModalFooter,
+<<<<<<< HEAD
     CFormTextarea,
+=======
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
 } from '@coreui/react'
 import { React, useState } from 'react'
 import useForm from 'src/Hooks/useForm.js'
@@ -65,7 +68,11 @@ const ShedMaster = () => {
                         <CForm className="row g-3 m-2 p-1" onSubmit={handleSubmit}>
                             <CRow className="">
                                 <CCol md={3}>
+<<<<<<< HEAD
                                     <CFormLabel htmlFor="dType">
+=======
+                                    <CFormLabel htmlFor="vehicleType">
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                                         Driver Type*{' '}
                                         {errors.DriverType && (
                                             <span className="help text-danger">{errors.DriverType}</span>
@@ -74,8 +81,12 @@ const ShedMaster = () => {
 
                                     <CFormSelect
                                         size="sm"
+<<<<<<< HEAD
                                         name="dType"
                                         id='dType'
+=======
+                                        name="vehicleType"
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                                         onFocus={onFocus}
                                         onBlur={onBlur}
                                         onChange={handleChange}
@@ -83,62 +94,110 @@ const ShedMaster = () => {
                                         className={`mb-1 ${errors.DriverType && 'is-invalid'}`}
                                         aria-label="Small select example"
                                     >
+<<<<<<< HEAD
                                         <option >Select ...</option>
+=======
+                                        <option value="">Select ...</option>
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
 
                                         <option value="1">Select SP</option>
 
                                     </CFormSelect>
                                 </CCol>
                                 <CCol md={3}>
+<<<<<<< HEAD
                                     <CFormLabel htmlFor="shedName">Shed Name*</CFormLabel>
                                     <CFormInput
                                         name="shedName"
                                         size="sm"
                                         id="shedName"
+=======
+                                    <CFormLabel htmlFor="vNum">Shed Name*</CFormLabel>
+                                    <CFormInput
+                                        name="vNum"
+                                        size="sm"
+                                        id=""
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                                         placeholder=""
                                     />
                                 </CCol>
                                 <CCol md={3}>
+<<<<<<< HEAD
                                     <CFormLabel htmlFor="sOwner">Shed Owner Name*</CFormLabel>
                                     <CFormInput
                                         name="sOwner"
                                         size="sm"
                                         id="sOwner"
+=======
+                                    <CFormLabel htmlFor="vNum">Shed Owner Name*</CFormLabel>
+                                    <CFormInput
+                                        name="vNum"
+                                        size="sm"
+                                        id=""
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                                         placeholder=""
                                     />
                                 </CCol>
                                 <CCol md={3}>
+<<<<<<< HEAD
                                     <CFormLabel htmlFor="sMob1">Shed Owner Mobile Number 1*</CFormLabel>
                                     <CFormInput
                                         name="sMob1"
                                         size="sm"
                                         id="sMob1"
+=======
+                                    <CFormLabel htmlFor="vNum">Shed Owner Mobile Number 1*</CFormLabel>
+                                    <CFormInput
+                                        name="vNum"
+                                        size="sm"
+                                        id=""
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                                         placeholder=""
                                     />
                                 </CCol>
                             </CRow>
                             <CRow className="">
                                 <CCol md={3}>
+<<<<<<< HEAD
                                     <CFormLabel htmlFor="sMob">Shed Owner Mobile Number 2*</CFormLabel>
                                     <CFormInput
                                         name="sMob"
                                         size="sm"
                                         id="sMob"
+=======
+                                    <CFormLabel htmlFor="vNum">Shed Owner Mobile Number 2*</CFormLabel>
+                                    <CFormInput
+                                        name="vNum"
+                                        size="sm"
+                                        id=""
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                                         placeholder=""
                                     />
                                 </CCol>
                                 <CCol md={3}>
+<<<<<<< HEAD
                                     <CFormLabel htmlFor="address">Shed Owner Address*</CFormLabel>
                                     <CFormTextarea
                                         name="address"
                                         size="sm"
                                         id="address"
+=======
+                                    <CFormLabel htmlFor="vNum">Shed Owner Address*</CFormLabel>
+                                    <CFormInput
+                                        name="vNum"
+                                        size="sm"
+                                        id=""
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                                         placeholder=""
                                     />
                                 </CCol>
 
                                 <CCol md={3}>
+<<<<<<< HEAD
                                     <CFormLabel htmlFor="ShedOwnerPhoto">
+=======
+                                    <CFormLabel htmlFor="formFileSm">
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                                         Shed Owner Photo*{' '}
                                         {errors.ShedOwnerPhoto && (
                                             <span className="help text-danger">{errors.ShedOwnerPhoto}</span>
@@ -148,6 +207,7 @@ const ShedMaster = () => {
                                         type="file"
                                         name="ShedOwnerPhoto"
                                         size="sm"
+<<<<<<< HEAD
                                         id="ShedOwnerPhoto"
                                     />
                                 </CCol>
@@ -157,26 +217,53 @@ const ShedMaster = () => {
                                         name="PAN"
                                         size="sm"
                                         id="PAN"
+=======
+                                        id="formFileSm"
+                                    />
+                                </CCol>
+                                <CCol md={3}>
+                                    <CFormLabel htmlFor="vNum">PAN Number</CFormLabel>
+                                    <CFormInput
+                                        name="vNum"
+                                        size="sm"
+                                        id=""
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                                         placeholder=""
                                     />
                                 </CCol>
                             </CRow>
                             <CRow className="">
                             <CCol md={3}>
+<<<<<<< HEAD
                                     <CFormLabel htmlFor="Aadhar">Aadhar Number</CFormLabel>
                                     <CFormInput
                                         name="Aadhar"
                                         size="sm"
                                         id="Aadhar"
+=======
+                                    <CFormLabel htmlFor="vNum">Aadhar Number</CFormLabel>
+                                    <CFormInput
+                                        name="vNum"
+                                        size="sm"
+                                        id=""
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                                         placeholder=""
                                     />
                                 </CCol>
                                 <CCol md={3}>
+<<<<<<< HEAD
                                     <CFormLabel htmlFor="GST">GST Number</CFormLabel>
                                     <CFormInput
                                         name="GST"
                                         size="sm"
                                         id="GST"
+=======
+                                    <CFormLabel htmlFor="vNum">GST Number</CFormLabel>
+                                    <CFormInput
+                                        name="vNum"
+                                        size="sm"
+                                        id=""
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                                         placeholder=""
                                     />
                                 </CCol>

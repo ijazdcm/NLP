@@ -27,7 +27,10 @@ import {
     CModalTitle,
     CModalBody,
     CModalFooter,
+<<<<<<< HEAD
     CFormTextarea,
+=======
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
 } from '@coreui/react'
 import { React, useState } from 'react'
 import useForm from 'src/Hooks/useForm.js'
@@ -65,7 +68,11 @@ const DriverMaster = () => {
                         <CForm className="row g-3 m-2 p-1" onSubmit={handleSubmit}>
                             <CRow >
                                 <CCol md={3}>
+<<<<<<< HEAD
                                     <CFormLabel htmlFor="dType">
+=======
+                                    <CFormLabel htmlFor="vehicleType">
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                                         Driver Type*{' '}
                                         {errors.DriverType && (
                                             <span className="help text-danger">{errors.DriverType}</span>
@@ -74,8 +81,12 @@ const DriverMaster = () => {
 
                                     <CFormSelect
                                         size="sm"
+<<<<<<< HEAD
                                         name="dType"
                                         id='dType'
+=======
+                                        name="vehicleType"
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                                         onFocus={onFocus}
                                         onBlur={onBlur}
                                         onChange={handleChange}
@@ -83,7 +94,11 @@ const DriverMaster = () => {
                                         className={`mb-1 ${errors.DriverType && 'is-invalid'}`}
                                         aria-label="Small select example"
                                     >
+<<<<<<< HEAD
                                         <option >Select ...</option>
+=======
+                                        <option value="">Select ...</option>
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
 
                                         <option value="1">Own</option>
 
@@ -93,61 +108,111 @@ const DriverMaster = () => {
                                     </CFormSelect>
                                 </CCol>
                                 <CCol md={3}>
+<<<<<<< HEAD
                                     <CFormLabel htmlFor="dName">Driver Name*</CFormLabel>
                                     <CFormInput
                                         name="dName"
                                         size="sm"
                                         id="dName"
+=======
+                                    <CFormLabel htmlFor="vNum">Driver Name*</CFormLabel>
+                                    <CFormInput
+                                        name="vNum"
+                                        size="sm"
+                                        id=""
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                                         placeholder=""
                                     />
                                 </CCol>
                                 <CCol md={3}>
+<<<<<<< HEAD
                                     <CFormLabel htmlFor="dCode">Driver Code*</CFormLabel>
                                     <CFormInput
                                         name="dCode"
                                         size="sm"
                                         id="dCode"
+=======
+                                    <CFormLabel htmlFor="vNum">Driver Code*</CFormLabel>
+                                    <CFormInput
+                                        name="vNum"
+                                        size="sm"
+                                        id=""
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                                         placeholder=""
                                     />
                                 </CCol>
                                 <CCol md={3}>
+<<<<<<< HEAD
                                     <CFormLabel htmlFor="dMob">Driver Mobile Number 1*</CFormLabel>
                                     <CFormInput
                                         name="dMob"
                                         size="sm"
                                         id="dMob"
+=======
+                                    <CFormLabel htmlFor="vNum">Driver Mobile Number 1*</CFormLabel>
+                                    <CFormInput
+                                        name="vNum"
+                                        size="sm"
+                                        id=""
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                                         placeholder=""
                                     />
                                 </CCol>
                             </CRow>
                             <CRow className="mb-md-1">
                                 <CCol md={3}>
+<<<<<<< HEAD
                                     <CFormLabel htmlFor="dMob1">Driver Mobile Number 2*</CFormLabel>
                                     <CFormInput
                                         name="dMob1"
                                         size="sm"
                                         id="dMob1"
+=======
+                                    <CFormLabel htmlFor="vNum">Driver Mobile Number 2*</CFormLabel>
+                                    <CFormInput
+                                        name="vNum"
+                                        size="sm"
+                                        id=""
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                                         placeholder=""
                                     />
                                 </CCol>
                                 <CCol md={3}>
+<<<<<<< HEAD
                                     <CFormLabel htmlFor="licence">License Number*</CFormLabel>
                                     <CFormInput
                                         name="licence"
                                         size="sm"
                                         id="licence"
+=======
+                                    <CFormLabel htmlFor="vNum">License Number*</CFormLabel>
+                                    <CFormInput
+                                        name="vNum"
+                                        size="sm"
+                                        id=""
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                                         placeholder=""
                                     />
                                 </CCol>
                                 <CCol md={3}>
+<<<<<<< HEAD
                                     <CFormLabel htmlFor="valid">License Valid To*</CFormLabel>
                                     <CFormInput
                                         type="date" size="sm" id="valid" name="valid" placeholder="date"
+=======
+                                    <CFormLabel >License Valid To*</CFormLabel>
+                                    <CFormInput
+                                        type="date" size="sm" id="fecha-hasta" name="fecha-hasta" placeholder="date"
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
 
                                     />
                                 </CCol>
                                 <CCol md={3}>
+<<<<<<< HEAD
                                     <CFormLabel htmlFor="lFront">
+=======
+                                    <CFormLabel htmlFor="formFileSm">
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                                         License Copy Front*{' '}
                                         {errors.LicenseCopyFront && (
                                             <span className="help text-danger">{errors.LicenseCopyFront}</span>
@@ -155,15 +220,25 @@ const DriverMaster = () => {
                                     </CFormLabel>
                                     <CFormInput
                                         type="file"
+<<<<<<< HEAD
                                         name="lFront"
                                         size="sm"
                                         id="lFront"
+=======
+                                        name="LicenseCopyFront"
+                                        size="sm"
+                                        id="formFileSm"
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                                     />
                                 </CCol>
                             </CRow>
                             <CRow className="mb-md-1">
                                 <CCol md={3}>
+<<<<<<< HEAD
                                     <CFormLabel htmlFor="lBack">
+=======
+                                    <CFormLabel htmlFor="formFileSm">
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                                         License Copy Back*{' '}
                                         {errors.LicenseCopyBack && (
                                             <span className="help text-danger">{errors.LicenseCopyBack}</span>
@@ -171,6 +246,7 @@ const DriverMaster = () => {
                                     </CFormLabel>
                                     <CFormInput
                                         type="file"
+<<<<<<< HEAD
                                         name="lBack"
                                         size="sm"
                                         id="lBack"
@@ -182,12 +258,29 @@ const DriverMaster = () => {
                                         name="vStatus"
                                         size="sm"
                                         id="vStatus"
+=======
+                                        name="LicenseCopyBack"
+                                        size="sm"
+                                        id="formFileSm"
+                                    />
+                                </CCol>
+                                <CCol md={3}>
+                                    <CFormLabel htmlFor="vNum">License Validity Status*</CFormLabel>
+                                    <CFormInput
+                                        name="vNum"
+                                        size="sm"
+                                        id=""
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                                         placeholder=""
                                         readOnly
                                     />
                                 </CCol>
                                 <CCol md={3}>
+<<<<<<< HEAD
                                     <CFormLabel htmlFor="AadharCard">
+=======
+                                    <CFormLabel htmlFor="formFileSm">
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                                         Aadhar Card*{' '}
                                         {errors.AadharCard && (
                                             <span className="help text-danger">{errors.AadharCard}</span>
@@ -197,11 +290,19 @@ const DriverMaster = () => {
                                         type="file"
                                         name="AadharCard"
                                         size="sm"
+<<<<<<< HEAD
                                         id="AadharCard"
                                     />
                                 </CCol>
                                 <CCol md={3}>
                                     <CFormLabel htmlFor="PANCard">
+=======
+                                        id="formFileSm"
+                                    />
+                                </CCol>
+                                <CCol md={3}>
+                                    <CFormLabel htmlFor="formFileSm">
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                                         PAN Card*{' '}
                                         {errors.PANCard && (
                                             <span className="help text-danger">{errors.PANCard}</span>
@@ -211,13 +312,21 @@ const DriverMaster = () => {
                                         type="file"
                                         name="PANCard"
                                         size="sm"
+<<<<<<< HEAD
                                         id="PANCard"
+=======
+                                        id="formFileSm"
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                                     />
                                 </CCol>
                             </CRow>
                             <CRow className="mb-md-1">
                                 <CCol md={3}>
+<<<<<<< HEAD
                                     <CFormLabel htmlFor="DriverPhoto">
+=======
+                                    <CFormLabel htmlFor="formFileSm">
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                                         Driver Photo*{' '}
                                         {errors.DriverPhoto && (
                                             <span className="help text-danger">{errors.DriverPhoto}</span>
@@ -227,6 +336,7 @@ const DriverMaster = () => {
                                         type="file"
                                         name="DriverPhoto"
                                         size="sm"
+<<<<<<< HEAD
                                         id="DriverPhoto"
                                     />
                                 </CCol>
@@ -236,6 +346,17 @@ const DriverMaster = () => {
                                         name="address"
                                         size="sm"
                                         id="address"
+=======
+                                        id="formFileSm"
+                                    />
+                                </CCol>
+                                <CCol md={3}>
+                                    <CFormLabel htmlFor="vNum">Driver Address*</CFormLabel>
+                                    <CFormInput
+                                        name="vNum"
+                                        size="sm"
+                                        id=""
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                                         placeholder=""
                                     />
                                 </CCol>

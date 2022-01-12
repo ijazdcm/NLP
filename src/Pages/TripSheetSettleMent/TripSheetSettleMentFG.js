@@ -89,7 +89,11 @@ const TripSheetSettleMentFG = () => {
                     <span className="help text-danger">{errors.vehicleType}</span>
                   )}
                 </CFormLabel>
+<<<<<<< HEAD
                 <CFormInput size="sm" id="inputAddress"  readOnly />
+=======
+                <CFormInput size="sm" id="inputAddress" value="" readOnly />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
               </CCol>
               <CCol xs={12} md={3}>
                 <CFormLabel htmlFor="inputAddress">
@@ -98,7 +102,11 @@ const TripSheetSettleMentFG = () => {
                     <span className="help text-danger">{errors.vehicleType}</span>
                   )}
                 </CFormLabel>
+<<<<<<< HEAD
                 <CFormInput size="sm" id="inputAddress"  readOnly />
+=======
+                <CFormInput size="sm" id="inputAddress" value="" readOnly />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
               </CCol>
               <CCol xs={12} md={3}>
                 <CFormLabel htmlFor="inputAddress">
@@ -107,7 +115,11 @@ const TripSheetSettleMentFG = () => {
                     <span className="help text-danger">{errors.vehicleType}</span>
                   )}
                 </CFormLabel>
+<<<<<<< HEAD
                 <CFormInput size="sm" id="inputAddress"  readOnly />
+=======
+                <CFormInput size="sm" id="inputAddress" value="" readOnly />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
               </CCol>
               <CCol xs={12} md={3}>
                 <CFormLabel htmlFor="inputAddress">
@@ -116,7 +128,11 @@ const TripSheetSettleMentFG = () => {
                     <span className="help text-danger">{errors.vehicleType}</span>
                   )}
                 </CFormLabel>
+<<<<<<< HEAD
                 <CFormInput size="sm" id="inputAddress"  readOnly />
+=======
+                <CFormInput size="sm" id="inputAddress" value="" readOnly />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
               </CCol>
             </CRow>
             <CRow className="">
@@ -127,7 +143,11 @@ const TripSheetSettleMentFG = () => {
                     <span className="help text-danger">{errors.vehicleType}</span>
                   )}
                 </CFormLabel>
+<<<<<<< HEAD
                 <CFormInput size="sm" id="inputAddress"  readOnly />
+=======
+                <CFormInput size="sm" id="inputAddress" value="" readOnly />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
               </CCol>
               <CCol xs={12} md={3}>
                 <CFormLabel htmlFor="inputAddress">
@@ -145,7 +165,11 @@ const TripSheetSettleMentFG = () => {
                     <span className="help text-danger">{errors.vehicleType}</span>
                   )}
                 </CFormLabel>
+<<<<<<< HEAD
                 <CFormInput size="sm" id="inputAddress"  readOnly />
+=======
+                <CFormInput size="sm" id="inputAddress" value="" readOnly />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
               </CCol>
               <CCol xs={12} md={3}>
                 <CFormLabel htmlFor="inputAddress">
@@ -188,7 +212,11 @@ const TripSheetSettleMentFG = () => {
                     <span className="help text-danger">{errors.vehicleType}</span>
                   )}
                 </CFormLabel>
+<<<<<<< HEAD
                 <CFormInput size="sm" type="datetime-local" id="inputAddress"  readOnly />
+=======
+                <CFormInput size="sm" type="datetime-local" id="inputAddress" value="" readOnly />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
               </CCol>
               <CCol xs={12} md={3}>
                 <CFormLabel htmlFor="inputAddress">
@@ -215,7 +243,11 @@ const TripSheetSettleMentFG = () => {
                     <span className="help text-danger">{errors.vehicleType}</span>
                   )}
                 </CFormLabel>
+<<<<<<< HEAD
                 <CFormInput size="sm" id="inputAddress"  readOnly />
+=======
+                <CFormInput size="sm" id="inputAddress" value="" readOnly />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
               </CCol>
             </CRow>
             <CRow className="">
@@ -235,7 +267,11 @@ const TripSheetSettleMentFG = () => {
                     <span className="help text-danger">{errors.vehicleType}</span>
                   )}
                 </CFormLabel>
+<<<<<<< HEAD
                 <CFormInput size="sm" id="inputAddress"  readOnly />
+=======
+                <CFormInput size="sm" id="inputAddress" value="" readOnly />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
               </CCol>
               <CCol xs={12} md={3}>
                 <CFormLabel htmlFor="inputAddress">
@@ -244,7 +280,11 @@ const TripSheetSettleMentFG = () => {
                     <span className="help text-danger">{errors.vehicleType}</span>
                   )}
                 </CFormLabel>
+<<<<<<< HEAD
                 <CFormInput size="sm" id="inputAddress"  readOnly />
+=======
+                <CFormInput size="sm" id="inputAddress" value="" readOnly />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
               </CCol>
               <CCol xs={12} md={3}>
                 <CFormLabel htmlFor="inputAddress">
@@ -253,7 +293,11 @@ const TripSheetSettleMentFG = () => {
                     <span className="help text-danger">{errors.vehicleType}</span>
                   )}
                 </CFormLabel>
+<<<<<<< HEAD
                 <CFormInput size="sm" type="datetime-local" id="inputAddress"  readOnly />
+=======
+                <CFormInput size="sm" type="datetime-local" id="inputAddress" value="" readOnly />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
               </CCol>
             </CRow>
             <CRow className="">
@@ -264,7 +308,11 @@ const TripSheetSettleMentFG = () => {
                     <span className="help text-danger">{errors.vehicleType}</span>
                   )}
                 </CFormLabel>
+<<<<<<< HEAD
                 <CFormInput size="sm" id="inputAddress"  readOnly />
+=======
+                <CFormInput size="sm" id="inputAddress" value="" readOnly />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
               </CCol>
               <CCol xs={12} md={3}>
                 <CFormLabel htmlFor="inputAddress">
@@ -273,7 +321,11 @@ const TripSheetSettleMentFG = () => {
                     <span className="help text-danger">{errors.vehicleType}</span>
                   )}
                 </CFormLabel>
+<<<<<<< HEAD
                 <CFormInput onClick size="sm" id="inputAddress"  readOnly />
+=======
+                <CFormInput onClick size="sm" id="inputAddress" value="" readOnly />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
               </CCol>
               <CCol xs={12} md={3}>
                 <CFormLabel htmlFor="inputAddress">
@@ -317,7 +369,11 @@ const TripSheetSettleMentFG = () => {
                     <span className="help text-danger">{errors.vehicleType}</span>
                   )}
                 </CFormLabel>
+<<<<<<< HEAD
                 <CFormInput size="sm" id="inputAddress"  readOnly />
+=======
+                <CFormInput size="sm" id="inputAddress" value="" readOnly />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
               </CCol>
             </CRow>
             <CRow className="">
@@ -328,7 +384,11 @@ const TripSheetSettleMentFG = () => {
                     <span className="help text-danger">{errors.vehicleType}</span>
                   )}
                 </CFormLabel>
+<<<<<<< HEAD
                 <CFormInput size="sm" id="inputAddress"  readOnly />
+=======
+                <CFormInput size="sm" id="inputAddress" value="" readOnly />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
               </CCol>
               <CCol xs={12} md={3}>
                 <CFormLabel htmlFor="inputAddress">
@@ -337,7 +397,11 @@ const TripSheetSettleMentFG = () => {
                     <span className="help text-danger">{errors.vehicleType}</span>
                   )}
                 </CFormLabel>
+<<<<<<< HEAD
                 <CFormInput size="sm" id="inputAddress"  readOnly />
+=======
+                <CFormInput size="sm" id="inputAddress" value="" readOnly />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
               </CCol>
               <CCol xs={12} md={3}>
                 <CFormLabel htmlFor="inputAddress">
@@ -346,7 +410,11 @@ const TripSheetSettleMentFG = () => {
                     <span className="help text-danger">{errors.vehicleType}</span>
                   )}
                 </CFormLabel>
+<<<<<<< HEAD
                 <CFormInput size="sm" id="inputAddress"  readOnly />
+=======
+                <CFormInput size="sm" id="inputAddress" value="" readOnly />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
               </CCol>
               <CCol xs={12} md={3}>
                 <CFormLabel htmlFor="inputAddress">
@@ -355,7 +423,11 @@ const TripSheetSettleMentFG = () => {
                     <span className="help text-danger">{errors.vehicleType}</span>
                   )}
                 </CFormLabel>
+<<<<<<< HEAD
                 <CFormInput size="sm" id="inputAddress"  readOnly />
+=======
+                <CFormInput size="sm" id="inputAddress" value="" readOnly />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
               </CCol>
             </CRow>
             <CRow className="">
@@ -366,7 +438,11 @@ const TripSheetSettleMentFG = () => {
                     <span className="help text-danger">{errors.vehicleType}</span>
                   )}
                 </CFormLabel>
+<<<<<<< HEAD
                 <CFormInput size="sm" id="inputAddress"  readOnly />
+=======
+                <CFormInput size="sm" id="inputAddress" value="" readOnly />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
               </CCol>
               <CCol xs={12} md={3}>
                 <CFormLabel htmlFor="inputAddress">
@@ -375,7 +451,11 @@ const TripSheetSettleMentFG = () => {
                     <span className="help text-danger">{errors.vehicleType}</span>
                   )}
                 </CFormLabel>
+<<<<<<< HEAD
                 <CFormInput size="sm" id="inputAddress"  readOnly />
+=======
+                <CFormInput size="sm" id="inputAddress" value="" readOnly />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
               </CCol>
               <CCol xs={12} md={3}>
                 <CFormLabel htmlFor="inputAddress">
@@ -384,7 +464,11 @@ const TripSheetSettleMentFG = () => {
                     <span className="help text-danger">{errors.vehicleType}</span>
                   )}
                 </CFormLabel>
+<<<<<<< HEAD
                 <CFormInput size="sm" id="inputAddress"  readOnly />
+=======
+                <CFormInput size="sm" id="inputAddress" value="" readOnly />
+>>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
               </CCol>
               <CCol xs={12} md={3}>
                 <CFormLabel htmlFor="remarks">Remarks*</CFormLabel>
