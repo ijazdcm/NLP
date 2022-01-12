@@ -175,7 +175,7 @@ const ParkingYardGate = () => {
                 </CFormLabel>
 
                 <CFormSelect size="sm" name="vType" aria-label="Small select example">
-                  <option value="" hidden selected>
+                  <option  hidden selected>
                     Select...
                   </option>
                   <option value="own" onClick={() => setHire(false)}>
@@ -195,7 +195,7 @@ const ParkingYardGate = () => {
               <CCol md={3}>
                 <CFormLabel htmlFor="vNum">Vehicle Number*</CFormLabel>
                 {hire ? (
-                  <CFormInput name="vNum" size="sm" id="inputAddress" value="" />
+                  <CFormInput name="vNum" size="sm" id="inputAddress"  />
                 ) : (
                   <CFormSelect size="sm" name="vNum" className="" aria-label="Small select example">
                     <option hidden>Select...</option>
@@ -221,14 +221,14 @@ const ParkingYardGate = () => {
                     <option value="30">30</option>
                   </CFormSelect>
                 ) : (
-                  <CFormInput name="vCap" size="sm" id="inputAddress" value="" readOnly />
+                  <CFormInput name="vCap" size="sm" id="inputAddress"  readOnly />
                 )}
               </CCol>
 
               <CCol xs={12} md={3}>
                 <CFormLabel htmlFor="dName">Driver Name*</CFormLabel>
                 {hire ? (
-                  <CFormInput name="dName" size="sm" id="inputAddress" value="" />
+                  <CFormInput name="dName" size="sm" id="inputAddress"  />
                 ) : (
                   <CFormSelect
                     name="dName"
@@ -248,7 +248,7 @@ const ParkingYardGate = () => {
             <CRow>
               <CCol xs={12} md={3}>
                 <CFormLabel htmlFor="dMob">Driver Contact Number*</CFormLabel>
-                <CFormInput name="dMob" size="sm" id="inputAddress" value="" readOnly={!hire} />
+                <CFormInput name="dMob" size="sm" id="inputAddress"  readOnly={!hire} />
               </CCol>
 
               <CCol xs={12} md={3} hidden={hire}>

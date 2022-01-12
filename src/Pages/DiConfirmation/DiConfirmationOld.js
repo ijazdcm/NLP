@@ -74,31 +74,31 @@ const ParkingYardGate = () => {
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">Diesel Vendor</CFormLabel>
 
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+                  <CFormInput size="sm" id="inputAddress"  readOnly />
                 </CCol>
 
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">Diesel Liter</CFormLabel>
 
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+                  <CFormInput size="sm" id="inputAddress"  readOnly />
                 </CCol>
 
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">Rate Per Liter</CFormLabel>
 
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+                  <CFormInput size="sm" id="inputAddress"  readOnly />
                 </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">Total Amount</CFormLabel>
 
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+                  <CFormInput size="sm" id="inputAddress"  readOnly />
                 </CCol>
               </CRow>
               <CRow className="">
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">Invoice date & Time</CFormLabel>
 
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+                  <CFormInput size="sm" id="inputAddress"  readOnly />
                 </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="formFileSm">
@@ -172,31 +172,31 @@ const ParkingYardGate = () => {
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">Diesel Vendor</CFormLabel>
 
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+                  <CFormInput size="sm" id="inputAddress"  readOnly />
                 </CCol>
 
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">Diesel Liter</CFormLabel>
 
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+                  <CFormInput size="sm" id="inputAddress"  readOnly />
                 </CCol>
 
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">Rate Per Liter</CFormLabel>
 
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+                  <CFormInput size="sm" id="inputAddress"  readOnly />
                 </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">Total Amount</CFormLabel>
 
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+                  <CFormInput size="sm" id="inputAddress"  readOnly />
                 </CCol>
               </CRow>
               <CRow className="">
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">Invoice date & Time</CFormLabel>
 
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+                  <CFormInput size="sm" id="inputAddress"  readOnly />
                 </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="formFileSm">
@@ -220,7 +220,7 @@ const ParkingYardGate = () => {
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">Driver Name</CFormLabel>
 
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+                  <CFormInput size="sm" id="inputAddress"  readOnly />
                 </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="remarks">Remarks*</CFormLabel>

@@ -92,7 +92,7 @@ const RejectResonTable = () => {
                                         <CFormLabel htmlFor="inputAddress">
                                             Reject Reason
                                         </CFormLabel>
-                                        <CFormInput size="sm" id="inputAddress" value="" />
+                                        <CFormInput size="sm" id="inputAddress"  />
                                     </CCol>
                                 </CRow>
                             </CModalBody>

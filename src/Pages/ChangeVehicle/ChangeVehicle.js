@@ -62,20 +62,21 @@ const ChangeVehicle = () => {
                         <CForm className="container p-3" onSubmit={handleSubmit}>
                             <CRow className="">
                                 <CCol xs={12} md={3}>
-                                    <CFormLabel htmlFor="freigthRate">Tripsheet Number*</CFormLabel>
-                                    <CFormInput type="text" name="freigthRate" size="sm" id="" readOnly />
+                                    <CFormLabel htmlFor="tNum">Tripsheet Number*</CFormLabel>
+                                    <CFormInput type="text" name="tNum" size="sm" id="tNum" readOnly />
                                 </CCol>
                                 <CCol xs={12} md={3}>
-                                    <CFormLabel htmlFor="freigthRate">Waiting_At</CFormLabel>
-                                    <CFormInput type="text" name="freigthRate" size="sm" id="" readOnly />
+                                    <CFormLabel htmlFor="wait">Waiting_At</CFormLabel>
+                                    <CFormInput type="text" name="wait" size="sm" id="wait" readOnly />
                                 </CCol>
                                 <CCol xs={12} md={3}>
-                                    <CFormLabel htmlFor="insuranceValid">Status*</CFormLabel>
+                                    <CFormLabel htmlFor="Status">Status*</CFormLabel>
                                     <CFormSelect
                                         size="sm"
                                         name="insuranceValid"
                                         className=""
                                         aria-label="Small select example"
+                                        id='Status'
                                     >
                                         <option hidden>Select...</option>
                                         <option value="0">Gate In</option>
@@ -96,13 +97,13 @@ const ChangeVehicle = () => {
                                 </CCol>
                                 <CCol xs={12} md={3}>
                                     <CFormLabel htmlFor="remarks">Remarks</CFormLabel>
-                                    <CFormTextarea id="exampleFormControlTextarea1" rows="1"></CFormTextarea>
+                                    <CFormTextarea id="remarks" rows="1"></CFormTextarea>
                                 </CCol>
                             </CRow>
 
                             <CRow>
                                 <CCol>
-                                    <Link to="/DocsVerify">
+                                    <Link to="/ChangeVehicleHome">
                                         <CButton
                                             md={9}
                                             size="sm"

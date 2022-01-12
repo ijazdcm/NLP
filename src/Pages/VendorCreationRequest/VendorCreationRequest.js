@@ -76,7 +76,7 @@ const VendorCreationRequest = () => {
                   <span className="help text-danger">{errors.shedName}</span>
                 )}
               </CFormLabel>
-              <CFormInput size="sm" id="shedName" value="" readOnly />
+              <CFormInput size="sm" id="shedName"  readOnly />
             </CCol>
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="ownerName">
@@ -85,7 +85,7 @@ const VendorCreationRequest = () => {
                   <span className="help text-danger">{errors.vehicleType}</span>
                 )}
               </CFormLabel>
-              <CFormInput size="sm" id="ownerName" value="" readOnly />
+              <CFormInput size="sm" id="ownerName"  readOnly />
             </CCol>
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="shedownerMob">
@@ -150,7 +150,7 @@ const VendorCreationRequest = () => {
                   <span className="help text-danger">{errors.panCard}</span>
                 )}
               </CFormLabel>
-              <CFormInput size="sm" id="panCard" value="" />
+              <CFormInput size="sm" id="panCard"  />
             </CCol>
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="AadharCopy">
@@ -193,7 +193,7 @@ const VendorCreationRequest = () => {
                   <span className="help text-danger">{errors.aadharCard}</span>
                 )}
               </CFormLabel>
-              <CFormInput size="sm" id="aadharCard" value="" />
+              <CFormInput size="sm" id="aadharCard"  />
             </CCol>
           </CRow>
           {/* Row Two------------------------- */}
@@ -413,7 +413,7 @@ const VendorCreationRequest = () => {
                   <span className="help text-danger">{errors.bankAccount}</span>
                 )}
               </CFormLabel>
-              <CFormInput size="sm" id="bankAccount" value="" />
+              <CFormInput size="sm" id="bankAccount"  />
             </CCol>
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="bankaccountholderName">
@@ -422,7 +422,7 @@ const VendorCreationRequest = () => {
                   <span className="help text-danger">{errors.bankaccountholderName}</span>
                 )}
               </CFormLabel>
-              <CFormInput size="sm" id="bankaccountholderName" value="" />
+              <CFormInput size="sm" id="bankaccountholderName"  />
             </CCol>
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="Street">
@@ -431,7 +431,7 @@ const VendorCreationRequest = () => {
                   <span className="help text-danger">{errors.Street}</span>
                 )}
               </CFormLabel>
-              <CFormInput size="sm" id="Street" value="" />
+              <CFormInput size="sm" id="Street"  />
             </CCol>
           </CRow>
           {/* Row Five------------------------- */}
@@ -444,7 +444,7 @@ const VendorCreationRequest = () => {
                   <span className="help text-danger">{errors.Area}</span>
                 )}
               </CFormLabel>
-              <CFormInput size="sm" id="Area" value="" />
+              <CFormInput size="sm" id="Area"  />
             </CCol>
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="City">
@@ -453,7 +453,7 @@ const VendorCreationRequest = () => {
                   <span className="help text-danger">{errors.City}</span>
                 )}
               </CFormLabel>
-              <CFormInput size="sm" id="City" value="" />
+              <CFormInput size="sm" id="City"  />
             </CCol>
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="District">
@@ -462,7 +462,7 @@ const VendorCreationRequest = () => {
                   <span className="help text-danger">{errors.District}</span>
                 )}
               </CFormLabel>
-              <CFormInput size="sm" id="District" value="" />
+              <CFormInput size="sm" id="District"  />
             </CCol>
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="State">
@@ -471,7 +471,7 @@ const VendorCreationRequest = () => {
                   <span className="help text-danger">{errors.State}</span>
                 )}
               </CFormLabel>
-              <CFormInput size="sm" id="State" value="" />
+              <CFormInput size="sm" id="State"  />
             </CCol>
           </CRow>
           {/* Row Six------------------------- */}
@@ -484,7 +484,7 @@ const VendorCreationRequest = () => {
                   <span className="help text-danger">{errors.postalCode}</span>
                 )}
               </CFormLabel>
-              <CFormInput size="sm" id="postalCode" value="" />
+              <CFormInput size="sm" id="postalCode"  />
             </CCol>
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="Region">
@@ -493,7 +493,7 @@ const VendorCreationRequest = () => {
                   <span className="help text-danger">{errors.Region}</span>
                 )}
               </CFormLabel>
-              <CFormInput size="sm" id="Region" value="" />
+              <CFormInput size="sm" id="Region"  />
             </CCol>
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="TDSfront">
@@ -584,7 +584,7 @@ const VendorCreationRequest = () => {
                 aria-label="Small select example"
                 id='GSTreg'
               >
-                <option value="" hidden selected>
+                <option  hidden selected>
                   Select...
                 </option>
                 <option value="1">Yes</option>
@@ -598,7 +598,7 @@ const VendorCreationRequest = () => {
                   <span className="help text-danger">{errors.GST}</span>
                 )}
               </CFormLabel>
-              <CFormInput size="sm" id="GST" value=""/>
+              <CFormInput size="sm" id="GST" />
             </CCol>
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="GSTtax">
@@ -607,7 +607,7 @@ const VendorCreationRequest = () => {
                   <span className="help text-danger">{errors.GSTtax}</span>
                 )}
               </CFormLabel>
-              <CFormInput size="sm" id="GSTtax" value="" readOnly />
+              <CFormInput size="sm" id="GSTtax"  readOnly />
             </CCol>
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="Payment">
@@ -616,7 +616,7 @@ const VendorCreationRequest = () => {
                   <span className="help text-danger">{errors.Payment}</span>
                 )}
               </CFormLabel>
-              <CFormInput size="sm" id="Payment" value="" readOnly />
+              <CFormInput size="sm" id="Payment"  readOnly />
             </CCol>
           </CRow>
           {/* Row Eight------------------------- */}
@@ -629,7 +629,7 @@ const VendorCreationRequest = () => {
                   <span className="help text-danger">{errors.remarks}</span>
                 )}
               </CFormLabel>
-              <CFormInput size="sm" id="remarks" value="" readOnly />
+              <CFormInput size="sm" id="remarks"  readOnly />
             </CCol>
           </CRow>
           {/* Row Nine------------------------- */}

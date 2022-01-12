@@ -71,7 +71,7 @@ const ParkingYardGate = () => {
                     className={`mb-3 ${errors.vehicleType && 'is-invalid'}`}
                     aria-label="Small select example"
                   >
-                    <option value="">Select Vehicle Types</option>
+                    <option >Select Vehicle Types</option>
 
                     <option value="1">Own</option>
 
@@ -97,7 +97,7 @@ const ParkingYardGate = () => {
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">Vehicle Capacity*</CFormLabel>
 
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+                  <CFormInput size="sm" id="inputAddress"  readOnly />
                 </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">Driver Name*</CFormLabel>
@@ -115,7 +115,7 @@ const ParkingYardGate = () => {
               <CRow>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">Driver Cell No*</CFormLabel>
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+                  <CFormInput size="sm" id="inputAddress"  readOnly />
                 </CCol>
 
                 <CCol xs={12} md={3}>

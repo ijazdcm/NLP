@@ -53,135 +53,131 @@ const ParkingYardGate = () => {
                 {/* <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">VA Number</CFormLabel>
 
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+                  <CFormInput size="sm" id="inputAddress"  readOnly />
                 </CCol> */}
 
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Vehicle Number</CFormLabel>
+                  <CFormLabel htmlFor="vNum">Vehicle Number</CFormLabel>
 
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+                  <CFormInput size="sm" id="vNum"  readOnly />
                 </CCol>
 
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Tripsheet No</CFormLabel>
+                  <CFormLabel htmlFor="tNum">Tripsheet Number</CFormLabel>
 
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+                  <CFormInput size="sm" id="tNum"  readOnly />
                 </CCol>
 
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Vendor Name</CFormLabel>
+                  <CFormLabel htmlFor="vName">Vendor Name</CFormLabel>
 
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+                  <CFormInput size="sm" id="vName"  readOnly />
                 </CCol>
               {/* </CRow>
               <CRow className=""> */}
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Vendor Code</CFormLabel>
+                  <CFormLabel htmlFor="vCode">Vendor Code</CFormLabel>
 
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+                  <CFormInput size="sm" id="vCode"  readOnly />
                 </CCol>
 
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Diesel Liters</CFormLabel>
+                  <CFormLabel htmlFor="dLtr">Diesel Liters</CFormLabel>
 
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+                  <CFormInput size="sm" id="dLtr"  readOnly />
                 </CCol>
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">
-                    Invoice No.*
-                    {errors.OdometerKm && (
-                      <span className="help text-danger">{errors.OdometerKm}</span>
+                  <CFormLabel htmlFor="invoice">
+                    Invoice Number*
+                    {errors.invoice && (
+                      <span className="help text-danger">{errors.invoice}</span>
                     )}
                   </CFormLabel>
                   <CFormInput
-                    name="OdometerKm"
+                    name="invoice"
                     onFocus={onFocus}
                     onBlur={onBlur}
                     onChange={handleChange}
-                    className={`${errors.OdometerKm && 'is-invalid'}`}
+                    className={`${errors.invoice && 'is-invalid'}`}
                     size="sm"
-                    id="inputAddress"
+                    id="invoice"
                     placeholder="Km on Odometer"
                   />
                 </CCol>
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="formFileSm">
+                  <CFormLabel htmlFor="invoiceCopy">
                     Invoice Copy*
-                    {errors.odometerPhoto && (
-                      <span className="help text-danger">{errors.odometerPhoto}</span>
+                    {errors.invoiceCopy && (
+                      <span className="help text-danger">{errors.invoiceCopy}</span>
                     )}
                   </CFormLabel>
                   <CFormInput
                     type="file"
-                    name="odometerPhoto"
+                    name="invoiceCopy"
                     onFocus={onFocus}
                     onBlur={onBlur}
                     onChange={handleChange}
-                    value={values.odometerPhoto}
-                    className={`${errors.odometerPhoto && 'is-invalid'}`}
+                    value={values.invoiceCopy}
+                    className={`${errors.invoiceCopy && 'is-invalid'}`}
                     size="sm"
-                    id="formFileSm"
+                    id="invoiceCopy"
                   />
                 </CCol>
               {/* </CRow>
               <CRow className=""> */}
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">
+                  <CFormLabel htmlFor="dLtr">
                     No. Of Liters*
-                    {errors.OdometerKm && (
-                      <span className="help text-danger">{errors.OdometerKm}</span>
+                    {errors.nLtr && (
+                      <span className="help text-danger">{errors.nLtr}</span>
                     )}
                   </CFormLabel>
                   <CFormInput
-                    name="OdometerKm"
+                    name="dLtr"
                     onFocus={onFocus}
                     onBlur={onBlur}
                     onChange={handleChange}
-                    className={`${errors.OdometerKm && 'is-invalid'}`}
+                    className={`${errors.dLtr && 'is-invalid'}`}
                     size="sm"
-                    id="inputAddress"
+                    id="dLtr"
                     placeholder="Km on Odometer"
                   />
                 </CCol>
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">
+                  <CFormLabel htmlFor="rateLtr">
                     Rate Per Liter*
-                    {errors.OdometerKm && (
-                      <span className="help text-danger">{errors.OdometerKm}</span>
+                    {errors.rateLtr && (
+                      <span className="help text-danger">{errors.rateLtr}</span>
                     )}
                   </CFormLabel>
                   <CFormInput
-                    name="OdometerKm"
+                    name="rateLtr"
                     onFocus={onFocus}
                     onBlur={onBlur}
                     onChange={handleChange}
                     className={`${errors.OdometerKm && 'is-invalid'}`}
                     size="sm"
-                    id="inputAddress"
+                    id="rateLtr"
                     placeholder="Km on Odometer"
                   />
                 </CCol>
-
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Amount</CFormLabel>
-
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+                  <CFormLabel htmlFor="dAmount">Amount</CFormLabel>
+                  <CFormInput size="sm" id="dAmount"  readOnly />
                 </CCol>
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Bunk Reading</CFormLabel>
-
-                  <CFormInput type="file" size="sm" id="inputAddress" value="" />
+                  <CFormLabel htmlFor="bunk">Bunk Reading</CFormLabel>
+                  <CFormInput type="file" size="sm" id="bunk"  />
                 </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="remarks">Remarks*</CFormLabel>
                   <CFormTextarea
                     name="remarks"
-                    id="exampleFormControlTextarea1"
+                    id="remarks"
                     rows="1"
                   ></CFormTextarea>
                 </CCol>
               </CRow>
-
               <CRow className="mt-3">
                 <CCol>
                   <CButton

@@ -377,7 +377,7 @@ const TSClossure = () => {
                         className={`${errors.DefectType && 'is-invalid'}`}
                         aria-label="Small select example"
                       >
-                        <option value="">Select Types</option>
+                        <option >Select Types</option>
 
                         <option value="1">Unloading Charges</option>
 
@@ -440,7 +440,7 @@ const TSClossure = () => {
                         className={`mb-3 ${errors.DefectType2 && 'is-invalid'}`}
                         aria-label="Small select example"
                       >
-                        <option value="">Select Types</option>
+                        <option >Select Types</option>
 
                         <option value="1">Unloading Charges</option>
 
@@ -850,7 +850,7 @@ const TSClossure = () => {
                           className={`${errors.DefectType && 'is-invalid'}`}
                           aria-label="Small select example"
                         >
-                          <option value="">Select Types</option>
+                          <option >Select Types</option>
 
                           <option value="1">Unloading Charges</option>
 
@@ -913,7 +913,7 @@ const TSClossure = () => {
                           className={`${errors.DefectType && 'is-invalid'}`}
                           aria-label="Small select example"
                         >
-                          <option value="">Select Types</option>
+                          <option >Select Types</option>
 
                           <option value="1">Unloading Charges</option>
 
@@ -976,7 +976,7 @@ const TSClossure = () => {
                           className={`${errors.DefectType && 'is-invalid'}`}
                           aria-label="Small select example"
                         >
-                          <option value="">Select Types</option>
+                          <option >Select Types</option>
 
                           <option value="1">Unloading Charges</option>
 

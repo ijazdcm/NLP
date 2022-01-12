@@ -117,7 +117,7 @@ const VehicleInspection = () => {
                     className={`${errors.dName && 'is-invalid'}`}
                     aria-label="Small select example"
                   >
-                    <option value="" hidden>
+                    <option  hidden>
                       Select...
                     </option>
 
@@ -372,7 +372,7 @@ const VehicleInspection = () => {
                     className={`${errors.prevLoad && 'is-invalid'}`}
                     aria-label="Small select example"
                   >
-                    <option value="" hidden>
+                    <option  hidden>
                       Select...
                     </option>
                     <option value="1">Select LP</option>

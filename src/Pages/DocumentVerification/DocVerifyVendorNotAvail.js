@@ -116,16 +116,16 @@ const DocVerifyVendorNotAvail = () => {
                 </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="panNum">PAN Card Number*</CFormLabel>
-                  <CFormInput name="panNum" size="sm" id="panNum" value="" />
+                  <CFormInput name="panNum" size="sm" id="panNum"  />
                 </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="ownerName">Owner Name*</CFormLabel>
-                  <CFormInput name="ownerName" size="sm" id="ownerName" value="" />
+                  <CFormInput name="ownerName" size="sm" id="ownerName"  />
                 </CCol>
 
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="ownerMob">Owner Mobile Number*</CFormLabel>
-                  <CFormInput name="ownerMob" size="sm" id="ownerMob" value="" />
+                  <CFormInput name="ownerMob" size="sm" id="ownerMob"  />
                 </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="aadharCard">Aadhar Card*</CFormLabel>

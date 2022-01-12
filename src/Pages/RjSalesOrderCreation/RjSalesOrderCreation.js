@@ -50,8 +50,8 @@ const ParkingYardGate = () => {
             <CForm className="container p-3" onSubmit={handleSubmit}>
               <CRow>
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Vehicle Number*</CFormLabel>
-                  <CFormSelect size="sm" aria-label="Small select example">
+                  <CFormLabel htmlFor="vNum">Vehicle Number*</CFormLabel>
+                  <CFormSelect size="sm" aria-label="Small select example" id='vNum'>
                     <option hidden>Select...</option>
 
                     <option value="1">TN45AT8614</option>
@@ -63,19 +63,20 @@ const ParkingYardGate = () => {
                 </CCol>
 
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Tripsheet Number</CFormLabel>
+                  <CFormLabel htmlFor="tNum">Tripsheet Number</CFormLabel>
 
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+                  <CFormInput size="sm" id="tNum"  readOnly />
                 </CCol>
 
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">
+                  <CFormLabel htmlFor="Payment">
                     Payment Terms
                     {errors.Payment && <span className="help text-danger">{errors.Payment}</span>}
                   </CFormLabel>
                   <CFormSelect
                     size="sm"
                     name="Payment"
+                    id='Payment'
                     onFocus={onFocus}
                     onBlur={onBlur}
                     onChange={handleChange}
@@ -83,7 +84,7 @@ const ParkingYardGate = () => {
                     className={`${errors.Payment && 'is-invalid'}`}
                     aria-label="Small select example"
                   >
-                    <option value="" hidden>
+                    <option  hidden>
                       Select...
                     </option>
                     <option value="1">Shed</option>
@@ -92,35 +93,35 @@ const ParkingYardGate = () => {
                 </CCol>
                 {values.Payment == 2 && (
                   <CCol xs={12} md={3}>
-                    <CFormLabel htmlFor="inputAddress">To Pay Customer Name</CFormLabel>
-                    <CFormInput size="sm" id="inputAddress" value="" />
+                    <CFormLabel htmlFor="cName">To Pay Customer Name</CFormLabel>
+                    <CFormInput size="sm" id="cName"  />
                   </CCol>
 
                 )}
                 {values.Payment == 2 && (
                   <CCol xs={12} md={3}>
-                    <CFormLabel htmlFor="inputAddress">Customer Mobile Number</CFormLabel>
-                    <CFormInput size="sm" id="inputAddress" value="" />
+                    <CFormLabel htmlFor="cMob">Customer Mobile Number</CFormLabel>
+                    <CFormInput size="sm" id="cMob"  />
                   </CCol>
                 )}
                 {values.Payment == 2 && (
                   <CCol xs={12} md={3}>
-                    <CFormLabel htmlFor="inputAddress">Customer PAN Number</CFormLabel>
-                    <CFormInput size="sm" id="inputAddress" value="" />
+                    <CFormLabel htmlFor="cPAN">Customer PAN Number</CFormLabel>
+                    <CFormInput size="sm" id="cPAN"  />
                   </CCol>
                 )}
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Shed PAN Number</CFormLabel>
-                  <CFormInput size="sm" id="inputAddress" value="" />
+                  <CFormLabel htmlFor="sPAN">Shed PAN Number</CFormLabel>
+                  <CFormInput size="sm" id="sPAN"  />
                 </CCol>
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Shed Aadhar Number*</CFormLabel>
-                  <CFormInput size="sm" id="inputAddress" value="" />
+                  <CFormLabel htmlFor="sAadhar">Shed Aadhar Number*</CFormLabel>
+                  <CFormInput size="sm" id="sAadhar"  />
                 </CCol>
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Shed Name*</CFormLabel>
+                  <CFormLabel htmlFor="shedName">Shed Name*</CFormLabel>
 
-                  <CFormSelect size="sm" aria-label="Small select example">
+                  <CFormSelect size="sm" id='shedName' aria-label="Small select example">
                     <option hidden>Select...</option>
 
                     <option value="1">North</option>
@@ -131,8 +132,8 @@ const ParkingYardGate = () => {
                   </CFormSelect>
                 </CCol>
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Material Type*</CFormLabel>
-                  <CFormSelect size="sm" aria-label="Small select example">
+                  <CFormLabel htmlFor="mType">Material Type*</CFormLabel>
+                  <CFormSelect size="sm" id='mType' aria-label="Small select example">
                     <option hidden>Select...</option>
 
                     <option value="1">Vegetable</option>
@@ -144,17 +145,17 @@ const ParkingYardGate = () => {
                 </CCol>
 
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Material Description*</CFormLabel>
-                  <CFormInput size="sm" id="inputAddress" value="" />
+                  <CFormLabel htmlFor="Mdescription">Material Description*</CFormLabel>
+                  <CFormInput size="sm" id="Mdescription"  />
                 </CCol>
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">HSN Code</CFormLabel>
+                  <CFormLabel htmlFor="HSNcode">HSN Code</CFormLabel>
 
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+                  <CFormInput size="sm" id="HSNcode"  readOnly />
                 </CCol>
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">UOM*</CFormLabel>
-                  <CFormSelect size="sm" aria-label="Small select example">
+                  <CFormLabel htmlFor="uom">UOM*</CFormLabel>
+                  <CFormSelect size="sm" id='uom' aria-label="Small select example">
                     <option hidden>Select...</option>
 
                     <option value="1">select</option>
@@ -164,10 +165,10 @@ const ParkingYardGate = () => {
                 </CCol>
 
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">
-                    Order Qty. Tons*
-                    {errors.OdometerKm && (
-                      <span className="help text-danger">{errors.OdometerKm}</span>
+                  <CFormLabel htmlFor="ordQty">
+                    Order Qty Tons*
+                    {errors.ordQty && (
+                      <span className="help text-danger">{errors.ordQty}</span>
                     )}
                   </CFormLabel>
                   <CFormInput
@@ -177,38 +178,38 @@ const ParkingYardGate = () => {
                     onChange={handleChange}
                     className={`${errors.OdometerKm && 'is-invalid'}`}
                     size="sm"
-                    id="inputAddress"
+                    id="ordQty"
                     placeholder=""
                   />
                 </CCol>
 
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">
+                  <CFormLabel htmlFor="frightincome">
                     Freight Income*
-                    {errors.OdometerKm && (
-                      <span className="help text-danger">{errors.OdometerKm}</span>
+                    {errors.frightincome && (
+                      <span className="help text-danger">{errors.frightincome}</span>
                     )}
                   </CFormLabel>
                   <CFormInput
-                    name="Order Qty"
+                    name="frightincome"
                     onFocus={onFocus}
                     onBlur={onBlur}
                     onChange={handleChange}
                     className={`${errors.OdometerKm && 'is-invalid'}`}
                     size="sm"
-                    id="inputAddress"
+                    id="frightincome"
                     placeholder=""
                   />
                 </CCol>
 
                 <CCol xs={12} md={3}>
                   {/* <CFormLabel htmlFor="inputAddress">Advance Amount*</CFormLabel> */}
-                  <CFormLabel htmlFor="inputAddress">Advance Amount*</CFormLabel> {/* Changed */}
-                  <CFormInput size="sm" id="inputAddress" value="" />
+                  <CFormLabel htmlFor="advanceAmount">Advance Amount*</CFormLabel> {/* Changed */}
+                  <CFormInput size="sm" id="advanceAmount"  />
                 </CCol>
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Last Delivery Point*</CFormLabel>
-                  <CFormSelect size="sm" aria-label="Small select example">
+                  <CFormLabel htmlFor="lastDelivery">Last Delivery Point*</CFormLabel>
+                  <CFormSelect size="sm" id='lastDelivery' aria-label="Small select example">
                     <option hidden>Select...</option>
 
                     <option value="1">select</option>
@@ -217,17 +218,17 @@ const ParkingYardGate = () => {
                   </CFormSelect>
                 </CCol>
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Empty Load KM*</CFormLabel>
+                  <CFormLabel htmlFor="emptyLoad">Empty Load KM*</CFormLabel>
 
-                  <CFormInput size="sm" id="inputAddress" value="" />
+                  <CFormInput size="sm" id="emptyLoad"  />
                 </CCol>
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Loading Point*</CFormLabel>
-                  <CFormInput size="sm" id="inputAddress" value="" />
+                  <CFormLabel htmlFor="loadPoint">Loading Point*</CFormLabel>
+                  <CFormInput size="sm" id="loadPoint"  />
                 </CCol>
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Unloading Point*</CFormLabel>
-                  <CFormSelect size="sm" aria-label="Small select example">
+                  <CFormLabel htmlFor="unloading">Unloading Point*</CFormLabel>
+                  <CFormSelect size="sm" id='unloading' aria-label="Small select example">
                     <option hidden>Select...</option>
 
                     <option value="1">select</option>
@@ -236,29 +237,29 @@ const ParkingYardGate = () => {
                   </CFormSelect>
                 </CCol>
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Empty Km After Unload*</CFormLabel>
+                  <CFormLabel htmlFor="emptyUnload">Empty Km After Unload*</CFormLabel>
 
-                  <CFormInput size="sm" id="inputAddress" value="" />
+                  <CFormInput size="sm" id="emptyUnload"  />
                 </CCol>
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">
+                  <CFormLabel htmlFor="expectDelivery">
                     Expected Delivery Date & Time*
-                    {errors.AdvancePaymentMode && <span className="help text-danger">{errors.AdvancePaymentMode}</span>}
+                    {errors.expectDelivery && <span className="help text-danger">{errors.expectDelivery}</span>}
                   </CFormLabel>
-                  <CFormInput size="sm" type="datetime-local" id="inputAddress" />
+                  <CFormInput size="sm" type="datetime-local" id="expectDelivery" />
                 </CCol>
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">
+                  <CFormLabel htmlFor="expectReturn">
                     Expected Return Date & Time*
-                    {errors.AdvancePaymentMode && <span className="help text-danger">{errors.AdvancePaymentMode}</span>}
+                    {errors.expectReturn && <span className="help text-danger">{errors.expectReturn}</span>}
                   </CFormLabel>
-                  <CFormInput size="sm" type="datetime-local" id="inputAddress" />
+                  <CFormInput size="sm" type="datetime-local" id="expectReturn" />
                 </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="remarks">Remarks</CFormLabel>
                   <CFormTextarea
                     name="remarks"
-                    id="exampleFormControlTextarea1"
+                    id="remarks"
                     rows="1"
                   ></CFormTextarea>
                 </CCol>

@@ -115,9 +115,9 @@ const Shipment = () => {
                                     <CModalBody>
                                         <CRow className="">
                                             <CCol>
-                                                <CFormLabel htmlFor="inputAddress">
-                                                    Truck No
-                                                    {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
+                                                <CFormLabel htmlFor="VNum">
+                                                    Vehicle Number
+                                                    {errors.VNum && <span className="help text-danger">{errors.VNum}</span>}
                                                 </CFormLabel>
                                                 <CFormSelect size="sm" className="mb-3" aria-label="Small select example">
                                                     <option hidden>Select ...</option>
@@ -130,37 +130,37 @@ const Shipment = () => {
                                                 </CFormSelect>
                                             </CCol>
                                             <CCol>
-                                                <CFormLabel htmlFor="inputAddress">
-                                                    Truck Capacity
-                                                    {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
+                                                <CFormLabel htmlFor="vCap">
+                                                    Vehicle Capacity
+                                                    {errors.vCap && <span className="help text-danger">{errors.vCap}</span>}
                                                 </CFormLabel>
-                                                <CFormInput size="sm" id="inputAddress" value="" readOnly />
+                                                <CFormInput size="sm" id="vCap"  readOnly />
                                             </CCol>
                                         </CRow>
                                         <CRow className="">
                                             <CCol>
-                                                <CFormLabel htmlFor="inputAddress">
-                                                    Truck Type
+                                                <CFormLabel htmlFor="vCap">
+                                                Vehicle Type
                                                     {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
                                                 </CFormLabel>
-                                                <CFormInput size="sm" id="inputAddress" value="" readOnly />
+                                                <CFormInput size="sm" id="vCap"  readOnly />
                                             </CCol>
                                             <CCol>
-                                                <CFormLabel htmlFor="inputAddress">
+                                                <CFormLabel htmlFor="dName">
                                                     Driver Name
-                                                    {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
+                                                    {errors.dName && <span className="help text-danger">{errors.dName}</span>}
                                                 </CFormLabel>
-                                                <CFormInput size="sm" id="inputAddress" value="" readOnly />
+                                                <CFormInput size="sm" id="dName"  readOnly />
                                             </CCol>
 
                                         </CRow>
                                         <CRow>
                                             <CCol>
-                                                <CFormLabel htmlFor="inputAddress">
+                                                <CFormLabel htmlFor="dMob">
                                                     Driver Mobile Number
-                                                    {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
+                                                    {errors.dMob && <span className="help text-danger">{errors.dMob}</span>}
                                                 </CFormLabel>
-                                                <CFormInput size="sm" id="inputAddress" value="" readOnly />
+                                                <CFormInput size="sm" id="dMob"  readOnly />
                                             </CCol>
                                             <CCol>
 

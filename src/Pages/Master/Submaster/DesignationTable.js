@@ -92,7 +92,7 @@ const DesignationTable = () => {
                                         <CFormLabel htmlFor="inputAddress">
                                         Designation
                                         </CFormLabel>
-                                        <CFormInput size="sm" id="inputAddress" value="" />
+                                        <CFormInput size="sm" id="inputAddress"  />
                                     </CCol>
                                 </CRow>
                             </CModalBody>

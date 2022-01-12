@@ -92,7 +92,7 @@ const VehicleCapacityTable = () => {
                                         <CFormLabel htmlFor="inputAddress">
                                             Vehicle Capacity
                                         </CFormLabel>
-                                        <CFormInput size="sm" id="inputAddress" value="" />
+                                        <CFormInput size="sm" id="inputAddress"  />
                                     </CCol>
                                 </CRow>
                             </CModalBody>

@@ -92,7 +92,7 @@ const DefectTypeTable = () => {
                                         <CFormLabel htmlFor="inputAddress">
                                             Defect Type
                                         </CFormLabel>
-                                        <CFormInput size="sm" id="inputAddress" value="" />
+                                        <CFormInput size="sm" id="inputAddress"  />
                                     </CCol>
                                 </CRow>
                             </CModalBody>

@@ -92,7 +92,7 @@ const DepartmentTable = () => {
                                         <CFormLabel htmlFor="inputAddress">
                                             Department
                                         </CFormLabel>
-                                        <CFormInput size="sm" id="inputAddress" value="" />
+                                        <CFormInput size="sm" id="inputAddress"  />
                                     </CCol>
                                 </CRow>
                             </CModalBody>

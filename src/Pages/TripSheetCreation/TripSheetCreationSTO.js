@@ -48,7 +48,7 @@ const TripSheetCreationSTO = () => {
               className={`${errors.vehicleType && 'is-invalid'}`}
               aria-label="Small select example"
             >
-              <option value="" hidden>
+              <option  hidden>
                 Select...
               </option>
 
@@ -74,7 +74,7 @@ const TripSheetCreationSTO = () => {
               className={`${errors.vehicleType && 'is-invalid'}`}
               aria-label="Small select example"
             >
-              <option value="" hidden>
+              <option  hidden>
                 Select...
               </option>
 
@@ -90,7 +90,7 @@ const TripSheetCreationSTO = () => {
               Vehicle Capacity In MTS*
               {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
-            <CFormInput size="sm" id="inputAddress" value="" readOnly />
+            <CFormInput size="sm" id="inputAddress"  readOnly />
           </CCol>
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
@@ -107,7 +107,7 @@ const TripSheetCreationSTO = () => {
               className={`${errors.vehicleType && 'is-invalid'}`}
               aria-label="Small select example"
             >
-              <option value="" hidden>
+              <option  hidden>
                 Select...
               </option>
 
@@ -125,21 +125,21 @@ const TripSheetCreationSTO = () => {
               Driver Code
               {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
-            <CFormInput size="sm" id="inputAddress" value="" readOnly />
+            <CFormInput size="sm" id="inputAddress"  readOnly />
           </CCol>
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
               Driver Mobile Number
               {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
-            <CFormInput size="sm" id="inputAddress" value="" readOnly />
+            <CFormInput size="sm" id="inputAddress"  readOnly />
           </CCol>
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
               Opening KM*
               {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
-            <CFormInput size="sm" id="inputAddress" type="number" value="" />
+            <CFormInput size="sm" id="inputAddress" type="number"  />
           </CCol>
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">

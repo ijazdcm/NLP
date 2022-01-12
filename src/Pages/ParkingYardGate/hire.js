@@ -71,24 +71,24 @@ const ParkingYardGate = () => {
                   <CCol md={3}>
                     <CFormLabel htmlFor="vNum">Vehicle No*</CFormLabel>
 
-                    <CFormInput size="sm" id="vNum" value="" />
+                    <CFormInput size="sm" id="vNum"  />
                   </CCol>
 
                   <CCol xs={12} md={3}>
                     <CFormLabel htmlFor="vCap">Vehicle Capacity*</CFormLabel>
 
-                    <CFormInput size="sm" id="vCap" value="" />
+                    <CFormInput size="sm" id="vCap"  />
                   </CCol>
 
                   <CCol xs={12} md={3}>
                     <CFormLabel htmlFor="dName">Driver Name*</CFormLabel>
-                    <CFormInput size="sm" id="driverNme" className="mb-3" value="" />
+                    <CFormInput size="sm" id="driverNme" className="mb-3"  />
                   </CCol>
                 </CRow>
                 <CRow>
                   <CCol xs={12} md={3}>
                     <CFormLabel htmlFor="dNum">Driver Mobile No*</CFormLabel>
-                    <CFormInput size="sm" id="driverNum" value="" />
+                    <CFormInput size="sm" id="driverNum"  />
                   </CCol>
 
                   <CCol xs={12} md={3}>

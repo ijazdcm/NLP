@@ -84,10 +84,11 @@ const FIScreen = () => {
                             </CRow>
                             <CRow className="">
                                 <CCol xs={12} md={3}>
-                                    <CFormLabel htmlFor="insuranceValid">Vehicle Number*</CFormLabel>
+                                    <CFormLabel htmlFor="vNum">Vehicle Number*</CFormLabel>
                                     <CFormSelect
                                         size="sm"
-                                        name="insuranceValid"
+                                        name="vNum"
+                                        id='vNum'
                                         className=""
                                         aria-label="Small select example"
                                     >
@@ -97,10 +98,11 @@ const FIScreen = () => {
                                     </CFormSelect>
                                 </CCol>
                                 <CCol xs={12} md={3}>
-                                    <CFormLabel htmlFor="insuranceValid">Trip Sheet Number*</CFormLabel>
+                                    <CFormLabel htmlFor="tNum">Trip Sheet Number*</CFormLabel>
                                     <CFormSelect
                                         size="sm"
-                                        name="insuranceValid"
+                                        id='tNum'
+                                        name="tNum"
                                         className=""
                                         aria-label="Small select example"
                                     >
@@ -110,10 +112,11 @@ const FIScreen = () => {
                                     </CFormSelect>
                                 </CCol>
                                 <CCol xs={12} md={3}>
-                                    <CFormLabel htmlFor="insuranceValid">Document Number*</CFormLabel>
+                                    <CFormLabel htmlFor="docNum">Document Number*</CFormLabel>
                                     <CFormSelect
                                         size="sm"
-                                        name="insuranceValid"
+                                        name="docNum"
+                                        id='docNum'
                                         className=""
                                         aria-label="Small select example"
                                     >
@@ -123,14 +126,15 @@ const FIScreen = () => {
                                     </CFormSelect>
                                 </CCol>
                                 <CCol xs={12} md={3}>
-                                    <CFormLabel htmlFor="freigthRate">Document Type*</CFormLabel>
-                                    <CFormInput type="text" name="freigthRate" size="sm" id="" readOnly />
+                                    <CFormLabel htmlFor="docType">Document Type*</CFormLabel>
+                                    <CFormInput type="text" name="docType" size="sm" id="docType" readOnly />
                                 </CCol>
                                 <CCol xs={12} md={3}>
-                                    <CFormLabel htmlFor="insuranceValid">Internal Order Number*</CFormLabel>
+                                    <CFormLabel htmlFor="intNum">Internal Order Number*</CFormLabel>
                                     <CFormSelect
                                         size="sm"
-                                        name="insuranceValid"
+                                        name="intNum"
+                                        id='intNum'
                                         className=""
                                         aria-label="Small select example"
                                     >
@@ -140,20 +144,20 @@ const FIScreen = () => {
                                     </CFormSelect>
                                 </CCol>
                                 <CCol xs={12} md={3}>
-                                    <CFormLabel htmlFor="freigthRate">Amount*</CFormLabel>
-                                    <CFormInput type="text" name="freigthRate" size="sm" id="" />
+                                    <CFormLabel htmlFor="amount">Amount*</CFormLabel>
+                                    <CFormInput type="text" name="amount" size="sm" id="amount" />
                                 </CCol>
                                 <CCol xs={12} md={3}>
-                                    <CFormLabel htmlFor="freigthRate">Narration*</CFormLabel>
-                                    <CFormInput type="text" name="freigthRate" size="sm" id="" />
+                                    <CFormLabel htmlFor="narration">Narration*</CFormLabel>
+                                    <CFormInput type="text" name="narration" size="sm" id="narration" />
                                 </CCol>
                                 <CCol xs={12} md={3}>
-                                    <CFormLabel htmlFor="freigthRate">Division*</CFormLabel>
-                                    <CFormInput type="text" name="freigthRate" size="sm" id="" readOnly />
+                                    <CFormLabel htmlFor="division">Division*</CFormLabel>
+                                    <CFormInput type="text" name="division" size="sm" id="division" readOnly />
                                 </CCol>
                                 <CCol xs={12} md={3}>
                                     <CFormLabel htmlFor="remarks">Remarks</CFormLabel>
-                                    <CFormTextarea id="exampleFormControlTextarea1" rows="1"></CFormTextarea>
+                                    <CFormTextarea id="remarks" rows="1"></CFormTextarea>
                                 </CCol>
                             </CRow>
 

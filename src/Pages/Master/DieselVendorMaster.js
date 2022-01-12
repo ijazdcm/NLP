@@ -64,49 +64,49 @@ const ShedMaster = () => {
                         <CForm className="row g-3 m-2 p-1" onSubmit={handleSubmit}>
                             <CRow className="mb-md-2">
                                 <CCol md={3}>
-                                    <CFormLabel htmlFor="vNum">Diesel Vendor Name*</CFormLabel>
+                                    <CFormLabel htmlFor="dVendor">Diesel Vendor Name*</CFormLabel>
                                     <CFormInput
-                                        name="vNum"
+                                        name="dVendor"
                                         size="sm"
-                                        id=""
+                                        id="dVendor"
                                         placeholder=""
                                     />
                                 </CCol>
                                 <CCol md={3}>
-                                    <CFormLabel htmlFor="vNum">Diesel Vendor Code*</CFormLabel>
+                                    <CFormLabel htmlFor="dCode">Diesel Vendor Code*</CFormLabel>
                                     <CFormInput
-                                        name="vNum"
+                                        name="dCode"
                                         size="sm"
-                                        id=""
+                                        id="dCode"
                                         placeholder=""
                                     />
                                 </CCol>
                                 <CCol md={3}>
-                                    <CFormLabel htmlFor="vNum">Diesel Vendor Mobile Number 1*</CFormLabel>
+                                    <CFormLabel htmlFor="dMob">Diesel Vendor Mobile Number 1*</CFormLabel>
                                     <CFormInput
-                                        name="vNum"
+                                        name="dMob"
                                         size="sm"
-                                        id=""
+                                        id="dMob"
                                         placeholder=""
                                     />
                                 </CCol>
                                 <CCol md={3}>
-                                    <CFormLabel htmlFor="vNum">Diesel Vendor Mobile Number 2*</CFormLabel>
+                                    <CFormLabel htmlFor="dMob1">Diesel Vendor Mobile Number 2*</CFormLabel>
                                     <CFormInput
-                                        name="vNum"
+                                        name="dMob1"
                                         size="sm"
-                                        id=""
+                                        id="dMob1"
                                         placeholder=""
                                     />
                                 </CCol>
                             </CRow>
                             <CRow className="mb-md-2">
                                 <CCol md={3}>
-                                    <CFormLabel htmlFor="vNum">Diesel Vendor Mail ID*</CFormLabel>
+                                    <CFormLabel htmlFor="mail">Diesel Vendor Mail ID*</CFormLabel>
                                     <CFormInput
-                                        name="vNum"
+                                        name="mail"
                                         size="sm"
-                                        id=""
+                                        id="mail"
                                         placeholder=""
                                     />
                                 </CCol>

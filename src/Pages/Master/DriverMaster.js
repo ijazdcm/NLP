@@ -27,6 +27,7 @@ import {
     CModalTitle,
     CModalBody,
     CModalFooter,
+    CFormTextarea,
 } from '@coreui/react'
 import { React, useState } from 'react'
 import useForm from 'src/Hooks/useForm.js'
@@ -64,7 +65,7 @@ const DriverMaster = () => {
                         <CForm className="row g-3 m-2 p-1" onSubmit={handleSubmit}>
                             <CRow >
                                 <CCol md={3}>
-                                    <CFormLabel htmlFor="vehicleType">
+                                    <CFormLabel htmlFor="dType">
                                         Driver Type*{' '}
                                         {errors.DriverType && (
                                             <span className="help text-danger">{errors.DriverType}</span>
@@ -73,7 +74,8 @@ const DriverMaster = () => {
 
                                     <CFormSelect
                                         size="sm"
-                                        name="vehicleType"
+                                        name="dType"
+                                        id='dType'
                                         onFocus={onFocus}
                                         onBlur={onBlur}
                                         onChange={handleChange}
@@ -81,7 +83,7 @@ const DriverMaster = () => {
                                         className={`mb-1 ${errors.DriverType && 'is-invalid'}`}
                                         aria-label="Small select example"
                                     >
-                                        <option value="">Select ...</option>
+                                        <option >Select ...</option>
 
                                         <option value="1">Own</option>
 
@@ -91,61 +93,61 @@ const DriverMaster = () => {
                                     </CFormSelect>
                                 </CCol>
                                 <CCol md={3}>
-                                    <CFormLabel htmlFor="vNum">Driver Name*</CFormLabel>
+                                    <CFormLabel htmlFor="dName">Driver Name*</CFormLabel>
                                     <CFormInput
-                                        name="vNum"
+                                        name="dName"
                                         size="sm"
-                                        id=""
+                                        id="dName"
                                         placeholder=""
                                     />
                                 </CCol>
                                 <CCol md={3}>
-                                    <CFormLabel htmlFor="vNum">Driver Code*</CFormLabel>
+                                    <CFormLabel htmlFor="dCode">Driver Code*</CFormLabel>
                                     <CFormInput
-                                        name="vNum"
+                                        name="dCode"
                                         size="sm"
-                                        id=""
+                                        id="dCode"
                                         placeholder=""
                                     />
                                 </CCol>
                                 <CCol md={3}>
-                                    <CFormLabel htmlFor="vNum">Driver Mobile Number 1*</CFormLabel>
+                                    <CFormLabel htmlFor="dMob">Driver Mobile Number 1*</CFormLabel>
                                     <CFormInput
-                                        name="vNum"
+                                        name="dMob"
                                         size="sm"
-                                        id=""
+                                        id="dMob"
                                         placeholder=""
                                     />
                                 </CCol>
                             </CRow>
                             <CRow className="mb-md-1">
                                 <CCol md={3}>
-                                    <CFormLabel htmlFor="vNum">Driver Mobile Number 2*</CFormLabel>
+                                    <CFormLabel htmlFor="dMob1">Driver Mobile Number 2*</CFormLabel>
                                     <CFormInput
-                                        name="vNum"
+                                        name="dMob1"
                                         size="sm"
-                                        id=""
+                                        id="dMob1"
                                         placeholder=""
                                     />
                                 </CCol>
                                 <CCol md={3}>
-                                    <CFormLabel htmlFor="vNum">License Number*</CFormLabel>
+                                    <CFormLabel htmlFor="licence">License Number*</CFormLabel>
                                     <CFormInput
-                                        name="vNum"
+                                        name="licence"
                                         size="sm"
-                                        id=""
+                                        id="licence"
                                         placeholder=""
                                     />
                                 </CCol>
                                 <CCol md={3}>
-                                    <CFormLabel >License Valid To*</CFormLabel>
+                                    <CFormLabel htmlFor="valid">License Valid To*</CFormLabel>
                                     <CFormInput
-                                        type="date" size="sm" id="fecha-hasta" name="fecha-hasta" placeholder="date"
+                                        type="date" size="sm" id="valid" name="valid" placeholder="date"
 
                                     />
                                 </CCol>
                                 <CCol md={3}>
-                                    <CFormLabel htmlFor="formFileSm">
+                                    <CFormLabel htmlFor="lFront">
                                         License Copy Front*{' '}
                                         {errors.LicenseCopyFront && (
                                             <span className="help text-danger">{errors.LicenseCopyFront}</span>
@@ -153,15 +155,15 @@ const DriverMaster = () => {
                                     </CFormLabel>
                                     <CFormInput
                                         type="file"
-                                        name="LicenseCopyFront"
+                                        name="lFront"
                                         size="sm"
-                                        id="formFileSm"
+                                        id="lFront"
                                     />
                                 </CCol>
                             </CRow>
                             <CRow className="mb-md-1">
                                 <CCol md={3}>
-                                    <CFormLabel htmlFor="formFileSm">
+                                    <CFormLabel htmlFor="lBack">
                                         License Copy Back*{' '}
                                         {errors.LicenseCopyBack && (
                                             <span className="help text-danger">{errors.LicenseCopyBack}</span>
@@ -169,23 +171,23 @@ const DriverMaster = () => {
                                     </CFormLabel>
                                     <CFormInput
                                         type="file"
-                                        name="LicenseCopyBack"
+                                        name="lBack"
                                         size="sm"
-                                        id="formFileSm"
+                                        id="lBack"
                                     />
                                 </CCol>
                                 <CCol md={3}>
-                                    <CFormLabel htmlFor="vNum">License Validity Status*</CFormLabel>
+                                    <CFormLabel htmlFor="vStatus">License Validity Status*</CFormLabel>
                                     <CFormInput
-                                        name="vNum"
+                                        name="vStatus"
                                         size="sm"
-                                        id=""
+                                        id="vStatus"
                                         placeholder=""
                                         readOnly
                                     />
                                 </CCol>
                                 <CCol md={3}>
-                                    <CFormLabel htmlFor="formFileSm">
+                                    <CFormLabel htmlFor="AadharCard">
                                         Aadhar Card*{' '}
                                         {errors.AadharCard && (
                                             <span className="help text-danger">{errors.AadharCard}</span>
@@ -195,11 +197,11 @@ const DriverMaster = () => {
                                         type="file"
                                         name="AadharCard"
                                         size="sm"
-                                        id="formFileSm"
+                                        id="AadharCard"
                                     />
                                 </CCol>
                                 <CCol md={3}>
-                                    <CFormLabel htmlFor="formFileSm">
+                                    <CFormLabel htmlFor="PANCard">
                                         PAN Card*{' '}
                                         {errors.PANCard && (
                                             <span className="help text-danger">{errors.PANCard}</span>
@@ -209,13 +211,13 @@ const DriverMaster = () => {
                                         type="file"
                                         name="PANCard"
                                         size="sm"
-                                        id="formFileSm"
+                                        id="PANCard"
                                     />
                                 </CCol>
                             </CRow>
                             <CRow className="mb-md-1">
                                 <CCol md={3}>
-                                    <CFormLabel htmlFor="formFileSm">
+                                    <CFormLabel htmlFor="DriverPhoto">
                                         Driver Photo*{' '}
                                         {errors.DriverPhoto && (
                                             <span className="help text-danger">{errors.DriverPhoto}</span>
@@ -225,15 +227,15 @@ const DriverMaster = () => {
                                         type="file"
                                         name="DriverPhoto"
                                         size="sm"
-                                        id="formFileSm"
+                                        id="DriverPhoto"
                                     />
                                 </CCol>
                                 <CCol md={3}>
-                                    <CFormLabel htmlFor="vNum">Driver Address*</CFormLabel>
-                                    <CFormInput
-                                        name="vNum"
+                                    <CFormLabel htmlFor="address">Driver Address*</CFormLabel>
+                                    <CFormTextarea
+                                        name="address"
                                         size="sm"
-                                        id=""
+                                        id="address"
                                         placeholder=""
                                     />
                                 </CCol>

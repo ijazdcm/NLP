@@ -92,7 +92,7 @@ const PreviousLoadDetailsTable = () => {
                                         <CFormLabel htmlFor="inputAddress">
                                             Previous Load Details
                                         </CFormLabel>
-                                        <CFormInput size="sm" id="inputAddress" value="" />
+                                        <CFormInput size="sm" id="inputAddress"  />
                                     </CCol>
                                 </CRow>
                             </CModalBody>

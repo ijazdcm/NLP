@@ -60,12 +60,12 @@ const VehicleMaintainence = () => {
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="vNum">Vehicle No*</CFormLabel>
 
-                  <CFormInput size="sm" id="vNum" value="" readOnly />
+                  <CFormInput size="sm" id="vNum"  readOnly />
                 </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="dName">Driver Name*</CFormLabel>
                   <CFormSelect size="sm" name="dName" id='dName' className="">
-                    <option value="" hidden>
+                    <option  hidden>
                       Select ...
                     </option>
                     <option value="inHouse" onClick={() => setoutSide(false)}>
@@ -85,7 +85,7 @@ const VehicleMaintainence = () => {
                   </CFormLabel>
 
                   <CFormSelect size="sm" name="maintenenceType" id='maintenenceType' className="">
-                    <option value="" hidden>
+                    <option  hidden>
                       Select Maintenance Type
                     </option>
                     <option value="scheduled">Scheduled Maintenance</option>
@@ -95,7 +95,7 @@ const VehicleMaintainence = () => {
                 <CCol className="mb-3" md={3}>
                   <CFormLabel htmlFor="maintenenceBy">Maintenance By *</CFormLabel>
                   <CFormSelect size="sm" name="maintenenceBy" id='maintenenceBy' className="">
-                    <option value="" hidden>
+                    <option  hidden>
                       Select Maintenance By
                     </option>
                     <option value="inHouse" onClick={() => setoutSide(false)}>
@@ -109,7 +109,7 @@ const VehicleMaintainence = () => {
                 <CCol className="mb-3" md={3}>
                   <CFormLabel htmlFor="workOrder">Work Order *</CFormLabel>
                   <CFormSelect size="sm" name="workOrder" id='workOrder' className="">
-                    <option value="" hidden>
+                    <option  hidden>
                       Select...
                     </option>
                     <option value="inHouse" onClick={() => setoutSide(false)}>
@@ -121,10 +121,10 @@ const VehicleMaintainence = () => {
                   <CFormLabel htmlFor="vendorName">Vendor Name *</CFormLabel>
                   <CFormSelect size="sm" name="vendorName" id='vendorName' className="">
 
-                    <option value="" hidden>
+                    <option  hidden>
                       Select...
                     </option>
-                    <option value="" onClick={() => setoutSide(false)}>
+                    <option  onClick={() => setoutSide(false)}>
                       Select-LP
                     </option>
                   </CFormSelect>

@@ -63,17 +63,17 @@ const UserLoginMaster = () => {
                         <CForm className="row g-3 m-2 p-1" onSubmit={handleSubmit}>
                             <CRow className="mb-md-1">
                                 <CCol md={3}>
-                                    <CFormLabel htmlFor="vNum">User Name*</CFormLabel>
+                                    <CFormLabel htmlFor="uName">User Name*</CFormLabel>
                                     <CFormInput
-                                        name="vNum"
+                                        name="uName"
                                         size="sm"
-                                        id=""
+                                        id="uName"
                                         placeholder=""
 
                                     />
                                 </CCol>
                                 <CCol md={3}>
-                                    <CFormLabel htmlFor="vehicleType">
+                                    <CFormLabel htmlFor="Divison">
                                         Divison*{' '}
                                         {errors.Divison && (
                                             <span className="help text-danger">{errors.Divison}</span>
@@ -83,6 +83,7 @@ const UserLoginMaster = () => {
                                     <CFormSelect
                                         size="sm"
                                         name="Divison"
+                                        id='Divison'
                                         onFocus={onFocus}
                                         onBlur={onBlur}
                                         onChange={handleChange}
@@ -90,7 +91,7 @@ const UserLoginMaster = () => {
                                         className={`mb-1 ${errors.Divison && 'is-invalid'}`}
                                         aria-label="Small select example"
                                     >
-                                        <option value="">Select ...</option>
+                                        <option >Select ...</option>
 
                                         <option value="1">NLFD</option>
 
@@ -114,6 +115,7 @@ const UserLoginMaster = () => {
                                     <CFormSelect
                                         size="sm"
                                         name="Department"
+                                        id='Department'
                                         onFocus={onFocus}
                                         onBlur={onBlur}
                                         onChange={handleChange}
@@ -121,7 +123,7 @@ const UserLoginMaster = () => {
                                         className={`mb-1 ${errors.Department && 'is-invalid'}`}
                                         aria-label="Small select example"
                                     >
-                                        <option value="">Select ...</option>
+                                        <option >Select ...</option>
 
                                         <option value="1">Sourcing Team</option>
 
@@ -144,6 +146,7 @@ const UserLoginMaster = () => {
                                     <CFormSelect
                                         size="sm"
                                         name="Designation"
+                                        id='Designation'
                                         onFocus={onFocus}
                                         onBlur={onBlur}
                                         onChange={handleChange}
@@ -151,7 +154,7 @@ const UserLoginMaster = () => {
                                         className={`mb-1 ${errors.Designation && 'is-invalid'}`}
                                         aria-label="Small select example"
                                     >
-                                        <option value="">Select ...</option>
+                                        <option >Select ...</option>
 
                                         <option value="1">Junior Executive</option>
 
@@ -168,41 +171,41 @@ const UserLoginMaster = () => {
                             </CRow>
                             <CRow className="mb-md-1">
                                 <CCol md={3}>
-                                    <CFormLabel htmlFor="vNum">Serial No*</CFormLabel>
+                                    <CFormLabel htmlFor="serial">Serial No*</CFormLabel>
                                     <CFormInput
-                                        name="vNum"
+                                        name="serial"
                                         size="sm"
-                                        id=""
+                                        id="serial"
                                         placeholder=""
 
                                     />
                                 </CCol>
                                 <CCol md={3}>
-                                    <CFormLabel htmlFor="vNum">User ID*</CFormLabel>
+                                    <CFormLabel htmlFor="uid">User ID*</CFormLabel>
                                     <CFormInput
-                                        name="vNum"
+                                        name="uid"
                                         size="sm"
-                                        id=""
+                                        id="uid"
                                         placeholder=""
                                         readOnly
                                     />
                                 </CCol>
                                 <CCol md={3}>
-                                    <CFormLabel htmlFor="vNum">User Mobile Number*</CFormLabel>
+                                    <CFormLabel htmlFor="uMob">User Mobile Number*</CFormLabel>
                                     <CFormInput
-                                        name="vNum"
+                                        name="uMob"
                                         size="sm"
-                                        id=""
+                                        id="uMob"
                                         placeholder=""
 
                                     />
                                 </CCol>
                                 <CCol md={3}>
-                                    <CFormLabel htmlFor="vNum">User Mail ID*</CFormLabel>
+                                    <CFormLabel htmlFor="mail">User Mail ID*</CFormLabel>
                                     <CFormInput
-                                        name="vNum"
+                                        name="mail"
                                         size="sm"
-                                        id=""
+                                        id="mail"
                                         placeholder=""
 
                                     />
@@ -210,7 +213,7 @@ const UserLoginMaster = () => {
                             </CRow>
                             <CRow className="mb-md-1">
                                 <CCol md={3}>
-                                    <CFormLabel htmlFor="formFileSm">
+                                    <CFormLabel htmlFor="UserPhoto">
                                         User Photo*{' '}
                                         {errors.UserPhoto && (
                                             <span className="help text-danger">{errors.UserPhoto}</span>
@@ -220,7 +223,7 @@ const UserLoginMaster = () => {
                                         type="file"
                                         name="UserPhoto"
                                         size="sm"
-                                        id="formFileSm"
+                                        id="UserPhoto"
                                     />
                                 </CCol>
 

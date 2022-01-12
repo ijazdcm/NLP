@@ -88,17 +88,17 @@ const TSClossureSto = () => {
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">Vehicle Capacity</CFormLabel>
 
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+                  <CFormInput size="sm" id="inputAddress"  readOnly />
                 </CCol>
                 {/* <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">Tripsheet No.</CFormLabel>
 
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+                  <CFormInput size="sm" id="inputAddress"  readOnly />
                 </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">TS Date & Time</CFormLabel>
 
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+                  <CFormInput size="sm" id="inputAddress"  readOnly />
                 </CCol> */}
                 <CCol md={3}>
                   <CFormLabel htmlFor="inputAddress">Driver Name*</CFormLabel>
@@ -115,17 +115,17 @@ const TSClossureSto = () => {
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">Driver Code</CFormLabel>
 
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+                  <CFormInput size="sm" id="inputAddress"  readOnly />
                 </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">Driver Mobile Number</CFormLabel>
 
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+                  <CFormInput size="sm" id="inputAddress"  readOnly />
                 </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">Opening KM</CFormLabel>
 
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+                  <CFormInput size="sm" id="inputAddress"  readOnly />
                 </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">Opening Odometer Photo</CFormLabel>
@@ -164,7 +164,7 @@ const TSClossureSto = () => {
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">Trip KM</CFormLabel>
 
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+                  <CFormInput size="sm" id="inputAddress"  readOnly />
                 </CCol>
               </CRow>
 
@@ -206,7 +206,7 @@ const TSClossureSto = () => {
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">Diesel Qty.</CFormLabel>
 
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+                  <CFormInput size="sm" id="inputAddress"  readOnly />
                 </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">Diesel Rate</CFormLabel>
@@ -219,7 +219,7 @@ const TSClossureSto = () => {
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">Diesel Amount</CFormLabel>
 
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+                  <CFormInput size="sm" id="inputAddress"  readOnly />
                 </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">Diesel Invoice*</CFormLabel>

@@ -58,7 +58,7 @@ const VendorCreationRequest = () => {
                   <span className="help text-danger">{errors.vehicleType}</span>
                 )}
               </CFormLabel>
-              <CFormInput size="sm" id="inputAddress" value="" readOnly />
+              <CFormInput size="sm" id="inputAddress"  readOnly />
             </CCol>
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="inputAddress">
@@ -67,7 +67,7 @@ const VendorCreationRequest = () => {
                   <span className="help text-danger">{errors.vehicleType}</span>
                 )}
               </CFormLabel>
-              <CFormInput size="sm" id="inputAddress" value="" readOnly />
+              <CFormInput size="sm" id="inputAddress"  readOnly />
             </CCol>
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="inputAddress">
@@ -76,7 +76,7 @@ const VendorCreationRequest = () => {
                   <span className="help text-danger">{errors.vehicleType}</span>
                 )}
               </CFormLabel>
-              <CFormInput size="sm" id="inputAddress" value="" readOnly />
+              <CFormInput size="sm" id="inputAddress"  readOnly />
             </CCol>
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="inputAddress">
@@ -291,7 +291,7 @@ const VendorCreationRequest = () => {
                   <span className="help text-danger">{errors.vehicleType}</span>
                 )}
               </CFormLabel>
-              <CFormInput size="sm" id="inputAddress" value="" readOnly />
+              <CFormInput size="sm" id="inputAddress"  readOnly />
             </CCol>
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="inputAddress">
@@ -300,7 +300,7 @@ const VendorCreationRequest = () => {
                   <span className="help text-danger">{errors.vehicleType}</span>
                 )}
               </CFormLabel>
-              <CFormInput size="sm" id="inputAddress" value="" readOnly />
+              <CFormInput size="sm" id="inputAddress"  readOnly />
             </CCol>
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="inputAddress">
@@ -309,7 +309,7 @@ const VendorCreationRequest = () => {
                   <span className="help text-danger">{errors.vehicleType}</span>
                 )}
               </CFormLabel>
-              <CFormInput size="sm" id="inputAddress" value="" readOnly />
+              <CFormInput size="sm" id="inputAddress"  readOnly />
             </CCol>
           </CRow>
 
@@ -323,7 +323,7 @@ const VendorCreationRequest = () => {
                   <span className="help text-danger">{errors.vehicleType}</span>
                 )}
               </CFormLabel>
-              <CFormInput size="sm" id="inputAddress" value="" />
+              <CFormInput size="sm" id="inputAddress"  />
             </CCol>
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="inputAddress">
@@ -332,7 +332,7 @@ const VendorCreationRequest = () => {
                   <span className="help text-danger">{errors.vehicleType}</span>
                 )}
               </CFormLabel>
-              <CFormInput size="sm" id="inputAddress" value="" />
+              <CFormInput size="sm" id="inputAddress"  />
             </CCol>
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="inputAddress">
@@ -341,7 +341,7 @@ const VendorCreationRequest = () => {
                   <span className="help text-danger">{errors.vehicleType}</span>
                 )}
               </CFormLabel>
-              <CFormInput size="sm" id="inputAddress" value="" />
+              <CFormInput size="sm" id="inputAddress"  />
             </CCol>
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="inputAddress">
@@ -350,7 +350,7 @@ const VendorCreationRequest = () => {
                   <span className="help text-danger">{errors.vehicleType}</span>
                 )}
               </CFormLabel>
-              <CFormInput size="sm" id="inputAddress" value="" />
+              <CFormInput size="sm" id="inputAddress"  />
             </CCol>
           </CRow>
 
@@ -364,7 +364,7 @@ const VendorCreationRequest = () => {
                   <span className="help text-danger">{errors.vehicleType}</span>
                 )}
               </CFormLabel>
-              <CFormInput size="sm" id="inputAddress" value="" />
+              <CFormInput size="sm" id="inputAddress"  />
             </CCol>
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="inputAddress">
@@ -373,7 +373,7 @@ const VendorCreationRequest = () => {
                   <span className="help text-danger">{errors.vehicleType}</span>
                 )}
               </CFormLabel>
-              <CFormInput size="sm" id="inputAddress" value="" readOnly />
+              <CFormInput size="sm" id="inputAddress"  readOnly />
             </CCol>
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="inputAddress">
@@ -382,7 +382,7 @@ const VendorCreationRequest = () => {
                   <span className="help text-danger">{errors.vehicleType}</span>
                 )}
               </CFormLabel>
-              <CFormInput size="sm" id="inputAddress" value="" readOnly />
+              <CFormInput size="sm" id="inputAddress"  readOnly />
             </CCol>
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="inputAddress">
@@ -401,7 +401,7 @@ const VendorCreationRequest = () => {
                 className={`${errors.vehicleType && 'is-invalid'}`}
                 aria-label="Small select example"
               >
-                <option value="" hidden>
+                <option  hidden>
                   Select...
                 </option>
 
@@ -424,7 +424,7 @@ const VendorCreationRequest = () => {
                   <span className="help text-danger">{errors.vehicleType}</span>
                 )}
               </CFormLabel>
-              <CFormInput size="sm" id="inputAddress" value="" />
+              <CFormInput size="sm" id="inputAddress"  />
             </CCol>
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="inputAddress">
@@ -433,7 +433,7 @@ const VendorCreationRequest = () => {
                   <span className="help text-danger">{errors.vehicleType}</span>
                 )}
               </CFormLabel>
-              <CFormInput size="sm" id="inputAddress" value="" readOnly />
+              <CFormInput size="sm" id="inputAddress"  readOnly />
             </CCol>
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="inputAddress">
@@ -442,7 +442,7 @@ const VendorCreationRequest = () => {
                   <span className="help text-danger">{errors.vehicleType}</span>
                 )}
               </CFormLabel>
-              <CFormInput size="sm" id="inputAddress" value="" readOnly />
+              <CFormInput size="sm" id="inputAddress"  readOnly />
             </CCol>
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="inputAddress">
@@ -451,7 +451,7 @@ const VendorCreationRequest = () => {
                   <span className="help text-danger">{errors.vehicleType}</span>
                 )}
               </CFormLabel>
-              <CFormInput size="sm" id="inputAddress" value="" readOnly />
+              <CFormInput size="sm" id="inputAddress"  readOnly />
             </CCol>
           </CRow>
 
@@ -465,7 +465,7 @@ const VendorCreationRequest = () => {
                   <span className="help text-danger">{errors.vehicleType}</span>
                 )}
               </CFormLabel>
-              <CFormInput size="sm" id="inputAddress" value="" />
+              <CFormInput size="sm" id="inputAddress"  />
             </CCol>
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="inputAddress">
@@ -474,7 +474,7 @@ const VendorCreationRequest = () => {
                   <span className="help text-danger">{errors.vehicleType}</span>
                 )}
               </CFormLabel>
-              <CFormInput size="sm" id="inputAddress" value="" readOnly />
+              <CFormInput size="sm" id="inputAddress"  readOnly />
             </CCol>
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="inputAddress">
@@ -483,7 +483,7 @@ const VendorCreationRequest = () => {
                   <span className="help text-danger">{errors.vehicleType}</span>
                 )}
               </CFormLabel>
-              <CFormInput size="sm" id="inputAddress" value="" readOnly />
+              <CFormInput size="sm" id="inputAddress"  readOnly />
             </CCol>
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="inputAddress">
@@ -498,7 +498,7 @@ const VendorCreationRequest = () => {
                 className={`${errors.vehicleType && 'is-invalid'}`}
                 aria-label="Small select example"
               >
-                <option value="" hidden>
+                <option  hidden>
                   Select...
                 </option>
 
@@ -527,7 +527,7 @@ const VendorCreationRequest = () => {
                 className={`mb-3 ${errors.vehicleType && 'is-invalid'}`}
                 aria-label="Small select example"
               >
-                <option value="" hidden>
+                <option  hidden>
                   Select...
                 </option>
 
@@ -551,7 +551,7 @@ const VendorCreationRequest = () => {
                 className={`mb-3 ${errors.vehicleType && 'is-invalid'}`}
                 aria-label="Small select example"
               >
-                <option value="" hidden>
+                <option  hidden>
                   Select...
                 </option>
 
@@ -569,7 +569,7 @@ const VendorCreationRequest = () => {
                   <span className="help text-danger">{errors.vehicleType}</span>
                 )}
               </CFormLabel>
-              <CFormInput size="sm" id="inputAddress" value="" readOnly />
+              <CFormInput size="sm" id="inputAddress"  readOnly />
             </CCol>
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="remarks">Remarks*</CFormLabel>
