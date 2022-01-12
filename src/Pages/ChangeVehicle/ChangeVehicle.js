@@ -62,7 +62,6 @@ const ChangeVehicle = () => {
                         <CForm className="container p-3" onSubmit={handleSubmit}>
                             <CRow className="">
                                 <CCol xs={12} md={3}>
-<<<<<<< HEAD
                                     <CFormLabel htmlFor="tNum">Tripsheet Number*</CFormLabel>
                                     <CFormInput type="text" name="tNum" size="sm" id="tNum" readOnly />
                                 </CCol>
@@ -72,26 +71,12 @@ const ChangeVehicle = () => {
                                 </CCol>
                                 <CCol xs={12} md={3}>
                                     <CFormLabel htmlFor="Status">Status*</CFormLabel>
-=======
-                                    <CFormLabel htmlFor="freigthRate">Tripsheet Number*</CFormLabel>
-                                    <CFormInput type="text" name="freigthRate" size="sm" id="" readOnly />
-                                </CCol>
-                                <CCol xs={12} md={3}>
-                                    <CFormLabel htmlFor="freigthRate">Waiting_At</CFormLabel>
-                                    <CFormInput type="text" name="freigthRate" size="sm" id="" readOnly />
-                                </CCol>
-                                <CCol xs={12} md={3}>
-                                    <CFormLabel htmlFor="insuranceValid">Status*</CFormLabel>
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                                     <CFormSelect
                                         size="sm"
                                         name="insuranceValid"
                                         className=""
                                         aria-label="Small select example"
-<<<<<<< HEAD
                                         id='Status'
-=======
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                                     >
                                         <option hidden>Select...</option>
                                         <option value="0">Gate In</option>
@@ -112,21 +97,13 @@ const ChangeVehicle = () => {
                                 </CCol>
                                 <CCol xs={12} md={3}>
                                     <CFormLabel htmlFor="remarks">Remarks</CFormLabel>
-<<<<<<< HEAD
                                     <CFormTextarea id="remarks" rows="1"></CFormTextarea>
-=======
-                                    <CFormTextarea id="exampleFormControlTextarea1" rows="1"></CFormTextarea>
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                                 </CCol>
                             </CRow>
 
                             <CRow>
                                 <CCol>
-<<<<<<< HEAD
                                     <Link to="/ChangeVehicleHome">
-=======
-                                    <Link to="/DocsVerify">
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                                         <CButton
                                             md={9}
                                             size="sm"

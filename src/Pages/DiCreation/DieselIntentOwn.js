@@ -51,7 +51,6 @@ const DieselIntentOwn = () => {
             <CForm className="container p-3" onSubmit={handleSubmit}>
               <CRow className="">
                 <CCol xs={12} md={3}>
-<<<<<<< HEAD
                   <CFormLabel htmlFor="vType">Vehicle Type</CFormLabel>
 
                   <CFormInput size="sm" id="vType"  readOnly />
@@ -67,38 +66,16 @@ const DieselIntentOwn = () => {
                   <CFormLabel htmlFor="vCap">Vehicle Capacity</CFormLabel>
 
                   <CFormInput size="sm" id="vCap"  readOnly />
-=======
-                  <CFormLabel htmlFor="inputAddress">Vehicle Type</CFormLabel>
-
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
-                </CCol>
-
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Vehicle Number</CFormLabel>
-
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
-                </CCol>
-
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Vehicle Capacity</CFormLabel>
-
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                 </CCol>
 
                 {/* <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">VA Number</CFormLabel>
 
-<<<<<<< HEAD
                   <CFormInput size="sm" id="inputAddress"  readOnly />
-=======
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                 </CCol>
               </CRow>
               <CRow className=""> */}
                 <CCol xs={12} md={3}>
-<<<<<<< HEAD
                   <CFormLabel htmlFor="dName">Driver Name</CFormLabel>
 
                   <CFormInput size="sm" id="dName"  readOnly />
@@ -120,38 +97,12 @@ const DieselIntentOwn = () => {
                   <CFormLabel htmlFor="odoIMG">Odometer Photo</CFormLabel>
 
                   {/* <CFormInput size="sm" id="inputAddress"  readOnly /> */}
-=======
-                  <CFormLabel htmlFor="inputAddress">Driver Name</CFormLabel>
-
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
-                </CCol>
-
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Driver Mobile Number</CFormLabel>
-
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
-                </CCol>
-
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Odometer KM</CFormLabel>
-
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
-                </CCol>
-
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Odometer Photo</CFormLabel>
-
-                  {/* <CFormInput size="sm" id="inputAddress" value="" readOnly /> */}
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                   <CButton
                     // onClick={() => setVisible(!visible)}
                     className="w-100"
                     color="info"
                     size="sm"
-<<<<<<< HEAD
                     id='odoIMG'
-=======
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                   >
                     <span className="float-start">
                       <i className="fa fa-eye" aria-hidden="true"></i> &nbsp;View
@@ -161,7 +112,6 @@ const DieselIntentOwn = () => {
               {/* </CRow>
               <CRow className=""> */}
                 <CCol xs={12} md={3}>
-<<<<<<< HEAD
                   <CFormLabel htmlFor="gateInDateTime">Gate-In Time</CFormLabel>
 
                   <CFormInput size="sm" id="gateInDateTime"  readOnly />
@@ -180,26 +130,6 @@ const DieselIntentOwn = () => {
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="vName">Vendor Name*</CFormLabel>
                   <CFormSelect size="sm" className="" id='vName' aria-label="Small select example">
-=======
-                  <CFormLabel htmlFor="inputAddress">Gate-In Time</CFormLabel>
-
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
-                </CCol>
-
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Inspection Time</CFormLabel>
-
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
-                </CCol>
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Tripsheet Number</CFormLabel>
-
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
-                </CCol>
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Vendor Name*</CFormLabel>
-                  <CFormSelect size="sm" className="" aria-label="Small select example">
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                     <option hidden>Select...</option>
 
                     <option value="1">select</option>
@@ -210,7 +140,6 @@ const DieselIntentOwn = () => {
               {/* </CRow>
               <CRow className=""> */}
                 <CCol xs={12} md={3}>
-<<<<<<< HEAD
                   <CFormLabel htmlFor="vCode">Vendor Code</CFormLabel>
 
                   <CFormInput size="sm" id="vCode"  readOnly />
@@ -220,27 +149,12 @@ const DieselIntentOwn = () => {
                   <CFormLabel htmlFor="dLtr">Diesel Liters</CFormLabel>
 
                   <CFormInput size="sm" id="dLtr"  />
-=======
-                  <CFormLabel htmlFor="inputAddress">Vendor Code</CFormLabel>
-
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
-                </CCol>
-
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Diesel Liters</CFormLabel>
-
-                  <CFormInput size="sm" id="inputAddress" value="" />
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                 </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="remarks">Remarks*</CFormLabel>
                   <CFormTextarea
                     name="remarks"
-<<<<<<< HEAD
                     id="remarks"
-=======
-                    id="exampleFormControlTextarea1"
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                     rows="1"
                   ></CFormTextarea>
                 </CCol>

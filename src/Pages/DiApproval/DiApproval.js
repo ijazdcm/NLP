@@ -38,7 +38,6 @@ const DiApproval = () => {
             <CForm className="container p-3" onSubmit={handleSubmit}>
               <CRow className="">
                 <CCol xs={12} md={3}>
-<<<<<<< HEAD
                   <CFormLabel htmlFor="vType">Vehicle Type</CFormLabel>
 
                   <CFormInput size="sm" id="vType"  readOnly />
@@ -54,38 +53,16 @@ const DiApproval = () => {
                   <CFormLabel htmlFor="vCap">Vehicle Capacity</CFormLabel>
 
                   <CFormInput size="sm" id="vCap"  readOnly />
-=======
-                  <CFormLabel htmlFor="inputAddress">Vehicle Type</CFormLabel>
-
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
-                </CCol>
-
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Vehicle Number</CFormLabel>
-
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
-                </CCol>
-
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Vehicle Capacity</CFormLabel>
-
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                 </CCol>
 
                 {/* <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">VA Number</CFormLabel>
 
-<<<<<<< HEAD
                   <CFormInput size="sm" id="inputAddress"  readOnly />
-=======
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                 </CCol>
               </CRow>
               <CRow className=""> */}
                 <CCol xs={12} md={3}>
-<<<<<<< HEAD
                   <CFormLabel htmlFor="dName">Driver Name</CFormLabel>
 
                   <CFormInput size="sm" id="dName"  readOnly />
@@ -106,37 +83,12 @@ const DiApproval = () => {
                   <CFormLabel htmlFor="odoIMG">Odometer Photo</CFormLabel>
 
                   {/* <CFormInput size="sm" id="inputAddress"  readOnly /> */}
-=======
-                  <CFormLabel htmlFor="inputAddress">Driver Name</CFormLabel>
-
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
-                </CCol>
-
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Driver Cell No.</CFormLabel>
-
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
-                </CCol>
-
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Odometer KM</CFormLabel>
-
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
-                </CCol>
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Odometer Photo</CFormLabel>
-
-                  {/* <CFormInput size="sm" id="inputAddress" value="" readOnly /> */}
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                   <CButton
                     // onClick={() => setVisible(!visible)}
                     className="w-100"
                     color="info"
                     size="sm"
-<<<<<<< HEAD
                     id='odoIMG'
-=======
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                   >
                     <span className="float-start">
                       <i className="fa fa-eye" aria-hidden="true"></i> &nbsp;View
@@ -146,7 +98,6 @@ const DiApproval = () => {
               {/* </CRow>
               <CRow className=""> */}
                 <CCol xs={12} md={3}>
-<<<<<<< HEAD
                   <CFormLabel htmlFor="gateInDateTime">Gate-In Time</CFormLabel>
 
                   <CFormInput size="sm" id="gateInDateTime"  readOnly />
@@ -168,34 +119,10 @@ const DiApproval = () => {
                   <CFormLabel htmlFor="tNum">Tripsheet Number</CFormLabel>
 
                   <CFormInput size="sm" id="tNum"  readOnly />
-=======
-                  <CFormLabel htmlFor="inputAddress">Gate-In Time</CFormLabel>
-
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
-                </CCol>
-
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Inspection Time</CFormLabel>
-
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
-                </CCol>
-
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Doc. Verify Time</CFormLabel>
-
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
-                </CCol>
-
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Tripsheet Number</CFormLabel>
-
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                 </CCol>
               {/* </CRow>
               <CRow className=""> */}
                 <CCol xs={12} md={3}>
-<<<<<<< HEAD
                   <CFormLabel htmlFor="shedName">Shed Name</CFormLabel>
 
                   <CFormInput size="sm" id="shedName"  readOnly />
@@ -216,33 +143,10 @@ const DiApproval = () => {
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="vName">Vendor Name*</CFormLabel>
                   <CFormInput size="sm" id="vName"  readOnly />
-=======
-                  <CFormLabel htmlFor="inputAddress">Shed Name</CFormLabel>
-
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
-                </CCol>
-
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Owner Name</CFormLabel>
-
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
-                </CCol>
-
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Owner Mobile Number</CFormLabel>
-
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
-                </CCol>
-
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Vendor Name*</CFormLabel>
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                 </CCol>
               {/* </CRow>
               <CRow className=""> */}
                 <CCol xs={12} md={3}>
-<<<<<<< HEAD
                   <CFormLabel htmlFor="vCode">Vendor Code</CFormLabel>
 
                   <CFormInput size="sm" id="vCode"  readOnly />
@@ -271,45 +175,12 @@ const DiApproval = () => {
                   <CFormLabel htmlFor="invoiceCopy">Invoice copy</CFormLabel>
 
                   {/* <CFormInput size="sm" id="inputAddress"  readOnly /> */}
-=======
-                  <CFormLabel htmlFor="inputAddress">Vendor Code</CFormLabel>
-
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
-                </CCol>
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Diesel Liters</CFormLabel>
-
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
-                </CCol>
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Rate/Liter</CFormLabel>
-
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
-                </CCol>
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Amount</CFormLabel>
-
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
-                </CCol>
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Invoice Number</CFormLabel>
-
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
-                </CCol>
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Invoice Number</CFormLabel>
-
-                  {/* <CFormInput size="sm" id="inputAddress" value="" readOnly /> */}
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                   <CButton
                     // onClick={() => setVisible(!visible)}
                     className="w-100"
                     color="info"
                     size="sm"
-<<<<<<< HEAD
                     id='invoiceCopy'
-=======
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                   >
                     <span className="float-start">
                       <i className="fa fa-eye" aria-hidden="true"></i> &nbsp;View
@@ -317,24 +188,15 @@ const DiApproval = () => {
                   </CButton>
                 </CCol>
                 <CCol xs={12} md={3}>
-<<<<<<< HEAD
                   <CFormLabel htmlFor="bunk">Bunk Reading</CFormLabel>
 
                   {/* <CFormInput size="sm" id="inputAddress"  readOnly /> */}
-=======
-                  <CFormLabel htmlFor="inputAddress">Bunk Reading</CFormLabel>
-
-                  {/* <CFormInput size="sm" id="inputAddress" value="" readOnly /> */}
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                   <CButton
                     // onClick={() => setVisible(!visible)}
                     className="w-100"
                     color="info"
                     size="sm"
-<<<<<<< HEAD
                     id='bunk'
-=======
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                   >
                     <span className="float-start">
                       <i className="fa fa-eye" aria-hidden="true"></i> &nbsp;View
@@ -345,11 +207,7 @@ const DiApproval = () => {
                   <CFormLabel htmlFor="remarks">Remarks*</CFormLabel>
                   <CFormTextarea
                     name="remarks"
-<<<<<<< HEAD
                     id="remarks"
-=======
-                    id="exampleFormControlTextarea1"
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                     rows="1"
                   ></CFormTextarea>
                 </CCol>

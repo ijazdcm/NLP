@@ -173,7 +173,6 @@ const TSClossure = () => {
               <CTabPane role="tabpanel" aria-labelledby="home-tab" visible={activeKey === 1}>
                 <CRow className="mt-2">
                   <CCol xs={12} md={3}>
-<<<<<<< HEAD
                     <CFormLabel htmlFor="tNum">Tripsheet Number</CFormLabel>
 
                     <CFormInput size="sm" id="tNum" readOnly />
@@ -203,43 +202,6 @@ const TSClossure = () => {
                     <CFormLabel htmlFor="dMob">Driver Cell Number</CFormLabel>
 
                     <CFormInput size="sm" id="dMob" readOnly />
-=======
-                    <CFormLabel htmlFor="inputAddress">VA Number</CFormLabel>
-                    <CFormInput size="sm" id="inputAddress" value="RMIASR182100000024" readOnly />
-                  </CCol>
-                  <CCol xs={12} md={3}>
-                    <CFormLabel htmlFor="inputAddress">Tripsheet Number</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" value="700012" readOnly />
-                  </CCol>
-                  <CCol xs={12} md={3}>
-                    <CFormLabel htmlFor="inputAddress">Vehicle Number</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" value="TN48DE3902" readOnly />
-                  </CCol>
-                  <CCol xs={12} md={3}>
-                    <CFormLabel htmlFor="inputAddress">Vehicle Capacity</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" value="10 TON" readOnly />
-                  </CCol>
-                </CRow>
-
-                <CRow className="">
-                  <CCol xs={12} md={3}>
-                    <CFormLabel htmlFor="inputAddress">Vehicle Type</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" value="Own" readOnly />
-                  </CCol>
-                  <CCol xs={12} md={3}>
-                    <CFormLabel htmlFor="inputAddress">Driver Name</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" value="NAGARAJ" readOnly />
-                  </CCol>
-                  <CCol xs={12} md={3}>
-                    <CFormLabel htmlFor="inputAddress">Driver Cell Number</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" value="8525097921" readOnly />
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                   </CCol>
 
                   {/* <CCol xs={12} md={3}>
@@ -292,7 +254,6 @@ const TSClossure = () => {
                   </CCol> */}
 
                   <CCol xs={12} md={3}>
-<<<<<<< HEAD
                     <CFormLabel htmlFor="gateInDateTime">Gate-In Date & Time</CFormLabel>
 
                     <CFormInput
@@ -307,49 +268,19 @@ const TSClossure = () => {
                     <CFormInput
                       size="sm"
                       id="inspectionDateTime"
-=======
-                    <CFormLabel htmlFor="inputAddress">Gate-In Date & Time</CFormLabel>
-
-                    <CFormInput
-                      size="sm"
-                      id="inputAddress"
-                      value="21 Sep 2021 12:00:00 PM"
-                      readOnly
-                    />
-                  </CCol>
-                </CRow>
-                <CRow className="">
-                  <CCol xs={12} md={3}>
-                    <CFormLabel htmlFor="inputAddress">Vehicle Inspection Date & Time</CFormLabel>
-
-                    <CFormInput
-                      size="sm"
-                      id="inputAddress"
-                      value="21 Sep 2021 12:00:00 PM"
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                       readOnly
                     />
                   </CCol>
                   <CCol xs={12} md={3}>
-<<<<<<< HEAD
                     <CFormLabel htmlFor="verifyDate">Doc. Verification Date & Time</CFormLabel>
 
                     <CFormInput
                       size="sm"
                       id="verifyDate"
-=======
-                    <CFormLabel htmlFor="inputAddress">Doc. Verification Date & Time</CFormLabel>
-
-                    <CFormInput
-                      size="sm"
-                      id="inputAddress"
-                      value="21 Sep 2021 12:00:00 PM"
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                       readOnly
                     />
                   </CCol>
                   <CCol xs={12} md={3}>
-<<<<<<< HEAD
                     <CFormLabel htmlFor="shedName">Shed Name</CFormLabel>
 
                     <CFormInput size="sm" id="shedName" readOnly />
@@ -370,31 +301,6 @@ const TSClossure = () => {
                     <CFormInput
                       size="sm"
                       id="gateoutDate"
-=======
-                    <CFormLabel htmlFor="inputAddress">Shed Name</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" value="AAAAA" readOnly />
-                  </CCol>
-                  <CCol xs={12} md={3}>
-                    <CFormLabel htmlFor="inputAddress">Owner Name</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" value="BBBBB" readOnly />
-                  </CCol>
-                </CRow>
-                <CRow className="">
-                  <CCol xs={12} md={3}>
-                    <CFormLabel htmlFor="inputAddress">Owner Cell Number</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" value="1234567890" readOnly />
-                  </CCol>
-                  <CCol xs={12} md={3}>
-                    <CFormLabel htmlFor="inputAddress">Gate Out Date & Time</CFormLabel>
-
-                    <CFormInput
-                      size="sm"
-                      id="inputAddress"
-                      value="21 Sep 2021 02:00:00 PM"
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                       readOnly
                     />
                   </CCol>
@@ -404,7 +310,6 @@ const TSClossure = () => {
               <CTabPane role="tabpanel" aria-labelledby="profile-tab" visible={activeKey === 2}>
                 <CRow className="mt-2" hidden>
                   <CCol xs={12} md={2}>
-<<<<<<< HEAD
                     <CFormLabel htmlFor="sNum">Shipment Number</CFormLabel>
 
                     <CFormInput size="sm" id="sNum" readOnly />
@@ -427,30 +332,6 @@ const TSClossure = () => {
                   <CCol xs={12} md={2}>
                     <CFormLabel htmlFor="fjPod">FJ POD Copy</CFormLabel>
                     <CFormInput type="file" name="fjPod" size="sm" id="fjPod" />
-=======
-                    <CFormLabel htmlFor="inputAddress">Shipment Number</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" value="1234" readOnly />
-                  </CCol>
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">Invoice Number</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" value="123456" readOnly />
-                  </CCol>
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">Customer Number</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" value="111111" readOnly />
-                  </CCol>
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">Delivery Date & Time</CFormLabel>
-
-                    <CFormInput size="sm" type="datetime-local" id="inputAddress" />
-                  </CCol>
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">FJ POD Copy</CFormLabel>
-                    <CFormInput type="file" name="fjPod1" size="sm" id="formFileSm" />
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
 
                     {/* <CFormInput size="sm" id="inputAddress" value=" " readOnly /> */}
                   </CCol>
@@ -471,14 +352,9 @@ const TSClossure = () => {
                       value={values.DefectType}
                       className={`${errors.DefectType && 'is-invalid'}`}
                       aria-label="Small select example"
-<<<<<<< HEAD
                       id='DefectType'
                     >
                       <option  hidden selected>
-=======
-                    >
-                      <option value="" hidden selected>
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                         Select...
                       </option>
                       <option value="1">Shortage</option>
@@ -488,7 +364,6 @@ const TSClossure = () => {
                       <option value="4">Halting</option>
                     </CFormSelect>
                   </CCol>
-<<<<<<< HEAD
                 </CRow>
                 <CRow className="" hidden>
                   <CCol xs={12} md={2}>
@@ -514,38 +389,6 @@ const TSClossure = () => {
                   <CCol xs={12} md={2}>
                     <CFormLabel htmlFor="fjPod2">FJ POD Copy</CFormLabel>
                     <CFormInput type="file" name="fjPod2" size="sm" id="fjPod2" />
-=======
-                  <CCol xs={12} md={2} hidden>
-                    <CFormLabel htmlFor="inputAddress">Defect Type</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" readOnly />
-                  </CCol>
-                </CRow>
-                <CRow className="" hidden>
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">Shipment Number</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" value="1234" readOnly />
-                  </CCol>
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">Invoice Number</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" value="123459" readOnly />
-                  </CCol>
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">Customer Number</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" value="444444" readOnly />
-                  </CCol>
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">Delivery Date & Time</CFormLabel>
-
-                    <CFormInput size="sm" type="datetime-local" id="inputAddress" />
-                  </CCol>
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">FJ POD Copy</CFormLabel>
-                    <CFormInput type="file" name="fjPod2" size="sm" id="formFileSm" />
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
 
                     {/* <CFormInput size="sm" id="inputAddress" value=" " readOnly /> */}
                   </CCol>
@@ -566,14 +409,9 @@ const TSClossure = () => {
                       value={values.DefectType2}
                       className={`mb-3 ${errors.DefectType2 && 'is-invalid'}`}
                       aria-label="Small select example"
-<<<<<<< HEAD
                       id='DefectType2'
                     >
                       <option  hidden selected>
-=======
-                    >
-                      <option value="" hidden selected>
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                         Select...
                       </option>
                       <option value="1">Shortage</option>
@@ -583,20 +421,11 @@ const TSClossure = () => {
                       <option value="4">Halting</option>
                     </CFormSelect>
                   </CCol>
-<<<<<<< HEAD
-=======
-                  <CCol xs={12} md={2} hidden>
-                    <CFormLabel htmlFor="inputAddress">Defect Type</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" readOnly />
-                  </CCol>
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                 </CRow>
               </CTabPane>
               <CTabPane role="tabpanel" aria-labelledby="profile-tab" visible={activeKey === 4}>
                 <CRow className="mt-2" hidden>
                   <CCol md={2}>
-<<<<<<< HEAD
                     <CFormLabel htmlFor="stoNum">
                       STO Delivery Number{' '}
                       {errors.stoNum && <span className="help text-danger">{errors.stoNum}</span>}
@@ -637,52 +466,13 @@ const TSClossure = () => {
                 </CRow>
 
                 <CButton color="primary">Add</CButton>
-=======
-                    <CFormLabel htmlFor="DefectType">
-                      STO Delivery Number{' '}
-                      {errors.STONo && <span className="help text-danger">{errors.STONo}</span>}
-                    </CFormLabel>
-                    <CFormInput size="sm" id="inputAddress" value="15487126" readOnly />
-                  </CCol>
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">From Location</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" value="" readOnly />
-                  </CCol>
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">To Location</CFormLabel>
-
-                    <CFormInput size="sm" type="" id="inputAddress" readOnly />
-                  </CCol>
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">Freight Amount</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" type="" value="12344" readOnly />
-                  </CCol>
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">Delivery Date and Time</CFormLabel>
-
-                    <CFormInput size="sm" type="datetime-local" id="inputAddress" />
-                  </CCol>
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">POD Copy</CFormLabel>
-                    <CFormInput type="file" name="fjPod1" size="sm" id="formFileSm" />
-
-                    {/* <CFormInput size="sm" id="inputAddress" value=" " readOnly /> */}
-                  </CCol>
-                </CRow>
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
               </CTabPane>
               <br />
               <CTabPane role="tabpanel" aria-labelledby="profile-tab" visible={activeKey === 7}>
                 <CTable caption="top" hover>
                   <CTableHead style={{ backgroundColor: '#4d3227', color: 'white' }}>
                     <CTableRow>
-<<<<<<< HEAD
                       <CTableHeaderCell scope="col"  style={{ color: 'white' }}>
-=======
-                      <CTableHeaderCell scope="col" style={{ color: 'white' }}>
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                         Load Tonnage
                       </CTableHeaderCell>
                       <CTableHeaderCell scope="col" style={{ color: 'white' }}>
@@ -713,11 +503,7 @@ const TSClossure = () => {
                         <CFormInput size="sm" id="inputAddress" Value="25000" readOnly />
                       </CTableDataCell>
                       <CTableDataCell>
-<<<<<<< HEAD
                         <CFormInput size="sm" id="inputAddress"  readOnly />
-=======
-                        <CFormInput size="sm" id="inputAddress" Value="" readOnly />
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                       </CTableDataCell>
                       <CTableDataCell>
                         <CFormInput size="sm" id="inputAddress" Value="20000" readOnly />
@@ -735,7 +521,6 @@ const TSClossure = () => {
               <CTabPane role="tabpanel" aria-labelledby="contact-tab" visible={activeKey === 5}>
                 <CRow className="mt-2" hidden>
                   <CCol xs={12} md={2}>
-<<<<<<< HEAD
                     <CFormLabel htmlFor="dVendor">Diesel Vendor</CFormLabel>
 
                     <CFormInput size="sm" id="dVendor"  readOnly />
@@ -762,51 +547,15 @@ const TSClossure = () => {
                       size="sm"
                       id="invoiceDate"
                       type="datetime-local"
-=======
-                    <CFormLabel htmlFor="inputAddress">Diesel Vendor</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" value="" readOnly />
-                  </CCol>
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">Diesel Liter</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" value="" readOnly />
-                  </CCol>
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">Rate Per Liter</CFormLabel>
-
-                    <CFormInput size="sm" type="" id="inputAddress" readOnly />
-                  </CCol>
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">Total Amount</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" type="" value="" readOnly />
-                  </CCol>
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">Invoice Date & Time</CFormLabel>
-
-                    <CFormInput
-                      size="sm"
-                      id="inputAddress"
-                      type="datetime-local"
-                      value=""
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                       readOnly
                     />
                   </CCol>
                   {!adhardel && (
                     <CCol xs={12} md={2}>
-<<<<<<< HEAD
                       <CFormLabel htmlFor="invoiceCopy">
                         Invoice Copy
                         {errors.invoiceCopy && (
                           <span className="help text-danger">{errors.invoiceCopy}</span>
-=======
-                      <CFormLabel htmlFor="inputAddress">
-                        Invoice Copy
-                        {errors.vehicleType && (
-                          <span className="help text-danger">{errors.vehicleType}</span>
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                         )}
                       </CFormLabel>
                       <CButton
@@ -814,11 +563,7 @@ const TSClossure = () => {
                         className="w-100 m-0"
                         color="info"
                         size="sm"
-<<<<<<< HEAD
                         id="invoiceCopy"
-=======
-                        id="inputAddress"
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                       >
                         <span
                           className="float-start"
@@ -846,11 +591,7 @@ const TSClossure = () => {
                   )}
                   {adhardel && (
                     <CCol xs={12} md={3}>
-<<<<<<< HEAD
                       <CFormLabel htmlFor="AadharCard">Invoice copy*</CFormLabel>
-=======
-                      <CFormLabel htmlFor="AadharCard">Aadhar Card*</CFormLabel>
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                       <CFormInput type="file" name="AadharCard" size="sm" id="" />
                     </CCol>
                   )}
@@ -859,22 +600,14 @@ const TSClossure = () => {
               <CTabPane role="tabpanel" aria-labelledby="contact-tab" visible={activeKey === 6}>
                 <CRow className="mt-2" hidden>
                   <CCol md={2}>
-<<<<<<< HEAD
                     <CFormLabel htmlFor="sNum">
                       Shipment Number{' '}
                       {errors.sNum && (
                         <span className="help text-danger">{errors.sNum}</span>
-=======
-                    <CFormLabel htmlFor="DefectType">
-                      Shipment Number{' '}
-                      {errors.DriverName && (
-                        <span className="help text-danger">{errors.DriverName}</span>
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                       )}
                     </CFormLabel>
                     <CFormSelect
                       size="sm"
-<<<<<<< HEAD
                       name="sNum"
                       id='sNum'
                       onFocus={onFocus}
@@ -885,17 +618,6 @@ const TSClossure = () => {
                       aria-label="Small select example"
                     >
                       <option  hidden selected>
-=======
-                      name="DefectType"
-                      onFocus={onFocus}
-                      onBlur={onBlur}
-                      onChange={handleChange}
-                      value={values.DriverName}
-                      className={`${errors.DriverName && 'is-invalid'}`}
-                      aria-label="Small select example"
-                    >
-                      <option value="" hidden selected>
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                         Select...
                       </option>
                       <option value="1">11111</option>
@@ -904,22 +626,14 @@ const TSClossure = () => {
                     </CFormSelect>
                   </CCol>
                   <CCol xs={12} md={2}>
-<<<<<<< HEAD
                     <CFormLabel htmlFor="deliveryNum">
                       Delivery Number{' '}
                       {errors.deliveryNum && (
                         <span className="help text-danger">{errors.deliveryNum}</span>
-=======
-                    <CFormLabel htmlFor="DefectType">
-                      Delivery Number{' '}
-                      {errors.DriverName && (
-                        <span className="help text-danger">{errors.DriverName}</span>
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                       )}
                     </CFormLabel>
                     <CFormSelect
                       size="sm"
-<<<<<<< HEAD
                       name="deliveryNum"
                       onFocus={onFocus}
                       onBlur={onBlur}
@@ -929,17 +643,6 @@ const TSClossure = () => {
                       aria-label="Small select example"
                     >
                       <option  hidden selected>
-=======
-                      name="DefectType"
-                      onFocus={onFocus}
-                      onBlur={onBlur}
-                      onChange={handleChange}
-                      value={values.DriverName}
-                      className={`${errors.DriverName && 'is-invalid'}`}
-                      aria-label="Small select example"
-                    >
-                      <option value="" hidden selected>
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                         Select...
                       </option>
                       <option value="1">11111</option>
@@ -949,22 +652,14 @@ const TSClossure = () => {
                   </CCol>
 
                   <CCol xs={12} md={2}>
-<<<<<<< HEAD
                     <CFormLabel htmlFor="returnTo">
                       Return To{' '}
                       {errors.returnTo && (
                         <span className="help text-danger">{errors.returnTo}</span>
-=======
-                    <CFormLabel htmlFor="DefectType">
-                      Return To{' '}
-                      {errors.DriverName && (
-                        <span className="help text-danger">{errors.DriverName}</span>
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                       )}
                     </CFormLabel>
                     <CFormSelect
                       size="sm"
-<<<<<<< HEAD
                       name="returnTo"
                       id='returnTo'
                       onFocus={onFocus}
@@ -975,17 +670,6 @@ const TSClossure = () => {
                       aria-label="Small select example"
                     >
                       <option  hidden selected>
-=======
-                      name="DefectType"
-                      onFocus={onFocus}
-                      onBlur={onBlur}
-                      onChange={handleChange}
-                      value={values.DriverName}
-                      className={`${errors.DriverName && 'is-invalid'}`}
-                      aria-label="Small select example"
-                    >
-                      <option value="" hidden selected>
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                         Select...
                       </option>
                       <option value="1">NLFD</option>
@@ -996,7 +680,6 @@ const TSClossure = () => {
                     </CFormSelect>
                   </CCol>
                   <CCol xs={12} md={2}>
-<<<<<<< HEAD
                     <CFormLabel htmlFor="returnQty">Retun QTY in Tons</CFormLabel>
 
                     <CFormInput size="sm" type="" id="returnQty" readOnly />
@@ -1014,25 +697,6 @@ const TSClossure = () => {
                   <CCol xs={12} md={2}>
                     <CFormLabel htmlFor="dPod">Diverted POD</CFormLabel>
                     <CFormInput type="file" name="dPod" size="sm" id="dPod" />
-=======
-                    <CFormLabel htmlFor="inputAddress">Retun QTY in Tons</CFormLabel>
-
-                    <CFormInput size="sm" type="" id="inputAddress" readOnly />
-                  </CCol>
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">Return Rate Per Ton</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" type="" value="" readOnly />
-                  </CCol>
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">Return Freight Amount</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" type="" />
-                  </CCol>
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">Diverted POD</CFormLabel>
-                    <CFormInput type="file" name="fjPod1" size="sm" id="formFileSm" />
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
 
                     {/* <CFormInput size="sm" id="inputAddress" value=" " readOnly /> */}
                   </CCol>
@@ -1530,7 +1194,6 @@ const TSClossure = () => {
               <CTabPane role="tabpanel" aria-labelledby="home-tab" visible={activeKey_2 === 1}>
                 <CRow className="mt-2">
                   <CCol xs={12} md={3}>
-<<<<<<< HEAD
                     <CFormLabel htmlFor="tNum1">Tripsheet Number</CFormLabel>
                     <CFormInput size="sm" id="tNum1" value="700012" readOnly />
                   </CCol>
@@ -1566,66 +1229,13 @@ const TSClossure = () => {
                   </CCol>
                   <CCol xs={12} md={3}>
                     <CFormLabel htmlFor="odoImg">Odometer Opening KM</CFormLabel>
-=======
-                    <CFormLabel htmlFor="inputAddress">VA Number</CFormLabel>
-                    <CFormInput size="sm" id="inputAddress" value="RMIASR182100000024" readOnly />
-                  </CCol>
-
-                  <CCol xs={12} md={3}>
-                    <CFormLabel htmlFor="inputAddress">Tripsheet Number</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" value="700012" readOnly />
-                  </CCol>
-
-                  <CCol xs={12} md={3}>
-                    <CFormLabel htmlFor="inputAddress">Vehicle Number</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" value="TN48DE3902" readOnly />
-                  </CCol>
-                  <CCol xs={12} md={3}>
-                    <CFormLabel htmlFor="inputAddress">Vehicle Capacity</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" value="10 TON" readOnly />
-                  </CCol>
-                </CRow>
-
-                <CRow className="">
-                  <CCol xs={12} md={3}>
-                    <CFormLabel htmlFor="inputAddress">Vehicle Type</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" value="Own" readOnly />
-                  </CCol>
-                  <CCol xs={12} md={3}>
-                    <CFormLabel htmlFor="inputAddress">Driver Name</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" value="NAGARAJ" readOnly />
-                  </CCol>
-                  <CCol xs={12} md={3}>
-                    <CFormLabel htmlFor="inputAddress">Driver Mobile Number</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" value="8525097921" readOnly />
-                  </CCol>
-                  <CCol xs={12} md={3}>
-                    <CFormLabel htmlFor="inputAddress">Odometer Opening KM</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" value="189736" readOnly />
-                  </CCol>
-                </CRow>
-
-                <CRow className="">
-                  <CCol xs={12} md={3}>
-                    <CFormLabel htmlFor="inputAddress">Odometer Opening KM</CFormLabel>
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
 
                     <div className="d-grid gap-2">
                       <CButton
                         className="text-justify"
                         color="info"
                         size="sm"
-<<<<<<< HEAD
                         id='odoImg'
-=======
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                         onClick={() => setVisible(!visible)}
                       >
                         <span className="float-start">
@@ -1645,104 +1255,60 @@ const TSClossure = () => {
                     />
                   </CCol> */}
                   <CCol xs={12} md={3}>
-<<<<<<< HEAD
                     <CFormLabel htmlFor="inspectionDateTime">Inspection Date Time</CFormLabel>
                     <CFormInput
                       size="sm"
                       id="inspectionDateTime"
-=======
-                    <CFormLabel htmlFor="inputAddress">Inspection Time</CFormLabel>
-
-                    <CFormInput
-                      size="sm"
-                      id="inputAddress"
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                       value="21 Sep 2021 12:00:00 PM"
                       readOnly
                     />
                   </CCol>
                   <CCol xs={12} md={3}>
-<<<<<<< HEAD
                     <CFormLabel htmlFor="verifyDate">Doc. Verify Time</CFormLabel>
 
                     <CFormInput
                       size="sm"
                       id="verifyDate"
-=======
-                    <CFormLabel htmlFor="inputAddress">Doc. Verify Time</CFormLabel>
-
-                    <CFormInput
-                      size="sm"
-                      id="inputAddress"
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                       value="21 Sep 2021 12:00:00 PM"
                       readOnly
                     />
                   </CCol>
 
                   <CCol xs={12} md={3}>
-<<<<<<< HEAD
                     <CFormLabel htmlFor="gateOut">Gate Out Date & Time</CFormLabel>
 
                     <CFormInput
                       size="sm"
                       id="gateOut"
-=======
-                    <CFormLabel htmlFor="inputAddress">Gate Out Date & Time</CFormLabel>
-
-                    <CFormInput
-                      size="sm"
-                      id="inputAddress"
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                       value="21 Sep 2021 02:00:00 PM"
                       readOnly
                     />
                   </CCol>
 
                   <CCol xs={12} md={3}>
-<<<<<<< HEAD
                     <CFormLabel htmlFor="gateInDateTime">Gate-In Time</CFormLabel>
 
                     <CFormInput
                       size="sm"
                       id="gateInDateTime"
-=======
-                    <CFormLabel htmlFor="inputAddress">Gate-In Time</CFormLabel>
-
-                    <CFormInput
-                      size="sm"
-                      id="inputAddress"
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                       value="24 Sep 2021 12:00:00 PM"
                       readOnly
                     />
                   </CCol>
                   <CCol xs={12} md={3}>
-<<<<<<< HEAD
                     <CFormLabel htmlFor="closingKM">Closing KM</CFormLabel>
 
                     <CFormInput size="sm" id="closingKM" value="198625" readOnly />
                   </CCol>
                   <CCol xs={12} md={3}>
                     <CFormLabel htmlFor="codoKM">Odometer Closing KM</CFormLabel>
-=======
-                    <CFormLabel htmlFor="inputAddress">Closing KM</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" value="198625" readOnly />
-                  </CCol>
-                  <CCol xs={12} md={3}>
-                    <CFormLabel htmlFor="inputAddress">Odometer Closing KM</CFormLabel>
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
 
                     <div className="d-grid gap-2">
                       <CButton
                         className="text-justify"
                         color="info"
                         size="sm"
-<<<<<<< HEAD
                         id='codoKM'
-=======
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                         onClick={() => setVisible(!visible)}
                       >
                         <span className="float-start">
@@ -1753,7 +1319,6 @@ const TSClossure = () => {
                   </CCol>
 
                   <CCol xs={12} md={3}>
-<<<<<<< HEAD
                     <CFormLabel htmlFor="tripKM" >Trip KM</CFormLabel>
 
                     <CFormInput size="sm" id="tripKM" value="8889" readOnly />
@@ -1795,49 +1360,6 @@ const TSClossure = () => {
                     <CFormLabel htmlFor="diffmil">Diff. Mileage</CFormLabel>
 
                     <CFormInput size="sm" id="diffmil" value="1" readOnly />
-=======
-                    <CFormLabel htmlFor="inputAddress">Trip KM</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" value="8889" readOnly />
-                  </CCol>
-
-                  <CCol xs={12} md={3}>
-                    <CFormLabel htmlFor="inputAddress">Budgeted KM</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" value="8800" />
-                  </CCol>
-                  <CCol xs={12} md={3}>
-                    <CFormLabel htmlFor="inputAddress">Actual KM</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" value="8880" />
-                  </CCol>
-                  <CCol xs={12} md={3}>
-                    <CFormLabel htmlFor="inputAddress">Diff. KM</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" value="80" readOnly />
-                  </CCol>
-                  <CCol xs={12} md={3}>
-                    <CFormLabel htmlFor="inputAddress">Idle Hrs</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" value="4" />
-                  </CCol>
-
-                  <CCol xs={12} md={3}>
-                    <CFormLabel htmlFor="inputAddress">Budged Mileage</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" value="5" />
-                  </CCol>
-                  <CCol xs={12} md={3}>
-                    <CFormLabel htmlFor="inputAddress">Actual Mileage</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" value="4" />
-                  </CCol>
-
-                  <CCol xs={12} md={3}>
-                    <CFormLabel htmlFor="inputAddress">Diff. Mileage</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" value="1" readOnly />
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                   </CCol>
                 </CRow>
 
@@ -1852,7 +1374,6 @@ const TSClossure = () => {
               <CTabPane role="tabpanel" aria-labelledby="profile-tab" visible={activeKey_2 === 2}>
                 <CRow className="mt-2" hidden>
                   <CCol xs={12} md={2}>
-<<<<<<< HEAD
                     <CFormLabel htmlFor="sNum2">Shipment Number</CFormLabel>
 
                     <CFormInput size="sm" id="sNum2" value="123456" readOnly />
@@ -1881,249 +1402,11 @@ const TSClossure = () => {
                   <CCol xs={12} md={2}>
                     <CFormLabel htmlFor="fjPod2">FJ POD Copy</CFormLabel>
                     <CFormInput type="file" name="fjPod2" size="sm" id="fjPod2" />
-=======
-                    <CFormLabel htmlFor="inputAddress">Shipment Number</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" value="123456" readOnly />
-                  </CCol>
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">Invoice Number</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" value="126788" readOnly />
-                  </CCol>
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">Customer Number</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" value="111111" readOnly />
-                  </CCol>
-
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">Delivery Date & Time</CFormLabel>
-
-                    <CFormInput size="sm" type="datetime-local" id="inputAddress" />
-                  </CCol>
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">Unloading Charges</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" />
-                  </CCol>
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">FJ POD Copy</CFormLabel>
-                    <CFormInput type="file" name="fjPod1" size="sm" id="formFileSm" />
 
                     {/* <CFormInput size="sm" id="inputAddress" value=" " readOnly /> */}
                   </CCol>
                   <CCol md={2}>
-                    <CFormLabel htmlFor="DefectType">
-                      Defect Type*{' '}
-                      {errors.DefectType && (
-                        <span className="help text-danger">{errors.DefectType}</span>
-                      )}
-                    </CFormLabel>
-
-                    <CFormSelect
-                      size="sm"
-                      name="DefectType"
-                      onFocus={onFocus}
-                      onBlur={onBlur}
-                      onChange={handleChange}
-                      value={values.DefectType}
-                      className={`${errors.DefectType && 'is-invalid'}`}
-                      aria-label="Small select example"
-                    >
-                      <option value="">Select Types</option>
-
-                      <option value="1">Unloading Charges</option>
-
-                      <option value="2">Subdelivery Charges</option>
-
-                      <option value="3">Halting Charges</option>
-
-                      <option value="4">Low Tonnage</option>
-                    </CFormSelect>
-                  </CCol>
-                  <CCol xs={12} md={2} hidden>
-                    <CFormLabel htmlFor="inputAddress">Defect Type</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" readOnly />
-                  </CCol>
-                </CRow>
-                <CRow className="mt-2" hidden>
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">Shipment Number</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" value="123456" readOnly />
-                  </CCol>
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">Invoice Number</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" value="126789" readOnly />
-                  </CCol>
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">Customer Number</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" value="111111" readOnly />
-                  </CCol>
-
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">Delivery Date & Time</CFormLabel>
-
-                    <CFormInput size="sm" type="datetime-local" id="inputAddress" />
-                  </CCol>
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">Unloading Charges</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" />
-                  </CCol>
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">FJ POD Copy</CFormLabel>
-                    <CFormInput type="file" name="fjPod1" size="sm" id="formFileSm" />
-
-                    {/* <CFormInput size="sm" id="inputAddress" value=" " readOnly /> */}
-                  </CCol>
-                  <CCol md={2}>
-                    <CFormLabel htmlFor="DefectType">
-                      Defect Type*{' '}
-                      {errors.DefectType && (
-                        <span className="help text-danger">{errors.DefectType}</span>
-                      )}
-                    </CFormLabel>
-
-                    <CFormSelect
-                      size="sm"
-                      name="DefectType"
-                      onFocus={onFocus}
-                      onBlur={onBlur}
-                      onChange={handleChange}
-                      value={values.DefectType}
-                      className={`${errors.DefectType && 'is-invalid'}`}
-                      aria-label="Small select example"
-                    >
-                      <option value="">Select Types</option>
-
-                      <option value="1">Unloading Charges</option>
-
-                      <option value="2">Subdelivery Charges</option>
-
-                      <option value="3">Halting Charges</option>
-
-                      <option value="4">Low Tonnage</option>
-                    </CFormSelect>
-                  </CCol>
-                  <CCol xs={12} md={2} hidden>
-                    <CFormLabel htmlFor="inputAddress">Defect Type</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" readOnly />
-                  </CCol>
-                </CRow>
-                <CRow className="mt-2" hidden>
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">Shipment Number</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" value="123456" readOnly />
-                  </CCol>
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">Invoice Number</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" value="126790" readOnly />
-                  </CCol>
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">Customer Number</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" value="333333" readOnly />
-                  </CCol>
-
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">Delivery Date & Time</CFormLabel>
-
-                    <CFormInput size="sm" type="datetime-local" id="inputAddress" />
-                  </CCol>
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">Unloading Charges</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" />
-                  </CCol>
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">FJ POD Copy</CFormLabel>
-                    <CFormInput type="file" name="fjPod1" size="sm" id="formFileSm" />
-
-                    {/* <CFormInput size="sm" id="inputAddress" value=" " readOnly /> */}
-                  </CCol>
-                  <CCol md={2}>
-                    <CFormLabel htmlFor="DefectType">
-                      Defect Type*{' '}
-                      {errors.DefectType && (
-                        <span className="help text-danger">{errors.DefectType}</span>
-                      )}
-                    </CFormLabel>
-
-                    <CFormSelect
-                      size="sm"
-                      name="DefectType"
-                      onFocus={onFocus}
-                      onBlur={onBlur}
-                      onChange={handleChange}
-                      value={values.DefectType}
-                      className={`${errors.DefectType && 'is-invalid'}`}
-                      aria-label="Small select example"
-                    >
-                      <option value="">Select Types</option>
-
-                      <option value="1">Unloading Charges</option>
-
-                      <option value="2">Subdelivery Charges</option>
-
-                      <option value="3">Halting Charges</option>
-
-                      <option value="4">Low Tonnage</option>
-                    </CFormSelect>
-                  </CCol>
-                  <CCol xs={12} md={2} hidden>
-                    <CFormLabel htmlFor="inputAddress">Defect Type</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" readOnly />
-                  </CCol>
-                </CRow>
-                <CRow className="mt-2" hidden>
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">Shipment Number</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" value="123456" readOnly />
-                  </CCol>
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">Invoice Number</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" value="126791" readOnly />
-                  </CCol>
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">Customer Number</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" value="222222" readOnly />
-                  </CCol>
-
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">Delivery Date & Time</CFormLabel>
-
-                    <CFormInput size="sm" type="datetime-local" id="inputAddress" />
-                  </CCol>
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">Unloading Charges</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" />
-                  </CCol>
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">FJ POD Copy</CFormLabel>
-                    <CFormInput type="file" name="fjPod1" size="sm" id="formFileSm" />
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
-
-                    {/* <CFormInput size="sm" id="inputAddress" value=" " readOnly /> */}
-                  </CCol>
-                  <CCol md={2}>
-<<<<<<< HEAD
                     <CFormLabel htmlFor="DefectType3">
-=======
-                    <CFormLabel htmlFor="DefectType">
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                       Defect Type*{' '}
                       {errors.DefectType && (
                         <span className="help text-danger">{errors.DefectType}</span>
@@ -2132,25 +1415,16 @@ const TSClossure = () => {
 
                     <CFormSelect
                       size="sm"
-<<<<<<< HEAD
                       name="DefectType3"
-=======
-                      name="DefectType"
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                       onFocus={onFocus}
                       onBlur={onBlur}
                       onChange={handleChange}
                       value={values.DefectType}
                       className={`${errors.DefectType && 'is-invalid'}`}
                       aria-label="Small select example"
-<<<<<<< HEAD
                       id='DefectType3'
                     >
                       <option >Select Types</option>
-=======
-                    >
-                      <option value="">Select Types</option>
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
 
                       <option value="1">Unloading Charges</option>
 
@@ -2161,7 +1435,6 @@ const TSClossure = () => {
                       <option value="4">Low Tonnage</option>
                     </CFormSelect>
                   </CCol>
-<<<<<<< HEAD
                 </CRow>       
                 <hr />
                 <CRow className="mb-md-1" hidden>
@@ -2174,25 +1447,6 @@ const TSClossure = () => {
                     <CFormLabel htmlFor="rCustomer">Customer Number</CFormLabel>
 
                     <CFormInput size="sm" id="rCustomer" value="1123661" readOnly />
-=======
-                  <CCol xs={12} md={2} hidden>
-                    <CFormLabel htmlFor="inputAddress">Defect Type</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" readOnly />
-                  </CCol>
-                </CRow>
-                <hr />
-                <CRow className="mb-md-1" hidden>
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">RJ SO Number</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" value="1234762" readOnly />
-                  </CCol>
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">Customer Number</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" value="1123661" readOnly />
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                   </CCol>
                   {/* <CCol xs={12} md={2}>
                     <CFormLabel htmlFor="inputAddress" >Opening KM</CFormLabel>
@@ -2210,7 +1464,6 @@ const TSClossure = () => {
                     <CFormInput htmlFor="inputAddress" readOnly />
                   </CCol> */}
                   <CCol xs={12} md={2}>
-<<<<<<< HEAD
                     <CFormLabel htmlFor="rDelivery">Delivery Date & Time</CFormLabel>
 
                     <CFormInput size="sm" type="datetime-local" id="rDelivery" />
@@ -2223,29 +1476,11 @@ const TSClossure = () => {
                   <CCol xs={12} md={2}>
                     <CFormLabel htmlFor="rPOD">RJ POD Copy</CFormLabel>
                     <CFormInput type="file" name="rPOD" size="sm" id="rPOD" />
-=======
-                    <CFormLabel htmlFor="inputAddress">Delivery Date & Time</CFormLabel>
-
-                    <CFormInput size="sm" type="datetime-local" id="inputAddress" />
-                  </CCol>
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">Unloading Charges</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" />
-                  </CCol>
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">RJ POD Copy</CFormLabel>
-                    <CFormInput type="file" name="fjPod1" size="sm" id="formFileSm" />
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
 
                     {/* <CFormInput size="sm" id="inputAddress" value=" " readOnly /> */}
                   </CCol>
                   <CCol md={2}>
-<<<<<<< HEAD
                     <CFormLabel htmlFor="DefectType4">
-=======
-                    <CFormLabel htmlFor="DefectType">
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                       Defect Type*{' '}
                       {errors.DefectType && (
                         <span className="help text-danger">{errors.DefectType}</span>
@@ -2261,14 +1496,9 @@ const TSClossure = () => {
                       value={values.DefectType}
                       className={`${errors.DefectType && 'is-invalid'}`}
                       aria-label="Small select example"
-<<<<<<< HEAD
                       id='DefectType4'
                     >
                       <option >Select Types</option>
-=======
-                    >
-                      <option value="">Select Types</option>
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
 
                       <option value="1">Unloading Charges</option>
 
@@ -2279,20 +1509,11 @@ const TSClossure = () => {
                       <option value="4">Low Tonage</option>
                     </CFormSelect>
                   </CCol>
-<<<<<<< HEAD
-=======
-                  <CCol xs={12} md={2} hidden>
-                    <CFormLabel htmlFor="inputAddress">Defect Type</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" readOnly />
-                  </CCol>
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                 </CRow>
               </CTabPane>
               <CTabPane role="tabpanel" aria-labelledby="contact-tab" visible={activeKey_2 === 4}>
                 <CRow className="mt-2" hidden>
                   <CCol md={2}>
-<<<<<<< HEAD
                     <CFormLabel htmlFor="stoNum1">
                       STO Delivery Number{' '}
                       {errors.STONo && <span className="help text-danger">{errors.STONo}</span>}
@@ -2322,46 +1543,11 @@ const TSClossure = () => {
                   <CCol xs={12} md={2}>
                     <CFormLabel htmlFor="pod">POD Copy</CFormLabel>
                     <CFormInput type="file" name="pod" size="sm" id="pod" />
-=======
-                    <CFormLabel htmlFor="DefectType">
-                      STO Delivery Number{' '}
-                      {errors.STONo && <span className="help text-danger">{errors.STONo}</span>}
-                    </CFormLabel>
-                    <CFormInput size="sm" id="inputAddress" value="15487126" readOnly />
-                  </CCol>
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">From Location</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" value="" readOnly />
-                  </CCol>
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">To Location</CFormLabel>
-
-                    <CFormInput size="sm" type="" id="inputAddress" readOnly />
-                  </CCol>
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">Freight Amount</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" type="" value="" readOnly />
-                  </CCol>
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">Delivery Date and Time</CFormLabel>
-
-                    <CFormInput size="sm" type="datetime-local" id="inputAddress" />
-                  </CCol>
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">POD Copy</CFormLabel>
-                    <CFormInput type="file" name="fjPod1" size="sm" id="formFileSm" />
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
 
                     {/* <CFormInput size="sm" id="inputAddress" value=" " readOnly /> */}
                   </CCol>
                   <CCol md={2}>
-<<<<<<< HEAD
                     <CFormLabel htmlFor="DriverName">
-=======
-                    <CFormLabel htmlFor="DefectType">
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                       Driver Name{' '}
                       {errors.DriverName && (
                         <span className="help text-danger">{errors.DriverName}</span>
@@ -2376,14 +1562,9 @@ const TSClossure = () => {
                       value={values.DriverName}
                       className={`${errors.DriverName && 'is-invalid'}`}
                       aria-label="Small select example"
-<<<<<<< HEAD
                       id='DriverName'
                     >
                       <option  hidden selected>
-=======
-                    >
-                      <option value="" hidden selected>
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                         Select...
                       </option>
                       <option value="1">11111</option>
@@ -2402,78 +1583,6 @@ const TSClossure = () => {
 
                 <CButton color="primary">Add</CButton>
                 <hr />
-<<<<<<< HEAD
-=======
-                <CRow className="mt-2" hidden>
-                  <CCol md={2}>
-                    <CFormLabel htmlFor="DefectType">
-                      STO Delivery Number{' '}
-                      {errors.STONo && <span className="help text-danger">{errors.STONo}</span>}
-                    </CFormLabel>
-                    <CFormInput size="sm" id="inputAddress" value="15487126" readOnly />
-                  </CCol>
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">From Location</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" value="" readOnly />
-                  </CCol>
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">To Location</CFormLabel>
-
-                    <CFormInput size="sm" type="" id="inputAddress" readOnly />
-                  </CCol>
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">Freight Amount</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" type="" value="" readOnly />
-                  </CCol>
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">Delivery Date and Time</CFormLabel>
-
-                    <CFormInput size="sm" type="datetime-local" id="inputAddress" />
-                  </CCol>
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">POD Copy</CFormLabel>
-                    <CFormInput type="file" name="fjPod1" size="sm" id="formFileSm" />
-
-                    {/* <CFormInput size="sm" id="inputAddress" value=" " readOnly /> */}
-                  </CCol>
-                  <CCol md={2}>
-                    <CFormLabel htmlFor="DefectType">
-                      Driver Name{' '}
-                      {errors.DriverName && (
-                        <span className="help text-danger">{errors.DriverName}</span>
-                      )}
-                    </CFormLabel>
-                    <CFormSelect
-                      size="sm"
-                      name="DefectType"
-                      onFocus={onFocus}
-                      onBlur={onBlur}
-                      onChange={handleChange}
-                      value={values.DriverName}
-                      className={`${errors.DriverName && 'is-invalid'}`}
-                      aria-label="Small select example"
-                    >
-                      <option value="" hidden selected>
-                        Select...
-                      </option>
-                      <option value="1">11111</option>
-                      <option value="2">22222</option>
-                      <option value="3">33333</option>
-                    </CFormSelect>
-                  </CCol>
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">Expense To Be Capture</CFormLabel>
-
-                    <CTableDataCell scope="row">
-                      <input type="checkbox" name="name2" />
-                    </CTableDataCell>
-                  </CCol>
-                </CRow>
-                <CButton color="primary">Add</CButton>
-                <hr />
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
               </CTabPane>
               <CTabPane role="tabpanel" aria-labelledby="contact-tab" visible={activeKey_2 === 5}>
                 <CRow className="mt-2" hidden>
@@ -2491,7 +1600,6 @@ const TSClossure = () => {
                 </CRow>
                 <CRow className="mt-2" hidden>
                   <CCol xs={12} md={2}>
-<<<<<<< HEAD
                     <CFormLabel htmlFor="dVendor1">Diesel Vendor</CFormLabel>
 
                     <CFormInput size="sm" id="dVendor1"  readOnly />
@@ -2517,33 +1625,6 @@ const TSClossure = () => {
                         Invoice Copy
                         {errors.dInvoice && (
                           <span className="help text-danger">{errors.dInvoice}</span>
-=======
-                    <CFormLabel htmlFor="inputAddress">Diesel Vendor</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" value="" readOnly />
-                  </CCol>
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">Diesel Liter</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" value="" />
-                  </CCol>
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">Rate Per Liter</CFormLabel>
-
-                    <CFormInput size="sm" type="" id="inputAddress" />
-                  </CCol>
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">Total Amount</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" type="" value="" readOnly />
-                  </CCol>
-                  {!adhardel && (
-                    <CCol xs={12} md={2}>
-                      <CFormLabel htmlFor="inputAddress">
-                        Invoice Copy
-                        {errors.vehicleType && (
-                          <span className="help text-danger">{errors.vehicleType}</span>
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                         )}
                       </CFormLabel>
                       <CButton
@@ -2551,11 +1632,7 @@ const TSClossure = () => {
                         className="w-100 m-0"
                         color="info"
                         size="sm"
-<<<<<<< HEAD
                         id="dInvoice"
-=======
-                        id="inputAddress"
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                       >
                         <span
                           className="float-start"
@@ -2588,11 +1665,7 @@ const TSClossure = () => {
                     </CCol>
                   )}
                   <CCol md={2}>
-<<<<<<< HEAD
                     <CFormLabel htmlFor="dName4">
-=======
-                    <CFormLabel htmlFor="DefectType">
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                       Driver Name{' '}
                       {errors.DriverName && (
                         <span className="help text-danger">{errors.DriverName}</span>
@@ -2607,14 +1680,9 @@ const TSClossure = () => {
                       value={values.DriverName}
                       className={`${errors.DriverName && 'is-invalid'}`}
                       aria-label="Small select example"
-<<<<<<< HEAD
                       id='dName4'
                     >
                       <option  hidden selected>
-=======
-                    >
-                      <option value="" hidden selected>
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                         Select...
                       </option>
                       <option value="1">11111</option>
@@ -2625,17 +1693,10 @@ const TSClossure = () => {
                 </CRow>
                 <CRow className="mt-2" hidden>
                   <CCol md={2}>
-<<<<<<< HEAD
                     <CFormLabel htmlFor="rVendor">
                       Registered Vendor{' '}
                       {errors.rVendor && (
                         <span className="help text-danger">{errors.rVendor}</span>
-=======
-                    <CFormLabel htmlFor="DefectType">
-                      Registered Vendor{' '}
-                      {errors.DriverName && (
-                        <span className="help text-danger">{errors.DriverName}</span>
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                       )}
                     </CFormLabel>
                     <CFormSelect
@@ -2644,20 +1705,12 @@ const TSClossure = () => {
                       onFocus={onFocus}
                       onBlur={onBlur}
                       onChange={handleChange}
-<<<<<<< HEAD
                       value={values.rVendor}
                       className={`${errors.rVendor && 'is-invalid'}`}
                       aria-label="Small select example"
                       id='rVendor'
                     >
                       <option  hidden selected>
-=======
-                      value={values.DriverName}
-                      className={`${errors.DriverName && 'is-invalid'}`}
-                      aria-label="Small select example"
-                    >
-                      <option value="" hidden selected>
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                         Select...
                       </option>
                       <option value="1">11111</option>
@@ -2666,7 +1719,6 @@ const TSClossure = () => {
                     </CFormSelect>
                   </CCol>
                   <CCol xs={12} md={2}>
-<<<<<<< HEAD
                     <CFormLabel htmlFor="dltr2">Diesel Liter</CFormLabel>
 
                     <CFormInput size="sm" id="dltr2"  />
@@ -2684,25 +1736,6 @@ const TSClossure = () => {
                   {!adhardel && (
                     <CCol xs={12} md={2}>
                       <CFormLabel htmlFor="dinvoice">
-=======
-                    <CFormLabel htmlFor="inputAddress">Diesel Liter</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" value="" />
-                  </CCol>
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">Rate Per Liter</CFormLabel>
-
-                    <CFormInput size="sm" type="" id="inputAddress" />
-                  </CCol>
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">Total Amount</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" type="" value="" readOnly />
-                  </CCol>
-                  {!adhardel && (
-                    <CCol xs={12} md={2}>
-                      <CFormLabel htmlFor="inputAddress">
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                         Invoice Number
                         {errors.vehicleType && (
                           <span className="help text-danger">{errors.vehicleType}</span>
@@ -2713,11 +1746,7 @@ const TSClossure = () => {
                         className="w-100 m-0"
                         color="info"
                         size="sm"
-<<<<<<< HEAD
                         id="dinvoice"
-=======
-                        id="inputAddress"
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                       >
                         <span
                           className="float-start"
@@ -2750,11 +1779,7 @@ const TSClossure = () => {
                     </CCol>
                   )}
                   <CCol md={2}>
-<<<<<<< HEAD
                     <CFormLabel htmlFor="dname">
-=======
-                    <CFormLabel htmlFor="DefectType">
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                       Driver Name{' '}
                       {errors.DriverName && (
                         <span className="help text-danger">{errors.DriverName}</span>
@@ -2769,14 +1794,9 @@ const TSClossure = () => {
                       value={values.DriverName}
                       className={`${errors.DriverName && 'is-invalid'}`}
                       aria-label="Small select example"
-<<<<<<< HEAD
                       id='dname'
                     >
                       <option  hidden selected>
-=======
-                    >
-                      <option value="" hidden selected>
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                         Select...
                       </option>
                       <option value="1">11111</option>
@@ -2787,7 +1807,6 @@ const TSClossure = () => {
                 </CRow>
                 <CRow className="mt-2" hidden>
                   <CCol md={2}>
-<<<<<<< HEAD
                     <CFormLabel htmlFor="uVendor">Unregistered Vendor</CFormLabel>
 
                     <CFormInput size="sm" id="uVendor"  />
@@ -2810,30 +1829,6 @@ const TSClossure = () => {
                   {!adhardel && (
                     <CCol xs={12} md={2}>
                       <CFormLabel htmlFor="dinvoice1">
-=======
-                    <CFormLabel htmlFor="inputAddress">Unregistered Vendor</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" value="" />
-                  </CCol>
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">Diesel Liter</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" value="" />
-                  </CCol>
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">Rate Per Liter</CFormLabel>
-
-                    <CFormInput size="sm" type="" id="inputAddress" />
-                  </CCol>
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">Total Amount</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" type="" value="" readOnly />
-                  </CCol>
-                  {!adhardel && (
-                    <CCol xs={12} md={2}>
-                      <CFormLabel htmlFor="inputAddress">
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                         Invoice Number
                         {errors.vehicleType && (
                           <span className="help text-danger">{errors.vehicleType}</span>
@@ -2844,11 +1839,7 @@ const TSClossure = () => {
                         className="w-100 m-0"
                         color="info"
                         size="sm"
-<<<<<<< HEAD
                         id="dinvoice1"
-=======
-                        id="inputAddress"
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                       >
                         <span
                           className="float-start"
@@ -2881,11 +1872,7 @@ const TSClossure = () => {
                     </CCol>
                   )}
                   <CCol md={2}>
-<<<<<<< HEAD
                     <CFormLabel htmlFor="dname2">
-=======
-                    <CFormLabel htmlFor="DefectType">
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                       Driver Name{' '}
                       {errors.DriverName && (
                         <span className="help text-danger">{errors.DriverName}</span>
@@ -2893,25 +1880,16 @@ const TSClossure = () => {
                     </CFormLabel>
                     <CFormSelect
                       size="sm"
-<<<<<<< HEAD
                       name="dname2"
-=======
-                      name="DefectType"
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                       onFocus={onFocus}
                       onBlur={onBlur}
                       onChange={handleChange}
                       value={values.DriverName}
                       className={`${errors.DriverName && 'is-invalid'}`}
                       aria-label="Small select example"
-<<<<<<< HEAD
                       id='dname2'
                     >
                       <option  hidden selected>
-=======
-                    >
-                      <option value="" hidden selected>
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                         Select...
                       </option>
                       <option value="1">11111</option>
@@ -2932,7 +1910,6 @@ const TSClossure = () => {
                     ></CFormLabel>
                   </CCol>
                   <CCol xs={12} md={2}>
-<<<<<<< HEAD
                     <CFormLabel htmlFor="dTotal">Total Diesel Liter</CFormLabel>
 
                     <CFormInput size="sm" id="dTotal"  readOnly />
@@ -2946,21 +1923,6 @@ const TSClossure = () => {
                     <CFormLabel htmlFor="dtAmount">Total Diesel Amount</CFormLabel>
 
                     <CFormInput size="sm" id="dtAmount" type=""  readOnly />
-=======
-                    <CFormLabel htmlFor="inputAddress">Total Diesel Liter</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" value="" readOnly />
-                  </CCol>
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">Average Rate Per Liter</CFormLabel>
-
-                    <CFormInput size="sm" type="" id="inputAddress" readOnly />
-                  </CCol>
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">Total Diesel Amount</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" type="" value="" readOnly />
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                   </CCol>
                 </CRow>
                 <hr />
@@ -2979,7 +1941,6 @@ const TSClossure = () => {
                 </CRow>
                 <CRow className="mt-2" hidden>
                   <CCol md={2}>
-<<<<<<< HEAD
                     <CFormLabel htmlFor="fjNum">
                       Forward Journey Number{' '}
                       {errors.STONo && <span className="help text-danger">{errors.STONo}</span>}
@@ -3022,55 +1983,10 @@ const TSClossure = () => {
                     <CFormLabel htmlFor="loadTon">Load Tonnage</CFormLabel>
 
                     <CFormInput size="sm" id='loadTon' readOnly />
-=======
-                    <CFormLabel htmlFor="DefectType">
-                      Forward Journey Number{' '}
-                      {errors.STONo && <span className="help text-danger">{errors.STONo}</span>}
-                    </CFormLabel>
-                    <CFormInput size="sm" id="inputAddress" value="15487126" readOnly />
-                  </CCol>
-
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">Diesel Consumption QTY</CFormLabel>
-
-                    <CFormInput size="sm" type="" id="inputAddress" />
-                  </CCol>
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">Average Rate/Liter</CFormLabel>
-
-                    <CFormInput size="sm" type="" id="inputAddress" readOnly />
-                  </CCol>
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">Total Diesel Amount</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" type="" value="" readOnly />
-                  </CCol>
-
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">Opening KM</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" readOnly />
-                  </CCol>
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">Closing KM</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" />
-                  </CCol>
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">Running KM</CFormLabel>
-
-                    <CFormInput size="sm" htmlFor="inputAddress" readOnly />
-                  </CCol>
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">Load Tonnage</CFormLabel>
-
-                    <CFormInput size="sm" htmlFor="inputAddress" readOnly />
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                   </CCol>
                 </CRow>
                 <CRow className="mt-2" hidden>
                   <CCol md={2}>
-<<<<<<< HEAD
                     <CFormLabel htmlFor="rjNum">
                       Return Journey Number{' '}
                       {errors.STONo && <span className="help text-danger">{errors.STONo}</span>}
@@ -3113,55 +2029,10 @@ const TSClossure = () => {
                     <CFormLabel htmlFor="loadTon1">Load Tonnage</CFormLabel>
 
                     <CFormInput size="sm" id="loadTon1" readOnly />
-=======
-                    <CFormLabel htmlFor="DefectType">
-                      Return Journey Number{' '}
-                      {errors.STONo && <span className="help text-danger">{errors.STONo}</span>}
-                    </CFormLabel>
-                    <CFormInput size="sm" id="inputAddress" value="15423426" readOnly />
-                  </CCol>
-
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">Diesel Consumption QTY</CFormLabel>
-
-                    <CFormInput size="sm" type="" id="inputAddress" />
-                  </CCol>
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">Average Rate/Liter</CFormLabel>
-
-                    <CFormInput size="sm" type="" id="inputAddress" readOnly />
-                  </CCol>
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">Total Diesel Amount</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" type="" value="" readOnly />
-                  </CCol>
-
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">Opening KM</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" readOnly />
-                  </CCol>
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">Closing KM</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" />
-                  </CCol>
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">Running KM</CFormLabel>
-
-                    <CFormInput size="sm" htmlFor="inputAddress" readOnly />
-                  </CCol>
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">Load Tonnage</CFormLabel>
-
-                    <CFormInput size="sm" htmlFor="inputAddress" readOnly />
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                   </CCol>
                 </CRow>
                 <CRow className="mt-2" hidden>
                   <CCol md={2}>
-<<<<<<< HEAD
                     <CFormLabel htmlFor="stonum">
                       STO Delivery Number{' '}
                       {errors.STONo && <span className="help text-danger">{errors.STONo}</span>}
@@ -3204,61 +2075,13 @@ const TSClossure = () => {
                     <CFormLabel htmlFor="loadTon2">Load Tonnage</CFormLabel>
 
                     <CFormInput size="sm" id="loadTon2" readOnly />
-=======
-                    <CFormLabel htmlFor="DefectType">
-                      STO Delivery Number{' '}
-                      {errors.STONo && <span className="help text-danger">{errors.STONo}</span>}
-                    </CFormLabel>
-                    <CFormInput size="sm" id="inputAddress" value="15487126" readOnly />
-                  </CCol>
-
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">Diesel Consumption QTY</CFormLabel>
-
-                    <CFormInput size="sm" type="" id="inputAddress" />
-                  </CCol>
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">Average Rate/Liter</CFormLabel>
-
-                    <CFormInput size="sm" type="" id="inputAddress" readOnly />
-                  </CCol>
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">Total Diesel Amount</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" type="" value="" readOnly />
-                  </CCol>
-
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">Opening KM</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" readOnly />
-                  </CCol>
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">Closing KM</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" />
-                  </CCol>
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">Running KM</CFormLabel>
-
-                    <CFormInput size="sm" htmlFor="inputAddress" readOnly />
-                  </CCol>
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">Load Tonnage</CFormLabel>
-
-                    <CFormInput size="sm" htmlFor="inputAddress" readOnly />
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                   </CCol>
                 </CRow>
               </CTabPane>
               <CTabPane role="tabpanel" aria-labelledby="contact-tab" visible={activeKey_2 === 6}>
                 <CRow className="mt-2" hidden>
                   <CCol md={2}>
-<<<<<<< HEAD
                     <CFormLabel htmlFor="snum">
-=======
-                    <CFormLabel htmlFor="DefectType">
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                       Shipment Number{' '}
                       {errors.DriverName && (
                         <span className="help text-danger">{errors.DriverName}</span>
@@ -3266,25 +2089,16 @@ const TSClossure = () => {
                     </CFormLabel>
                     <CFormSelect
                       size="sm"
-<<<<<<< HEAD
                       name="snum"
-=======
-                      name="DefectType"
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                       onFocus={onFocus}
                       onBlur={onBlur}
                       onChange={handleChange}
                       value={setSelectedDeliveryNumber}
                       className={`${errors.DriverName && 'is-invalid'}`}
                       aria-label="Small select example"
-<<<<<<< HEAD
                       id='snum'
                     >
                       <option  hidden selected>
-=======
-                    >
-                      <option value="" hidden selected>
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                         Select...
                       </option>
                       <option value="1">11111</option>
@@ -3293,11 +2107,7 @@ const TSClossure = () => {
                     </CFormSelect>
                   </CCol>
                   <CCol xs={12} md={2}>
-<<<<<<< HEAD
                     <CFormLabel htmlFor="dnum">
-=======
-                    <CFormLabel htmlFor="DefectType">
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                       Delivery Number{' '}
                       {errors.DriverName && (
                         <span className="help text-danger">{errors.DriverName}</span>
@@ -3305,25 +2115,16 @@ const TSClossure = () => {
                     </CFormLabel>
                     <CFormSelect
                       size="sm"
-<<<<<<< HEAD
                       name="dnum"
-=======
-                      name="DefectType"
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                       onFocus={onFocus}
                       onBlur={onBlur}
                       onChange={handleChange}
                       value={setSelectedDeliveryNumber}
                       className={`${errors.DriverName && 'is-invalid'}`}
                       aria-label="Small select example"
-<<<<<<< HEAD
                       id='dnum'
                     >
                       <option  hidden selected>
-=======
-                    >
-                      <option value="" hidden selected>
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                         Select...
                       </option>
                       <option value="1">11111</option>
@@ -3333,11 +2134,7 @@ const TSClossure = () => {
                   </CCol>
 
                   <CCol xs={12} md={2}>
-<<<<<<< HEAD
                     <CFormLabel htmlFor="Return">
-=======
-                    <CFormLabel htmlFor="DefectType">
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                       Return To{' '}
                       {errors.DriverName && (
                         <span className="help text-danger">{errors.DriverName}</span>
@@ -3345,25 +2142,16 @@ const TSClossure = () => {
                     </CFormLabel>
                     <CFormSelect
                       size="sm"
-<<<<<<< HEAD
                       name="Return"
-=======
-                      name="DefectType"
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                       onFocus={onFocus}
                       onBlur={onBlur}
                       onChange={handleChange}
                       value={values.DriverName}
                       className={`${errors.DriverName && 'is-invalid'}`}
                       aria-label="Small select example"
-<<<<<<< HEAD
                       id='Return'
                     >
                       <option  hidden selected>
-=======
-                    >
-                      <option value="" hidden selected>
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                         Select...
                       </option>
                       <option value="1">NLFD</option>
@@ -3374,7 +2162,6 @@ const TSClossure = () => {
                     </CFormSelect>
                   </CCol>
                   <CCol xs={12} md={2}>
-<<<<<<< HEAD
                     <CFormLabel htmlFor="returnqty">Return QTY in Tons</CFormLabel>
 
                     <CFormInput size="sm" type="" id="returnqty" readOnly />
@@ -3392,25 +2179,6 @@ const TSClossure = () => {
                   <CCol xs={12} md={2}>
                     <CFormLabel htmlFor="dPOD">Diverted POD</CFormLabel>
                     <CFormInput type="file" name="dPOD" size="sm" id="dPOD" />
-=======
-                    <CFormLabel htmlFor="inputAddress">Return QTY in Tons</CFormLabel>
-
-                    <CFormInput size="sm" type="" id="inputAddress" readOnly />
-                  </CCol>
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">Return Rate Per Ton</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" type="" value="" readOnly />
-                  </CCol>
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">Return Freight Amount</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" type="" />
-                  </CCol>
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">Diverted POD</CFormLabel>
-                    <CFormInput type="file" name="fjPod1" size="sm" id="formFileSm" />
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
 
                     {/* <CFormInput size="sm" id="inputAddress" value=" " readOnly /> */}
                   </CCol>
@@ -3419,22 +2187,14 @@ const TSClossure = () => {
               <CTabPane role="tabpanel" aria-labelledby="contact-tab" visible={activeKey_2 === 8}>
                 <CRow className="mt-2" hidden>
                   <CCol xs={12} md={2}>
-<<<<<<< HEAD
                     <CFormLabel htmlFor="gPass">
                       Gate Pass Type{' '}
                       {errors.gPass && (
                         <span className="help text-danger">{errors.gPass}</span>
-=======
-                    <CFormLabel htmlFor="DefectType">
-                      Gate Pass Type{' '}
-                      {errors.DriverName && (
-                        <span className="help text-danger">{errors.DriverName}</span>
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                       )}
                     </CFormLabel>
                     <CFormSelect
                       size="sm"
-<<<<<<< HEAD
                       name="gPass"
                       onFocus={onFocus}
                       onBlur={onBlur}
@@ -3445,17 +2205,6 @@ const TSClossure = () => {
                       id='gPass'
                     >
                       <option  hidden selected>
-=======
-                      name="DefectType"
-                      onFocus={onFocus}
-                      onBlur={onBlur}
-                      onChange={handleChange}
-                      value={values.DriverName}
-                      className={`${errors.DriverName && 'is-invalid'}`}
-                      aria-label="Small select example"
-                    >
-                      <option value="" hidden selected>
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                         Select...
                       </option>
                       <option value="1">Returnable</option>
@@ -3463,22 +2212,14 @@ const TSClossure = () => {
                     </CFormSelect>
                   </CCol>
                   <CCol md={2}>
-<<<<<<< HEAD
                     <CFormLabel htmlFor="gNum">
                       Gate Pass Number{' '}
                       {errors.gNum && (
                         <span className="help text-danger">{errors.gNum}</span>
-=======
-                    <CFormLabel htmlFor="DefectType">
-                      Gate Pass Number{' '}
-                      {errors.DriverName && (
-                        <span className="help text-danger">{errors.DriverName}</span>
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                       )}
                     </CFormLabel>
                     <CFormSelect
                       size="sm"
-<<<<<<< HEAD
                       name="gNum"
                       onFocus={onFocus}
                       onBlur={onBlur}
@@ -3489,17 +2230,6 @@ const TSClossure = () => {
                       id='gNum'
                     >
                       <option  hidden selected>
-=======
-                      name="DefectType"
-                      onFocus={onFocus}
-                      onBlur={onBlur}
-                      onChange={handleChange}
-                      value={values.DriverName}
-                      className={`${errors.DriverName && 'is-invalid'}`}
-                      aria-label="Small select example"
-                    >
-                      <option value="" hidden selected>
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                         Select...
                       </option>
                       <option value="1">11111</option>
@@ -3509,7 +2239,6 @@ const TSClossure = () => {
                   </CCol>
 
                   <CCol xs={12} md={2}>
-<<<<<<< HEAD
                     <CFormLabel htmlFor="floc">From Loacation</CFormLabel>
 
                     <CFormInput size="sm" type="" id="floc" readOnly />
@@ -3526,25 +2255,6 @@ const TSClossure = () => {
                   <CCol xs={12} md={2}>
                     <CFormLabel htmlFor="attach">Attachment</CFormLabel>
                     <CFormInput type="file" name="attach" size="sm" id="attach" />
-=======
-                    <CFormLabel htmlFor="inputAddress">From Loacation</CFormLabel>
-
-                    <CFormInput size="sm" type="" id="inputAddress" readOnly />
-                  </CCol>
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">To Loacation</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" type="" readOnly />
-                  </CCol>
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">Freight Amount</CFormLabel>
-
-                    <CFormInput size="sm" id="inputAddress" type="" />
-                  </CCol>
-                  <CCol xs={12} md={2}>
-                    <CFormLabel htmlFor="inputAddress">Attachment</CFormLabel>
-                    <CFormInput type="file" name="fjPod1" size="sm" id="formFileSm" />
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
 
                     {/* <CFormInput size="sm" id="inputAddress" value=" " readOnly /> */}
                   </CCol>

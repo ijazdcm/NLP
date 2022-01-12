@@ -58,7 +58,6 @@ const VehicleMaintainence = () => {
             <CForm className="container p-3" onSubmit={'handleSubmit'}>
               <CRow>
                 <CCol xs={12} md={3}>
-<<<<<<< HEAD
                   <CFormLabel htmlFor="vNum">Vehicle No*</CFormLabel>
 
                   <CFormInput size="sm" id="vNum"  readOnly />
@@ -74,23 +73,6 @@ const VehicleMaintainence = () => {
                     </option>
                     <option value="outSide" onClick={() => setoutSide(true)}>
                       Raj
-=======
-                  <CFormLabel htmlFor="inputAddress">Vehicle No*</CFormLabel>
-
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
-                </CCol>
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Driver Name*</CFormLabel>
-                  <CFormSelect size="sm" name="maintenenceBy" className="">
-                    <option value="" hidden>
-                      Select ...
-                    </option>
-                    <option value="inHouse" onClick={() => setoutSide(false)}>
-                      Ram
-                    </option>
-                    <option value="outSide" onClick={() => setoutSide(true)}>
-                      Kumar
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                     </option>
                   </CFormSelect>
                 </CCol>
@@ -102,13 +84,8 @@ const VehicleMaintainence = () => {
                     )}
                   </CFormLabel>
 
-<<<<<<< HEAD
                   <CFormSelect size="sm" name="maintenenceType" id='maintenenceType' className="">
                     <option  hidden>
-=======
-                  <CFormSelect size="sm" name="maintenenceType" className="">
-                    <option value="" hidden>
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                       Select Maintenance Type
                     </option>
                     <option value="scheduled">Scheduled Maintenance</option>
@@ -117,13 +94,8 @@ const VehicleMaintainence = () => {
                 </CCol>
                 <CCol className="mb-3" md={3}>
                   <CFormLabel htmlFor="maintenenceBy">Maintenance By *</CFormLabel>
-<<<<<<< HEAD
                   <CFormSelect size="sm" name="maintenenceBy" id='maintenenceBy' className="">
                     <option  hidden>
-=======
-                  <CFormSelect size="sm" name="maintenenceBy" className="">
-                    <option value="" hidden>
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                       Select Maintenance By
                     </option>
                     <option value="inHouse" onClick={() => setoutSide(false)}>
@@ -136,13 +108,8 @@ const VehicleMaintainence = () => {
                 </CCol>
                 <CCol className="mb-3" md={3}>
                   <CFormLabel htmlFor="workOrder">Work Order *</CFormLabel>
-<<<<<<< HEAD
                   <CFormSelect size="sm" name="workOrder" id='workOrder' className="">
                     <option  hidden>
-=======
-                  <CFormSelect size="sm" name="workOrder" className="">
-                    <option value="" hidden>
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                       Select...
                     </option>
                     <option value="inHouse" onClick={() => setoutSide(false)}>
@@ -152,27 +119,17 @@ const VehicleMaintainence = () => {
                 </CCol>
                 <CCol className="mb-3" md={3}>
                   <CFormLabel htmlFor="vendorName">Vendor Name *</CFormLabel>
-<<<<<<< HEAD
                   <CFormSelect size="sm" name="vendorName" id='vendorName' className="">
 
                     <option  hidden>
                       Select...
                     </option>
                     <option  onClick={() => setoutSide(false)}>
-=======
-                  <CFormSelect size="sm" name="vendorName" className="">
-
-                    <option value="" hidden>
-                      Select...
-                    </option>
-                    <option value="" onClick={() => setoutSide(false)}>
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                       Select-LP
                     </option>
                   </CFormSelect>
                 </CCol>
                 <CCol xs={12} md={3}>
-<<<<<<< HEAD
                   <CFormLabel htmlFor="MaintenanceStart">Maintainence Start Date& Time*</CFormLabel>
 
                   <CFormInput size="sm" id="MaintenanceStart" type="datetime-local" />
@@ -185,20 +142,6 @@ const VehicleMaintainence = () => {
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="remarks">Remarks</CFormLabel>
                   <CFormTextarea id="remarks" rows="1"></CFormTextarea>
-=======
-                  <CFormLabel htmlFor="inputAddress">Maintainence Start Date& Time*</CFormLabel>
-
-                  <CFormInput size="sm" id="" type="datetime-local" />
-                </CCol>
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Maintainence End Date& Time*</CFormLabel>
-
-                  <CFormInput size="sm" id="" type="datetime-local" />
-                </CCol>
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="remarks">Remarks</CFormLabel>
-                  <CFormTextarea id="exampleFormControlTextarea1" rows="1"></CFormTextarea>
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                 </CCol>
               </CRow>
 

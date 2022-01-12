@@ -115,15 +115,9 @@ const Shipment = () => {
                                     <CModalBody>
                                         <CRow className="">
                                             <CCol>
-<<<<<<< HEAD
                                                 <CFormLabel htmlFor="VNum">
                                                     Vehicle Number
                                                     {errors.VNum && <span className="help text-danger">{errors.VNum}</span>}
-=======
-                                                <CFormLabel htmlFor="inputAddress">
-                                                    Truck No
-                                                    {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                                                 </CFormLabel>
                                                 <CFormSelect size="sm" className="mb-3" aria-label="Small select example">
                                                     <option hidden>Select ...</option>
@@ -136,24 +130,15 @@ const Shipment = () => {
                                                 </CFormSelect>
                                             </CCol>
                                             <CCol>
-<<<<<<< HEAD
                                                 <CFormLabel htmlFor="vCap">
                                                     Vehicle Capacity
                                                     {errors.vCap && <span className="help text-danger">{errors.vCap}</span>}
                                                 </CFormLabel>
                                                 <CFormInput size="sm" id="vCap"  readOnly />
-=======
-                                                <CFormLabel htmlFor="inputAddress">
-                                                    Truck Capacity
-                                                    {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
-                                                </CFormLabel>
-                                                <CFormInput size="sm" id="inputAddress" value="" readOnly />
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                                             </CCol>
                                         </CRow>
                                         <CRow className="">
                                             <CCol>
-<<<<<<< HEAD
                                                 <CFormLabel htmlFor="vCap">
                                                 Vehicle Type
                                                     {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
@@ -166,38 +151,16 @@ const Shipment = () => {
                                                     {errors.dName && <span className="help text-danger">{errors.dName}</span>}
                                                 </CFormLabel>
                                                 <CFormInput size="sm" id="dName"  readOnly />
-=======
-                                                <CFormLabel htmlFor="inputAddress">
-                                                    Truck Type
-                                                    {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
-                                                </CFormLabel>
-                                                <CFormInput size="sm" id="inputAddress" value="" readOnly />
-                                            </CCol>
-                                            <CCol>
-                                                <CFormLabel htmlFor="inputAddress">
-                                                    Driver Name
-                                                    {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
-                                                </CFormLabel>
-                                                <CFormInput size="sm" id="inputAddress" value="" readOnly />
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                                             </CCol>
 
                                         </CRow>
                                         <CRow>
                                             <CCol>
-<<<<<<< HEAD
                                                 <CFormLabel htmlFor="dMob">
                                                     Driver Mobile Number
                                                     {errors.dMob && <span className="help text-danger">{errors.dMob}</span>}
                                                 </CFormLabel>
                                                 <CFormInput size="sm" id="dMob"  readOnly />
-=======
-                                                <CFormLabel htmlFor="inputAddress">
-                                                    Driver Mobile Number
-                                                    {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
-                                                </CFormLabel>
-                                                <CFormInput size="sm" id="inputAddress" value="" readOnly />
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                                             </CCol>
                                             <CCol>
 

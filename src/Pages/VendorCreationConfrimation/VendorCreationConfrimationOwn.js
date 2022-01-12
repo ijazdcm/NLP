@@ -56,33 +56,21 @@ const VendorCreationConfrimationOwn = () => {
               Shed Name
               {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
-<<<<<<< HEAD
             <CFormInput size="sm" id="inputAddress"  readOnly />
-=======
-            <CFormInput size="sm" id="inputAddress" value="" readOnly />
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
           </CCol>
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
               Owner Name
               {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
-<<<<<<< HEAD
             <CFormInput size="sm" id="inputAddress"  readOnly />
-=======
-            <CFormInput size="sm" id="inputAddress" value="" readOnly />
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
           </CCol>
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
               Owner Mobile Number
               {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
-<<<<<<< HEAD
             <CFormInput size="sm" id="inputAddress"  readOnly />
-=======
-            <CFormInput size="sm" id="inputAddress" value="" readOnly />
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
           </CCol>
 
           <CCol xs={12} md={3}>
@@ -119,11 +107,7 @@ const VendorCreationConfrimationOwn = () => {
               PAN Card Number*
               {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
-<<<<<<< HEAD
             <CFormInput size="sm" id="inputAddress"  />
-=======
-            <CFormInput size="sm" id="inputAddress" value="" />
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
           </CCol>
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
@@ -155,11 +139,7 @@ const VendorCreationConfrimationOwn = () => {
               Adhar Card Number
               {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
-<<<<<<< HEAD
             <CFormInput size="sm" id="inputAddress"  />
-=======
-            <CFormInput size="sm" id="inputAddress" value="" />
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
           </CCol>
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
@@ -315,44 +295,28 @@ const VendorCreationConfrimationOwn = () => {
               Bank Account Number*
               {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
-<<<<<<< HEAD
             <CFormInput size="sm" id="inputAddress"  />
-=======
-            <CFormInput size="sm" id="inputAddress" value="" />
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
           </CCol>
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
               Bank Account Holder Name*
               {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
-<<<<<<< HEAD
             <CFormInput size="sm" id="inputAddress"  />
-=======
-            <CFormInput size="sm" id="inputAddress" value="" />
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
           </CCol>
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
               Street
               {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
-<<<<<<< HEAD
             <CFormInput size="sm" id="inputAddress"  />
-=======
-            <CFormInput size="sm" id="inputAddress" value="" />
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
           </CCol>
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
               area
               {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
-<<<<<<< HEAD
             <CFormInput size="sm" id="inputAddress"  />
-=======
-            <CFormInput size="sm" id="inputAddress" value="" />
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
           </CCol>
         </CRow>
         {/* Row Five------------------------- */}
@@ -363,44 +327,28 @@ const VendorCreationConfrimationOwn = () => {
               City
               {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
-<<<<<<< HEAD
             <CFormInput size="sm" id="inputAddress"  />
-=======
-            <CFormInput size="sm" id="inputAddress" value="" />
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
           </CCol>
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
               District
               {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
-<<<<<<< HEAD
             <CFormInput size="sm" id="inputAddress"  />
-=======
-            <CFormInput size="sm" id="inputAddress" value="" />
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
           </CCol>
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
               State
               {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
-<<<<<<< HEAD
             <CFormInput size="sm" id="inputAddress"  />
-=======
-            <CFormInput size="sm" id="inputAddress" value="" />
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
           </CCol>
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
               Postal Code
               {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
-<<<<<<< HEAD
             <CFormInput size="sm" id="inputAddress"  />
-=======
-            <CFormInput size="sm" id="inputAddress" value="" />
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
           </CCol>
         </CRow>
         {/* Row Six------------------------- */}
@@ -411,44 +359,28 @@ const VendorCreationConfrimationOwn = () => {
               Region
               {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
-<<<<<<< HEAD
             <CFormInput size="sm" id="inputAddress"  />
-=======
-            <CFormInput size="sm" id="inputAddress" value="" />
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
           </CCol>
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
               TDS Declaration Form Front
               {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
-<<<<<<< HEAD
             <CFormInput size="sm" id="inputAddress"  />
-=======
-            <CFormInput size="sm" id="inputAddress" value="" />
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
           </CCol>
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
               TDS Declaration Form Back
               {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
-<<<<<<< HEAD
             <CFormInput size="sm" id="inputAddress"  />
-=======
-            <CFormInput size="sm" id="inputAddress" value="" />
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
           </CCol>
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
               GST Registeration
               {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
-<<<<<<< HEAD
             <CFormInput size="sm" id="inputAddress"  />
-=======
-            <CFormInput size="sm" id="inputAddress" value="" />
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
           </CCol>
         </CRow>
         {/* Row Seven------------------------- */}
@@ -460,44 +392,28 @@ const VendorCreationConfrimationOwn = () => {
               GST Registration Number*
               {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
-<<<<<<< HEAD
             <CFormInput size="sm" id="inputAddress"  />
-=======
-            <CFormInput size="sm" id="inputAddress" value="" />
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
           </CCol>
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
               GST Tax Code
               {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
-<<<<<<< HEAD
             <CFormInput size="sm" id="inputAddress"  readOnly />
-=======
-            <CFormInput size="sm" id="inputAddress" value="" readOnly />
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
           </CCol>
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
               Payment Terms 3Days
               {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
-<<<<<<< HEAD
             <CFormInput size="sm" id="inputAddress"  readOnly />
-=======
-            <CFormInput size="sm" id="inputAddress" value="" readOnly />
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
           </CCol>
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
               Remarks
               {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
-<<<<<<< HEAD
             <CFormInput size="sm" id="inputAddress"  readOnly />
-=======
-            <CFormInput size="sm" id="inputAddress" value="" readOnly />
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
           </CCol>
         </CRow>
         {/* Row Eight------------------------- */}

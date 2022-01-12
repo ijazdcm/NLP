@@ -52,7 +52,6 @@ const AdvanceHire = () => {
             <CForm className="container p-3" onSubmit={handleSubmit}>
               <CRow className="">
                 <CCol xs={12} md={3}>
-<<<<<<< HEAD
                   <CFormLabel htmlFor="vType">Vehicle Type</CFormLabel>
 
                   <CFormInput size="sm" id="vType"  readOnly />
@@ -68,38 +67,16 @@ const AdvanceHire = () => {
                   <CFormLabel htmlFor="vCap">Vehicle Capacity</CFormLabel>
 
                   <CFormInput size="sm" id="vCap"  readOnly />
-=======
-                  <CFormLabel htmlFor="inputAddress">Vehicle Type</CFormLabel>
-
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
-                </CCol>
-
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Vehicle Number</CFormLabel>
-
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
-                </CCol>
-
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Vehicle Capacity</CFormLabel>
-
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                 </CCol>
 
                 {/* <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">VA Number</CFormLabel>
 
-<<<<<<< HEAD
                   <CFormInput size="sm" id="inputAddress"  readOnly />
-=======
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                 </CCol>
               </CRow>
               <CRow className=""> */}
                 <CCol xs={12} md={3}>
-<<<<<<< HEAD
                   <CFormLabel htmlFor="dName">Driver Name</CFormLabel>
 
                   <CFormInput size="sm" id="dName"  readOnly />
@@ -120,33 +97,10 @@ const AdvanceHire = () => {
                   <CFormLabel htmlFor="inspectionDateTime">Vehicle Inspection Date & Time</CFormLabel>
 
                   <CFormInput size="sm" id="inspectionDateTime"  readOnly />
-=======
-                  <CFormLabel htmlFor="inputAddress">Driver Name</CFormLabel>
-
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
-                </CCol>
-
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Driver Mobile Number</CFormLabel>
-
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
-                </CCol>
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Gate-In Date & Time</CFormLabel>
-
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
-                </CCol>
-
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Vehicle Inspection Date & Time</CFormLabel>
-
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                 </CCol>
               {/* </CRow>
               <CRow className=""> */}
                 <CCol xs={12} md={3}>
-<<<<<<< HEAD
                   <CFormLabel htmlFor="verifyDate">Doc. Verification Date & Time</CFormLabel>
 
                   <CFormInput size="sm" id="verifyDate"  readOnly />
@@ -167,33 +121,10 @@ const AdvanceHire = () => {
                   <CFormLabel htmlFor="ownerName">Owner Name</CFormLabel>
 
                   <CFormInput size="sm" id="ownerName"  readOnly />
-=======
-                  <CFormLabel htmlFor="inputAddress">Doc. Verification Date & Time</CFormLabel>
-
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
-                </CCol>
-
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Tripsheet Number</CFormLabel>
-
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
-                </CCol>
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Shed Name</CFormLabel>
-
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
-                </CCol>
-
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Owner Name</CFormLabel>
-
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                 </CCol>
               {/* </CRow>
               <CRow className=""> */}
                 <CCol xs={12} md={3}>
-<<<<<<< HEAD
                   <CFormLabel htmlFor="ownerMob">Owner Cell Number</CFormLabel>
 
                   <CFormInput size="sm" id="ownerMob"  readOnly />
@@ -238,52 +169,6 @@ const AdvanceHire = () => {
                   <CFormLabel htmlFor="sTon">Shipment Tonnage*</CFormLabel>
 
                   <CFormInput type="text" size="sm" id="sTon"  readOnly />
-=======
-                  <CFormLabel htmlFor="inputAddress">Owner Cell Number</CFormLabel>
-
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
-                </CCol>
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Vendor Code</CFormLabel>
-
-                  <CFormInput type="text" size="sm" id="inputAddress" value="" readOnly />
-                </CCol>
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Current Outstanding</CFormLabel>
-
-                  <CFormInput type="text" size="sm" id="inputAddress" value="" readOnly />
-                </CCol>
-
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Advance Payment Bank*</CFormLabel>
-
-                  <CFormInput type="text" size="sm" id="inputAddress" value="432" />
-                </CCol>
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Advance Payment Diesel*</CFormLabel>
-
-                  <CFormInput type="text" size="sm" id="inputAddress" value="5327" />
-                </CCol>
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Total Frieght Amount</CFormLabel>
-
-                  <CFormInput type="text" size="sm" id="inputAddress" value="6443" readOnly />
-                </CCol>
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Actual Freight Amount*</CFormLabel>
-
-                  <CFormInput type="text" size="sm" id="inputAddress" value="3543" />
-                </CCol>
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Income Base Freight Amount</CFormLabel>
-
-                  <CFormInput type="text" size="sm" id="inputAddress" value="" />
-                </CCol>
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Shipment Tonnage*</CFormLabel>
-
-                  <CFormInput type="text" size="sm" id="inputAddress" value="" readOnly />
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                 </CCol>
 
                 {/* <CCol xs={12} md={3}>
@@ -303,29 +188,17 @@ const AdvanceHire = () => {
                                     </CFormSelect>
                                 </CCol> */}
                 <CCol xs={12} md={3}>
-<<<<<<< HEAD
                   <CFormLabel htmlFor="expectDelivery">
-=======
-                  <CFormLabel htmlFor="inputAddress">
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                     Expected Delivery Date & Time*
                     {errors.AdvancePaymentMode && (
                       <span className="help text-danger">{errors.AdvancePaymentMode}</span>
                     )}
                   </CFormLabel>
-<<<<<<< HEAD
                   <CFormInput size="sm" type="datetime-local" id="expectDelivery" />
                 </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="remarks">Remarks</CFormLabel>
                   <CFormTextarea id="remarks" rows="1"></CFormTextarea>
-=======
-                  <CFormInput size="sm" type="datetime-local" id="inputAddress" />
-                </CCol>
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="remarks">Remarks</CFormLabel>
-                  <CFormTextarea id="exampleFormControlTextarea1" rows="1"></CFormTextarea>
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                 </CCol>
               </CRow>
 

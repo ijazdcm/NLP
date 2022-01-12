@@ -175,11 +175,7 @@ const ParkingYardGate = () => {
                 </CFormLabel>
 
                 <CFormSelect size="sm" name="vType" aria-label="Small select example">
-<<<<<<< HEAD
                   <option  hidden selected>
-=======
-                  <option value="" hidden selected>
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                     Select...
                   </option>
                   <option value="own" onClick={() => setHire(false)}>
@@ -199,11 +195,7 @@ const ParkingYardGate = () => {
               <CCol md={3}>
                 <CFormLabel htmlFor="vNum">Vehicle Number*</CFormLabel>
                 {hire ? (
-<<<<<<< HEAD
                   <CFormInput name="vNum" size="sm" id="inputAddress"  />
-=======
-                  <CFormInput name="vNum" size="sm" id="inputAddress" value="" />
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                 ) : (
                   <CFormSelect size="sm" name="vNum" className="" aria-label="Small select example">
                     <option hidden>Select...</option>
@@ -229,22 +221,14 @@ const ParkingYardGate = () => {
                     <option value="30">30</option>
                   </CFormSelect>
                 ) : (
-<<<<<<< HEAD
                   <CFormInput name="vCap" size="sm" id="inputAddress"  readOnly />
-=======
-                  <CFormInput name="vCap" size="sm" id="inputAddress" value="" readOnly />
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                 )}
               </CCol>
 
               <CCol xs={12} md={3}>
                 <CFormLabel htmlFor="dName">Driver Name*</CFormLabel>
                 {hire ? (
-<<<<<<< HEAD
                   <CFormInput name="dName" size="sm" id="inputAddress"  />
-=======
-                  <CFormInput name="dName" size="sm" id="inputAddress" value="" />
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                 ) : (
                   <CFormSelect
                     name="dName"
@@ -264,11 +248,7 @@ const ParkingYardGate = () => {
             <CRow>
               <CCol xs={12} md={3}>
                 <CFormLabel htmlFor="dMob">Driver Contact Number*</CFormLabel>
-<<<<<<< HEAD
                 <CFormInput name="dMob" size="sm" id="inputAddress"  readOnly={!hire} />
-=======
-                <CFormInput name="dMob" size="sm" id="inputAddress" value="" readOnly={!hire} />
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
               </CCol>
 
               <CCol xs={12} md={3} hidden={hire}>

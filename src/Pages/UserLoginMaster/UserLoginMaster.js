@@ -63,29 +63,17 @@ const UserLoginMaster = () => {
                         <CForm className="row g-3 m-2 p-1" onSubmit={handleSubmit}>
                             <CRow className="mb-md-1">
                                 <CCol md={3}>
-<<<<<<< HEAD
                                     <CFormLabel htmlFor="uName">User Name*</CFormLabel>
                                     <CFormInput
                                         name="uName"
                                         size="sm"
                                         id="uName"
-=======
-                                    <CFormLabel htmlFor="vNum">User Name*</CFormLabel>
-                                    <CFormInput
-                                        name="vNum"
-                                        size="sm"
-                                        id=""
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                                         placeholder=""
 
                                     />
                                 </CCol>
                                 <CCol md={3}>
-<<<<<<< HEAD
                                     <CFormLabel htmlFor="Divison">
-=======
-                                    <CFormLabel htmlFor="vehicleType">
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                                         Divison*{' '}
                                         {errors.Divison && (
                                             <span className="help text-danger">{errors.Divison}</span>
@@ -95,10 +83,7 @@ const UserLoginMaster = () => {
                                     <CFormSelect
                                         size="sm"
                                         name="Divison"
-<<<<<<< HEAD
                                         id='Divison'
-=======
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                                         onFocus={onFocus}
                                         onBlur={onBlur}
                                         onChange={handleChange}
@@ -106,11 +91,7 @@ const UserLoginMaster = () => {
                                         className={`mb-1 ${errors.Divison && 'is-invalid'}`}
                                         aria-label="Small select example"
                                     >
-<<<<<<< HEAD
                                         <option >Select ...</option>
-=======
-                                        <option value="">Select ...</option>
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
 
                                         <option value="1">NLFD</option>
 
@@ -134,10 +115,7 @@ const UserLoginMaster = () => {
                                     <CFormSelect
                                         size="sm"
                                         name="Department"
-<<<<<<< HEAD
                                         id='Department'
-=======
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                                         onFocus={onFocus}
                                         onBlur={onBlur}
                                         onChange={handleChange}
@@ -145,11 +123,7 @@ const UserLoginMaster = () => {
                                         className={`mb-1 ${errors.Department && 'is-invalid'}`}
                                         aria-label="Small select example"
                                     >
-<<<<<<< HEAD
                                         <option >Select ...</option>
-=======
-                                        <option value="">Select ...</option>
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
 
                                         <option value="1">Sourcing Team</option>
 
@@ -172,10 +146,7 @@ const UserLoginMaster = () => {
                                     <CFormSelect
                                         size="sm"
                                         name="Designation"
-<<<<<<< HEAD
                                         id='Designation'
-=======
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                                         onFocus={onFocus}
                                         onBlur={onBlur}
                                         onChange={handleChange}
@@ -183,11 +154,7 @@ const UserLoginMaster = () => {
                                         className={`mb-1 ${errors.Designation && 'is-invalid'}`}
                                         aria-label="Small select example"
                                     >
-<<<<<<< HEAD
                                         <option >Select ...</option>
-=======
-                                        <option value="">Select ...</option>
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
 
                                         <option value="1">Junior Executive</option>
 
@@ -204,73 +171,41 @@ const UserLoginMaster = () => {
                             </CRow>
                             <CRow className="mb-md-1">
                                 <CCol md={3}>
-<<<<<<< HEAD
                                     <CFormLabel htmlFor="serial">Serial No*</CFormLabel>
                                     <CFormInput
                                         name="serial"
                                         size="sm"
                                         id="serial"
-=======
-                                    <CFormLabel htmlFor="vNum">Serial No*</CFormLabel>
-                                    <CFormInput
-                                        name="vNum"
-                                        size="sm"
-                                        id=""
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                                         placeholder=""
 
                                     />
                                 </CCol>
                                 <CCol md={3}>
-<<<<<<< HEAD
                                     <CFormLabel htmlFor="uid">User ID*</CFormLabel>
                                     <CFormInput
                                         name="uid"
                                         size="sm"
                                         id="uid"
-=======
-                                    <CFormLabel htmlFor="vNum">User ID*</CFormLabel>
-                                    <CFormInput
-                                        name="vNum"
-                                        size="sm"
-                                        id=""
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                                         placeholder=""
                                         readOnly
                                     />
                                 </CCol>
                                 <CCol md={3}>
-<<<<<<< HEAD
                                     <CFormLabel htmlFor="uMob">User Mobile Number*</CFormLabel>
                                     <CFormInput
                                         name="uMob"
                                         size="sm"
                                         id="uMob"
-=======
-                                    <CFormLabel htmlFor="vNum">User Mobile Number*</CFormLabel>
-                                    <CFormInput
-                                        name="vNum"
-                                        size="sm"
-                                        id=""
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                                         placeholder=""
 
                                     />
                                 </CCol>
                                 <CCol md={3}>
-<<<<<<< HEAD
                                     <CFormLabel htmlFor="mail">User Mail ID*</CFormLabel>
                                     <CFormInput
                                         name="mail"
                                         size="sm"
                                         id="mail"
-=======
-                                    <CFormLabel htmlFor="vNum">User Mail ID*</CFormLabel>
-                                    <CFormInput
-                                        name="vNum"
-                                        size="sm"
-                                        id=""
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                                         placeholder=""
 
                                     />
@@ -278,11 +213,7 @@ const UserLoginMaster = () => {
                             </CRow>
                             <CRow className="mb-md-1">
                                 <CCol md={3}>
-<<<<<<< HEAD
                                     <CFormLabel htmlFor="UserPhoto">
-=======
-                                    <CFormLabel htmlFor="formFileSm">
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                                         User Photo*{' '}
                                         {errors.UserPhoto && (
                                             <span className="help text-danger">{errors.UserPhoto}</span>
@@ -292,11 +223,7 @@ const UserLoginMaster = () => {
                                         type="file"
                                         name="UserPhoto"
                                         size="sm"
-<<<<<<< HEAD
                                         id="UserPhoto"
-=======
-                                        id="formFileSm"
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                                     />
                                 </CCol>
 

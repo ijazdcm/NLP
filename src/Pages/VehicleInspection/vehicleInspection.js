@@ -70,11 +70,7 @@ const VehicleInspection = () => {
                   <CFormInput
                     name="vType"
                     size="sm"
-<<<<<<< HEAD
                     id="vType"
-=======
-                    id=""
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                     value="Contract"
                     placeholder=""
                     readOnly
@@ -86,11 +82,7 @@ const VehicleInspection = () => {
                   <CFormInput
                     name="vNum"
                     size="sm"
-<<<<<<< HEAD
                     id="vNum"
-=======
-                    id=""
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                     value="TN90AE3902"
                     placeholder=""
                     readOnly
@@ -99,11 +91,7 @@ const VehicleInspection = () => {
 
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="vCap">Vehicle Capacity In MTS</CFormLabel>
-<<<<<<< HEAD
                   <CFormInput name="vCap" size="sm" id="vCap" value="10" placeholder="10" readOnly />
-=======
-                  <CFormInput name="vCap" size="sm" id="" value="10" placeholder="10" readOnly />
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                 </CCol>
 
                 {/* <CCol xs={12} md={3}>
@@ -112,22 +100,14 @@ const VehicleInspection = () => {
                 </CCol> */}
 
                 <CCol xs={12} md={3}>
-<<<<<<< HEAD
                   <CFormLabel htmlFor="dName">
                     Driver Name*
                     {errors.dName && (
                       <span className="help text-danger">{errors.dName}</span>
-=======
-                  <CFormLabel htmlFor="inputAddress">
-                    Driver Name*
-                    {errors.vehicleType && (
-                      <span className="help text-danger">{errors.vehicleType}</span>
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                     )}
                   </CFormLabel>
                   <CFormSelect
                     size="sm"
-<<<<<<< HEAD
                     name="dName"
                     id='dName'
                     onFocus={onFocus}
@@ -138,17 +118,6 @@ const VehicleInspection = () => {
                     aria-label="Small select example"
                   >
                     <option  hidden>
-=======
-                    name="vehicleType"
-                    onFocus={onFocus}
-                    onBlur={onBlur}
-                    onChange={handleChange}
-                    value={values.vehicleType}
-                    className={`${errors.vehicleType && 'is-invalid'}`}
-                    aria-label="Small select example"
-                  >
-                    <option value="" hidden>
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                       Select...
                     </option>
 
@@ -163,19 +132,11 @@ const VehicleInspection = () => {
               <CRow className="">
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="dMob">Driver Contact Number</CFormLabel>
-<<<<<<< HEAD
                   <CFormInput name="dMob" size="sm" id="dMob" value="9443194657" readOnly />
                 </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="OdometerKM">Odometer KM</CFormLabel>
                   <CFormInput name="OdometerKM" size="sm" id="OdometerKM" value="189736" readOnly />
-=======
-                  <CFormInput name="dMob" size="sm" id="" value="9443194657" readOnly />
-                </CCol>
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="dMob">Odometer KM</CFormLabel>
-                  <CFormInput name="dMob" size="sm" id="" value="189736" readOnly />
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                 </CCol>
 
                 <CCol xs={12} md={3}>
@@ -185,10 +146,7 @@ const VehicleInspection = () => {
                     className="w-100 m-0"
                     color="info"
                     size="sm"
-<<<<<<< HEAD
                     id='odoImg'
-=======
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                     style={border}
                   >
                     <span className="float-start">
@@ -219,11 +177,7 @@ const VehicleInspection = () => {
                   <CFormInput
                     name="gateInDateTime"
                     size="sm"
-<<<<<<< HEAD
                     id="gateInDateTime"
-=======
-                    id=""
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                     value="21 Sep 2021 12:00:00 PM"
                     readOnly
                   />
@@ -406,7 +360,6 @@ const VehicleInspection = () => {
                   </CButtonGroup>
                 </CCol>
                 <CCol xs={12} md={3}>
-<<<<<<< HEAD
                   <CFormLabel htmlFor="prevLoad">Vehicle Fit For Loading *</CFormLabel>
                   <CFormSelect
                     size="sm"
@@ -432,38 +385,6 @@ const VehicleInspection = () => {
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="remarks">Remarks</CFormLabel>
                   <CFormTextarea id="remarks" rows="1"></CFormTextarea>
-=======
-                  <CFormLabel htmlFor="prevLoad">Previous Load Details *</CFormLabel>
-                  <br />
-                  <CButtonGroup role="group" aria-label="Basic checkbox toggle button group">
-                    <CFormCheck
-                      type="radio"
-                      button={{ color: 'primary', variant: 'outline' }}
-                      name="btnradio"
-                      id="btnradio17"
-                      autoComplete="off"
-                      label="Yes"
-                    />
-                    <CFormCheck
-                      type="radio"
-                      button={{ color: 'primary', variant: 'outline' }}
-                      name="btnradio"
-                      id="btnradio18"
-                      autoComplete="off"
-                      label="No"
-                    />
-                  </CButtonGroup>
-                </CCol>
-              </CRow>
-              <CRow>
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="vFitLoad">Vehicle Fit For Loading *</CFormLabel>
-                  <CFormInput name="vFitLoad" size="sm" id="" value="No" />
-                </CCol>
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="remarks">Remarks</CFormLabel>
-                  <CFormTextarea id="exampleFormControlTextarea1" rows="1"></CFormTextarea>
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                 </CCol>
               </CRow>
 

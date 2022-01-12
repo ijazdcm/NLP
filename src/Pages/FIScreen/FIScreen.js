@@ -84,18 +84,11 @@ const FIScreen = () => {
                             </CRow>
                             <CRow className="">
                                 <CCol xs={12} md={3}>
-<<<<<<< HEAD
                                     <CFormLabel htmlFor="vNum">Vehicle Number*</CFormLabel>
                                     <CFormSelect
                                         size="sm"
                                         name="vNum"
                                         id='vNum'
-=======
-                                    <CFormLabel htmlFor="insuranceValid">Vehicle Number*</CFormLabel>
-                                    <CFormSelect
-                                        size="sm"
-                                        name="insuranceValid"
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                                         className=""
                                         aria-label="Small select example"
                                     >
@@ -105,18 +98,11 @@ const FIScreen = () => {
                                     </CFormSelect>
                                 </CCol>
                                 <CCol xs={12} md={3}>
-<<<<<<< HEAD
                                     <CFormLabel htmlFor="tNum">Trip Sheet Number*</CFormLabel>
                                     <CFormSelect
                                         size="sm"
                                         id='tNum'
                                         name="tNum"
-=======
-                                    <CFormLabel htmlFor="insuranceValid">Trip Sheet Number*</CFormLabel>
-                                    <CFormSelect
-                                        size="sm"
-                                        name="insuranceValid"
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                                         className=""
                                         aria-label="Small select example"
                                     >
@@ -126,18 +112,11 @@ const FIScreen = () => {
                                     </CFormSelect>
                                 </CCol>
                                 <CCol xs={12} md={3}>
-<<<<<<< HEAD
                                     <CFormLabel htmlFor="docNum">Document Number*</CFormLabel>
                                     <CFormSelect
                                         size="sm"
                                         name="docNum"
                                         id='docNum'
-=======
-                                    <CFormLabel htmlFor="insuranceValid">Document Number*</CFormLabel>
-                                    <CFormSelect
-                                        size="sm"
-                                        name="insuranceValid"
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                                         className=""
                                         aria-label="Small select example"
                                     >
@@ -147,7 +126,6 @@ const FIScreen = () => {
                                     </CFormSelect>
                                 </CCol>
                                 <CCol xs={12} md={3}>
-<<<<<<< HEAD
                                     <CFormLabel htmlFor="docType">Document Type*</CFormLabel>
                                     <CFormInput type="text" name="docType" size="sm" id="docType" readOnly />
                                 </CCol>
@@ -157,16 +135,6 @@ const FIScreen = () => {
                                         size="sm"
                                         name="intNum"
                                         id='intNum'
-=======
-                                    <CFormLabel htmlFor="freigthRate">Document Type*</CFormLabel>
-                                    <CFormInput type="text" name="freigthRate" size="sm" id="" readOnly />
-                                </CCol>
-                                <CCol xs={12} md={3}>
-                                    <CFormLabel htmlFor="insuranceValid">Internal Order Number*</CFormLabel>
-                                    <CFormSelect
-                                        size="sm"
-                                        name="insuranceValid"
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                                         className=""
                                         aria-label="Small select example"
                                     >
@@ -176,7 +144,6 @@ const FIScreen = () => {
                                     </CFormSelect>
                                 </CCol>
                                 <CCol xs={12} md={3}>
-<<<<<<< HEAD
                                     <CFormLabel htmlFor="amount">Amount*</CFormLabel>
                                     <CFormInput type="text" name="amount" size="sm" id="amount" />
                                 </CCol>
@@ -191,22 +158,6 @@ const FIScreen = () => {
                                 <CCol xs={12} md={3}>
                                     <CFormLabel htmlFor="remarks">Remarks</CFormLabel>
                                     <CFormTextarea id="remarks" rows="1"></CFormTextarea>
-=======
-                                    <CFormLabel htmlFor="freigthRate">Amount*</CFormLabel>
-                                    <CFormInput type="text" name="freigthRate" size="sm" id="" />
-                                </CCol>
-                                <CCol xs={12} md={3}>
-                                    <CFormLabel htmlFor="freigthRate">Narration*</CFormLabel>
-                                    <CFormInput type="text" name="freigthRate" size="sm" id="" />
-                                </CCol>
-                                <CCol xs={12} md={3}>
-                                    <CFormLabel htmlFor="freigthRate">Division*</CFormLabel>
-                                    <CFormInput type="text" name="freigthRate" size="sm" id="" readOnly />
-                                </CCol>
-                                <CCol xs={12} md={3}>
-                                    <CFormLabel htmlFor="remarks">Remarks</CFormLabel>
-                                    <CFormTextarea id="exampleFormControlTextarea1" rows="1"></CFormTextarea>
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                                 </CCol>
                             </CRow>
 

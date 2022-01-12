@@ -27,11 +27,7 @@ import { React, useState } from 'react'
 import useForm from 'src/Hooks/useForm'
 import validate from 'src/Validations/FormValidation'
 import CustomTable from '../../components/customComponent/CustomTable'
-<<<<<<< HEAD
 const VehicleAssignmentConsumer = () => {
-=======
-const ParkingYardGate = () => {
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
   const formValues = {
     vehicleType: '',
     OdometerKm: '',
@@ -55,7 +51,6 @@ const ParkingYardGate = () => {
             <CForm className="container p-3" onSubmit={handleSubmit}>
               <CRow className="">
                 <CCol xs={12} md={3}>
-<<<<<<< HEAD
                   <CFormLabel htmlFor="vType">Vehicle Type</CFormLabel>
 
                   <CFormInput size="sm" id="vType"  readOnly />
@@ -71,39 +66,17 @@ const ParkingYardGate = () => {
                   <CFormLabel htmlFor="vCap">Vehicle Capacity</CFormLabel>
 
                   <CFormInput size="sm" id="vCap"  readOnly />
-=======
-                  <CFormLabel htmlFor="inputAddress">Vehicle Type</CFormLabel>
-
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
-                </CCol>
-
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Vehicle Number</CFormLabel>
-
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
-                </CCol>
-
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Vehicle Capacity</CFormLabel>
-
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                 </CCol>
 
                 {/* <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="inputAddress">VA Number</CFormLabel>
 
-<<<<<<< HEAD
                   <CFormInput size="sm" id="inputAddress"  readOnly />
-=======
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                 </CCol>
               </CRow>
 
               <CRow className=""> */}
                 <CCol xs={12} md={3}>
-<<<<<<< HEAD
                   <CFormLabel htmlFor="dName">Driver Name</CFormLabel>
 
                   <CFormInput size="sm" id="dName"  readOnly />
@@ -125,38 +98,12 @@ const ParkingYardGate = () => {
                   <CFormLabel htmlFor="odoImg">Odometer Photo</CFormLabel>
 
                   {/* <CFormInput size="sm" id="inputAddress"  readOnly /> */}
-=======
-                  <CFormLabel htmlFor="inputAddress">Driver Name</CFormLabel>
-
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
-                </CCol>
-
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Driver Mobile Number</CFormLabel>
-
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
-                </CCol>
-
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Odometer KM</CFormLabel>
-
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
-                </CCol>
-
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Odometer Photo</CFormLabel>
-
-                  {/* <CFormInput size="sm" id="inputAddress" value="" readOnly /> */}
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                   <CButton
                     // onClick={() => setVisible(!visible)}
                     className="w-100"
                     color="info"
                     size="sm"
-<<<<<<< HEAD
                     id='odoImg'
-=======
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                   >
                     <span className="float-start">
                       <i className="fa fa-eye" aria-hidden="true"></i> &nbsp;View
@@ -167,7 +114,6 @@ const ParkingYardGate = () => {
 
               <CRow className=""> */}
                 <CCol xs={12} md={3}>
-<<<<<<< HEAD
                   <CFormLabel htmlFor="gateInDateTime">Gate-In Time</CFormLabel>
 
                   <CFormInput size="sm" id="gateInDateTime"  readOnly />
@@ -189,34 +135,10 @@ const ParkingYardGate = () => {
                   <CFormLabel htmlFor="tNum">Tripsheet Number</CFormLabel>
 
                   <CFormInput size="sm" id="tNum"  readOnly />
-=======
-                  <CFormLabel htmlFor="inputAddress">Gate-In Time</CFormLabel>
-
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
-                </CCol>
-
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Inspection Time</CFormLabel>
-
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
-                </CCol>
-
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Doc. Verify Time</CFormLabel>
-
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
-                </CCol>
-
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Tripsheet Number</CFormLabel>
-
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                 </CCol>
               {/* </CRow>
               <CRow className=""> */}
                 <CCol xs={12} md={3}>
-<<<<<<< HEAD
                   <CFormLabel htmlFor="shedName">Shed Name</CFormLabel>
 
                   <CFormInput size="sm" id="shedName"  readOnly />
@@ -232,39 +154,17 @@ const ParkingYardGate = () => {
                   <CFormLabel htmlFor="ownerMob">Owner Mobile Number</CFormLabel>
 
                   <CFormInput size="sm" id="ownerMob"  readOnly />
-=======
-                  <CFormLabel htmlFor="inputAddress">Shed Name</CFormLabel>
-
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
-                </CCol>
-
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Owner Name</CFormLabel>
-
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
-                </CCol>
-
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Owner Mobile Number</CFormLabel>
-
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                 </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="remarks">Remarks*</CFormLabel>
                   <CFormTextarea
                     name="remarks"
-<<<<<<< HEAD
                     id="remarks"
-=======
-                    id="exampleFormControlTextarea1"
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                     rows="1"
                   ></CFormTextarea>
                 </CCol>
               </CRow>
 
-<<<<<<< HEAD
               <br />
               <CTable>
                 <CTableHead style={{ backgroundColor: '#4d3227', color: 'white' }}>
@@ -365,22 +265,6 @@ const ParkingYardGate = () => {
 
                 <CCol
                   className="offset-md-7"
-=======
-              <CRow className="mt-2">
-                <CCol>
-                  <CButton
-                    size="sm"
-                    color="primary"
-                    // disabled={enableSubmit}
-                    className="px-3 text-white"
-                    type="submit"
-                  >
-                    Previous
-                  </CButton>
-                </CCol>
-                <CCol
-                  className="offset-md-6"
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
                   xs={12}
                   sm={12}
                   md={3}
@@ -414,8 +298,4 @@ const ParkingYardGate = () => {
   )
 }
 
-<<<<<<< HEAD
 export default VehicleAssignmentConsumer
-=======
-export default ParkingYardGate
->>>>>>> bdc8ecd054b9a1532c72a49db280bd4faa8dde0a
