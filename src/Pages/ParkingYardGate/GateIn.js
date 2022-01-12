@@ -25,20 +25,38 @@ import {
   CFormCheck,
   CFormTextarea,
 } from '@coreui/react'
-import { React, useState, useContext } from 'react'
-import useForm from 'src/Hooks/useForm'
+import { React, useState, useEffect, useContext } from 'react'
+import useForm from 'src/Hooks/useFormValidate'
 import validate from 'src/Validations/FormValidation'
 import CustomTable from '../../components/customComponent/CustomTable'
+import { ParkingView } from '../../API/useGet'
 const ParkingYardGate = () => {
   const [hire, setHire] = useState(false)
+
   const formValues = {
-    vehicleType: '',
-    OdometerKm: '',
-    odometerPhoto: '',
+    vType: '',
+    vNum: '',
+    vCapMTS: '',
+    dName: '',
+    dNum: '',
+    vType: '',
+    odoKm: '',
+    odoimg: '',
+    pName: '',
+    vBody: '',
   }
 
-  const { values, errors, handleChange, onFocus, handleSubmit, enableSubmit, onBlur, onClick } =
-    useForm(login, validate, formValues)
+  const {
+    values,
+    errors,
+    handleChange,
+    onFocus,
+    handleSubmit,
+    enableSubmit,
+    onBlur,
+    onClick,
+    onKeyUp,
+  } = useForm(login, validate, formValues)
 
   function login() {
     alert('No Errors CallBack Called')
@@ -157,6 +175,9 @@ const ParkingYardGate = () => {
       ),
     },
   ]
+  useEffect(() => {
+    ParkingView()
+  }, [])
 
   return (
     <>
@@ -167,19 +188,18 @@ const ParkingYardGate = () => {
               <CCol md={3}>
                 <CFormLabel htmlFor="vType">
                   Vehicle Type*{' '}
-                  {errors.vehicleType && (
-                    <span className="help text-danger">{errors.vehicleType}</span>
-                  )}
+                  {errors.vType && <span className="help text-danger">{errors.vType}</span>}
                 </CFormLabel>
 
                 <CFormSelect
                   size="sm"
-                  name="vehicleType"
+                  name="vType"
+                  id="vType"
                   onFocus={onFocus}
                   onBlur={onBlur}
                   onChange={handleChange}
-                  value={values.vehicleType}
-                  className={`${errors.vehicleType && 'is-invalid'}`}
+                  value={values.vType}
+                  className={`${errors.vType && 'is-invalid'}`}
                   aria-label="Small select example"
                 >
                   <option value="" hidden selected>
@@ -191,17 +211,22 @@ const ParkingYardGate = () => {
                   <option value="4">Party</option>
                 </CFormSelect>
               </CCol>
-              {values.vehicleType == 1 && (
+              {values.vType == 1 && (
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Vehicle Number*</CFormLabel>
+                  <CFormLabel htmlFor="vNum">
+                    Vehicle Number*
+                    {errors.vNum && <span className="help text-danger">{errors.vNum}</span>}
+                  </CFormLabel>
                   <CFormSelect
                     size="sm"
-                    name="VehicleNumber"
+                    name="vNum"
+                    id="vNum"
+                    maxLength={10}
                     onFocus={onFocus}
                     onBlur={onBlur}
-                    onChange={handleChange}
-                    value={values.VehicleNumber}
-                    className={`${errors.VehicleNumber && 'is-invalid'}`}
+                    onChange={(handleChange, onKeyUp)}
+                    value={values.vNum || ''}
+                    className={`${errors.vNum && 'is-invalid'}`}
                     aria-label="Small select example"
                   >
                     <option value="" hidden selected>
@@ -212,23 +237,27 @@ const ParkingYardGate = () => {
                   </CFormSelect>
                 </CCol>
               )}
-              {values.vehicleType == 1 && (
+              {values.vType == 1 && (
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Vehicle Capacity In MTS*</CFormLabel>
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+                  <CFormLabel htmlFor="vCap">Vehicle Capacity In MTS*</CFormLabel>
+                  <CFormInput size="sm" id="vCap" name="vCap" value={values.vCap} readOnly />
                 </CCol>
               )}
-              {values.vehicleType == 1 && (
+              {values.vType == 1 && (
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Driver Name*</CFormLabel>
+                  <CFormLabel htmlFor="dName">
+                    Driver Name*{' '}
+                    {errors.dName && <span className="help text-danger">{errors.dName}</span>}
+                  </CFormLabel>
                   <CFormSelect
                     size="sm"
-                    name="DriverName"
+                    name="dName"
+                    id="dName"
                     onFocus={onFocus}
                     onBlur={onBlur}
                     onChange={handleChange}
-                    value={values.DriverName}
-                    className={`${errors.DriverName && 'is-invalid'}`}
+                    value={values.dName || ''}
+                    className={`${errors.dName && 'is-invalid'}`}
                     aria-label="Small select example"
                   >
                     <option value="" hidden selected>
@@ -239,25 +268,46 @@ const ParkingYardGate = () => {
                   </CFormSelect>
                 </CCol>
               )}
-              {values.vehicleType == 1 && (
+              {values.vType == 1 && (
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Driver Contact Number*</CFormLabel>
-                  <CFormInput size="sm" id="inputAddress" value="" readOnly />
+                  <CFormLabel htmlFor="dNum">
+                    Driver Contact Number*
+                    {errors.dNum && <span className="help text-danger">{errors.dNum}</span>}
+                  </CFormLabel>
+                  <CFormInput
+                    size="sm"
+                    name="dNum"
+                    maxLength={10}
+                    onFocus={onFocus}
+                    onBlur={onBlur}
+                    onChange={handleChange}
+                    value={values.dNum || ''}
+                  />
                 </CCol>
               )}
-              {values.vehicleType == 1 && (
+              {values.vType == 1 && (
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Odometer KM*</CFormLabel>
-                  <CFormInput size="sm" id="inputAddress" value="" />
+                  <CFormLabel htmlFor="odoKm">
+                    Odometer KM*{' '}
+                    {errors.odoKm && <span className="help text-danger">{errors.odoKm}</span>}
+                  </CFormLabel>
+                  <CFormInput
+                    size="sm"
+                    name="odoKm"
+                    id="odoKm"
+                    maxLength={6}
+                    onFocus={onFocus}
+                    onBlur={onBlur}
+                    onChange={handleChange}
+                    value={values.odoKm || ''}
+                  />
                 </CCol>
               )}
-              {values.vehicleType == 1 && (
+              {values.vType == 1 && (
                 <CCol xs={12} md={3} hidden={hire}>
                   <CFormLabel htmlFor="odoImg">
                     Odometer Photo*{' '}
-                    {errors.odometerPhoto && (
-                      <span className="help text-danger">{errors.odometerPhoto}</span>
-                    )}
+                    {errors.odoImg && <span className="help text-danger">{errors.odoImg}</span>}
                   </CFormLabel>
                   <CFormInput
                     type="file"
@@ -265,22 +315,38 @@ const ParkingYardGate = () => {
                     onFocus={onFocus}
                     onBlur={onBlur}
                     onChange={handleChange}
-                    value={values.odometerPhoto}
-                    className={`${errors.odometerPhoto && 'is-invalid'}`}
+                    value={values.odoImg}
+                    className={`${errors.odoImg && 'is-invalid'}`}
                     size="sm"
                     id="formFileSm"
                   />
                 </CCol>
               )}
-              {values.vehicleType == 3 && (
+              {values.vType == 3 && (
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Vehicle Number*</CFormLabel>
-                  <CFormInput size="sm" id="inputAddress" value="" />
+                  <CFormLabel htmlFor="vNum">
+                    Vehicle Number*
+                    {errors.vNum && <span className="help text-danger">{errors.vNum}</span>}
+                  </CFormLabel>
+                  <CFormInput
+                    size="sm"
+                    name="vNum"
+                    id="vNum"
+                    onKeyUp={onKeyUp}
+                    maxLength={10}
+                    onFocus={onFocus}
+                    onBlur={onBlur}
+                    onChange={handleChange}
+                    value={values.vNum}
+                  />
                 </CCol>
               )}
-              {values.vehicleType == 3 && (
+              {values.vType == 3 && (
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Vehicle Capacity In MTS*</CFormLabel>
+                  <CFormLabel htmlFor="vCap">
+                    Vehicle Capacity In MTS*{' '}
+                    {errors.vCap && <span className="help text-danger">{errors.vCap}</span>}
+                  </CFormLabel>
                   <CFormSelect size="sm" name="vCap" className="" aria-label="Small select example">
                     <option hidden>Select...</option>
                     <option value="10">10</option>
@@ -291,44 +357,113 @@ const ParkingYardGate = () => {
                   </CFormSelect>
                 </CCol>
               )}
-              {values.vehicleType == 3 && (
+              {values.vType == 3 && (
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Driver Name*</CFormLabel>
-                  <CFormInput size="sm" id="inputAddress" value="" />
+                  <CFormLabel htmlFor="dName">
+                    Driver Name*
+                    {errors.dName && <span className="help text-danger">{errors.dName}</span>}
+                  </CFormLabel>
+                  <CFormInput
+                    size="sm"
+                    name="dName"
+                    id="dName"
+                    onFocus={onFocus}
+                    onBlur={onBlur}
+                    onChange={handleChange}
+                    value={values.dName}
+                  />
                 </CCol>
               )}
-              {values.vehicleType == 3 && (
+              {values.vType == 3 && (
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Driver Contact Number*</CFormLabel>
-                  <CFormInput size="sm" id="inputAddress" value="" />
+                  <CFormLabel htmlFor="dNum">
+                    Driver Contact Number*
+                    {errors.dNum && <span className="help text-danger">{errors.dNum}</span>}
+                  </CFormLabel>
+                  <CFormInput
+                    size="sm"
+                    name="dNum"
+                    id="dNum"
+                    maxLength={10}
+                    onFocus={onFocus}
+                    onBlur={onBlur}
+                    onChange={handleChange}
+                    value={values.dNum}
+                  />
                 </CCol>
               )}
-              {values.vehicleType == 3 && (
+              {values.vType == 3 && (
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Vehicle Body*</CFormLabel>
-                  <CFormSelect size="sm" name="vCap" className="" aria-label="Small select example">
+                  <CFormLabel htmlFor="vBody">
+                    Vehicle Body*
+                    {errors.vBody && <span className="help text-danger">{errors.vBody}</span>}
+                  </CFormLabel>
+                  <CFormSelect
+                    size="sm"
+                    name="vBody"
+                    className=""
+                    onFocus={onFocus}
+                    onBlur={onBlur}
+                    onChange={handleChange}
+                    aria-label="Small select example"
+                  >
                     <option hidden>Select...</option>
                     <option value="1">Open</option>
                     <option value="2">Closed</option>
                   </CFormSelect>
                 </CCol>
               )}
-              {values.vehicleType == 4 && (
+              {values.vType == 4 && (
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Vehicle Number*</CFormLabel>
-                  <CFormInput size="sm" id="inputAddress" value="" />
+                  <CFormLabel htmlFor="vNum">
+                    Vehicle Number*
+                    {errors.vNum && <span className="help text-danger">{errors.vNum}</span>}
+                  </CFormLabel>
+                  <CFormInput
+                    size="sm"
+                    name="vNum"
+                    id="vNum"
+                    maxLength={10}
+                    onFocus={onFocus}
+                    onBlur={onBlur}
+                    onChange={handleChange}
+                    value={values.vNum}
+                  />
                 </CCol>
               )}
-              {values.vehicleType == 4 && (
+              {values.vType == 4 && (
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Party Name*</CFormLabel>
-                  <CFormInput size="sm" id="inputAddress" value="" />
+                  <CFormLabel htmlFor="pName">
+                    Party Name*
+                    {errors.pName && <span className="help text-danger">{errors.pName}</span>}
+                  </CFormLabel>
+                  <CFormInput
+                    size="sm"
+                    name="pName"
+                    id="pName"
+                    onFocus={onFocus}
+                    onBlur={onBlur}
+                    onChange={handleChange}
+                    value={values.pName}
+                  />
                 </CCol>
               )}
-              {values.vehicleType == 4 && (
+              {values.vType == 4 && (
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Vehicle Capacity In MTS*</CFormLabel>
-                  <CFormSelect size="sm" name="vCap" className="" aria-label="Small select example">
+                  <CFormLabel htmlFor="vCapMts">
+                    Vehicle Capacity In MTS*{' '}
+                    {errors.vCapMts && <span className="help text-danger">{errors.vCapMts}</span>}
+                  </CFormLabel>
+                  <CFormSelect
+                    size="sm"
+                    name="vCapMts"
+                    id="vCapMts"
+                    onFocus={onFocus}
+                    onBlur={onBlur}
+                    onChange={handleChange}
+                    className=""
+                    aria-label="Small select example"
+                  >
                     <option hidden>Select...</option>
                     <option value="10">10</option>
                     <option value="12">12</option>
@@ -338,22 +473,55 @@ const ParkingYardGate = () => {
                   </CFormSelect>
                 </CCol>
               )}
-              {values.vehicleType == 4 && (
+              {values.vType == 4 && (
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Driver Name*</CFormLabel>
-                  <CFormInput size="sm" id="inputAddress" value="" />
+                  <CFormLabel htmlFor="dName">
+                    Driver Name*{' '}
+                    {errors.dName && <span className="help text-danger">{errors.dName}</span>}
+                  </CFormLabel>
+                  <CFormInput
+                    size="sm"
+                    name="dName"
+                    id="dName"
+                    onFocus={onFocus}
+                    onBlur={onBlur}
+                    onChange={handleChange}
+                    value={values.dName}
+                  />
                 </CCol>
               )}
-              {values.vehicleType == 4 && (
+              {values.vType == 4 && (
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Driver Contact Number*</CFormLabel>
-                  <CFormInput size="sm" id="inputAddress" value="" />
+                  <CFormLabel htmlFor="dNum">
+                    Driver Contact Number*{' '}
+                    {errors.dNum && <span className="help text-danger">{errors.dNum}</span>}
+                  </CFormLabel>
+                  <CFormInput
+                    size="sm"
+                    name="dNum"
+                    id="dNum"
+                    onFocus={onFocus}
+                    onBlur={onBlur}
+                    onChange={handleChange}
+                    value={values.dNum}
+                  />
                 </CCol>
               )}
-              {values.vehicleType == 4 && (
+              {values.vType == 4 && (
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">Vehicle Body*</CFormLabel>
-                  <CFormSelect size="sm" name="vCap" className="" aria-label="Small select example">
+                  <CFormLabel htmlFor="vBody">
+                    Vehicle Body*
+                    {errors.vBody && <span className="help text-danger">{errors.vBody}</span>}
+                  </CFormLabel>
+                  <CFormSelect
+                    size="sm"
+                    name="vBody"
+                    onFocus={onFocus}
+                    onBlur={onBlur}
+                    onChange={handleChange}
+                    className=""
+                    aria-label="Small select example"
+                  >
                     <option hidden>Select...</option>
                     <option value="1">Open</option>
                     <option value="2">Closed</option>

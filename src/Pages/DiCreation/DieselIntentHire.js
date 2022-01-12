@@ -24,7 +24,7 @@ import {
   CFormTextarea,
 } from '@coreui/react'
 import { React, useState } from 'react'
-import useForm from 'src/Hooks/useForm'
+import useForm from 'src/Hooks/useFormValidate'
 import validate from 'src/Validations/FormValidation'
 import CustomTable from '../../components/customComponent/CustomTable'
 const DieselIntentHire = () => {

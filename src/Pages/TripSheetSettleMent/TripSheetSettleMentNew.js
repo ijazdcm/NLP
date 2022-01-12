@@ -34,7 +34,7 @@ import {
 import { React, useEffect, useState } from 'react'
 // import Select from 'react-select'
 // import CModal from '@coreui/react/src/components/modal/CModal'
-import useForm from 'src/Hooks/useForm'
+import useForm from 'src/Hooks/useFormValidate'
 import validate from 'src/Validations/FormValidation'
 import CustomTable from '../../components/customComponent/CustomTable'
 

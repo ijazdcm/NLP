@@ -26,21 +26,23 @@ import {
   CFormTextarea,
 } from '@coreui/react'
 import { React, useState } from 'react'
-import useForm from 'src/Hooks/useForm'
+import useFormValid from 'src/Hooks/useFormValidate'
 import validate from 'src/Validations/FormValidation'
 import CustomTable from '../../components/customComponent/CustomTable'
+
 const ParkingYardGate = () => {
-  
+  // States
   const [hire, setHire] = useState(false)
+
+  // Form Validations
+  const { values, errors, handleChange, onFocus, handleSubmit, enableSubmit, onBlur, onClick } =
+    useFormValid(login, validate, formValues)
 
   const formValues = {
     vehicleType: '',
     OdometerKm: '',
     odometerPhoto: '',
   }
-
-  const { values, errors, handleChange, onFocus, handleSubmit, enableSubmit, onBlur, onClick } =
-    useForm(login, validate, formValues)
 
   function login() {
     alert('No Errors CallBack Called')
@@ -168,7 +170,7 @@ const ParkingYardGate = () => {
             <CRow className="">
               <CCol md={3}>
                 <CFormLabel htmlFor="vType">
-                  Vehicle Type*{' '}
+                  Vehicle Type*
                   {errors.vehicleType && (
                     <span className="help text-danger">{errors.vehicleType}</span>
                   )}
@@ -176,7 +178,7 @@ const ParkingYardGate = () => {
 
                 <CFormSelect size="sm" name="vType" aria-label="Small select example">
                   <option value="" hidden selected>
-                    Select...
+                    Select..
                   </option>
                   <option value="own" onClick={() => setHire(false)}>
                     Own
@@ -192,8 +194,12 @@ const ParkingYardGate = () => {
                   </option>
                 </CFormSelect>
               </CCol>
+
               <CCol md={3}>
-                <CFormLabel htmlFor="vNum">Vehicle Number*</CFormLabel>
+                <CFormLabel htmlFor="vNum">
+                  Vehicle Number*
+                  {errors.vNum && <span className="help text-danger">{errors.vNum}</span>}
+                </CFormLabel>
                 {hire ? (
                   <CFormInput name="vNum" size="sm" id="inputAddress" value="" />
                 ) : (
