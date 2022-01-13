@@ -17,10 +17,9 @@ import {
 } from '@coreui/react'
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import useForm from 'src/Hooks/useForm'
-import VendorRequesrValidation from 'src/Validations/VendorCreation/VendorRequestValidation'
-
-const VendorCreationConfirmation = () => {
+import useForm from 'src/Hooks/useFormValidate'
+import VendorRequestValidation from 'src/Validations/VendorCreation/VendorRequestValidation'
+const VendorCreationApproval = () => {
   const formValues = {
     vehicleType: '',
     OdometerKm: '',
@@ -48,7 +47,7 @@ const VendorCreationConfirmation = () => {
   const [tdsbackdel, setTdsbackdel] = useState(false)
   const { values, errors, handleChange, onFocus, handleSubmit, enableSubmit, onBlur } = useForm(
     login,
-    VendorRequesrValidation,
+    VendorRequestValidation,
     formValues
   )
 
@@ -71,11 +70,9 @@ const VendorCreationConfirmation = () => {
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="shedName">
                 Shed Name
-                {errors.shedName && (
-                  <span className="help text-danger">{errors.shedName}</span>
-                )}
+                {errors.shedName && <span className="help text-danger">{errors.shedName}</span>}
               </CFormLabel>
-              <CFormInput size="sm" id="shedName"  readOnly />
+              <CFormInput size="sm" id="shedName" readOnly />
             </CCol>
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="ownerName">
@@ -84,7 +81,7 @@ const VendorCreationConfirmation = () => {
                   <span className="help text-danger">{errors.vehicleType}</span>
                 )}
               </CFormLabel>
-              <CFormInput size="sm" id="ownerName"  readOnly />
+              <CFormInput size="sm" id="ownerName" readOnly />
             </CCol>
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="shedownerMob">
@@ -145,18 +142,14 @@ const VendorCreationConfirmation = () => {
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="panCard">
                 PAN Card Number*
-                {errors.panCard && (
-                  <span className="help text-danger">{errors.panCard}</span>
-                )}
+                {errors.panCard && <span className="help text-danger">{errors.panCard}</span>}
               </CFormLabel>
-              <CFormInput size="sm" id="panCard"  readOnly/>
+              <CFormInput size="sm" id="panCard" readOnly />
             </CCol>
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="AadharCopy">
                 Aadhar Card Copy
-                {errors.AadharCopy && (
-                  <span className="help text-danger">{errors.AadharCopy}</span>
-                )}
+                {errors.AadharCopy && <span className="help text-danger">{errors.AadharCopy}</span>}
               </CFormLabel>
               <CButton
                 // onClick={() => setAdharVisible(!adharvisible)}
@@ -188,11 +181,9 @@ const VendorCreationConfirmation = () => {
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="aadharCard">
                 Aadhar Card Number
-                {errors.aadharCard && (
-                  <span className="help text-danger">{errors.aadharCard}</span>
-                )}
+                {errors.aadharCard && <span className="help text-danger">{errors.aadharCard}</span>}
               </CFormLabel>
-              <CFormInput size="sm" id="aadharCard"  readOnly/>
+              <CFormInput size="sm" id="aadharCard" readOnly />
             </CCol>
           </CRow>
           {/* Row Two------------------------- */}
@@ -201,9 +192,7 @@ const VendorCreationConfirmation = () => {
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="license">
                 License Copy
-                {errors.vehicleType && (
-                  <span className="help text-danger">{errors.license}</span>
-                )}
+                {errors.vehicleType && <span className="help text-danger">{errors.license}</span>}
               </CFormLabel>
               <CButton
                 // onClick={() => setLicence(!PanCard)}
@@ -230,9 +219,7 @@ const VendorCreationConfirmation = () => {
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="rcFront">
                 RC Copy -Front
-                {errors.rcFront && (
-                  <span className="help text-danger">{errors.rcFront}</span>
-                )}
+                {errors.rcFront && <span className="help text-danger">{errors.rcFront}</span>}
               </CFormLabel>
               <CButton
                 // onClick={() => setRcFront(!RcFront)}
@@ -259,9 +246,7 @@ const VendorCreationConfirmation = () => {
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="rcBack">
                 RC Copy Back
-                {errors.rcBack && (
-                  <span className="help text-danger">{errors.rcBack}</span>
-                )}
+                {errors.rcBack && <span className="help text-danger">{errors.rcBack}</span>}
               </CFormLabel>
               <CButton
                 // onClick={() => setRcBank(!RcBank)}
@@ -288,9 +273,7 @@ const VendorCreationConfirmation = () => {
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="insurance">
                 Insurance Copy
-                {errors.insurance && (
-                  <span className="help text-danger">{errors.insurance}</span>
-                )}
+                {errors.insurance && <span className="help text-danger">{errors.insurance}</span>}
               </CFormLabel>
               <CButton
                 // onClick={() => setInsurance(!Insurance)}
@@ -353,9 +336,7 @@ const VendorCreationConfirmation = () => {
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="bankPass">
                 Bank Pass Book
-                {errors.bankPass && (
-                  <span className="help text-danger">{errors.bankPass}</span>
-                )}
+                {errors.bankPass && <span className="help text-danger">{errors.bankPass}</span>}
               </CFormLabel>
               <CButton
                 // onClick={() => setTDSFormFront(!TDSFormFront)}
@@ -382,11 +363,11 @@ const VendorCreationConfirmation = () => {
             </CCol>
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="bankName">Bank Name</CFormLabel>
-              <CFormInput type="text" name="bankName" size="sm" id="bankName" readOnly/>                 
+              <CFormInput type="text" name="bankName" size="sm" id="bankName" readOnly />
             </CCol>
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="bankBranch">Bank Branch</CFormLabel>
-              <CFormInput type="text" name="bankBranch" size="sm" id="bankBranch" readOnly/>
+              <CFormInput type="text" name="bankBranch" size="sm" id="bankBranch" readOnly />
             </CCol>
           </CRow>
           {/* Row Four------------------------- */}
@@ -394,7 +375,7 @@ const VendorCreationConfirmation = () => {
           <CRow className="">
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="ifscCode">Bank IFSC Code</CFormLabel>
-              <CFormInput type="text" name="ifscCode" size="sm" id="ifscCode" readOnly/>
+              <CFormInput type="text" name="ifscCode" size="sm" id="ifscCode" readOnly />
             </CCol>
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="bankAccount">
@@ -403,7 +384,7 @@ const VendorCreationConfirmation = () => {
                   <span className="help text-danger">{errors.bankAccount}</span>
                 )}
               </CFormLabel>
-              <CFormInput size="sm" id="bankAccount"  readOnly/>
+              <CFormInput size="sm" id="bankAccount" readOnly />
             </CCol>
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="bankaccountholderName">
@@ -412,16 +393,14 @@ const VendorCreationConfirmation = () => {
                   <span className="help text-danger">{errors.bankaccountholderName}</span>
                 )}
               </CFormLabel>
-              <CFormInput size="sm" id="bankaccountholderName"  readOnly/>
+              <CFormInput size="sm" id="bankaccountholderName" readOnly />
             </CCol>
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="Street">
                 Street
-                {errors.Street && (
-                  <span className="help text-danger">{errors.Street}</span>
-                )}
+                {errors.Street && <span className="help text-danger">{errors.Street}</span>}
               </CFormLabel>
-              <CFormInput size="sm" id="Street"  readOnly/>
+              <CFormInput size="sm" id="Street" readOnly />
             </CCol>
           </CRow>
           {/* Row Five------------------------- */}
@@ -430,38 +409,30 @@ const VendorCreationConfirmation = () => {
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="Area">
                 Area
-                {errors.Area && (
-                  <span className="help text-danger">{errors.Area}</span>
-                )}
+                {errors.Area && <span className="help text-danger">{errors.Area}</span>}
               </CFormLabel>
-              <CFormInput size="sm" id="Area"  readOnly/>
+              <CFormInput size="sm" id="Area" readOnly />
             </CCol>
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="City">
                 City
-                {errors.City && (
-                  <span className="help text-danger">{errors.City}</span>
-                )}
+                {errors.City && <span className="help text-danger">{errors.City}</span>}
               </CFormLabel>
-              <CFormInput size="sm" id="City"  readOnly/>
+              <CFormInput size="sm" id="City" readOnly />
             </CCol>
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="District">
                 District
-                {errors.District && (
-                  <span className="help text-danger">{errors.District}</span>
-                )}
+                {errors.District && <span className="help text-danger">{errors.District}</span>}
               </CFormLabel>
-              <CFormInput size="sm" id="District"  readOnly/>
+              <CFormInput size="sm" id="District" readOnly />
             </CCol>
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="State">
                 State
-                {errors.State && (
-                  <span className="help text-danger">{errors.State}</span>
-                )}
+                {errors.State && <span className="help text-danger">{errors.State}</span>}
               </CFormLabel>
-              <CFormInput size="sm" id="State"  readOnly/>
+              <CFormInput size="sm" id="State" readOnly />
             </CCol>
           </CRow>
           {/* Row Six------------------------- */}
@@ -470,27 +441,21 @@ const VendorCreationConfirmation = () => {
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="postalCode">
                 Postal Code
-                {errors.postalCode && (
-                  <span className="help text-danger">{errors.postalCode}</span>
-                )}
+                {errors.postalCode && <span className="help text-danger">{errors.postalCode}</span>}
               </CFormLabel>
-              <CFormInput size="sm" id="postalCode"  readOnly/>
+              <CFormInput size="sm" id="postalCode" readOnly />
             </CCol>
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="Region">
                 Region
-                {errors.Region && (
-                  <span className="help text-danger">{errors.Region}</span>
-                )}
+                {errors.Region && <span className="help text-danger">{errors.Region}</span>}
               </CFormLabel>
-              <CFormInput size="sm" id="Region"  readOnly/>
+              <CFormInput size="sm" id="Region" readOnly />
             </CCol>
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="TDSfront">
                 TDS Declaration Form Front
-                {errors.TDSfront && (
-                  <span className="help text-danger">{errors.TDSfront}</span>
-                )}
+                {errors.TDSfront && <span className="help text-danger">{errors.TDSfront}</span>}
               </CFormLabel>
               <CButton
                 // onClick={() => setTransporterShedSheet(!TransporterShedSheet)}
@@ -521,9 +486,7 @@ const VendorCreationConfirmation = () => {
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="TDSback">
                 TDS Declaration Form Back
-                {errors.TDSback && (
-                  <span className="help text-danger">{errors.TDSback}</span>
-                )}
+                {errors.TDSback && <span className="help text-danger">{errors.TDSback}</span>}
               </CFormLabel>
               <CButton
                 // onClick={() => setTransporterShedSheet(!TransporterShedSheet)}
@@ -556,41 +519,33 @@ const VendorCreationConfirmation = () => {
 
           {/* Row Eight------------------------- */}
           <CRow className="">
-          <CCol xs={12} md={3}>
+            <CCol xs={12} md={3}>
               <CFormLabel htmlFor="GSTreg">
                 GST Registeration
-                {errors.GSTreg && (
-                  <span className="help text-danger">{errors.GSTreg}</span>
-                )}
+                {errors.GSTreg && <span className="help text-danger">{errors.GSTreg}</span>}
               </CFormLabel>
-              <CFormInput size="sm" id="GSTreg"  readOnly/>
+              <CFormInput size="sm" id="GSTreg" readOnly />
             </CCol>
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="GST">
                 GST Registration Number*
-                {errors.GST && (
-                  <span className="help text-danger">{errors.GST}</span>
-                )}
+                {errors.GST && <span className="help text-danger">{errors.GST}</span>}
               </CFormLabel>
-              <CFormInput size="sm" id="GST"  readOnly/>
+              <CFormInput size="sm" id="GST" readOnly />
             </CCol>
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="GSTtax">
                 GST Tax Code
-                {errors.GSTtax && (
-                  <span className="help text-danger">{errors.GSTtax}</span>
-                )}
+                {errors.GSTtax && <span className="help text-danger">{errors.GSTtax}</span>}
               </CFormLabel>
-              <CFormInput size="sm" id="GSTtax"  readOnly />
+              <CFormInput size="sm" id="GSTtax" readOnly />
             </CCol>
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="Payment">
                 Payment Terms 3Days
-                {errors.Payment && (
-                  <span className="help text-danger">{errors.Payment}</span>
-                )}
+                {errors.Payment && <span className="help text-danger">{errors.Payment}</span>}
               </CFormLabel>
-              <CFormInput size="sm" id="Payment"  readOnly />
+              <CFormInput size="sm" id="Payment" readOnly />
             </CCol>
           </CRow>
           {/* Row Eight------------------------- */}
@@ -599,11 +554,9 @@ const VendorCreationConfirmation = () => {
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="remarks">
                 Remarks
-                {errors.remarks && (
-                  <span className="help text-danger">{errors.remarks}</span>
-                )}
+                {errors.remarks && <span className="help text-danger">{errors.remarks}</span>}
               </CFormLabel>
-              <CFormInput size="sm" id="remarks"  readOnly />
+              <CFormInput size="sm" id="remarks" readOnly />
             </CCol>
           </CRow>
           {/* Row Nine------------------------- */}
@@ -616,11 +569,11 @@ const VendorCreationConfirmation = () => {
               </CButton>
             </CCol>
             <CCol className="offset-md-6 d-md-flex justify-content-end" xs={12} sm={12} md={3}>
-            <CButton size="sm" color="warning" className="mx-3 px-3 text-white" type="submit">
-            Approved
+              <CButton size="sm" color="warning" className="mx-3 px-3 text-white" type="submit">
+                Approved
               </CButton>
               <CButton size="sm" color="warning" className="mx-3 px-3 text-white" type="submit">
-              Reject
+                Reject
               </CButton>
             </CCol>
           </CRow>
@@ -675,10 +628,7 @@ const VendorCreationConfirmation = () => {
           <CModalTitle>TDS Declaration Form Back</CModalTitle>
         </CModalHeader>
         <CModalBody>
-          <CCardImage
-            orientation="top"
-            src=""
-          />
+          <CCardImage orientation="top" src="" />
         </CModalBody>
         <CModalFooter>
           <CButton color="secondary" onClick={() => setTDSFormBack(false)}>
@@ -695,10 +645,7 @@ const VendorCreationConfirmation = () => {
           <CModalTitle>Pan Card</CModalTitle>
         </CModalHeader>
         <CModalBody>
-          <CCardImage
-            orientation="top"
-            src=""
-          />
+          <CCardImage orientation="top" src="" />
         </CModalBody>
         <CModalFooter>
           <CButton color="secondary" onClick={() => setPanCard(false)}>
@@ -715,10 +662,7 @@ const VendorCreationConfirmation = () => {
           <CModalTitle>Pan Card</CModalTitle>
         </CModalHeader>
         <CModalBody>
-          <CCardImage
-            orientation="top"
-            src=""
-          />
+          <CCardImage orientation="top" src="" />
         </CModalBody>
         <CModalFooter>
           <CButton color="secondary" onClick={() => setLicence(false)}>
@@ -735,10 +679,7 @@ const VendorCreationConfirmation = () => {
           <CModalTitle>Pan Card</CModalTitle>
         </CModalHeader>
         <CModalBody>
-          <CCardImage
-            orientation="top"
-            src=""
-          />
+          <CCardImage orientation="top" src="" />
         </CModalBody>
         <CModalFooter>
           <CButton color="secondary" onClick={() => setRcFront(false)}>
@@ -755,10 +696,7 @@ const VendorCreationConfirmation = () => {
           <CModalTitle>Insurance</CModalTitle>
         </CModalHeader>
         <CModalBody>
-          <CCardImage
-            orientation="top"
-            src=""
-          />
+          <CCardImage orientation="top" src="" />
         </CModalBody>
         <CModalFooter>
           <CButton color="secondary" onClick={() => setInsurance(false)}>
@@ -775,10 +713,7 @@ const VendorCreationConfirmation = () => {
           <CModalTitle>Transporter Shed Sheet</CModalTitle>
         </CModalHeader>
         <CModalBody>
-          <CCardImage
-            orientation="top"
-            src=""
-          />
+          <CCardImage orientation="top" src="" />
         </CModalBody>
         <CModalFooter>
           <CButton color="secondary" onClick={() => setTransporterShedSheet(false)}>
@@ -815,10 +750,7 @@ const VendorCreationConfirmation = () => {
           <CModalTitle>TDS Declaration Fomr</CModalTitle>
         </CModalHeader>
         <CModalBody>
-          <CCardImage
-            orientation="top"
-            src=""
-          />
+          <CCardImage orientation="top" src="" />
         </CModalBody>
         <CModalFooter>
           <CButton color="secondary" onClick={() => setTDSFormFront(false)}>
@@ -837,4 +769,4 @@ const VendorCreationConfirmation = () => {
   )
 }
 
-export default VendorCreationConfirmation
+export default VendorCreationApproval

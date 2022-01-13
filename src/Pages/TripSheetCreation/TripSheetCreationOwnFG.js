@@ -16,7 +16,7 @@ import {
     CFormTextarea,
     CFormSelect,
 } from '@coreui/react'
-import useForm from 'src/Hooks/useForm'
+import useForm from 'src/Hooks/useFormValidate'
 import VendorRequestValidation from 'src/Validations/VendorCreation/VendorRequestValidation'
 import { Link } from 'react-router-dom'
 

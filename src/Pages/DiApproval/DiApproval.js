@@ -12,7 +12,7 @@ import {
   CTabContent,
   CTabPane,
 } from '@coreui/react'
-import useForm from 'src/Hooks/useForm'
+import useForm from 'src/Hooks/useFormValidate'
 import validate from 'src/Validations/FormValidation'
 const DiApproval = () => {
   const formValues = {

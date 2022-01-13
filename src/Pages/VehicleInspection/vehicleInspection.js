@@ -31,7 +31,7 @@ import {
   CButtonGroup,
 } from '@coreui/react'
 import { React, useState } from 'react'
-import useForm from 'src/Hooks/useForm.js'
+import useForm from 'src/Hooks/useFormValidate.js'
 import validate from 'src/Validations/FormValidation'
 import CustomTable from '../../components/customComponent/CustomTable'
 
@@ -360,10 +360,10 @@ const VehicleInspection = () => {
                   </CButtonGroup>
                 </CCol>
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="prevLoad">Vehicle Fit For Loading *</CFormLabel>
+                  <CFormLabel htmlFor="prevLoad">Previous Load Details *</CFormLabel>
                   <CFormSelect
                     size="sm"
-                    name="prevLoad"
+                    name="fitLoad"
                     id='prevLoad'
                     onFocus={onFocus}
                     onBlur={onBlur}
