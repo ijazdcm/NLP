@@ -610,7 +610,7 @@ const VendorCreationApproval = () => {
           <CRow className="mb-md-1">
             <CCol className="" xs={12} sm={12} md={3}>
               <CButton size="sm" color="primary" className="text-white" type="button">
-                <Link className="text-white" to="/VendorCreationHome">
+                <Link className="text-white" to="/VendorCreationApprovalHome">
                   Previous
                 </Link>
               </CButton>

@@ -183,7 +183,7 @@ const RJcustomerCreationConfirmation = () => {
                     className="px-3 text-white"
                     type="button"
                   >
-                    <Link to="/RJcustomerCreationApprovalHome"> Previous</Link>
+                    <Link to="/RJcustomerCreationConfrimationHome"> Previous</Link>
                   </CButton>
                 </CCol>
                 <CCol className="offset-md-6 d-md-flex justify-content-end" xs={12} sm={12} md={3}>

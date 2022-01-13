@@ -159,7 +159,7 @@ const UserLoginMasterTable = () => {
                             className="px-3 text-white"
                             type="submit"
                         >
-                            <Link className="text-white" to="/UserLoginMaster">
+                            <Link className="text-white" to="/UserLoginMasterTable/UserLoginMaster">
                                 New
                             </Link>
                         </CButton>
