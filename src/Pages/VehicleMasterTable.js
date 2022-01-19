@@ -238,7 +238,7 @@ const VehicleMasterTable = () => {
                             className="px-3 text-white"
                             type="submit"
                         >
-                            <Link className="text-white" to="/VehicleMaster">
+                            <Link className="text-white" to="/VehicleMasterTable/VehicleMaster">
                                 New
                             </Link>
                         </CButton>

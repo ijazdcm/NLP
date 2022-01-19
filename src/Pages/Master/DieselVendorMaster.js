@@ -31,8 +31,7 @@ import {
 import { React, useState } from 'react'
 import useForm from 'src/Hooks/useFormValidate.js'
 import validate from 'src/Validations/FormValidation'
-
-
+import { Link } from "react-router-dom";
 const ShedMaster = () => {
     const formValues = {
         vehicleType: '',
@@ -61,7 +60,7 @@ const ShedMaster = () => {
             <CCard>
                 <CTabContent>
                     <CTabPane role="tabpanel" aria-labelledby="home-tab" visible={true}>
-                        <CForm className="row g-3 m-2 p-1" onSubmit={handleSubmit}>
+                        <CForm className="row g-3 m-2 p-1" onClick={handleSubmit}>
                             <CRow className="mb-md-2">
                                 <CCol md={3}>
                                     <CFormLabel htmlFor="dVendor">Diesel Vendor Name*</CFormLabel>
@@ -136,7 +135,9 @@ const ShedMaster = () => {
                                         className="mx-1 px-2 text-white"
                                         type="submit"
                                     >
-                                        Cancel
+                                         <Link className="text-white" to="/DieselVendorMasterTable">
+                                Cancel
+                            </Link>
                                     </CButton>
                                 </CCol>
                             </CRow>

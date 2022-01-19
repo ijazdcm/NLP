@@ -14,6 +14,7 @@ import {
 } from '@coreui/react'
 import useForm from 'src/Hooks/useFormValidate'
 import validate from 'src/Validations/FormValidation'
+import { Link } from 'react-router-dom'
 const DiApproval = () => {
   const formValues = {
     vehicleType: '',
@@ -222,7 +223,9 @@ const DiApproval = () => {
                     className="px-3 text-white"
                     type="submit"
                   >
-                    Previous
+                     <Link className="text-white" to="/DiApprovalHome">
+                  Previous
+                </Link>
                   </CButton>
                 </CCol>
                 <CCol className="offset-md-6 d-md-flex justify-content-end" xs={12} sm={12} md={3}>

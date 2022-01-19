@@ -27,6 +27,7 @@ import { React, useState } from 'react'
 import useForm from 'src/Hooks/useFormValidate'
 import validate from 'src/Validations/FormValidation'
 import CustomTable from '../../components/customComponent/CustomTable'
+import { Link } from 'react-router-dom'
 const VehicleAssignmentConsumer = () => {
   const formValues = {
     vehicleType: '',
@@ -259,7 +260,9 @@ const VehicleAssignmentConsumer = () => {
               <CRow className="mt-3">
                 <CCol>
                   <CButton size="sm" color="primary" className="text-white" type="button">
-                    Previous
+                  <Link className="text-white" to="/ShipmentCreationConsumer">
+                  Previous
+                </Link>
                   </CButton>
                 </CCol>
 

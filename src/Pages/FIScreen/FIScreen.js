@@ -163,7 +163,7 @@ const FIScreen = () => {
 
                             <CRow>
                                 <CCol>
-                                    <Link to="/DocsVerify">
+                                    <Link to="/">
                                         <CButton
                                             md={9}
                                             size="sm"

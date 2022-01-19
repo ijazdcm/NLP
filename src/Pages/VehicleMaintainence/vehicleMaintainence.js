@@ -155,7 +155,9 @@ const VehicleMaintainence = () => {
                     className="text-white"
                     type="submit"
                   >
-                    Previous
+                   <Link className="text-white" to="/VMain">
+                   Previous
+                   </Link>
                   </CButton>
                 </CCol>
 

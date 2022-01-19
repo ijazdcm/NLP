@@ -26,6 +26,7 @@ import {
 import { React, useState } from 'react'
 import useForm from 'src/Hooks/useFormValidate'
 import validate from 'src/Validations/FormValidation'
+import { Link } from 'react-router-dom'
 import CustomTable from '../../components/customComponent/CustomTable'
 const ParkingYardGate = () => {
   const formValues = {
@@ -274,7 +275,9 @@ const ParkingYardGate = () => {
                     className="text-white"
                     type="submit"
                   >
-                    Previous
+         <Link className="text-white" to="/">
+                  Previous
+                </Link>
                   </CButton>
                 </CCol>
 

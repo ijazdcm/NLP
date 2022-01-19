@@ -316,7 +316,7 @@ const Shipment = () => {
                                     <CTableDataCell>6547234</CTableDataCell>
                                     <CTableDataCell>637534</CTableDataCell>
                                     <CTableDataCell>TN57AT6789</CTableDataCell>
-                                    <CTableDataCell><CButton color="warning" size="sm" className="mx-3 text-white"><Link className="text-white" to="/VehicleAssignmentFoods">
+                                    <CTableDataCell><CButton color="warning" size="sm" className="mx-3 text-white"><Link className="text-white" to="/ShipmentCreation/VehicleAssignmentFoods">
                                         Show
                                     </Link></CButton></CTableDataCell>
                                 </CTableRow>

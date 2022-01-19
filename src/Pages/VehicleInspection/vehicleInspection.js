@@ -34,6 +34,7 @@ import { React, useState } from 'react'
 import useForm from 'src/Hooks/useFormValidate.js'
 import validate from 'src/Validations/FormValidation'
 import CustomTable from '../../components/customComponent/CustomTable'
+import { Link } from 'react-router-dom'
 
 const VehicleInspection = () => {
   const formValues = {
@@ -397,8 +398,11 @@ const VehicleInspection = () => {
                     disabled=""
                     className="text-white"
                     type="submit"
+                    to="/TripSheetCreationHome"
                   >
-                    Previous
+                    <Link className="text-white" to="/vInspection">
+                Previous
+              </Link>
                   </CButton>
                 </CCol>
 

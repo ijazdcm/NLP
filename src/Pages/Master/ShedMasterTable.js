@@ -158,7 +158,7 @@ const ShedMasterTable = () => {
                             className="px-3 text-white"
                             type="submit"
                         >
-                            <Link className="text-white" to="/ShedMaster">
+                            <Link className="text-white" to="/ShedMasterTable/ShedMaster">
                                 New
                             </Link>
                         </CButton>

@@ -32,7 +32,7 @@ import {
 import { React, useState } from 'react'
 import useForm from 'src/Hooks/useFormValidate.js'
 import validate from 'src/Validations/FormValidation'
-
+import { Link } from 'react-router-dom'
 
 const DriverMaster = () => {
     const formValues = {
@@ -264,7 +264,9 @@ const DriverMaster = () => {
                                         className="mx-1 px-2 text-white"
                                         type="submit"
                                     >
-                                        Cancel
+                                          <Link className="text-white" to="/DriverMasterTable">
+                                            Cancel
+                                          </Link>
                                     </CButton>
                                 </CCol>
                             </CRow>
