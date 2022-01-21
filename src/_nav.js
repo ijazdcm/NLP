@@ -67,7 +67,7 @@ const _nav = [
     name: 'Yard Gate-In / Out',
     to: '/GateIn',
     icon: <CIcon icon={cilInput} customClassName="nav-icon" />,
-    dataToggle: 'tooltip',
+    datatoggle: 'tooltip',
     title: 'Parking Yard Gate-In / Out',
   },
   {
@@ -75,7 +75,7 @@ const _nav = [
     name: 'Vehicle Inspection',
     to: '/vInspection',
     icon: <CIcon icon={cilAirplay} customClassName="nav-icon" />,
-    dataToggle: 'tooltip',
+    datatoggle: 'tooltip',
     title: 'Vehicle Inspection',
   },
 
@@ -84,7 +84,7 @@ const _nav = [
     name: 'Vehicle Maintenance',
     to: '/VMain',
     icon: <CIcon icon={cilCog} customClassName="nav-icon" />,
-    dataToggle: 'tooltip',
+    datatoggle: 'tooltip',
     title: 'Vehicle Maintenance',
   },
   {
@@ -92,7 +92,7 @@ const _nav = [
     name: 'Trip STO',
     to: '/TripSTO',
     icon: <CIcon icon={cilReload} customClassName="nav-icon" />,
-    dataToggle: 'tooltip',
+    datatoggle: 'tooltip',
     title: 'Trip Sheet STO',
   },
   {
@@ -100,7 +100,7 @@ const _nav = [
     name: 'Docs. Verification',
     to: '/DocsVerify',
     icon: <CIcon icon={cilSpreadsheet} customClassName="nav-icon" />,
-    dataToggle: 'tooltip',
+    datatoggle: 'tooltip',
     title: 'Documents Verification',
   },
 
@@ -109,7 +109,7 @@ const _nav = [
     name: 'Vendor Create Req.',
     to: '/VendorCreationHome',
     icon: <CIcon icon={cilPen} customClassName="nav-icon" />,
-    dataToggle: 'tooltip',
+    datatoggle: 'tooltip',
     title: 'Vendor Creation Request',
   },
   {
@@ -117,7 +117,7 @@ const _nav = [
     name: 'Vendor Create Appr.',
     to: '/VendorCreationApprovalHome',
     icon: <CIcon icon={cilThumbUp} customClassName="nav-icon" />,
-    dataToggle: 'tooltip',
+    datatoggle: 'tooltip',
     title: 'Vendor Creation Approval',
   },
   {
@@ -125,7 +125,7 @@ const _nav = [
     name: 'Vendor Create Conf.',
     to: '/VendorCreationConfrimationHome',
     icon: <CIcon icon={cilThumbUp} customClassName="nav-icon" />,
-    dataToggle: 'tooltip',
+    datatoggle: 'tooltip',
     title: 'Vendor Creation Confirmation',
   },
   {
@@ -133,7 +133,7 @@ const _nav = [
     name: 'TS Creation',
     to: '/TripSheetCreation',
     icon: <CIcon icon={cilNewspaper} customClassName="nav-icon" />,
-    dataToggle: 'tooltip',
+    datatoggle: 'tooltip',
     title: 'Trip Sheet Creation',
   },
 
@@ -142,7 +142,7 @@ const _nav = [
     name: 'RJ SO Creation',
     to: '/RjSalesOrderCreation',
     icon: <CIcon icon={cilChevronDoubleLeft} customClassName="nav-icon" />,
-    dataToggle: 'tooltip',
+    datatoggle: 'tooltip',
     title: 'Return Journey Sales Order Creation',
   },
 
@@ -151,7 +151,7 @@ const _nav = [
     name: 'Customer Creation',
     to: '/RJcustomerCreationHome',
     icon: <CIcon icon={cilAperture} customClassName="nav-icon" />,
-    dataToggle: 'tooltip',
+    datatoggle: 'tooltip',
     title: 'Return Journey Customer Creation',
   },
   {
@@ -159,7 +159,7 @@ const _nav = [
     name: 'Customer Create Appr.',
     to: '/RJcustomerCreationApprovalHome',
     icon: <CIcon icon={cilThumbUp} customClassName="nav-icon" />,
-    dataToggle: 'tooltip',
+    datatoggle: 'tooltip',
     title: 'RJ Customer Create Approval',
   },
   {
@@ -167,7 +167,7 @@ const _nav = [
     name: 'Customer Create Conf.',
     to: '/RJcustomerCreationConfrimationHome',
     icon: <CIcon icon={cilThumbUp} customClassName="nav-icon" />,
-    dataToggle: 'tooltip',
+    datatoggle: 'tooltip',
     title: 'RJ Customer Creation Confrimation',
   },
   // {
@@ -175,7 +175,7 @@ const _nav = [
   //   name: 'VH. Assign',
   //   to: '/VehicleAssignmentFoods',
   //   icon: <CIcon icon={cilInbox} customClassName="nav-icon" />,
-  //   dataToggle: 'tooltip',
+  //   datatoggle: 'tooltip',
   //   title: 'Vehicle Assignment',
   // },
   {
@@ -183,7 +183,7 @@ const _nav = [
     name: 'Vehicle Assignment',
     to: '/ShipmentCreation',
     icon: <CIcon icon={cilInbox} customClassName="nav-icon" />,
-    dataToggle: 'tooltip',
+    datatoggle: 'tooltip',
     title: 'Vehicle Assignment',
   },
   {
@@ -191,7 +191,7 @@ const _nav = [
     name: 'Advance Payment',
     to: '/AdvancePayment',
     icon: <CIcon icon={cilCash} customClassName="nav-icon" />,
-    dataToggle: 'tooltip',
+    datatoggle: 'tooltip',
     title: 'Advance Payment',
   },
   {
@@ -199,7 +199,7 @@ const _nav = [
     name: 'VH.Assign Consumer',
     to: '/ShipmentCreationConsumer',
     icon: <CIcon icon={cilCheckCircle} customClassName="nav-icon" />,
-    dataToggle: 'tooltip',
+    datatoggle: 'tooltip',
     title: 'Vehicle Assignment Consumer',
   },
   {
@@ -207,7 +207,7 @@ const _nav = [
     name: 'DI Creation',
     to: '/DieselIntentHome',
     icon: <CIcon icon={cilPenNib} customClassName="nav-icon" />,
-    dataToggle: 'tooltip',
+    datatoggle: 'tooltip',
     title: 'Diesel Indent Creation',
   },
   {
@@ -215,7 +215,7 @@ const _nav = [
     name: 'DI Confirmation',
     to: '/DiConfirmation',
     icon: <CIcon icon={cilThumbUp} customClassName="nav-icon" />,
-    dataToggle: 'tooltip',
+    datatoggle: 'tooltip',
     title: 'Diesel Indent Confirmation',
   },
   {
@@ -223,7 +223,7 @@ const _nav = [
     name: 'DI Approval',
     to: '/DiApprovalHome',
     icon: <CIcon icon={cilThumbUp} customClassName="nav-icon" />,
-    dataToggle: 'tooltip',
+    datatoggle: 'tooltip',
     title: 'Diesel Indent Approval',
   },
   {
@@ -231,7 +231,7 @@ const _nav = [
     name: 'TS Closure',
     to: '/TSClossure',
     icon: <CIcon icon={cilFactorySlash} customClassName="nav-icon" />,
-    dataToggle: 'tooltip',
+    datatoggle: 'tooltip',
     title: 'Trip Sheet Closure',
   },
   // {
@@ -239,7 +239,7 @@ const _nav = [
   //   name: 'TS Closure - STO',
   //   to: '/TSClossure-sto',
   //   icon: <CIcon icon={cilAddressBook} customClassName="nav-icon" />,
-  //   dataToggle: 'tooltip',
+  //   datatoggle: 'tooltip',
   //   title: 'Trip Sheet Closure - STO',
   // },
   {
@@ -247,7 +247,7 @@ const _nav = [
     name: 'TS Settlement',
     to: '/TripSheetSettleMentNew',
     icon: <CIcon icon={cilBrowser} customClassName="nav-icon" />,
-    dataToggle: 'tooltip',
+    datatoggle: 'tooltip',
     title: 'Trip Sheet Settlement',
   },
   {
@@ -255,7 +255,7 @@ const _nav = [
     name: 'FI Entry',
     to: '/FIScreen',
     icon: <CIcon icon={cilCalculator} customClassName="nav-icon" />,
-    dataToggle: 'tooltip',
+    datatoggle: 'tooltip',
     title: 'FI Entry',
   },
   {
@@ -383,7 +383,7 @@ const _nav = [
     name: 'Change Vehicle',
     to: '/ChangeVehicleHome',
     icon: <CIcon icon={cilBackspace} customClassName="nav-icon" />,
-    dataToggle: 'tooltip',
+    datatoggle: 'tooltip',
     title: 'Change Vehicle',
   },
   // {

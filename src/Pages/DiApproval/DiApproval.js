@@ -12,8 +12,8 @@ import {
   CTabContent,
   CTabPane,
 } from '@coreui/react'
-import useForm from 'src/Hooks/useFormValidate'
-import validate from 'src/Validations/FormValidation'
+import useForm from 'src/Hooks/useForm'
+import validate from 'src/Utils/Validation'
 const DiApproval = () => {
   const formValues = {
     vehicleType: '',

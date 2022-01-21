@@ -3,7 +3,8 @@ import { Provider } from 'react-redux'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import './scss/style.scss'
 import store from './store'
-export const API_URL = 'http://localhost/Logistic'
+
+export const APIURL = "http://127.0.0.1:8000/api/v1/";
 
 export const REQUEST_HEADERS = () => {
   return {
@@ -21,7 +22,7 @@ const loading = (
 )
 
 // Containers
-const DefaultLayout = React.lazy(() => import('./layout/DefaultLayout'))
+const DefaultLayout = React.lazy(() => import('./Layout/DefaultLayout'))
 
 class App extends Component {
   render() {

@@ -17,8 +17,8 @@ import {
 } from '@coreui/react'
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import useForm from 'src/Hooks/useFormValidate'
-import VendorRequestValidation from 'src/Validations/VendorCreation/VendorRequestValidation'
+import useForm from 'src/Hooks/useForm'
+import VendorRequestValidation from 'src/Utils/VendorCreation/VendorRequestValidation'
 const VendorCreationApproval = () => {
   const formValues = {
     vehicleType: '',
@@ -381,7 +381,7 @@ const VendorCreationApproval = () => {
             </CCol>
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="bankName">Bank Name</CFormLabel>
-              <CFormInput type="text" name="bankName" size="sm" id="bankName" readOnly/>                 
+              <CFormInput type="text" name="bankName" size="sm" id="bankName" readOnly/>
             </CCol>
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="bankBranch">Bank Branch</CFormLabel>

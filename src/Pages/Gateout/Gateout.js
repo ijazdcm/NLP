@@ -1,5 +1,5 @@
 import { React, useState } from 'react'
-import useForm from 'src/Hooks/useFormValidate'
+import useForm from 'src/Hooks/useForm'
 import {
   CButton,
   CCard,
@@ -18,7 +18,7 @@ import {
   CTabPane,
 } from '@coreui/react'
 import { useHistory } from 'react-router-dom'
-import validate from 'src/Validations/FormValidation'
+import validate from 'src/Utils/Validation'
 const Gateout = () => {
   let history = useHistory()
   const redirect = () => {

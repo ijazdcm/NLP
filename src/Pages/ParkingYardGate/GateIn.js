@@ -27,11 +27,11 @@ import {
 } from '@coreui/react'
 
 import { React, useState, useEffect, useContext, Component } from 'react'
-import useForm from 'src/Hooks/useFormValidate'
-import validate from 'src/Validations/FormValidation'
+import useForm from 'src/Hooks/useForm'
+import validate from 'src/Utils/Validation'
 import CustomTable from '../../components/customComponent/CustomTable'
-import VehicleMaster from '../../services/Master/VehicleMaster'
-import PYG from '../../services/Transactions/PYG'
+import VehicleMaster from '../../Services/Master/VehicleMaster'
+import PYG from '../../Services/Transactions/PYG'
 
 const ParkingYardGate = () => {
   const [hire, setHire] = useState(false)
@@ -215,12 +215,12 @@ const ParkingYardGate = () => {
                     Select...
                   </option>
                   <option value="1">Own</option>
-                  <option value="1">Contract</option>
+                  <option value="2">Contract</option>
                   <option value="3">Hire</option>
                   <option value="4">Party</option>
                 </CFormSelect>
               </CCol>
-              {values.vType == 1 && (
+              {values.vType < 3 && (
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="vNum">
                     Vehicle Number*
@@ -246,13 +246,13 @@ const ParkingYardGate = () => {
                   </CFormSelect>
                 </CCol>
               )}
-              {values.vType == 1 && (
+              {values.vType < 3 && (
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="vCap">Vehicle Capacity In MTS*</CFormLabel>
                   <CFormInput size="sm" id="vCap" name="vCap" value={values.vCap} readOnly />
                 </CCol>
               )}
-              {values.vType == 1 && (
+              {values.vType < 3 && (
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="dName">
                     Driver Name*{' '}
@@ -277,7 +277,7 @@ const ParkingYardGate = () => {
                   </CFormSelect>
                 </CCol>
               )}
-              {values.vType == 1 && (
+              {values.vType < 3 && (
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="dNum">
                     Driver Contact Number*
@@ -294,7 +294,7 @@ const ParkingYardGate = () => {
                   />
                 </CCol>
               )}
-              {values.vType == 1 && (
+              {values.vType < 3 && (
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="odoKm">
                     Odometer KM*{' '}
@@ -312,7 +312,7 @@ const ParkingYardGate = () => {
                   />
                 </CCol>
               )}
-              {values.vType == 1 && (
+              {values.vType < 3 && (
                 <CCol xs={12} md={3} hidden={hire}>
                   <CFormLabel htmlFor="odoImg">
                     Odometer Photo*{' '}

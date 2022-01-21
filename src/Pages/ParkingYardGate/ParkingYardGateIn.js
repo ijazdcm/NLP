@@ -26,8 +26,8 @@ import {
   CFormTextarea,
 } from '@coreui/react'
 import { React, useState } from 'react'
-import useFormValid from 'src/Hooks/useFormValidate'
-import validate from 'src/Validations/FormValidation'
+import useFormValid from 'src/Hooks/useForm'
+import validate from 'src/Utils/Validation'
 import CustomTable from '../../components/customComponent/CustomTable'
 
 const ParkingYardGate = () => {

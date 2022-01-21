@@ -31,8 +31,8 @@ import {
     CButtonGroup,
 } from '@coreui/react'
 import { React, useState } from 'react'
-import useForm from 'src/Hooks/useFormValidate.js'
-import validate from 'src/Validations/FormValidation'
+import useForm from 'src/Hooks/useForm.js'
+import validate from 'src/Utils/Validation'
 import CustomTable from '../../components/customComponent/CustomTable'
 
 const VehicleInspectionHire = () => {

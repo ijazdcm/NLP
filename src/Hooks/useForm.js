@@ -57,6 +57,7 @@ const useForm = (callback, validate, formValues) => {
   }
 
   const onClick = (event) => {
+    console.log(screenTyp)
     const yardType = event.target.value
     yardType === 'hire' ? setscreenTyp(yardType) : setscreenTyp(yardType)
   }

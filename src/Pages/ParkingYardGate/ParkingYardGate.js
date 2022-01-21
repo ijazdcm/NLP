@@ -24,7 +24,7 @@ import {
 } from '@coreui/react'
 import { React, useState, useContext } from 'react'
 import useForm from 'src/Hooks/useForm'
-import validate from 'src/Validations/FormValidation'
+import validate from 'src/Utils/Validation'
 import CustomTable from '../../components/customComponent/CustomTable'
 const ParkingYardGate = () => {
   const ctx = useContext()

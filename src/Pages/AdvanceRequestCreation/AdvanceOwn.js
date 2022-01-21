@@ -24,15 +24,14 @@ import {
   CFormTextarea,
 } from '@coreui/react'
 import { React, useState } from 'react'
-import useForm from 'src/Hooks/useFormValidate'
-import validate from 'src/Validations/FormValidation'
+import useForm from 'src/Hooks/useForm'
+import validate from 'src/Utils/Validation'
 import { Link } from 'react-router-dom'
 import CustomTable from '../../components/customComponent/CustomTable'
 const AdvanceOwn = () => {
   const formValues = {
-    vehicleType: '',
-    OdometerKm: '',
-    odometerPhoto: '',
+    advanceReq: '',
+    enterOtp: '',
   }
 
   const { values, errors, handleChange, onFocus, handleSubmit, enableSubmit, onBlur } = useForm(
@@ -54,44 +53,37 @@ const AdvanceOwn = () => {
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="vType">Vehicle Type</CFormLabel>
 
-                  <CFormInput size="sm" id="vType"  readOnly />
+                  <CFormInput size="sm" id="vType" readOnly />
                 </CCol>
 
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="vNum">Vehicle Number</CFormLabel>
 
-                  <CFormInput size="sm" id="vNum"  readOnly />
+                  <CFormInput size="sm" id="vNum" readOnly />
                 </CCol>
 
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="vCap">Vehicle Capacity</CFormLabel>
 
-                  <CFormInput size="sm" id="vCap"  readOnly />
+                  <CFormInput size="sm" id="vCap" readOnly />
                 </CCol>
 
-                {/* <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inputAddress">VA Number</CFormLabel>
-
-                  <CFormInput size="sm" id="inputAddress"  readOnly />
-                </CCol>
-              </CRow>
-              <CRow className=""> */}
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="dName">Driver Name</CFormLabel>
 
-                  <CFormInput size="sm" id="dName"  readOnly />
+                  <CFormInput size="sm" id="dName" readOnly />
                 </CCol>
 
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="dMob">Driver Mobile Number</CFormLabel>
 
-                  <CFormInput size="sm" id="dMob"  readOnly />
+                  <CFormInput size="sm" id="dMob" readOnly />
                 </CCol>
 
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="OdometerKM">Odometer KM</CFormLabel>
 
-                  <CFormInput size="sm" id="OdometerKM"  readOnly />
+                  <CFormInput size="sm" id="OdometerKM" readOnly />
                 </CCol>
 
                 <CCol xs={12} md={3}>
@@ -101,80 +93,84 @@ const AdvanceOwn = () => {
                     className="w-100"
                     color="info"
                     size="sm"
-                    id='odoIMG'
+                    id="odoIMG"
                   >
                     <span className="float-start">
                       <i className="fa fa-eye" aria-hidden="true"></i> &nbsp;View
                     </span>
                   </CButton>
                 </CCol>
-              {/* </CRow>
+                {/* </CRow>
               <CRow className=""> */}
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="gateInDateTime">Gate-In Date & Time</CFormLabel>
 
-                  <CFormInput size="sm" id="gateInDateTime"  readOnly />
+                  <CFormInput size="sm" id="gateInDateTime" readOnly />
                 </CCol>
 
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="inspectionDateTime">Vehicle Inspection Date & Time</CFormLabel>
+                  <CFormLabel htmlFor="inspectionDateTime">
+                    Vehicle Inspection Date & Time
+                  </CFormLabel>
 
-                  <CFormInput size="sm" id="inspectionDateTime"  readOnly />
+                  <CFormInput size="sm" id="inspectionDateTime" readOnly />
                 </CCol>
 
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="verifyDate">Doc. Verification Date & Time</CFormLabel>
 
-                  <CFormInput size="sm" id="verifyDate"  readOnly />
+                  <CFormInput size="sm" id="verifyDate" readOnly />
                 </CCol>
 
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="tNum">Tripsheet Number</CFormLabel>
 
-                  <CFormInput size="sm" id="tNum"  readOnly />
+                  <CFormInput size="sm" id="tNum" readOnly />
                 </CCol>
-              {/* </CRow>
+                {/* </CRow>
               <CRow className=""> */}
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="vCode">Vendor Code</CFormLabel>
 
-                  <CFormInput size="sm" id="vCode"  readOnly />
+                  <CFormInput size="sm" id="vCode" readOnly />
                 </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="dOutstand">Driver Outstanding</CFormLabel>
 
-                  <CFormInput size="sm" id="dOutstand"  readOnly />
+                  <CFormInput size="sm" id="dOutstand" readOnly />
                 </CCol>
 
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="advanceReq">Advance Request Form</CFormLabel>
+                  <CFormLabel htmlFor="advanceReq">
+                    Advance Request Form{' '}
+                    {errors.advanceReq && (
+                      <span className="small text-danger">{errors.advanceReq}</span>
+                    )}
+                  </CFormLabel>
 
-                  <CFormInput type="file" size="sm" id="advanceReq"  />
+                  <CFormInput
+                    type="file"
+                    id="advanceReq"
+                    className={`${errors.advanceReq && 'is-invalid'}`}
+                    name="advanceReq"
+                    value={values.advanceReq || ''}
+                    onFocus={onFocus}
+                    onBlur={onBlur}
+                    onChange={handleChange}
+                  />
                 </CCol>
 
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="advance">
                     Advance Amount*
-                    {errors.advance && (
-                      <span className="small text-danger">{errors.advance}</span>
-                    )}
+                    {errors.advance && <span className="small text-danger">{errors.advance}</span>}
                   </CFormLabel>
-                  <CFormInput size="sm" id="inputAddress"  readOnly />
-                  {/* <CFormInput
-                      name="Order Qty"
-                      onFocus={onFocus}
-                      onBlur={onBlur}
-                      onChange={handleChange}
-                      className={`${errors.OdometerKm && 'is-invalid'}`}
-                      size="sm"
-                      id="inputAddress"
-                      placeholder=""
-                    /> */}
+                  <CFormInput size="sm" id="inputAddress" readOnly />
                 </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="sTon">Shipment Tonnage*</CFormLabel>
 
-                  <CFormInput type="text" size="sm" id="sTon"  readOnly />
+                  <CFormInput type="text" size="sm" id="sTon" readOnly />
                 </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="expectDelivery">
@@ -201,7 +197,7 @@ const AdvanceOwn = () => {
                     className="w-100"
                     color="info"
                     size="sm"
-                    id='otp'
+                    id="otp"
                   >
                     <span className="float-start">
                       <i className="fa fa-key" aria-hidden="true"></i> &nbsp;Click Here To Generate
@@ -210,9 +206,23 @@ const AdvanceOwn = () => {
                   </CButton>
                 </CCol>
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="enterOtp">Enter OTP*</CFormLabel>
+                  <CFormLabel htmlFor="enterOtp">
+                    Enter OTP*{' '}
+                    {errors.enterOtp && (
+                      <span className="small text-danger">{errors.enterOtp}</span>
+                    )}
+                  </CFormLabel>
 
-                  <CFormInput size="sm" id="enterOtp" />
+                  <CFormInput
+                    size="sm"
+                    id="enterOtp"
+                    className={`${errors.enterOtp && 'is-invalid'}`}
+                    name="enterOtp"
+                    value={values.enterOtp || ''}
+                    onFocus={onFocus}
+                    onBlur={onBlur}
+                    onChange={handleChange}
+                  />
                 </CCol>
 
                 <CCol xs={12} md={3}>

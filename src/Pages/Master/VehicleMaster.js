@@ -29,8 +29,8 @@ import {
     CModalFooter,
 } from '@coreui/react'
 import { React, useState } from 'react'
-import useForm from 'src/Hooks/useFormValidate.js'
-import validate from 'src/Validations/FormValidation'
+import useForm from 'src/Hooks/useForm.js'
+import validate from 'src/Utils/Validation'
 
 const VehicleMaster = () => {
     const formValues = {
@@ -229,7 +229,7 @@ const VehicleMaster = () => {
                                         // size="sm"
                                         // id="date-input"
                                         // locate="pt-br"
-                                        // 
+                                        //
                                         // placeholder=""
                                         type="date" size="sm" id="iValidaitiy" name="fecha-hasta" placeholder="date"
                                     />

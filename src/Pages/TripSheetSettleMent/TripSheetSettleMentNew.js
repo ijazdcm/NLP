@@ -33,8 +33,8 @@ import {
 import { React, useEffect, useState } from 'react'
 // import Select from 'react-select';
 // import CModal from '@coreui/react/src/components/modal/CModal'
-import useForm from 'src/Hooks/useFormValidate'
-import validate from 'src/Validations/FormValidation'
+import useForm from 'src/Hooks/useForm'
+import validate from 'src/Utils/Validation'
 import CustomTable from '../../components/customComponent/CustomTable'
 
 const TSSettlement = () => {
@@ -187,7 +187,7 @@ const TSSettlement = () => {
 
                     <CFormInput size="sm" id="vCap"  readOnly />
                   </CCol>
-                
+
                   <CCol xs={12} md={3}>
                     <CFormLabel htmlFor="vType">Vehicle Type</CFormLabel>
 
@@ -1435,7 +1435,7 @@ const TSSettlement = () => {
                       <option value="4">Low Tonnage</option>
                     </CFormSelect>
                   </CCol>
-                </CRow>       
+                </CRow>
                 <hr />
                 <CRow className="mb-md-1" hidden>
                   <CCol xs={12} md={2}>

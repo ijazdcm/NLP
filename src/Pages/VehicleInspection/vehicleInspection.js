@@ -31,8 +31,8 @@ import {
   CButtonGroup,
 } from '@coreui/react'
 import { React, useState } from 'react'
-import useForm from 'src/Hooks/useFormValidate.js'
-import validate from 'src/Validations/FormValidation'
+import useForm from 'src/Hooks/useForm.js'
+import validate from 'src/Utils/Validation'
 import CustomTable from '../../components/customComponent/CustomTable'
 
 const VehicleInspection = () => {
@@ -370,10 +370,15 @@ const VehicleInspection = () => {
                   </CButtonGroup>
                 </CCol>
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="prevLoad">Previous Load Details *</CFormLabel>
+                  <CFormLabel htmlFor="prevLoad">
+                    Previous Load Details *
+                    {errors.prevLoad && (
+                      <span className="small text-danger">{errors.prevLoad}</span>
+                    )}
+                  </CFormLabel>
                   <CFormSelect
                     size="sm"
-                    name="fitLoad"
+                    name="prevLoad"
                     id="prevLoad"
                     onFocus={onFocus}
                     onBlur={onBlur}
@@ -387,8 +392,21 @@ const VehicleInspection = () => {
                   </CFormSelect>
                 </CCol>
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="vFitLoad">Vehicle Fit For Loading *</CFormLabel>
-                  <CFormInput name="vFitLoad" size="sm" id="vFitLoad" value="No" />
+                  <CFormLabel htmlFor="vFitLoad">
+                    Vehicle Fit For Loading *
+                    {errors.vFitLoad && (
+                      <span className="small text-danger">{errors.vFitLoad}</span>
+                    )}
+                  </CFormLabel>
+                  <CFormInput
+                    name="vFitLoad"
+                    size="sm"
+                    id="vFitLoad"
+                    onFocus={onFocus}
+                    onBlur={onBlur}
+                    onChange={handleChange}
+                    value={values.prevLoad || 'No'}
+                  />
                 </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="remarks">Remarks</CFormLabel>
