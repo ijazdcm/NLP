@@ -25,7 +25,8 @@ import {
 } from '@coreui/react'
 import { React, useState } from 'react'
 import useForm from 'src/Hooks/useForm'
-import validate from 'src/Utils/Validation'
+import validate from 'src/Validations/FormValidation'
+import { Link } from 'react-router-dom'
 import CustomTable from '../../components/customComponent/CustomTable'
 const DieselIntentHire = () => {
   const formValues = {
@@ -174,7 +175,9 @@ const DieselIntentHire = () => {
                     className="px-3 text-white"
                     type="submit"
                   >
-                    Previous
+                    <Link className="text-white" to="/DieselIntentHome">
+                  Previous
+                </Link>
                   </CButton>
                 </CCol>
                 <CCol className="offset-md-6 d-md-flex justify-content-end" xs={12} sm={12} md={3}>

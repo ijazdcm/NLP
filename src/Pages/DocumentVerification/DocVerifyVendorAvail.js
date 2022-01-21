@@ -32,26 +32,14 @@ import {
 import { React, useState } from 'react'
 import { Link } from 'react-router-dom'
 import useForm from 'src/Hooks/useForm.js'
-import validate from 'src/Utils/Validation'
+import validate from 'src/Validations/FormValidation'
 import CustomTable from '../../components/customComponent/CustomTable'
 
 const DocVerifyVendorAvail = () => {
   const formValues = {
-    panNum: '',
-    license: '',
-    rcFront: '',
-    rcFront: '',
-    rcBack: '',
-    insurance: '',
-    insuranceValid: '',
-    TDSfront: '',
-    TDSback: '',
-    transportShed: '',
-    shedName: '',
-    ownershipTrans: '',
-    shedownerMob: '',
-    shedownerWhatsapp: '',
-    freigthRate: '',
+    vehicleType: '',
+    OdometerKm: '',
+    odometerPhoto: '',
   }
 
   const { values, errors, handleChange, onFocus, handleSubmit, enableSubmit, onBlur } = useForm(
@@ -100,8 +88,8 @@ const DocVerifyVendorAvail = () => {
                   <CFormInput name="dName" size="sm" id="dName" value="Naga Raj" readOnly />
                 </CCol>
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="dNum">Driver Contact Number</CFormLabel>
-                  <CFormInput name="dNum" size="sm" id="dNum" value="9135362456" readOnly />
+                  <CFormLabel htmlFor="dMob">Driver Contact Number</CFormLabel>
+                  <CFormInput name="dMob" size="sm" id="dMob" value="9135362456" readOnly />
                 </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="gateInDateTime">Gate-In Date & Time</CFormLabel>
@@ -124,19 +112,13 @@ const DocVerifyVendorAvail = () => {
                   />
                 </CCol>
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="panNum">
-                    PAN Card Number*{' '}
-                    {errors.panNum && <span className="small text-danger">{errors.panNum}</span>}
-                  </CFormLabel>
+                  <CFormLabel htmlFor="panNum">PAN Card Number*</CFormLabel>
                   <CFormSelect
                     size="sm"
-                    id="panNum"
-                    className={`${errors.panNum && 'is-invalid'}`}
                     name="panNum"
-                    value={values.panNum || ''}
-                    onFocus={onFocus}
-                    onBlur={onBlur}
-                    onChange={handleChange}
+                    id='panNum'
+                    className=""
+                    aria-label="Small select example"
                   >
                     <option hidden>Select...</option>
                     <option value="0">ABCD123F</option>
@@ -150,18 +132,18 @@ const DocVerifyVendorAvail = () => {
                 </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="ownerName">Owner Name</CFormLabel>
-                  <CFormInput
-                    name="ownerName"
-                    size="sm"
-                    id="ownerName"
-                    value="Mari Muthu"
-                    readOnly
-                  />
+                  <CFormInput name="ownerName" size="sm" id="ownerName" value="Mari Muthu" readOnly />
                 </CCol>
 
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="ownerMob">Owner Mobile Number</CFormLabel>
-                  <CFormInput name="ownerMob" size="sm" id="ownerMob" value="9132657894" readOnly />
+                  <CFormInput
+                    name="ownerMob"
+                    size="sm"
+                    id="ownerMob"
+                    value="9132657894"
+                    readOnly
+                  />
                 </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="aadhar">Aadhar Number</CFormLabel>
@@ -169,182 +151,61 @@ const DocVerifyVendorAvail = () => {
                 </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="bankAcc">Bank Account Number</CFormLabel>
-                  <CFormInput
-                    name="bankAcc"
-                    size="sm"
-                    id="bankAcc"
-                    value="SBI506980963214"
-                    readOnly
-                  />
+                  <CFormInput name="bankAcc" size="sm" id="bankAcc" value="SBI506980963214" readOnly />
                 </CCol>
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="license">
-                    License Copy*{' '}
-                    {errors.license && <span className="small text-danger">{errors.license}</span>}
-                  </CFormLabel>
-                  <CFormInput
-                    type="file"
-                    size="sm"
-                    id="license"
-                    className={`${errors.license && 'is-invalid'}`}
-                    name="license"
-                    value={values.license || ''}
-                    onFocus={onFocus}
-                    onBlur={onBlur}
-                    onChange={handleChange}
-                  />
+                  <CFormLabel htmlFor="license">License Copy*</CFormLabel>
+                  <CFormInput type="file" name="license" size="sm" id="license" />
                 </CCol>
 
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="rcFront">
-                    RC Copy - Front*{' '}
-                    {errors.rcFront && <span className="small text-danger">{errors.rcFront}</span>}
-                  </CFormLabel>
-                  <CFormInput
-                    type="file"
-                    size="sm"
-                    id="rcFront"
-                    className={`${errors.rcFront && 'is-invalid'}`}
-                    name="rcFront"
-                    value={values.rcFront || ''}
-                    onFocus={onFocus}
-                    onBlur={onBlur}
-                    onChange={handleChange}
-                  />
+                  <CFormLabel htmlFor="rcFront">RC Copy - Front*</CFormLabel>
+                  <CFormInput type="file" name="rcFront" size="sm" id="rcFront" />
                 </CCol>
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="rcBack">
-                    RC Copy - Back*{' '}
-                    {errors.rcBack && <span className="small text-danger">{errors.rcBack}</span>}
-                  </CFormLabel>
-                  <CFormInput
-                    type="file"
-                    size="sm"
-                    id="rcBack"
-                    className={`${errors.rcBack && 'is-invalid'}`}
-                    name="rcBack"
-                    value={values.rcBack || ''}
-                    onFocus={onFocus}
-                    onBlur={onBlur}
-                    onChange={handleChange}
-                  />
+                  <CFormLabel htmlFor="rcBack">RC Copy - Back*</CFormLabel>
+                  <CFormInput type="file" name="rcBack" size="sm" id="rcBack" />
                 </CCol>
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="insurance">
-                    Insurance Copy*{' '}
-                    {errors.insurance && (
-                      <span className="small text-danger">{errors.insurance}</span>
-                    )}
-                  </CFormLabel>
-                  <CFormInput
-                    type="file"
-                    size="sm"
-                    id="insurance"
-                    className={`${errors.insurance && 'is-invalid'}`}
-                    name="insurance"
-                    value={values.insurance || ''}
-                    onFocus={onFocus}
-                    onBlur={onBlur}
-                    onChange={handleChange}
-                  />
+                  <CFormLabel htmlFor="insurance">Insurance Copy*</CFormLabel>
+                  <CFormInput type="file" name="insurance" size="sm" id="insurance" />
                 </CCol>
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="insuranceValid">
-                    Insurance Validity*
-                    {errors.insuranceValid && (
-                      <span className="small text-danger">{errors.insuranceValid}</span>
-                    )}
-                  </CFormLabel>
+                  <CFormLabel htmlFor="insuranceValid">Insurance Validity*</CFormLabel>
                   <CFormSelect
                     size="sm"
-                    id="insuranceValid"
-                    className={`${errors.insuranceValid && 'is-invalid'}`}
                     name="insuranceValid"
-                    value={values.insuranceValid || ''}
-                    onFocus={onFocus}
-                    onBlur={onBlur}
-                    onChange={handleChange}
+                    id='insuranceValid'
+                    className=""
+                    aria-label="Small select example"
                   >
-                    <option value="" hidden selected>
-                      Select...
-                    </option>
-                    <option value="1">Valid</option>
+                    <option hidden>Select...</option>
+                    <option value="0">Valid</option>
                     <option value="0">Invalid</option>
                   </CFormSelect>
                 </CCol>
 
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="TDSfront">
-                    TDS Declaration Form - Front*
-                    {errors.TDSfront && (
-                      <span className="small text-danger">{errors.TDSfront}</span>
-                    )}
-                  </CFormLabel>
-                  <CFormInput
-                    type="file"
-                    size="sm"
-                    id="TDSfront"
-                    className={`${errors.TDSfront && 'is-invalid'}`}
-                    name="TDSfront"
-                    value={values.TDSfront || ''}
-                    onFocus={onFocus}
-                    onBlur={onBlur}
-                    onChange={handleChange}
-                  />
+                  <CFormLabel htmlFor="TDSfront">TDS Declaration Form - Front*</CFormLabel>
+                  <CFormInput type="file" name="TDSfront" size="sm" id="TDSfront" />
                 </CCol>
 
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="TDSback">
-                    TDS Declaration Form - Back*{' '}
-                    {errors.TDSback && <span className="small text-danger">{errors.TDSback}</span>}
-                  </CFormLabel>
-                  <CFormInput
-                    type="file"
-                    size="sm"
-                    id="TDSback"
-                    className={`${errors.TDSback && 'is-invalid'}`}
-                    name="TDSback"
-                    value={values.TDSback || ''}
-                    onFocus={onFocus}
-                    onBlur={onBlur}
-                    onChange={handleChange}
-                  />
+                  <CFormLabel htmlFor="TDSback">TDS Declaration Form - Back* </CFormLabel>
+                  <CFormInput type="file" name="TDSback" size="sm" id="TDSback" />
                 </CCol>
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="transportShed">
-                    Transporter Shed Sheet*{' '}
-                    {errors.transportShed && (
-                      <span className="small text-danger">{errors.transportShed}</span>
-                    )}
-                  </CFormLabel>
-                  <CFormInput
-                    type="file"
-                    size="sm"
-                    id="transportShed"
-                    className={`${errors.transportShed && 'is-invalid'}`}
-                    name="transportShed"
-                    value={values.transportShed || ''}
-                    onFocus={onFocus}
-                    onBlur={onBlur}
-                    onChange={handleChange}
-                  />
+                  <CFormLabel htmlFor="transportShed">Transporter Shed Sheet*</CFormLabel>
+                  <CFormInput type="file" name="transportShed" size="sm" id="transportShed" />
                 </CCol>
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="shedName">
-                    Shed Name*
-                    {errors.shedName && (
-                      <span className="small text-danger">{errors.shedName}</span>
-                    )}
-                  </CFormLabel>
+                  <CFormLabel htmlFor="shedName">Shed Name*</CFormLabel>
                   <CFormSelect
                     size="sm"
-                    id="shedName"
-                    className={`${errors.shedName && 'is-invalid'}`}
                     name="shedName"
-                    value={values.shedName || ''}
-                    onFocus={onFocus}
-                    onBlur={onBlur}
-                    onChange={handleChange}
+                    className=""
+                    id='shedName'
+                    aria-label="Small select example"
                   >
                     <option hidden>Select...</option>
                     <option value="0">Select SP</option>
@@ -352,76 +213,20 @@ const DocVerifyVendorAvail = () => {
                 </CCol>
 
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="ownershipTrans">
-                    Ownership Transfer Form*
-                    {errors.ownershipTrans && (
-                      <span className="small text-danger">{errors.ownershipTrans}</span>
-                    )}{' '}
-                  </CFormLabel>
-                  <CFormInput
-                    type="file"
-                    id="ownershipTrans"
-                    className={`${errors.ownershipTrans && 'is-invalid'}`}
-                    name="ownershipTrans"
-                    value={values.ownershipTrans || ''}
-                    onFocus={onFocus}
-                    onBlur={onBlur}
-                    onChange={handleChange}
-                  />
+                  <CFormLabel htmlFor="ownershipTrans">Ownership Transfer Form* </CFormLabel>
+                  <CFormInput type="file" name="ownershipTrans" size="sm" id="ownershipTrans" />
                 </CCol>
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="shedownerMob">
-                    Shed Mobile Number*
-                    {errors.shedownerMob && (
-                      <span className="small text-danger">{errors.shedownerMob}</span>
-                    )}{' '}
-                  </CFormLabel>
-                  <CFormInput
-                    type="text"
-                    id="shedownerMob"
-                    className={`${errors.shedownerMob && 'is-invalid'}`}
-                    name="shedownerMob"
-                    value={values.shedownerMob || ''}
-                    onFocus={onFocus}
-                    onBlur={onBlur}
-                    onChange={handleChange}
-                  />
+                  <CFormLabel htmlFor="shedownerMob">Shed Mobile Number</CFormLabel>
+                  <CFormInput type="text" name="shedownerMob" size="sm" id="shedownerMob" />
                 </CCol>
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="shedownerWhatsapp">
-                    Shed WhatsApp Number
-                    {errors.shedownerWhatsapp && (
-                      <span className="small text-danger">{errors.shedownerWhatsapp}</span>
-                    )}{' '}
-                  </CFormLabel>
-                  <CFormInput
-                    type="text"
-                    id="shedownerWhatsapp"
-                    className={`${errors.shedownerWhatsapp && 'is-invalid'}`}
-                    name="shedownerWhatsapp"
-                    value={values.shedownerWhatsapp || ''}
-                    onFocus={onFocus}
-                    onBlur={onBlur}
-                    onChange={handleChange}
-                  />
+                  <CFormLabel htmlFor="shedownerWhatsapp">Shed WhatsApp Number</CFormLabel>
+                  <CFormInput type="text" name="shedownerWhatsapp" size="sm" id="shedownerWhatsapp" />
                 </CCol>
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="freigthRate">
-                    Freight Rate Per Ton*
-                    {errors.freigthRate && (
-                      <span className="small text-danger">{errors.freigthRate}</span>
-                    )}{' '}
-                  </CFormLabel>
-                  <CFormInput
-                    type="text"
-                    id="freigthRate"
-                    className={`${errors.freigthRate && 'is-invalid'}`}
-                    name="freigthRate"
-                    value={values.freigthRate || ''}
-                    onFocus={onFocus}
-                    onBlur={onBlur}
-                    onChange={handleChange}
-                  />
+                  <CFormLabel htmlFor="freigthRate">Freight Rate Per Ton*</CFormLabel>
+                  <CFormInput type="text" name="freigthRate" size="sm" id="freigthRate" />
                 </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="remarks">Remarks</CFormLabel>

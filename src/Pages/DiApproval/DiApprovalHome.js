@@ -1,12 +1,9 @@
 import { CButton } from '@coreui/react'
 import DataTable from 'react-data-table-component'
-import { Link, useHistory } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import React from 'react'
 const DiApprovalHome = () => {
-  let history = useHistory()
-  const redirect = () => {
-    history.push('/Gateout')
-  }
+
   const columns = [
     {
       name: 'S.No',

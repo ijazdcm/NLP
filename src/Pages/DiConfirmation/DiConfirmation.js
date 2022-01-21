@@ -25,8 +25,9 @@ import {
 } from '@coreui/react'
 import { React, useState } from 'react'
 import useForm from 'src/Hooks/useForm'
-import validate from 'src/Utils/Validation'
+import validate from 'src/Validations/FormValidation'
 import CustomTable from '../../components/customComponent/CustomTable'
+import { Link } from 'react-router-dom'
 const ParkingYardGate = () => {
   const formValues = {
     vehicleType: '',
@@ -90,7 +91,7 @@ const ParkingYardGate = () => {
                   <CFormLabel htmlFor="invoice">
                     Invoice Number*
                     {errors.invoice && (
-                      <span className="small text-danger">{errors.invoice}</span>
+                      <span className="help text-danger">{errors.invoice}</span>
                     )}
                   </CFormLabel>
                   <CFormInput
@@ -108,7 +109,7 @@ const ParkingYardGate = () => {
                   <CFormLabel htmlFor="invoiceCopy">
                     Invoice Copy*
                     {errors.invoiceCopy && (
-                      <span className="small text-danger">{errors.invoiceCopy}</span>
+                      <span className="help text-danger">{errors.invoiceCopy}</span>
                     )}
                   </CFormLabel>
                   <CFormInput
@@ -129,7 +130,7 @@ const ParkingYardGate = () => {
                   <CFormLabel htmlFor="dLtr">
                     No. Of Liters*
                     {errors.nLtr && (
-                      <span className="small text-danger">{errors.nLtr}</span>
+                      <span className="help text-danger">{errors.nLtr}</span>
                     )}
                   </CFormLabel>
                   <CFormInput
@@ -147,7 +148,7 @@ const ParkingYardGate = () => {
                   <CFormLabel htmlFor="rateLtr">
                     Rate Per Liter*
                     {errors.rateLtr && (
-                      <span className="small text-danger">{errors.rateLtr}</span>
+                      <span className="help text-danger">{errors.rateLtr}</span>
                     )}
                   </CFormLabel>
                   <CFormInput
@@ -187,7 +188,9 @@ const ParkingYardGate = () => {
                     className="text-white"
                     type="submit"
                   >
-                    Previous
+                      <Link className="text-white" to="/DieselIntentHome">
+                  Previous
+                </Link>
                   </CButton>
                 </CCol>
                 <CCol className="offset-md-6  d-md-flex justify-content-end" xs={12} sm={12} md={3}>
@@ -207,7 +210,9 @@ const ParkingYardGate = () => {
                     className="px-3 text-white"
                     type="submit"
                   >
+                     <Link className="text-white" to="/DieselIntentHome">
                     Cancel
+                    </Link>
                   </CButton>
                 </CCol>
               </CRow>

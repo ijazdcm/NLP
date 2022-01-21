@@ -17,13 +17,10 @@ import {
   CTabContent,
   CTabPane,
 } from '@coreui/react'
-import { useHistory } from 'react-router-dom'
-import validate from 'src/Utils/Validation'
+import validate from 'src/Validations/FormValidation'
+import { Link } from 'react-router-dom'
 const Gateout = () => {
-  let history = useHistory()
-  const redirect = () => {
-    history.push('/AllCommonTable')
-  }
+
   const formValues = {
     vehicleType: '',
     OdometerKm: '',
@@ -92,7 +89,7 @@ const Gateout = () => {
                   <CFormLabel htmlFor="inputAddress">
                     Odometer Photo
                     {errors.vehicleType && (
-                      <span className="small text-danger">{errors.vehicleType}</span>
+                      <span className="help text-danger">{errors.vehicleType}</span>
                     )}
                   </CFormLabel>
                   <div className="d-grid gap-">
@@ -183,24 +180,40 @@ const Gateout = () => {
                   <CFormInput size="sm" id="inputAddress" value="9898987676" readOnly />
                 </CCol>
               </CRow>
-
               <CRow>
-                <CCol xs={12} sm={3} md={9}>
-                  <CButton size="sm" color="primary" className="" onClick={redirect}>
-                    Previous
-                  </CButton>
-                </CCol>
-                <CCol xs={12} sm={3} md={3}>
-                  <div className="d-flex justify-content-between">
-                    <CButton size="sm" color="warning" className="text-white " onClick={redirect}>
-                      Gate out
-                    </CButton>
-                    <CButton size="sm" color="warning" className="text-white " onClick={redirect}>
-                      Cancel
-                    </CButton>
-                  </div>
-                </CCol>
-              </CRow>
+                                <CCol>
+                                    <Link to="/GateIn">
+                                        <CButton
+                                            md={9}
+                                            size="sm"
+                                            color="primary"
+                                            disabled=""
+                                            className="text-white"
+                                            type="submit"
+                                        >
+                                            Previous
+                                        </CButton>
+                                    </Link>
+                                </CCol>
+
+                                <CCol
+                                    className=""
+                                    xs={12}
+                                    sm={12}
+                                    md={3}
+                                    style={{ display: 'flex', justifyContent: 'flex-end' }}
+                                >
+                                    <CButton
+                                        size="sm"
+                                        // disabled={enableSubmit}
+                                        color="warning"
+                                        className="px-3 text-white"
+                                        type="submit"
+                                    >
+                                        Gate Out
+                                    </CButton>
+                                </CCol>
+                            </CRow>
             </CForm>
           </CTabPane>
         </CTabContent>

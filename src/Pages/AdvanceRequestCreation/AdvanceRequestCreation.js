@@ -25,7 +25,7 @@ import {
 } from '@coreui/react'
 import { React, useState } from 'react'
 import useForm from 'src/Hooks/useForm'
-import validate from 'src/Utils/Validation'
+import validate from 'src/Validations/FormValidation'
 import CustomTable from '../../components/customComponent/CustomTable'
 const ParkingYardGate = () => {
   const formValues = {
@@ -174,7 +174,7 @@ const ParkingYardGate = () => {
                   <CFormLabel htmlFor="inputAddress">
                     Advance Amount*
                     {errors.OdometerKm && (
-                      <span className="small text-danger">{errors.OdometerKm}</span>
+                      <span className="help text-danger">{errors.OdometerKm}</span>
                     )}
                   </CFormLabel>
                   <CFormInput size="sm" id="inputAddress"  readOnly />

@@ -598,7 +598,6 @@ const VendorCreationRequest = () => {
               </CButton>
             </CCol>
           </CRow>
-
           <CRow className="">
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="GSTreg">

@@ -1,11 +1,9 @@
 import { useState, useEffect } from 'react'
-import { InputValid } from './InputValid'
 
 const useForm = (callback, validate, formValues) => {
   const [values, setValues] = useState(formValues)
   const [errors, setErrors] = useState({})
   const [isTouched, setIsTouched] = useState({})
-  const [screenTyp, setscreenTyp] = useState('ownContract')
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [enableSubmit, setEnableSubmit] = useState(true)
 
@@ -36,10 +34,16 @@ const useForm = (callback, validate, formValues) => {
     //While User Changes
     event.persist()
     setIsTouched((isTouched) => ({ ...isTouched, [event.target.name]: true }))
+<<<<<<< HEAD
 
     setValues((values) => ({
       ...values,
       [event.target.name]: event.target.value,
+=======
+    setValues((values) => ({
+      ...values,
+      [event.target.name]:true,
+>>>>>>> 09e30f5f2b9baec619b08b4edc4723eaf74e5031
     }))
   }
 
@@ -57,11 +61,6 @@ const useForm = (callback, validate, formValues) => {
     chechFormFieldMatchs()
   }
 
-  const onClick = (event) => {
-    console.log(screenTyp)
-    const yardType = event.target.value
-    yardType === 'hire' ? setscreenTyp(yardType) : setscreenTyp(yardType)
-  }
 
   return {
     handleChange,
@@ -71,8 +70,7 @@ const useForm = (callback, validate, formValues) => {
     values,
     errors,
     enableSubmit,
-    onBlur,
-    onClick,
+    onBlur
   }
 }
 

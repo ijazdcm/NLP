@@ -24,7 +24,7 @@ import {
 } from '@coreui/react'
 import { React, useState, useContext } from 'react'
 import useForm from 'src/Hooks/useForm'
-import validate from 'src/Utils/Validation'
+import validate from 'src/Validations/FormValidation'
 import CustomTable from '../../components/customComponent/CustomTable'
 const ParkingYardGate = () => {
   const ctx = useContext()
@@ -57,7 +57,7 @@ const ParkingYardGate = () => {
                   <CFormLabel htmlFor="vehicleType">
                     Vehicle Type*{' '}
                     {errors.vehicleType && (
-                      <span className="small text-danger">{errors.vehicleType}</span>
+                      <span className="help text-danger">{errors.vehicleType}</span>
                     )}
                   </CFormLabel>
 
@@ -122,7 +122,7 @@ const ParkingYardGate = () => {
                   <CFormLabel htmlFor="inputAddress">
                     Odometer Km*{' '}
                     {errors.OdometerKm && (
-                      <span className="small text-danger">{errors.OdometerKm}</span>
+                      <span className="help text-danger">{errors.OdometerKm}</span>
                     )}
                   </CFormLabel>
                   <CFormInput
@@ -141,7 +141,7 @@ const ParkingYardGate = () => {
                   <CFormLabel htmlFor="formFileSm">
                     Odometer Photo*{' '}
                     {errors.odometerPhoto && (
-                      <span className="small text-danger">{errors.odometerPhoto}</span>
+                      <span className="help text-danger">{errors.odometerPhoto}</span>
                     )}
                   </CFormLabel>
                   <CFormInput
