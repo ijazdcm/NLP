@@ -91,8 +91,8 @@ import FIScreen from './Pages/FIScreen/FIScreen'
 import ChangeVehicleHome from './Pages/ChangeVehicle/ChangeVehicleHome'
 import ChangeVehicle from './Pages/ChangeVehicle/ChangeVehicle'
 const routes = [
-  { path: '/dashboard', exact: true, name: 'Home' },
-  { path: '/ParkingYardGateIn', exact: true, name: 'Test', component: ParkingYardGate },
+  { path: '/dashboard', exact: true, name: 'Naga Logistics Pro' },
+  { path: '/ParkingYardGateIn', exact: true, name: 'Parking Yard Gate', component: ParkingYardGate },
   { path: '/GateIn', exact: true, name: 'GateIn', component: GateIn },
   { path: '/Gateout', exact: true, name: 'Test', component: Gateout },
   { path: '/AllCommonTable', exact: true, name: 'Test', component: AllCommonTable },

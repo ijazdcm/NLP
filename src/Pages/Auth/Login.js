@@ -42,7 +42,7 @@ const Login = () => {
           if(res.status==200)
           {
            LocalStorageService.setLocalstorage('auth_token',res.data.token)
-           window.location.href="/"
+           window.location.href="/dashboard"
           }
 
         }).catch((error)=>{

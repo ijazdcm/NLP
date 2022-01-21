@@ -1,4 +1,6 @@
 import React, { useEffect } from 'react'
+import { useLocation } from "react-router-dom"
+
 import { useSelector, useDispatch } from 'react-redux'
 import {
   CContainer,
@@ -17,11 +19,16 @@ import { AppBreadcrumb } from './index'
 import { AppHeaderDropdown } from './header/index'
 import { logo } from 'src/assets/brand/logo'
 import Title from './Title'
-
-const AppHeader = (props) => {
+import nav from '../_nav'
+import routes from '../routes'
+const AppHeader = () => {
   const dispatch = useDispatch()
   const sidebarShow = useSelector((state) => state.changeState.sidebarShow)
-   console.log(props);
+  const location = useLocation();
+  const curent_route=routes.find((route)=>{
+    return route.path == location.pathname
+  })
+  console.log(location.pathname);
   return (
     <CHeader position="sticky" className="mb-3 p-0 pt-3">
       <CContainer fluid>
@@ -31,7 +38,7 @@ const AppHeader = (props) => {
         >
           <CIcon icon={cilMenu} size="lg" />
         </CHeaderToggler>
-        <Title tittle={(props.name)?props.name:"Logistics Pro Naga"} />
+        <Title tittle={(curent_route)?curent_route.name:"Logistics Pro Naga"} />
         <CHeaderNav className="ms-3">
           <AppHeaderDropdown />
         </CHeaderNav>

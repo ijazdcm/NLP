@@ -8,12 +8,16 @@ class LocalStorageService {
     {
         localStorage.setItem(key,value);
     }
-    
+
     getLocalstorage(key)
     {
        return localStorage.getItem(key);
     }
 
+    clear()
+    {
+      localStorage.clear();
+    }
 
 
 }
