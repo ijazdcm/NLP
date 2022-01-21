@@ -31,8 +31,7 @@ import {
 } from '@coreui/react'
 import { React, useState } from 'react'
 import useForm from 'src/Hooks/useForm.js'
-import validate from 'src/Validations/FormValidation'
-import { Link } from "react-router-dom";
+import validate from 'src/Utils/Validation'
 
 
 const ShedMaster = () => {
@@ -69,7 +68,7 @@ const ShedMaster = () => {
                                     <CFormLabel htmlFor="dType">
                                         Driver Type*{' '}
                                         {errors.DriverType && (
-                                            <span className="help text-danger">{errors.DriverType}</span>
+                                            <span className="small text-danger">{errors.DriverType}</span>
                                         )}
                                     </CFormLabel>
 
@@ -142,7 +141,7 @@ const ShedMaster = () => {
                                     <CFormLabel htmlFor="ShedOwnerPhoto">
                                         Shed Owner Photo*{' '}
                                         {errors.ShedOwnerPhoto && (
-                                            <span className="help text-danger">{errors.ShedOwnerPhoto}</span>
+                                            <span className="small text-danger">{errors.ShedOwnerPhoto}</span>
                                         )}
                                     </CFormLabel>
                                     <CFormInput
@@ -206,9 +205,7 @@ const ShedMaster = () => {
                                         className="mx-1 px-2 text-white"
                                         type="submit"
                                     >
-                                       <Link className="text-white" to="/ShedMasterTable">
-                                Cancel
-                            </Link>
+                                        Cancel
                                     </CButton>
                                 </CCol>
                             </CRow>

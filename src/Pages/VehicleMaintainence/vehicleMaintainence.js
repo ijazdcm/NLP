@@ -27,15 +27,18 @@ import {
 import { React, useState } from 'react'
 import { Link } from 'react-router-dom'
 import useForm from 'src/Hooks/useForm'
-import validate from 'src/Validations/FormValidation'
+import validate from 'src/Utils/Validation'
 import CustomTable from '../../components/customComponent/CustomTable'
 
 const VehicleMaintainence = () => {
   const [outSide, setoutSide] = useState(false)
   const formValues = {
-    vehicleType: '',
-    OdometerKm: '',
-    odometerPhoto: '',
+    maintenenceType: '',
+    maintenenceBy: '',
+    workOrder: '',
+    vendorName: '',
+    MaintenanceStart: '',
+    MaintenanceEnd: '',
   }
 
   const { values, errors, handleChange, onFocus, handleSubmit, enableSubmit, onBlur } = useForm(
@@ -55,23 +58,35 @@ const VehicleMaintainence = () => {
       <CCard>
         <CTabContent>
           <CTabPane role="tabpanel" aria-labelledby="home-tab" visible={true}>
-            <CForm className="container p-3" onSubmit={'handleSubmit'}>
+            <CForm className="container p-3" onSubmit={handleSubmit}>
               <CRow>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="vNum">Vehicle No*</CFormLabel>
 
-                  <CFormInput size="sm" id="vNum"  readOnly />
+                  <CFormInput size="sm" id="vNum" readOnly />
                 </CCol>
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="dName">Driver Name*</CFormLabel>
-                  <CFormSelect size="sm" name="dName" id='dName' className="">
-                    <option  hidden>
+                  <CFormLabel htmlFor="dName">
+                    Driver Name*
+                    {errors.dName && <span className="small text-danger">{errors.dName}</span>}
+                  </CFormLabel>
+                  <CFormSelect
+                    size="sm"
+                    id="dName"
+                    className={`${errors.dName && 'is-invalid'}`}
+                    name="dName"
+                    value={values.dName || ''}
+                    onFocus={onFocus}
+                    onBlur={onBlur}
+                    onChange={handleChange}
+                  >
+                    <option value="" hidden selected>
                       Select ...
                     </option>
-                    <option value="inHouse" onClick={() => setoutSide(false)}>
+                    <option value="1" onClick={() => setoutSide(false)}>
                       Kumar
                     </option>
-                    <option value="outSide" onClick={() => setoutSide(true)}>
+                    <option value="2" onClick={() => setoutSide(true)}>
                       Raj
                     </option>
                   </CFormSelect>
@@ -79,13 +94,22 @@ const VehicleMaintainence = () => {
                 <CCol md={3}>
                   <CFormLabel htmlFor="maintenenceType">
                     Maintenance Type *{' '}
-                    {errors.vehicleType && (
-                      <span className="help text-danger">{errors.vehicleType}</span>
+                    {errors.maintenenceType && (
+                      <span className="small text-danger">{errors.maintenenceType}</span>
                     )}
                   </CFormLabel>
 
-                  <CFormSelect size="sm" name="maintenenceType" id='maintenenceType' className="">
-                    <option  hidden>
+                  <CFormSelect
+                    size="sm"
+                    id="maintenenceType"
+                    className={`${errors.maintenenceType && 'is-invalid'}`}
+                    name="maintenenceType"
+                    value={values.maintenenceType || ''}
+                    onFocus={onFocus}
+                    onBlur={onBlur}
+                    onChange={handleChange}
+                  >
+                    <option value="" hidden selected>
                       Select Maintenance Type
                     </option>
                     <option value="scheduled">Scheduled Maintenance</option>
@@ -93,9 +117,23 @@ const VehicleMaintainence = () => {
                   </CFormSelect>
                 </CCol>
                 <CCol className="mb-3" md={3}>
-                  <CFormLabel htmlFor="maintenenceBy">Maintenance By *</CFormLabel>
-                  <CFormSelect size="sm" name="maintenenceBy" id='maintenenceBy' className="">
-                    <option  hidden>
+                  <CFormLabel htmlFor="maintenenceBy">
+                    Maintenance By *
+                    {errors.maintenenceBy && (
+                      <span className="small text-danger">{errors.maintenenceBy}</span>
+                    )}
+                  </CFormLabel>
+                  <CFormSelect
+                    size="sm"
+                    id="maintenenceBy"
+                    className={`${errors.maintenenceBy && 'is-invalid'}`}
+                    name="maintenenceBy"
+                    value={values.maintenenceBy || ''}
+                    onFocus={onFocus}
+                    onBlur={onBlur}
+                    onChange={handleChange}
+                  >
+                    <option value="" hidden selected>
                       Select Maintenance By
                     </option>
                     <option value="inHouse" onClick={() => setoutSide(false)}>
@@ -107,9 +145,23 @@ const VehicleMaintainence = () => {
                   </CFormSelect>
                 </CCol>
                 <CCol className="mb-3" md={3}>
-                  <CFormLabel htmlFor="workOrder">Work Order *</CFormLabel>
-                  <CFormSelect size="sm" name="workOrder" id='workOrder' className="">
-                    <option  hidden>
+                  <CFormLabel htmlFor="workOrder">
+                    Work Order *
+                    {errors.workOrder && (
+                      <span className="small text-danger">{errors.workOrder}</span>
+                    )}
+                  </CFormLabel>
+                  <CFormSelect
+                    size="sm"
+                    id="workOrder"
+                    className={`${errors.workOrder && 'is-invalid'}`}
+                    name="workOrder"
+                    value={values.workOrder || ''}
+                    onFocus={onFocus}
+                    onBlur={onBlur}
+                    onChange={handleChange}
+                  >
+                    <option value="" hidden selected>
                       Select...
                     </option>
                     <option value="inHouse" onClick={() => setoutSide(false)}>
@@ -118,26 +170,68 @@ const VehicleMaintainence = () => {
                   </CFormSelect>
                 </CCol>
                 <CCol className="mb-3" md={3}>
-                  <CFormLabel htmlFor="vendorName">Vendor Name *</CFormLabel>
-                  <CFormSelect size="sm" name="vendorName" id='vendorName' className="">
-
-                    <option  hidden>
+                  <CFormLabel htmlFor="vendorName">
+                    Vendor Name *
+                    {errors.vendorName && (
+                      <span className="small text-danger">{errors.vendorName}</span>
+                    )}
+                  </CFormLabel>
+                  <CFormSelect
+                    size="sm"
+                    id="vendorName"
+                    className={`${errors.vendorName && 'is-invalid'}`}
+                    name="vendorName"
+                    value={values.vendorName || ''}
+                    onFocus={onFocus}
+                    onBlur={onBlur}
+                    onChange={handleChange}
+                  >
+                    <option value="" hidden selected>
                       Select...
                     </option>
-                    <option  onClick={() => setoutSide(false)}>
-                      Select-LP
-                    </option>
+                    <option onClick={() => setoutSide(false)}>Select-LP</option>
                   </CFormSelect>
                 </CCol>
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="MaintenanceStart">Maintainence Start Date& Time*</CFormLabel>
+                  <CFormLabel htmlFor="MaintenanceStart">
+                    Maintainence Start Date & Time*
+                    {errors.MaintenanceStart && (
+                      <span className="small text-danger">{errors.MaintenanceStart}</span>
+                    )}
+                  </CFormLabel>
 
-                  <CFormInput size="sm" id="MaintenanceStart" type="datetime-local" />
+                  <CFormInput
+                    size="sm"
+                    id="MaintenanceStart"
+                    className={`${errors.MaintenanceStart && 'is-invalid'}`}
+                    name="MaintenanceStart"
+                    value={values.MaintenanceStart || ''}
+                    type="datetime-local"
+                    onFocus={onFocus}
+                    onBlur={onBlur}
+                    onChange={handleChange}
+                  />
                 </CCol>
-                <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="MaintenanceEnd">Maintainence End Date& Time*</CFormLabel>
 
-                  <CFormInput size="sm" id="MaintenanceEnd" type="datetime-local" />
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="MaintenanceEnd">
+                    Maintainence End Date & Time*
+                    {errors.MaintenanceEnd && (
+                      <span className="small text-danger">{errors.MaintenanceEnd}</span>
+                    )}
+                  </CFormLabel>
+
+                  <CFormInput
+                    size="sm"
+                    id="MaintenanceEnd"
+                    className={`${errors.MaintenanceEnd && 'is-invalid'}`}
+                    name="MaintenanceEnd"
+                    value={values.MaintenanceEnd || ''}
+                    type="datetime-local"
+                    onFocus={onFocus}
+                    onBlur={onBlur}
+                    onChange={handleChange}
+                  />
                 </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="remarks">Remarks</CFormLabel>
@@ -155,9 +249,7 @@ const VehicleMaintainence = () => {
                     className="text-white"
                     type="submit"
                   >
-                   <Link className="text-white" to="/VMain">
-                   Previous
-                   </Link>
+                    Previous
                   </CButton>
                 </CCol>
 

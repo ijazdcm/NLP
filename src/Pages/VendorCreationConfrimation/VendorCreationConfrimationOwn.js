@@ -18,7 +18,7 @@ import {
 } from '@coreui/react'
 import { useState } from 'react'
 import useForm from 'src/Hooks/useForm'
-import VendorRequestValidation from 'src/Validations/VendorCreation/VendorRequestValidation'
+import VendorRequestValidation from 'src/Utils/VendorCreation/VendorRequestValidation'
 import { Link } from 'react-router-dom'
 
 const VendorCreationConfrimationOwn = () => {
@@ -54,21 +54,21 @@ const VendorCreationConfrimationOwn = () => {
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
               Shed Name
-              {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
+              {errors.vehicleType && <span className="small text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
             <CFormInput size="sm" id="inputAddress"  readOnly />
           </CCol>
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
               Owner Name
-              {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
+              {errors.vehicleType && <span className="small text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
             <CFormInput size="sm" id="inputAddress"  readOnly />
           </CCol>
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
               Owner Mobile Number
-              {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
+              {errors.vehicleType && <span className="small text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
             <CFormInput size="sm" id="inputAddress"  readOnly />
           </CCol>
@@ -76,7 +76,7 @@ const VendorCreationConfrimationOwn = () => {
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
               PAN Card Attatchment
-              {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
+              {errors.vehicleType && <span className="small text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
             <CButton
               // onClick={() => setAdharVisible(!adharvisible)}
@@ -105,14 +105,14 @@ const VendorCreationConfrimationOwn = () => {
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
               PAN Card Number*
-              {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
+              {errors.vehicleType && <span className="small text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
             <CFormInput size="sm" id="inputAddress"  />
           </CCol>
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
               Adhar Card Attachemnt
-              {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
+              {errors.vehicleType && <span className="small text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
             <CButton
               // onClick={() => setAdharVisible(!adharvisible)}
@@ -137,14 +137,14 @@ const VendorCreationConfrimationOwn = () => {
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
               Adhar Card Number
-              {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
+              {errors.vehicleType && <span className="small text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
             <CFormInput size="sm" id="inputAddress"  />
           </CCol>
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
               License Copy
-              {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
+              {errors.vehicleType && <span className="small text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
             <CButton
               // onClick={() => setLicence(!PanCard)}
@@ -168,7 +168,7 @@ const VendorCreationConfrimationOwn = () => {
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
               RC Copy -Front
-              {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
+              {errors.vehicleType && <span className="small text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
             <CButton
               // onClick={() => setRcFront(!RcFront)}
@@ -188,7 +188,7 @@ const VendorCreationConfrimationOwn = () => {
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
               RC Copy Back
-              {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
+              {errors.vehicleType && <span className="small text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
             <CButton
               // onClick={() => setRcBank(!RcBank)}
@@ -208,7 +208,7 @@ const VendorCreationConfrimationOwn = () => {
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
               Insurance Copy
-              {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
+              {errors.vehicleType && <span className="small text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
             <CButton
               // onClick={() => setInsurance(!Insurance)}
@@ -228,7 +228,7 @@ const VendorCreationConfrimationOwn = () => {
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
               Transporter Shed Sheet
-              {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
+              {errors.vehicleType && <span className="small text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
             <CButton
               // onClick={() => setTransporterShedSheet(!TransporterShedSheet)}
@@ -256,7 +256,7 @@ const VendorCreationConfrimationOwn = () => {
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
               Bank Pass Book
-              {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
+              {errors.vehicleType && <span className="small text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
             <CButton
               // onClick={() => setTDSFormFront(!TDSFormFront)}
@@ -293,28 +293,28 @@ const VendorCreationConfrimationOwn = () => {
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
               Bank Account Number*
-              {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
+              {errors.vehicleType && <span className="small text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
             <CFormInput size="sm" id="inputAddress"  />
           </CCol>
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
               Bank Account Holder Name*
-              {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
+              {errors.vehicleType && <span className="small text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
             <CFormInput size="sm" id="inputAddress"  />
           </CCol>
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
               Street
-              {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
+              {errors.vehicleType && <span className="small text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
             <CFormInput size="sm" id="inputAddress"  />
           </CCol>
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
               area
-              {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
+              {errors.vehicleType && <span className="small text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
             <CFormInput size="sm" id="inputAddress"  />
           </CCol>
@@ -325,28 +325,28 @@ const VendorCreationConfrimationOwn = () => {
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
               City
-              {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
+              {errors.vehicleType && <span className="small text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
             <CFormInput size="sm" id="inputAddress"  />
           </CCol>
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
               District
-              {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
+              {errors.vehicleType && <span className="small text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
             <CFormInput size="sm" id="inputAddress"  />
           </CCol>
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
               State
-              {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
+              {errors.vehicleType && <span className="small text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
             <CFormInput size="sm" id="inputAddress"  />
           </CCol>
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
               Postal Code
-              {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
+              {errors.vehicleType && <span className="small text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
             <CFormInput size="sm" id="inputAddress"  />
           </CCol>
@@ -357,28 +357,28 @@ const VendorCreationConfrimationOwn = () => {
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
               Region
-              {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
+              {errors.vehicleType && <span className="small text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
             <CFormInput size="sm" id="inputAddress"  />
           </CCol>
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
               TDS Declaration Form Front
-              {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
+              {errors.vehicleType && <span className="small text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
             <CFormInput size="sm" id="inputAddress"  />
           </CCol>
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
               TDS Declaration Form Back
-              {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
+              {errors.vehicleType && <span className="small text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
             <CFormInput size="sm" id="inputAddress"  />
           </CCol>
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
               GST Registeration
-              {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
+              {errors.vehicleType && <span className="small text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
             <CFormInput size="sm" id="inputAddress"  />
           </CCol>
@@ -390,28 +390,28 @@ const VendorCreationConfrimationOwn = () => {
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
               GST Registration Number*
-              {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
+              {errors.vehicleType && <span className="small text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
             <CFormInput size="sm" id="inputAddress"  />
           </CCol>
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
               GST Tax Code
-              {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
+              {errors.vehicleType && <span className="small text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
             <CFormInput size="sm" id="inputAddress"  readOnly />
           </CCol>
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
               Payment Terms 3Days
-              {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
+              {errors.vehicleType && <span className="small text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
             <CFormInput size="sm" id="inputAddress"  readOnly />
           </CCol>
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
               Remarks
-              {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
+              {errors.vehicleType && <span className="small text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
             <CFormInput size="sm" id="inputAddress"  readOnly />
           </CCol>

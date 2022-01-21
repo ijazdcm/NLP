@@ -32,9 +32,8 @@ import {
 } from '@coreui/react'
 import { React, useState } from 'react'
 import useForm from 'src/Hooks/useForm.js'
-import validate from 'src/Validations/FormValidation'
+import validate from 'src/Utils/Validation'
 import CustomTable from '../../components/customComponent/CustomTable'
-import { Link } from 'react-router-dom'
 
 const VehicleInspectionHire = () => {
     const formValues = {
@@ -104,7 +103,7 @@ const VehicleInspectionHire = () => {
                                     <CFormLabel htmlFor="dName">
                                         Driver Name*
                                         {errors.dName && (
-                                            <span className="help text-danger">{errors.dName}</span>
+                                            <span className="small text-danger">{errors.dName}</span>
                                         )}
                                     </CFormLabel>
                                     <CFormSelect
@@ -358,9 +357,7 @@ const VehicleInspectionHire = () => {
                                         className="text-white"
                                         type="submit"
                                     >
-                                            <Link className="text-white" to="/vInspection">
-                                            Previous
-                                            </Link>
+                                        Previous
                                     </CButton>
                                 </CCol>
 

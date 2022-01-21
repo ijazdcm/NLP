@@ -18,7 +18,7 @@ import {
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import useForm from 'src/Hooks/useForm'
-import VendorRequestValidation from 'src/Validations/VendorCreation/VendorRequestValidation'
+import VendorRequestValidation from 'src/Utils/VendorCreation/VendorRequestValidation'
 const VendorCreationApproval = () => {
   const formValues = {
     vehicleType: '',
@@ -70,7 +70,7 @@ const VendorCreationApproval = () => {
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="shedName">
                 Shed Name
-                {errors.shedName && <span className="help text-danger">{errors.shedName}</span>}
+                {errors.shedName && <span className="small text-danger">{errors.shedName}</span>}
               </CFormLabel>
               <CFormInput size="sm" id="shedName" readOnly />
             </CCol>
@@ -78,7 +78,7 @@ const VendorCreationApproval = () => {
               <CFormLabel htmlFor="ownerName">
                 Owner Name
                 {errors.vehicleType && (
-                  <span className="help text-danger">{errors.vehicleType}</span>
+                  <span className="small text-danger">{errors.vehicleType}</span>
                 )}
               </CFormLabel>
               <CFormInput size="sm" id="ownerName" readOnly />
@@ -87,7 +87,7 @@ const VendorCreationApproval = () => {
               <CFormLabel htmlFor="shedownerMob">
                 Shed Mobile Number
                 {errors.shedownerMob && (
-                  <span className="help text-danger">{errors.shedownerMob}</span>
+                  <span className="small text-danger">{errors.shedownerMob}</span>
                 )}
               </CFormLabel>
               <CFormInput size="sm" id="shedownerMob" readOnly />
@@ -96,7 +96,7 @@ const VendorCreationApproval = () => {
               <CFormLabel htmlFor="shedownerWhatsapp">
                 Shed Whatsapp Number
                 {errors.shedownerWhatsapp && (
-                  <span className="help text-danger">{errors.shedownerWhatsapp}</span>
+                  <span className="small text-danger">{errors.shedownerWhatsapp}</span>
                 )}
               </CFormLabel>
               <CFormInput size="sm" id="shedownerWhatsapp" readOnly />
@@ -109,7 +109,7 @@ const VendorCreationApproval = () => {
               <CFormLabel htmlFor="panCardattachment">
                 PAN Card Attatchment
                 {errors.panCardattachment && (
-                  <span className="help text-danger">{errors.panCardattachment}</span>
+                  <span className="small text-danger">{errors.panCardattachment}</span>
                 )}
               </CFormLabel>
               <CButton
@@ -142,14 +142,14 @@ const VendorCreationApproval = () => {
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="panCard">
                 PAN Card Number*
-                {errors.panCard && <span className="help text-danger">{errors.panCard}</span>}
+                {errors.panCard && <span className="small text-danger">{errors.panCard}</span>}
               </CFormLabel>
               <CFormInput size="sm" id="panCard" readOnly />
             </CCol>
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="AadharCopy">
                 Aadhar Card Copy
-                {errors.AadharCopy && <span className="help text-danger">{errors.AadharCopy}</span>}
+                {errors.AadharCopy && <span className="small text-danger">{errors.AadharCopy}</span>}
               </CFormLabel>
               <CButton
                 // onClick={() => setAdharVisible(!adharvisible)}
@@ -181,7 +181,7 @@ const VendorCreationApproval = () => {
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="aadharCard">
                 Aadhar Card Number
-                {errors.aadharCard && <span className="help text-danger">{errors.aadharCard}</span>}
+                {errors.aadharCard && <span className="small text-danger">{errors.aadharCard}</span>}
               </CFormLabel>
               <CFormInput size="sm" id="aadharCard" readOnly />
             </CCol>
@@ -192,7 +192,7 @@ const VendorCreationApproval = () => {
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="license">
                 License Copy
-                {errors.vehicleType && <span className="help text-danger">{errors.license}</span>}
+                {errors.vehicleType && <span className="small text-danger">{errors.license}</span>}
               </CFormLabel>
               <CButton
                 // onClick={() => setLicence(!PanCard)}
@@ -219,7 +219,7 @@ const VendorCreationApproval = () => {
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="rcFront">
                 RC Copy -Front
-                {errors.rcFront && <span className="help text-danger">{errors.rcFront}</span>}
+                {errors.rcFront && <span className="small text-danger">{errors.rcFront}</span>}
               </CFormLabel>
               <CButton
                 // onClick={() => setRcFront(!RcFront)}
@@ -246,7 +246,7 @@ const VendorCreationApproval = () => {
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="rcBack">
                 RC Copy Back
-                {errors.rcBack && <span className="help text-danger">{errors.rcBack}</span>}
+                {errors.rcBack && <span className="small text-danger">{errors.rcBack}</span>}
               </CFormLabel>
               <CButton
                 // onClick={() => setRcBank(!RcBank)}
@@ -273,7 +273,7 @@ const VendorCreationApproval = () => {
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="insurance">
                 Insurance Copy
-                {errors.insurance && <span className="help text-danger">{errors.insurance}</span>}
+                {errors.insurance && <span className="small text-danger">{errors.insurance}</span>}
               </CFormLabel>
               <CButton
                 // onClick={() => setInsurance(!Insurance)}
@@ -304,7 +304,7 @@ const VendorCreationApproval = () => {
               <CFormLabel htmlFor="transportShed">
                 Transporter Shed Sheet
                 {errors.transportShed && (
-                  <span className="help text-danger">{errors.transportShed}</span>
+                  <span className="small text-danger">{errors.transportShed}</span>
                 )}
               </CFormLabel>
               <CButton
@@ -336,7 +336,7 @@ const VendorCreationApproval = () => {
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="bankPass">
                 Bank Pass Book
-                {errors.bankPass && <span className="help text-danger">{errors.bankPass}</span>}
+                {errors.bankPass && <span className="small text-danger">{errors.bankPass}</span>}
               </CFormLabel>
               <CButton
                 // onClick={() => setTDSFormFront(!TDSFormFront)}
@@ -381,7 +381,7 @@ const VendorCreationApproval = () => {
               <CFormLabel htmlFor="bankAccount">
                 Bank Account Number*
                 {errors.bankAccount && (
-                  <span className="help text-danger">{errors.bankAccount}</span>
+                  <span className="small text-danger">{errors.bankAccount}</span>
                 )}
               </CFormLabel>
               <CFormInput size="sm" id="bankAccount" readOnly />
@@ -390,7 +390,7 @@ const VendorCreationApproval = () => {
               <CFormLabel htmlFor="bankaccountholderName">
                 Bank Account Holder Name*
                 {errors.bankaccountholderName && (
-                  <span className="help text-danger">{errors.bankaccountholderName}</span>
+                  <span className="small text-danger">{errors.bankaccountholderName}</span>
                 )}
               </CFormLabel>
               <CFormInput size="sm" id="bankaccountholderName" readOnly />
@@ -398,7 +398,7 @@ const VendorCreationApproval = () => {
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="Street">
                 Street
-                {errors.Street && <span className="help text-danger">{errors.Street}</span>}
+                {errors.Street && <span className="small text-danger">{errors.Street}</span>}
               </CFormLabel>
               <CFormInput size="sm" id="Street" readOnly />
             </CCol>
@@ -409,28 +409,28 @@ const VendorCreationApproval = () => {
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="Area">
                 Area
-                {errors.Area && <span className="help text-danger">{errors.Area}</span>}
+                {errors.Area && <span className="small text-danger">{errors.Area}</span>}
               </CFormLabel>
               <CFormInput size="sm" id="Area" readOnly />
             </CCol>
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="City">
                 City
-                {errors.City && <span className="help text-danger">{errors.City}</span>}
+                {errors.City && <span className="small text-danger">{errors.City}</span>}
               </CFormLabel>
               <CFormInput size="sm" id="City" readOnly />
             </CCol>
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="District">
                 District
-                {errors.District && <span className="help text-danger">{errors.District}</span>}
+                {errors.District && <span className="small text-danger">{errors.District}</span>}
               </CFormLabel>
               <CFormInput size="sm" id="District" readOnly />
             </CCol>
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="State">
                 State
-                {errors.State && <span className="help text-danger">{errors.State}</span>}
+                {errors.State && <span className="small text-danger">{errors.State}</span>}
               </CFormLabel>
               <CFormInput size="sm" id="State" readOnly />
             </CCol>
@@ -441,21 +441,21 @@ const VendorCreationApproval = () => {
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="postalCode">
                 Postal Code
-                {errors.postalCode && <span className="help text-danger">{errors.postalCode}</span>}
+                {errors.postalCode && <span className="small text-danger">{errors.postalCode}</span>}
               </CFormLabel>
               <CFormInput size="sm" id="postalCode" readOnly />
             </CCol>
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="Region">
                 Region
-                {errors.Region && <span className="help text-danger">{errors.Region}</span>}
+                {errors.Region && <span className="small text-danger">{errors.Region}</span>}
               </CFormLabel>
               <CFormInput size="sm" id="Region" readOnly />
             </CCol>
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="TDSfront">
                 TDS Declaration Form Front
-                {errors.TDSfront && <span className="help text-danger">{errors.TDSfront}</span>}
+                {errors.TDSfront && <span className="small text-danger">{errors.TDSfront}</span>}
               </CFormLabel>
               <CButton
                 // onClick={() => setTransporterShedSheet(!TransporterShedSheet)}
@@ -486,7 +486,7 @@ const VendorCreationApproval = () => {
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="TDSback">
                 TDS Declaration Form Back
-                {errors.TDSback && <span className="help text-danger">{errors.TDSback}</span>}
+                {errors.TDSback && <span className="small text-danger">{errors.TDSback}</span>}
               </CFormLabel>
               <CButton
                 // onClick={() => setTransporterShedSheet(!TransporterShedSheet)}
@@ -522,28 +522,28 @@ const VendorCreationApproval = () => {
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="GSTreg">
                 GST Registeration
-                {errors.GSTreg && <span className="help text-danger">{errors.GSTreg}</span>}
+                {errors.GSTreg && <span className="small text-danger">{errors.GSTreg}</span>}
               </CFormLabel>
               <CFormInput size="sm" id="GSTreg" readOnly />
             </CCol>
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="GST">
                 GST Registration Number*
-                {errors.GST && <span className="help text-danger">{errors.GST}</span>}
+                {errors.GST && <span className="small text-danger">{errors.GST}</span>}
               </CFormLabel>
               <CFormInput size="sm" id="GST" readOnly />
             </CCol>
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="GSTtax">
                 GST Tax Code
-                {errors.GSTtax && <span className="help text-danger">{errors.GSTtax}</span>}
+                {errors.GSTtax && <span className="small text-danger">{errors.GSTtax}</span>}
               </CFormLabel>
               <CFormInput size="sm" id="GSTtax" readOnly />
             </CCol>
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="Payment">
                 Payment Terms 3Days
-                {errors.Payment && <span className="help text-danger">{errors.Payment}</span>}
+                {errors.Payment && <span className="small text-danger">{errors.Payment}</span>}
               </CFormLabel>
               <CFormInput size="sm" id="Payment" readOnly />
             </CCol>
@@ -554,7 +554,7 @@ const VendorCreationApproval = () => {
             <CCol xs={12} md={3}>
               <CFormLabel htmlFor="remarks">
                 Remarks
-                {errors.remarks && <span className="help text-danger">{errors.remarks}</span>}
+                {errors.remarks && <span className="small text-danger">{errors.remarks}</span>}
               </CFormLabel>
               <CFormInput size="sm" id="remarks" readOnly />
             </CCol>
@@ -563,7 +563,7 @@ const VendorCreationApproval = () => {
           <CRow className="mb-md-1">
             <CCol className="" xs={12} sm={12} md={3}>
               <CButton size="sm" color="primary" className="text-white" type="button">
-                <Link className="text-white" to="/VendorCreationConfrimationHome">
+                <Link className="text-white" to="/VendorCreationHome">
                   Previous
                 </Link>
               </CButton>

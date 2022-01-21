@@ -25,7 +25,7 @@ import {
 } from '@coreui/react'
 import { React, useState } from 'react'
 import useForm from 'src/Hooks/useForm'
-import validate from 'src/Validations/FormValidation'
+import validate from 'src/Utils/Validation'
 import CustomTable from '../../components/customComponent/CustomTable'
 const ParkingYardGate = () => {
   const formValues = {
@@ -53,7 +53,7 @@ const ParkingYardGate = () => {
                     <CFormLabel htmlFor="vType">
                       Vehicle Type*
                       {errors.vehicleType && (
-                        <span className="help text-danger">{errors.vehicleType}</span>
+                        <span className="small text-danger">{errors.vehicleType}</span>
                       )}
                     </CFormLabel>
 
@@ -95,7 +95,7 @@ const ParkingYardGate = () => {
                     <CFormLabel htmlFor="vBody">
                       Vehicle Body*
                       {errors.vehicleType && (
-                        <span className="help text-danger">{errors.vehicleType}</span>
+                        <span className="small text-danger">{errors.vehicleType}</span>
                       )}
                     </CFormLabel>
                     <CFormSelect size="sm" name="vBody" aria-label="Small select example">

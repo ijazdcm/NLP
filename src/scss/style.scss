@@ -23,6 +23,13 @@ body {
   scrollbar-width: none;
 }
 
+html,
+body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
 .btn,
 .btn-group {
   margin: 0;

@@ -30,7 +30,7 @@ import {
 } from '@coreui/react'
 import { React, useState } from 'react'
 import useForm from 'src/Hooks/useForm.js'
-import validate from 'src/Validations/FormValidation'
+import validate from 'src/Utils/Validation'
 
 
 const RejectReason = () => {

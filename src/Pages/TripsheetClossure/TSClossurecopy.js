@@ -31,7 +31,7 @@ import {
 import { React, useState } from 'react'
 // import CModal from '@coreui/react/src/components/modal/CModal'
 import useForm from 'src/Hooks/useForm'
-import validate from 'src/Validations/FormValidation'
+import validate from 'src/Utils/Validation'
 import CustomTable from '../../components/customComponent/CustomTable'
 const TSClossure = () => {
   const formValues = {
@@ -363,7 +363,7 @@ const TSClossure = () => {
                       <CFormLabel htmlFor="DefectType">
                         Defect Type*{' '}
                         {errors.DefectType && (
-                          <span className="help text-danger">{errors.DefectType}</span>
+                          <span className="small text-danger">{errors.DefectType}</span>
                         )}
                       </CFormLabel>
 
@@ -426,7 +426,7 @@ const TSClossure = () => {
                       <CFormLabel htmlFor="DefectType2">
                         Defect Type*{' '}
                         {errors.DefectType2 && (
-                          <span className="help text-danger">{errors.DefectType2}</span>
+                          <span className="small text-danger">{errors.DefectType2}</span>
                         )}
                       </CFormLabel>
 
@@ -836,7 +836,7 @@ const TSClossure = () => {
                         <CFormLabel htmlFor="DefectType">
                           Defect Type*{' '}
                           {errors.DefectType && (
-                            <span className="help text-danger">{errors.DefectType}</span>
+                            <span className="small text-danger">{errors.DefectType}</span>
                           )}
                         </CFormLabel>
 
@@ -899,7 +899,7 @@ const TSClossure = () => {
                         <CFormLabel htmlFor="DefectType">
                           Defect Type*{' '}
                           {errors.DefectType && (
-                            <span className="help text-danger">{errors.DefectType}</span>
+                            <span className="small text-danger">{errors.DefectType}</span>
                           )}
                         </CFormLabel>
 
@@ -962,7 +962,7 @@ const TSClossure = () => {
                         <CFormLabel htmlFor="DefectType">
                           Defect Type*{' '}
                           {errors.DefectType && (
-                            <span className="help text-danger">{errors.DefectType}</span>
+                            <span className="small text-danger">{errors.DefectType}</span>
                           )}
                         </CFormLabel>
 

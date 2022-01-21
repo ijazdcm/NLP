@@ -12,7 +12,7 @@ import {
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import useForm from 'src/Hooks/useForm'
-import VendorRequestValidation from 'src/Validations/VendorCreation/VendorRequestValidation'
+import VendorRequestValidation from 'src/Utils/VendorCreation/VendorRequestValidation'
 const TripSheetCreationSTO = () => {
   const formValues = {
     vehicleType: '',
@@ -36,7 +36,7 @@ const TripSheetCreationSTO = () => {
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
               Vehicle Type*
-              {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
+              {errors.vehicleType && <span className="small text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
             <CFormSelect
               size="sm"
@@ -62,7 +62,7 @@ const TripSheetCreationSTO = () => {
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
               Vehicle Number*
-              {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
+              {errors.vehicleType && <span className="small text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
             <CFormSelect
               size="sm"
@@ -88,14 +88,14 @@ const TripSheetCreationSTO = () => {
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
               Vehicle Capacity In MTS*
-              {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
+              {errors.vehicleType && <span className="small text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
             <CFormInput size="sm" id="inputAddress"  readOnly />
           </CCol>
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
               Driver Name*
-              {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
+              {errors.vehicleType && <span className="small text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
             <CFormSelect
               size="sm"
@@ -123,28 +123,28 @@ const TripSheetCreationSTO = () => {
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
               Driver Code
-              {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
+              {errors.vehicleType && <span className="small text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
             <CFormInput size="sm" id="inputAddress"  readOnly />
           </CCol>
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
               Driver Mobile Number
-              {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
+              {errors.vehicleType && <span className="small text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
             <CFormInput size="sm" id="inputAddress"  readOnly />
           </CCol>
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
               Opening KM*
-              {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
+              {errors.vehicleType && <span className="small text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
             <CFormInput size="sm" id="inputAddress" type="number"  />
           </CCol>
           <CCol xs={12} md={3}>
             <CFormLabel htmlFor="inputAddress">
               Opening Odometer Photo*
-              {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
+              {errors.vehicleType && <span className="small text-danger">{errors.vehicleType}</span>}
             </CFormLabel>
             <CFormInput
               type="file"

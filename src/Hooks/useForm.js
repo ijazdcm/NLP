@@ -54,7 +54,6 @@ const useForm = (callback, validate, formValues) => {
   }
 
 
-
   return {
     handleChange,
     handleSubmit,
