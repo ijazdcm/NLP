@@ -1,6 +1,8 @@
 export default function validate(values, isTouched) {
   const errors = {}
 
+  //================================ Transaction Pages Validations ===================================
+
   // Parking Yard Gate In
   if (!values.vType && isTouched.vType) {
     errors.vType = 'Required'
@@ -220,6 +222,15 @@ export default function validate(values, isTouched) {
   if (isTouched.remarks && !values.remarks) {
     errors.remarks = 'Required'
   }
-  console.log(errors)
+
+  //================================ Transaction Pages Validations ===================================
+  /*                       */
+  //================================ Masters Validations =============================================
+
+  // Sub-Masters
+
+  //================================ Masters Validations =============================================
+
+  // console.log(errors)
   return errors
 }

@@ -1,4 +1,6 @@
+// Created By Dev - David Prabu
 import {
+  CForm,
   CButton,
   CCard,
   CContainer,
@@ -12,16 +14,141 @@ import {
   CModalBody,
   CCardImage,
   CModalFooter,
+  CAlert,
 } from '@coreui/react'
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import useForm from 'src/Hooks/useForm'
+import validate from 'src/Utils/Validation'
 import CustomTable from 'src/components/customComponent/CustomTable'
 import DivisionApi from '../../../Services/SubMaster/DivisionApi'
 
 const DivisionTable = () => {
-  const [VehicleCapacity, setVehicleCapacity] = useState(false)
+  const [modal, setModal] = useState(false)
   const [rowData, setRowData] = useState([])
+  const [save, setSave] = useState(true)
+  const [success, setSuccess] = useState('')
+  const [editId, setEditId] = useState('')
+  const [update, setUpdate] = useState('')
+  const [deleted, setDeleted] = useState('')
+  const [error, setError] = useState('')
 
+  const formValues = {
+    division: '',
+  }
+  // =================== Validation ===============
+  const {
+    values,
+    errors,
+    handleChange,
+    onFocus,
+    handleSubmit,
+    enableSubmit,
+    onBlur,
+    onClick,
+    onKeyUp,
+  } = useForm(login, validate, formValues)
+
+  function login() {
+    // alert('No Errors CallBack Called')
+  }
+  // =================== Validation ===============
+
+  /*                    */
+
+  // =================== CRUD =====================
+  const Create = (e) => {
+    e.preventDefault()
+    let createValues = { division_name: values.division }
+    DivisionApi.createDivision(createValues)
+      .then((response) => {
+        setSuccess('New Division Added Successfully')
+      })
+      .catch((error) => {
+        setError(error.response.data.errors.division_name[0])
+      })
+  }
+
+  const Edit = (id) => {
+    setSave(false)
+    setEditId('')
+    DivisionApi.getDivisionById(id).then((response) => {
+      let editData = response.data.data
+      setModal(true)
+      values.division = editData.division
+      setEditId(id)
+    })
+  }
+
+  const Update = (id) => {
+    let updateValues = { division_name: values.division }
+    console.log(updateValues, id)
+    DivisionApi.updateDivision(updateValues, id)
+      .then((response) => {
+        setSuccess('Division Updated Successfully')
+      })
+      .catch((error) => {
+        setError(error.response.data.errors.division_name[0])
+      })
+  }
+
+  const Delete = (id) => {
+    alert('Are you Sure ?')
+    DivisionApi.deleteDivision(id).then((response) => {
+      setDeleted('Division Removed Successfully')
+      alert(deleted)
+    })
+  }
+
+  useEffect(() => {
+    DivisionApi.getDivision().then((response) => {
+      let viewData = response.data.data
+      let rowDataList = []
+      viewData.map((data, index) => {
+        rowDataList.push({
+          sno: index + 1,
+          Division: data.division,
+          Action: (
+            <div className="d-flex justify-content-space-between">
+              <CButton
+                size="sm"
+                color="danger"
+                shape="rounded"
+                id={data.id}
+                onClick={() => Delete(data.id)}
+                className="m-1"
+              >
+                {/* Delete */}
+                <i className="fa fa-trash" aria-hidden="true"></i>
+              </CButton>
+              <CButton
+                size="sm"
+                color="secondary"
+                shape="rounded"
+                id={data.id}
+                onClick={() => Edit(data.id)}
+                className="m-1"
+              >
+                {/* Edit */}
+                <i className="fa fa-edit" aria-hidden="true"></i>
+              </CButton>
+            </div>
+          ),
+        })
+      })
+      setRowData(rowDataList)
+
+      setTimeout(() => {
+        setSuccess('')
+        setUpdate('')
+        setError('')
+        setDeleted('')
+      }, 1500)
+    })
+  }, [modal, save, success, update, deleted])
+  // ============ CRUD =====================
+  /*                    */
+  // ============ Column Header Data =======
   const columns = [
     {
       name: 'S.No',
@@ -29,62 +156,26 @@ const DivisionTable = () => {
       sortable: true,
       center: true,
     },
-    // {
-    //   name: 'Creation Date',
-    //   selector: (row) => row.Creation_Date,
-    //   sortable: true,
-    //   center: true,
-    // },
+
     {
       name: 'Division',
       selector: (row) => row.Division,
       left: true,
     },
-    // {
-    //   name: 'Status',
-    //   selector: (row) => row.Status,
-    //   center: true,
-    // },
+
     {
       name: 'Action',
       selector: (row) => row.Action,
       center: true,
     },
   ]
-
-  useEffect(() => {
-    DivisionApi.getDivision().then((response) => {
-      let resData = response.data.data
-
-      let rowDataList = []
-
-      resData.map((data, index) => {
-        rowDataList.push({
-          sno: index + 1,
-          Division: data.division,
-          Action: (
-            <span>
-              <CButton id={data.id} className="btn btn-danger" color="">
-                <i className="fa fa-trash" aria-hidden="true"></i>
-              </CButton>
-              <CButton id={data.id} className="btn btn-dark" color="white">
-                <i className="fa fa-edit" aria-hidden="true"></i>
-              </CButton>
-            </span>
-          ),
-        })
-      })
-
-      setRowData(rowDataList)
-    })
-  }, [])
+  // =================== Column Header Data =======
 
   return (
     <>
       <CContainer className="mt-2">
         <CRow className="mt-3">
           <CCol
-            onClick={() => setVehicleCapacity(!VehicleCapacity)}
             className="offset-md-6"
             xs={15}
             sm={15}
@@ -94,9 +185,8 @@ const DivisionTable = () => {
             <CButton
               size="md"
               color="warning"
-              // disabled={enableSubmit}
               className="px-3 text-white"
-              type="submit"
+              onClick={() => setModal(!modal)}
             >
               <span className="float-start">
                 <i className="" aria-hidden="true"></i> &nbsp;New
@@ -110,20 +200,52 @@ const DivisionTable = () => {
       </CContainer>
 
       {/* Modal Section */}
-      <CModal visible={VehicleCapacity} onClose={() => setVehicleCapacity(false)}>
+      <CModal visible={modal} onClose={() => setModal(false)}>
         <CModalHeader>
           <CModalTitle>Division</CModalTitle>
         </CModalHeader>
         <CModalBody>
           <CRow>
             <CCol>
-              <CFormLabel htmlFor="inputAddress">Division</CFormLabel>
-              <CFormInput size="sm" id="inputAddress" />
+              {update && (
+                <CAlert color="primary" dismissible>
+                  {update}
+                </CAlert>
+              )}
+              {success && (
+                <CAlert color="success" dismissible>
+                  {success}
+                </CAlert>
+              )}
+              {error && (
+                <CAlert color="danger" dismissible>
+                  {error}
+                </CAlert>
+              )}
+
+              <CFormLabel htmlFor="division">
+                Division*{' '}
+                {errors.division && <span className="small text-danger">{errors.division}</span>}
+              </CFormLabel>
+              <CFormInput
+                size="sm"
+                id="division"
+                maxLength={4}
+                className={`${errors.division && 'is-invalid'}`}
+                name="division"
+                value={values.division || ''}
+                onFocus={onFocus}
+                onBlur={onBlur}
+                onChange={handleChange}
+                aria-label="Small select example"
+              />
             </CCol>
           </CRow>
         </CModalBody>
         <CModalFooter>
-          <CButton color="primary">Save</CButton>
+          <CButton onClick={(e) => (save ? Create(e) : Update(editId))} color="primary">
+            {save ? 'Save' : 'Update'}
+          </CButton>
         </CModalFooter>
       </CModal>
       {/* Modal Section */}
@@ -132,3 +254,16 @@ const DivisionTable = () => {
 }
 
 export default DivisionTable
+
+// {
+//   name: 'Creation Date',
+//   selector: (row) => row.Creation_Date,
+//   sortable: true,
+//   center: true,
+// },
+
+// {
+//   name: 'Status',
+//   selector: (row) => row.Status,
+//   center: true,
+// },

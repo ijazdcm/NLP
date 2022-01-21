@@ -24,21 +24,22 @@ const useForm = (callback, validate, formValues) => {
   }
 
   const handleSubmit = (event) => {
+    console.log(event.target)
     if (event) event.preventDefault()
-    // const submitVal = InputValid(event)
+
     setIsSubmitting(true)
     setErrors(validate(values, isTouched, isSubmitting))
   }
 
   const handleChange = (event) => {
+    // console.log(event.target.name + ':' + event.target.value)
     //While User Changes
     event.persist()
-
     setIsTouched((isTouched) => ({ ...isTouched, [event.target.name]: true }))
-    const inputVal = InputValid(event)
+
     setValues((values) => ({
       ...values,
-      [event.target.name]: inputVal,
+      [event.target.name]: event.target.value,
     }))
   }
 
