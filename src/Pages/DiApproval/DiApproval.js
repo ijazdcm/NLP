@@ -12,7 +12,7 @@ import {
   CTabContent,
   CTabPane,
 } from '@coreui/react'
-import useForm from 'src/Hooks/useFormValidate'
+import useForm from 'src/Hooks/useForm'
 import validate from 'src/Validations/FormValidation'
 import { Link } from 'react-router-dom'
 const DiApproval = () => {

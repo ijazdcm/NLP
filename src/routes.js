@@ -91,7 +91,7 @@ import FIScreen from './Pages/FIScreen/FIScreen'
 import ChangeVehicleHome from './Pages/ChangeVehicle/ChangeVehicleHome'
 import ChangeVehicle from './Pages/ChangeVehicle/ChangeVehicle'
 const routes = [
-  { path: '/', exact: true, name: 'Home' },
+  { path: '/dashboard', exact: true, name: 'Home' },
   { path: '/ParkingYardGateIn', exact: true, name: 'Test', component: ParkingYardGate },
   { path: '/GateIn', exact: true, name: 'GateIn', component: GateIn },
   { path: '/Gateout', exact: true, name: 'Test', component: Gateout },

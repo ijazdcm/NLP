@@ -1,4 +1,6 @@
 import React, { useEffect } from 'react'
+import { Route, Switch } from 'react-router-dom'
+import routes from 'src/routes'
 import { AppContent, AppSidebar, AppFooter, AppHeader } from '../components/index'
 import nav from '../_nav'
 

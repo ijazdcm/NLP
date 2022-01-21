@@ -17,7 +17,7 @@ import {
 } from '@coreui/react'
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import useForm from 'src/Hooks/useFormValidate'
+import useForm from 'src/Hooks/useForm'
 import VendorRequestValidation from 'src/Validations/VendorCreation/VendorRequestValidation'
 const VendorCreationApproval = () => {
   const formValues = {

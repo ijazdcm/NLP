@@ -21,7 +21,7 @@ import Title from './Title'
 const AppHeader = (props) => {
   const dispatch = useDispatch()
   const sidebarShow = useSelector((state) => state.changeState.sidebarShow)
-
+   console.log(props);
   return (
     <CHeader position="sticky" className="mb-3 p-0 pt-3">
       <CContainer fluid>
@@ -31,7 +31,7 @@ const AppHeader = (props) => {
         >
           <CIcon icon={cilMenu} size="lg" />
         </CHeaderToggler>
-        <Title />
+        <Title tittle={(props.name)?props.name:"Logistics Pro Naga"} />
         <CHeaderNav className="ms-3">
           <AppHeaderDropdown />
         </CHeaderNav>

@@ -1,5 +1,5 @@
 import { React, useState } from 'react'
-import useForm from 'src/Hooks/useFormValidate'
+import useForm from 'src/Hooks/useForm'
 import {
   CButton,
   CCard,
@@ -17,14 +17,10 @@ import {
   CTabContent,
   CTabPane,
 } from '@coreui/react'
-import { useHistory } from 'react-router-dom'
 import validate from 'src/Validations/FormValidation'
 import { Link } from 'react-router-dom'
 const Gateout = () => {
-  let history = useHistory()
-  const redirect = () => {
-    history.push('/AllCommonTable')
-  }
+
   const formValues = {
     vehicleType: '',
     OdometerKm: '',

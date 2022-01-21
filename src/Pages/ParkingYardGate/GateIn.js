@@ -26,10 +26,9 @@ import {
   CFormTextarea,
 } from '@coreui/react'
 import { React, useState, useEffect, useContext } from 'react'
-import useForm from 'src/Hooks/useFormValidate'
+import useForm from 'src/Hooks/useForm'
 import validate from 'src/Validations/FormValidation'
 import CustomTable from '../../components/customComponent/CustomTable'
-import { ParkingView } from '../../API/useGet'
 const ParkingYardGate = () => {
   const [hire, setHire] = useState(false)
 
@@ -175,9 +174,7 @@ const ParkingYardGate = () => {
       ),
     },
   ]
-  useEffect(() => {
-    ParkingView()
-  }, [])
+
 
   return (
     <>

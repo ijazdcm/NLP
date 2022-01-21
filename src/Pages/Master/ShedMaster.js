@@ -30,7 +30,7 @@ import {
     CFormTextarea,
 } from '@coreui/react'
 import { React, useState } from 'react'
-import useForm from 'src/Hooks/useFormValidate.js'
+import useForm from 'src/Hooks/useForm.js'
 import validate from 'src/Validations/FormValidation'
 import { Link } from "react-router-dom";
 

@@ -30,7 +30,7 @@ import {
 } from '@coreui/react'
 import { React, useState } from 'react'
 // import CModal from '@coreui/react/src/components/modal/CModal'
-import useForm from 'src/Hooks/useFormValidate'
+import useForm from 'src/Hooks/useForm'
 import validate from 'src/Validations/FormValidation'
 import CustomTable from '../../components/customComponent/CustomTable'
 const TSClossure = () => {
