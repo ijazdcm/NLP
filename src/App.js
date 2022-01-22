@@ -1,29 +1,44 @@
 import React, { Component } from 'react'
-import { Provider, useDispatch } from 'react-redux'
-import { BrowserRouter, Route,Routes  } from 'react-router-dom'
-import Login from './Pages/Auth/Login'
+import { Provider } from 'react-redux'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import './scss/style.scss'
 import store from './store'
-import LocalStorageService from 'src/Service/LocalStoage'
+
+export const API_URL = 'http://127.0.0.1:8000/api/v1/'
+
+export const REQUEST_HEADERS = () => {
+  return {
+    HEADER: {
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${localStorage.getItem('empId')}`,
+    },
+  }
+}
+
 const loading = (
   <div className="pt-3 text-center">
     <div className="sk-spinner sk-spinner-pulse"></div>
   </div>
 )
+
 // Containers
-const DefaultLayout = React.lazy(() => import('./layout/DefaultLayout'))
 
-function App () {
+const DefaultLayout = React.lazy(() => import('../src/Layout/DefaultLayout'))
 
-   const token=LocalStorageService.getLocalstorage('auth_token')
-   let isauth= token ? true : false
-
+class App extends Component {
+  render() {
     return (
-      <React.Suspense fallback={loading}>
-       {isauth ? <DefaultLayout/>:<Login/>}
-      </React.Suspense>
+      <Provider store={store}>
+        <BrowserRouter>
+          <React.Suspense fallback={loading}>
+            <Switch>
+              <Route path="/" name="Home" render={(props) => <DefaultLayout {...props} />} />
+            </Switch>
+          </React.Suspense>
+        </BrowserRouter>
+      </Provider>
     )
   }
-
+}
 
 export default App

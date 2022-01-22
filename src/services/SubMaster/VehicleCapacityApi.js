@@ -1,7 +1,7 @@
 import axios from 'axios'
-import { APIURL } from 'src/App'
+import { API_URL } from 'src/App'
 
-const API_BASE_URL = APIURL + 'vehicleCapacity' //Development
+const API_BASE_URL = API_URL + 'vehicleCapacity' //Development
 
 class VehicleCapacityApi {
   getVehicleCapacity() {

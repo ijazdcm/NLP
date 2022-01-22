@@ -12,14 +12,150 @@ import {
   CModalBody,
   CCardImage,
   CModalFooter,
+  CAlert,
 } from '@coreui/react'
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import useForm from 'src/Hooks/useForm'
+import validate from 'src/Utils/Validation'
 import CustomTable from 'src/components/customComponent/CustomTable'
 import RejectionReasonApi from '../../../Services/SubMaster/RejectionReasonApi'
 const RejectResonTable = () => {
-  const [VehicleCapacity, setVehicleCapacity] = useState(false)
+  const [modal, setModal] = useState(false)
+  const [deleteModal, setDeleteModal] = useState(false)
   const [rowData, setRowData] = useState([])
+  const [save, setSave] = useState(true)
+  const [success, setSuccess] = useState('')
+  const [editId, setEditId] = useState('')
+  const [deleteId, setDeleteId] = useState('')
+  const [update, setUpdate] = useState('')
+  const [deleted, setDeleted] = useState('')
+  const [error, setError] = useState('')
+
+  const formValues = {
+    rejection_reason: '',
+  }
+  // =================== Validation ===============
+  const {
+    values,
+    errors,
+    handleChange,
+    onFocus,
+    handleSubmit,
+    enableSubmit,
+    onBlur,
+    onClick,
+    onKeyUp,
+  } = useForm(login, validate, formValues)
+
+  function login() {
+    // alert('No Errors CallBack Called')
+  }
+  // =================== Validation ===============
+
+  /*                    */
+
+  // =================== CRUD =====================
+  const Create = (e) => {
+    e.preventDefault()
+    let createValues = { rejection_reason: values.rejection_reason }
+    RejectionReasonApi.createRejectionReason(createValues)
+      .then((response) => {
+        setSuccess('New Rejection Reason Added Successfully')
+      })
+      .catch((error) => {
+        setError(error.response.data.errors.rejection_reason[0])
+        setTimeout(() => {
+          setError('')
+        }, 1000)
+      })
+  }
+
+  const Edit = (id) => {
+    setSave(false)
+    setEditId('')
+    RejectionReasonApi.getRejectionReasonById(id).then((response) => {
+      let editData = response.data.data
+      setModal(true)
+      values.rejection_reason = editData.rejection_reason
+      setEditId(id)
+    })
+  }
+
+  const Update = (id) => {
+    let updateValues = { rejection_reason: values.rejection_reason }
+    console.log(updateValues, id)
+    RejectionReasonApi.updateRejectionReason(updateValues, id)
+      .then((response) => {
+        setSuccess('Rejection Reason Updated Successfully')
+      })
+      .catch((error) => {
+        setError(error.response.data.errors.rejection_reason[0])
+        setTimeout(() => {
+          setError('')
+        }, 1000)
+      })
+  }
+
+  const Delete = () => {
+    RejectionReasonApi.deleteRejectionReason(deleteId).then((response) => {
+      setDeleted('Rejection Reason Removed Successfully')
+      setDeleteId('')
+    })
+    setTimeout(() => setDeleteModal(false), 500)
+  }
+
+  useEffect(() => {
+    RejectionReasonApi.getRejectionReason().then((response) => {
+      let viewData = response.data.data
+      let rowDataList = []
+      viewData.map((data, index) => {
+        rowDataList.push({
+          sno: index + 1,
+          Rejection: data.rejection_reason,
+          Action: (
+            <div className="d-flex justify-content-space-between">
+              <CButton
+                size="sm"
+                color="danger"
+                shape="rounded"
+                id={data.id}
+                onClick={() => {
+                  setDeleteId(data.id)
+                  setDeleteModal(true)
+                }}
+                className="m-1"
+              >
+                {/* Delete */}
+                <i className="fa fa-trash" aria-hidden="true"></i>
+              </CButton>
+              <CButton
+                size="sm"
+                color="secondary"
+                shape="rounded"
+                id={data.id}
+                onClick={() => Edit(data.id)}
+                className="m-1"
+              >
+                {/* Edit */}
+                <i className="fa fa-edit" aria-hidden="true"></i>
+              </CButton>
+            </div>
+          ),
+        })
+      })
+      setRowData(rowDataList)
+
+      setTimeout(() => {
+        setSuccess('')
+        setUpdate('')
+        setDeleted('')
+      }, 1500)
+    })
+  }, [modal, save, success, update, deleted])
+  // ============ CRUD =====================
+  /*                    */
+  // ============ Column Header Data =======
   const columns = [
     {
       name: 'S.No',
@@ -27,64 +163,26 @@ const RejectResonTable = () => {
       sortable: true,
       center: true,
     },
-    // {
-    //   name: 'Creation Date',
-    //   selector: (row) => row.Creation_Date,
-    //   sortable: true,
-    //   center: true,
-    // },
 
     {
-      name: 'Reject Reason',
-      selector: (row) => row.Reject_Reason,
+      name: 'Rejection Reason',
+      selector: (row) => row.Rejection,
       left: true,
     },
-    // {
-    //   name: 'Status',
-    //   selector: (row) => row.Status,
-    //   center: true,
-    // },
+
     {
       name: 'Action',
       selector: (row) => row.Action,
       center: true,
     },
   ]
+  // =================== Column Header Data =======
 
-  useEffect(() => {
-    RejectionReasonApi.getRejectionReason().then((response) => {
-      let resData = response.data.data
-
-      console.log(resData)
-
-      let rowDataList = []
-
-      resData.map((data, index) => {
-        rowDataList.push({
-          sno: index + 1,
-          Reject_Reason: data.rejection_reason,
-          Action: (
-            <span>
-              <CButton id={data.id} className="btn btn-danger" color="">
-                <i className="fa fa-trash" aria-hidden="true"></i>
-              </CButton>
-              <CButton id={data.id} className="btn btn-dark" color="white">
-                <i className="fa fa-edit" aria-hidden="true"></i>
-              </CButton>
-            </span>
-          ),
-        })
-      })
-
-      setRowData(rowDataList)
-    })
-  }, [])
   return (
     <>
       <CContainer className="mt-2">
         <CRow className="mt-3">
           <CCol
-            onClick={() => setVehicleCapacity(!VehicleCapacity)}
             className="offset-md-6"
             xs={15}
             sm={15}
@@ -94,9 +192,15 @@ const RejectResonTable = () => {
             <CButton
               size="md"
               color="warning"
-              // disabled={enableSubmit}
               className="px-3 text-white"
-              type="submit"
+              onClick={() => {
+                values.rejection_reason = ''
+                setSuccess('')
+                setUpdate('')
+                setError('')
+                setDeleted('')
+                setModal(!modal)
+              }}
             >
               <span className="float-start">
                 <i className="" aria-hidden="true"></i> &nbsp;New
@@ -109,26 +213,86 @@ const RejectResonTable = () => {
         </CCard>
       </CContainer>
 
-      {/* Modal Section */}
-      <CModal visible={VehicleCapacity} onClose={() => setVehicleCapacity(false)}>
+      {/* View & Edit Modal Section */}
+      <CModal visible={modal} onClose={() => setModal(false)}>
         <CModalHeader>
-          <CModalTitle>Division</CModalTitle>
+          <CModalTitle>Rejection Reason</CModalTitle>
         </CModalHeader>
         <CModalBody>
           <CRow>
             <CCol>
-              <CFormLabel htmlFor="inputAddress">Division</CFormLabel>
-              <CFormInput size="sm" id="inputAddress" />
+              {update && (
+                <CAlert color="primary" data-aos="fade-down" dismissible>
+                  {update}
+                </CAlert>
+              )}
+              {success && (
+                <CAlert color="success" data-aos="fade-down" dismissible>
+                  {success}
+                </CAlert>
+              )}
+              {error && (
+                <CAlert color="danger" data-aos="fade-down" dismissible>
+                  {error}
+                </CAlert>
+              )}
+
+              <CFormLabel htmlFor="rejection_reason">
+                Rejection Reason*{' '}
+                {errors.rejection_reason && (
+                  <span className="small text-danger">{errors.rejection_reason}</span>
+                )}
+              </CFormLabel>
+              <CFormInput
+                size="sm"
+                id="rejection_reason"
+                maxLength={20}
+                className={`${errors.rejection_reason && 'is-invalid'}`}
+                name="rejection_reason"
+                value={values.rejection_reason || ''}
+                onFocus={onFocus}
+                onBlur={onBlur}
+                onChange={handleChange}
+                aria-label="Small select example"
+              />
             </CCol>
           </CRow>
         </CModalBody>
         <CModalFooter>
-          <CButton color="primary" type="submit">
-            Save
+          <CButton onClick={(e) => (save ? Create(e) : Update(editId))} color="primary">
+            {save ? 'Save' : 'Update'}
           </CButton>
         </CModalFooter>
       </CModal>
-      {/* Modal Section */}
+      {/* View & Edit Modal Section */}
+
+      {/* Delete Modal Section */}
+      <CModal visible={deleteModal} onClose={() => setDeleteModal(false)}>
+        <CModalHeader>
+          <CModalTitle className="h4">Confirm To Delete</CModalTitle>
+        </CModalHeader>
+        <CModalBody>
+          <CRow>
+            <CCol>
+              <CFormLabel htmlFor="rejection_reason">Are you sure want to Delete ?</CFormLabel>
+            </CCol>
+          </CRow>
+          {deleted && (
+            <CAlert color="danger" dismissible>
+              {deleted}
+            </CAlert>
+          )}
+        </CModalBody>
+        <CModalFooter>
+          <CButton onClick={() => Delete()} color="danger">
+            YES
+          </CButton>
+          <CButton onClick={() => setDeleteModal(false)} color="primary">
+            NO
+          </CButton>
+        </CModalFooter>
+      </CModal>
+      {/* Delete Modal Section */}
     </>
   )
 }

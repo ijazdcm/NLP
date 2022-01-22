@@ -1,7 +1,7 @@
 import axios from 'axios'
-import { APIURL } from 'src/App'
+import { API_URL } from '../../App'
 
-const API_BASE_URL = APIURL + 'division' //Development
+const API_BASE_URL = API_URL + 'division' //Development
 
 class DivisionApi {
   getDivision() {
