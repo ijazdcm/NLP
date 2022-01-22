@@ -33,8 +33,8 @@ import {
 import { React, useEffect, useState } from 'react'
 // import Select from 'react-select';
 // import CModal from '@coreui/react/src/components/modal/CModal'
-import useForm from 'src/Hooks/useFormValidate'
-import validate from 'src/Validations/FormValidation'
+import useForm from 'src/Hooks/useForm'
+import validate from 'src/Utils/Validation'
 import CustomTable from '../../components/customComponent/CustomTable'
 
 const TSSettlement = () => {
@@ -187,7 +187,7 @@ const TSSettlement = () => {
 
                     <CFormInput size="sm" id="vCap"  readOnly />
                   </CCol>
-                
+
                   <CCol xs={12} md={3}>
                     <CFormLabel htmlFor="vType">Vehicle Type</CFormLabel>
 
@@ -339,7 +339,7 @@ const TSSettlement = () => {
                     <CFormLabel htmlFor="DefectType">
                       Defect Type*{' '}
                       {errors.DefectType && (
-                        <span className="help text-danger">{errors.DefectType}</span>
+                        <span className="small text-danger">{errors.DefectType}</span>
                       )}
                     </CFormLabel>
 
@@ -396,7 +396,7 @@ const TSSettlement = () => {
                     <CFormLabel htmlFor="DefectType2">
                       Defect Type*{' '}
                       {errors.DefectType2 && (
-                        <span className="help text-danger">{errors.DefectType2}</span>
+                        <span className="small text-danger">{errors.DefectType2}</span>
                       )}
                     </CFormLabel>
 
@@ -428,7 +428,7 @@ const TSSettlement = () => {
                   <CCol md={2}>
                     <CFormLabel htmlFor="stoNum">
                       STO Delivery Number{' '}
-                      {errors.stoNum && <span className="help text-danger">{errors.stoNum}</span>}
+                      {errors.stoNum && <span className="small text-danger">{errors.stoNum}</span>}
                     </CFormLabel>
                     <CFormInput size="sm" id="stoNum" readOnly />
                   </CCol>
@@ -555,7 +555,7 @@ const TSSettlement = () => {
                       <CFormLabel htmlFor="invoiceCopy">
                         Invoice Copy
                         {errors.invoiceCopy && (
-                          <span className="help text-danger">{errors.invoiceCopy}</span>
+                          <span className="small text-danger">{errors.invoiceCopy}</span>
                         )}
                       </CFormLabel>
                       <CButton
@@ -603,7 +603,7 @@ const TSSettlement = () => {
                     <CFormLabel htmlFor="sNum">
                       Shipment Number{' '}
                       {errors.sNum && (
-                        <span className="help text-danger">{errors.sNum}</span>
+                        <span className="small text-danger">{errors.sNum}</span>
                       )}
                     </CFormLabel>
                     <CFormSelect
@@ -629,7 +629,7 @@ const TSSettlement = () => {
                     <CFormLabel htmlFor="deliveryNum">
                       Delivery Number{' '}
                       {errors.deliveryNum && (
-                        <span className="help text-danger">{errors.deliveryNum}</span>
+                        <span className="small text-danger">{errors.deliveryNum}</span>
                       )}
                     </CFormLabel>
                     <CFormSelect
@@ -655,7 +655,7 @@ const TSSettlement = () => {
                     <CFormLabel htmlFor="returnTo">
                       Return To{' '}
                       {errors.returnTo && (
-                        <span className="help text-danger">{errors.returnTo}</span>
+                        <span className="small text-danger">{errors.returnTo}</span>
                       )}
                     </CFormLabel>
                     <CFormSelect
@@ -1409,7 +1409,7 @@ const TSSettlement = () => {
                     <CFormLabel htmlFor="DefectType3">
                       Defect Type*{' '}
                       {errors.DefectType && (
-                        <span className="help text-danger">{errors.DefectType}</span>
+                        <span className="small text-danger">{errors.DefectType}</span>
                       )}
                     </CFormLabel>
 
@@ -1435,7 +1435,7 @@ const TSSettlement = () => {
                       <option value="4">Low Tonnage</option>
                     </CFormSelect>
                   </CCol>
-                </CRow>       
+                </CRow>
                 <hr />
                 <CRow className="mb-md-1" hidden>
                   <CCol xs={12} md={2}>
@@ -1483,7 +1483,7 @@ const TSSettlement = () => {
                     <CFormLabel htmlFor="DefectType4">
                       Defect Type*{' '}
                       {errors.DefectType && (
-                        <span className="help text-danger">{errors.DefectType}</span>
+                        <span className="small text-danger">{errors.DefectType}</span>
                       )}
                     </CFormLabel>
 
@@ -1516,7 +1516,7 @@ const TSSettlement = () => {
                   <CCol md={2}>
                     <CFormLabel htmlFor="stoNum1">
                       STO Delivery Number{' '}
-                      {errors.STONo && <span className="help text-danger">{errors.STONo}</span>}
+                      {errors.STONo && <span className="small text-danger">{errors.STONo}</span>}
                     </CFormLabel>
                     <CFormInput size="sm" id="stoNum1" value="15487126" readOnly />
                   </CCol>
@@ -1550,7 +1550,7 @@ const TSSettlement = () => {
                     <CFormLabel htmlFor="DriverName">
                       Driver Name{' '}
                       {errors.DriverName && (
-                        <span className="help text-danger">{errors.DriverName}</span>
+                        <span className="small text-danger">{errors.DriverName}</span>
                       )}
                     </CFormLabel>
                     <CFormSelect
@@ -1624,7 +1624,7 @@ const TSSettlement = () => {
                       <CFormLabel htmlFor="dInvoice">
                         Invoice Copy
                         {errors.dInvoice && (
-                          <span className="help text-danger">{errors.dInvoice}</span>
+                          <span className="small text-danger">{errors.dInvoice}</span>
                         )}
                       </CFormLabel>
                       <CButton
@@ -1668,7 +1668,7 @@ const TSSettlement = () => {
                     <CFormLabel htmlFor="dName4">
                       Driver Name{' '}
                       {errors.DriverName && (
-                        <span className="help text-danger">{errors.DriverName}</span>
+                        <span className="small text-danger">{errors.DriverName}</span>
                       )}
                     </CFormLabel>
                     <CFormSelect
@@ -1696,7 +1696,7 @@ const TSSettlement = () => {
                     <CFormLabel htmlFor="rVendor">
                       Registered Vendor{' '}
                       {errors.rVendor && (
-                        <span className="help text-danger">{errors.rVendor}</span>
+                        <span className="small text-danger">{errors.rVendor}</span>
                       )}
                     </CFormLabel>
                     <CFormSelect
@@ -1738,7 +1738,7 @@ const TSSettlement = () => {
                       <CFormLabel htmlFor="dinvoice">
                         Invoice Number
                         {errors.vehicleType && (
-                          <span className="help text-danger">{errors.vehicleType}</span>
+                          <span className="small text-danger">{errors.vehicleType}</span>
                         )}
                       </CFormLabel>
                       <CButton
@@ -1782,7 +1782,7 @@ const TSSettlement = () => {
                     <CFormLabel htmlFor="dname">
                       Driver Name{' '}
                       {errors.DriverName && (
-                        <span className="help text-danger">{errors.DriverName}</span>
+                        <span className="small text-danger">{errors.DriverName}</span>
                       )}
                     </CFormLabel>
                     <CFormSelect
@@ -1831,7 +1831,7 @@ const TSSettlement = () => {
                       <CFormLabel htmlFor="dinvoice1">
                         Invoice Number
                         {errors.vehicleType && (
-                          <span className="help text-danger">{errors.vehicleType}</span>
+                          <span className="small text-danger">{errors.vehicleType}</span>
                         )}
                       </CFormLabel>
                       <CButton
@@ -1875,7 +1875,7 @@ const TSSettlement = () => {
                     <CFormLabel htmlFor="dname2">
                       Driver Name{' '}
                       {errors.DriverName && (
-                        <span className="help text-danger">{errors.DriverName}</span>
+                        <span className="small text-danger">{errors.DriverName}</span>
                       )}
                     </CFormLabel>
                     <CFormSelect
@@ -1943,7 +1943,7 @@ const TSSettlement = () => {
                   <CCol md={2}>
                     <CFormLabel htmlFor="fjNum">
                       Forward Journey Number{' '}
-                      {errors.STONo && <span className="help text-danger">{errors.STONo}</span>}
+                      {errors.STONo && <span className="small text-danger">{errors.STONo}</span>}
                     </CFormLabel>
                     <CFormInput size="sm" id="fjNum" value="15487126" readOnly />
                   </CCol>
@@ -1989,7 +1989,7 @@ const TSSettlement = () => {
                   <CCol md={2}>
                     <CFormLabel htmlFor="rjNum">
                       Return Journey Number{' '}
-                      {errors.STONo && <span className="help text-danger">{errors.STONo}</span>}
+                      {errors.STONo && <span className="small text-danger">{errors.STONo}</span>}
                     </CFormLabel>
                     <CFormInput size="sm" id="rjNum" value="15423426" readOnly />
                   </CCol>
@@ -2035,7 +2035,7 @@ const TSSettlement = () => {
                   <CCol md={2}>
                     <CFormLabel htmlFor="stonum">
                       STO Delivery Number{' '}
-                      {errors.STONo && <span className="help text-danger">{errors.STONo}</span>}
+                      {errors.STONo && <span className="small text-danger">{errors.STONo}</span>}
                     </CFormLabel>
                     <CFormInput size="sm" id="stonum" value="15487126" readOnly />
                   </CCol>
@@ -2084,7 +2084,7 @@ const TSSettlement = () => {
                     <CFormLabel htmlFor="snum">
                       Shipment Number{' '}
                       {errors.DriverName && (
-                        <span className="help text-danger">{errors.DriverName}</span>
+                        <span className="small text-danger">{errors.DriverName}</span>
                       )}
                     </CFormLabel>
                     <CFormSelect
@@ -2110,7 +2110,7 @@ const TSSettlement = () => {
                     <CFormLabel htmlFor="dnum">
                       Delivery Number{' '}
                       {errors.DriverName && (
-                        <span className="help text-danger">{errors.DriverName}</span>
+                        <span className="small text-danger">{errors.DriverName}</span>
                       )}
                     </CFormLabel>
                     <CFormSelect
@@ -2137,7 +2137,7 @@ const TSSettlement = () => {
                     <CFormLabel htmlFor="Return">
                       Return To{' '}
                       {errors.DriverName && (
-                        <span className="help text-danger">{errors.DriverName}</span>
+                        <span className="small text-danger">{errors.DriverName}</span>
                       )}
                     </CFormLabel>
                     <CFormSelect
@@ -2190,7 +2190,7 @@ const TSSettlement = () => {
                     <CFormLabel htmlFor="gPass">
                       Gate Pass Type{' '}
                       {errors.gPass && (
-                        <span className="help text-danger">{errors.gPass}</span>
+                        <span className="small text-danger">{errors.gPass}</span>
                       )}
                     </CFormLabel>
                     <CFormSelect
@@ -2215,7 +2215,7 @@ const TSSettlement = () => {
                     <CFormLabel htmlFor="gNum">
                       Gate Pass Number{' '}
                       {errors.gNum && (
-                        <span className="help text-danger">{errors.gNum}</span>
+                        <span className="small text-danger">{errors.gNum}</span>
                       )}
                     </CFormLabel>
                     <CFormSelect

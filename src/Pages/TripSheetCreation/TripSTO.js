@@ -78,7 +78,7 @@ const TripSheetCreationHome = () => {
       Overall_Duration: '0 Hrs 55 Mins',
       Action: (
         <CButton className="badge text-white" color="warning" >
-          <Link className="text-white" to="/TripSheetCreation/hire">
+          <Link className="text-white" to="/TripSheetCreationHome/TripSheetCreationOwnFG">
             Trip STO
           </Link>
         </CButton>

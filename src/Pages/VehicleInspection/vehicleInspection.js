@@ -31,16 +31,22 @@ import {
   CButtonGroup,
 } from '@coreui/react'
 import { React, useState } from 'react'
-import useForm from 'src/Hooks/useFormValidate.js'
-import validate from 'src/Validations/FormValidation'
+import useForm from 'src/Hooks/useForm.js'
+import validate from 'src/Utils/Validation'
 import CustomTable from '../../components/customComponent/CustomTable'
-import { Link } from 'react-router-dom'
 
 const VehicleInspection = () => {
   const formValues = {
-    vehicleType: '',
-    OdometerKm: '',
-    odometerPhoto: '',
+    truckClean: '',
+    badSmell: '',
+    insectVevils: '',
+    tarSRF: '',
+    tarNon: '',
+    tarInsectVevils: '',
+    trkPlat: '',
+    prevLoad: '',
+    vFitLoad: '',
+    remarks: '',
   }
 
   const border = {
@@ -92,7 +98,14 @@ const VehicleInspection = () => {
 
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="vCap">Vehicle Capacity In MTS</CFormLabel>
-                  <CFormInput name="vCap" size="sm" id="vCap" value="10" placeholder="10" readOnly />
+                  <CFormInput
+                    name="vCap"
+                    size="sm"
+                    id="vCap"
+                    value="10"
+                    placeholder="10"
+                    readOnly
+                  />
                 </CCol>
 
                 {/* <CCol xs={12} md={3}>
@@ -103,14 +116,12 @@ const VehicleInspection = () => {
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="dName">
                     Driver Name*
-                    {errors.dName && (
-                      <span className="help text-danger">{errors.dName}</span>
-                    )}
+                    {errors.dName && <span className="small text-danger">{errors.dName}</span>}
                   </CFormLabel>
                   <CFormSelect
                     size="sm"
                     name="dName"
-                    id='dName'
+                    id="dName"
                     onFocus={onFocus}
                     onBlur={onBlur}
                     onChange={handleChange}
@@ -118,9 +129,7 @@ const VehicleInspection = () => {
                     className={`${errors.dName && 'is-invalid'}`}
                     aria-label="Small select example"
                   >
-                    <option  hidden>
-                      Select...
-                    </option>
+                    <option hidden>Select...</option>
 
                     <option value="1">Mari</option>
 
@@ -147,7 +156,7 @@ const VehicleInspection = () => {
                     className="w-100 m-0"
                     color="info"
                     size="sm"
-                    id='odoImg'
+                    id="odoImg"
                     style={border}
                   >
                     <span className="float-start">
@@ -361,11 +370,16 @@ const VehicleInspection = () => {
                   </CButtonGroup>
                 </CCol>
                 <CCol xs={12} md={3}>
-                  <CFormLabel htmlFor="prevLoad">Previous Load Details *</CFormLabel>
+                  <CFormLabel htmlFor="prevLoad">
+                    Previous Load Details *
+                    {errors.prevLoad && (
+                      <span className="small text-danger">{errors.prevLoad}</span>
+                    )}
+                  </CFormLabel>
                   <CFormSelect
                     size="sm"
-                    name="fitLoad"
-                    id='prevLoad'
+                    name="prevLoad"
+                    id="prevLoad"
                     onFocus={onFocus}
                     onBlur={onBlur}
                     onChange={handleChange}
@@ -373,16 +387,27 @@ const VehicleInspection = () => {
                     className={`${errors.prevLoad && 'is-invalid'}`}
                     aria-label="Small select example"
                   >
-                    <option  hidden>
-                      Select...
-                    </option>
+                    <option hidden>Select...</option>
                     <option value="1">Select LP</option>
                   </CFormSelect>
                 </CCol>
-                 <CCol xs={12} md={3}>
-                    <CFormLabel htmlFor="vFitLoad">Vehicle Fit For Loading *</CFormLabel>
-                    <CFormInput name="vFitLoad" size="sm" id="vFitLoad" value="No" />
-                 </CCol>
+                <CCol xs={12} md={3}>
+                  <CFormLabel htmlFor="vFitLoad">
+                    Vehicle Fit For Loading *
+                    {errors.vFitLoad && (
+                      <span className="small text-danger">{errors.vFitLoad}</span>
+                    )}
+                  </CFormLabel>
+                  <CFormInput
+                    name="vFitLoad"
+                    size="sm"
+                    id="vFitLoad"
+                    onFocus={onFocus}
+                    onBlur={onBlur}
+                    onChange={handleChange}
+                    value={values.prevLoad || 'No'}
+                  />
+                </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="remarks">Remarks</CFormLabel>
                   <CFormTextarea id="remarks" rows="1"></CFormTextarea>
@@ -398,11 +423,8 @@ const VehicleInspection = () => {
                     disabled=""
                     className="text-white"
                     type="submit"
-                    to="/TripSheetCreationHome"
                   >
-                    <Link className="text-white" to="/vInspection">
-                Previous
-              </Link>
+                    Previous
                   </CButton>
                 </CCol>
 

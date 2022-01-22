@@ -1,12 +1,8 @@
 import DataTable from 'react-data-table-component'
 import React from 'react'
 import { CButton } from '@coreui/react'
-import { useHistory } from 'react-router-dom'
 const AllCommonTable = () => {
-    let history = useHistory();
-    const redirect = () => {
-        history.push("/Gateout")
-    }
+
     const columns = [
         {
             name: 'S.No',
@@ -123,7 +119,7 @@ const AllCommonTable = () => {
             Screen_Duration: '1 Hrs 07 Mins',
             Overall_Duration: '2 Hrs 55 Mins',
             Action: (
-                <CButton className="badge text-white" color="warning" onClick={redirect}>
+                <CButton className="badge text-white" color="warning">
                     Gate Out
                 </CButton>
             ),

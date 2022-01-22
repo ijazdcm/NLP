@@ -1,8 +1,44 @@
 import React from 'react'
-// import ParkingYardGate from './Pages/ParkingYardGate/ParkingYardGate'
-import Gateout from './Pages/Gateout/Gateout'
-import AllCommonTable from './Pages/AllCommonTable/AllCommonTable'
-// import ParkingYardGate from './Pages/ParkingYardGate/ParkingYardGate'
+
+// Master Pages
+import VehicleMaster from './Pages/Master/VehicleMaster'
+import DriverMaster from './Pages/Master/DriverMaster'
+import ShedMaster from './Pages/Master/ShedMaster'
+import DieselVendorMaster from './Pages/Master/DieselVendorMaster'
+import UserLoginMaster from './Pages/UserLoginMaster/UserLoginMaster'
+import DriverMasterTable from './Pages/Master/DriverMasterTable'
+import DieselVendorMasterTable from './Pages/Master/DieselVendorMasterTable'
+import UserLoginMasterTable from './Pages/Master/UserLoginMasterTable'
+
+// Sub-Master Pages
+import Department from './Pages/Master/Submaster/Department'
+import Designation from './Pages/Master/Submaster/Designation'
+import Division from './Pages/Master/Submaster/Division'
+import MaterialDescription from './Pages/Master/Submaster/MaterialDescription'
+import OtherCharges from './Pages/Master/Submaster/OtherCharges'
+import PreviousLoadDetails from './Pages/Master/Submaster/PreviousLoadDetails'
+import RejectReason from './Pages/Master/Submaster/RejectReason'
+import Status from './Pages/Master/Submaster/Status'
+import UOM from './Pages/Master/Submaster/UOM'
+import VehicleCapacity from './Pages/Master/Submaster/VehicleCapacity'
+import DesignationTable from './Pages/Master/Submaster/DesignationTable'
+import DefectType from './Pages/Master/Submaster/DefectType'
+import DefectTypeTable from './Pages/Master/Submaster/DefectTypeTable'
+import DepartmentTable from './Pages/Master/Submaster/DepartmentTable'
+import StatusTable from './Pages/Master/Submaster/StatusTable'
+import DivisionTable from './Pages/Master/Submaster/DivisionTable'
+import MaterialDescriptionTable from './Pages/Master/Submaster/MaterialDescriptionTable'
+import OtherChargesTable from './Pages/Master/Submaster/OtherChargesTable'
+import PreviousLoadDetailsTable from './Pages/Master/Submaster/PreviousLoadDetailsTable'
+import RejectReasonTable from './Pages/Master/Submaster/RejectReasonTable'
+import VehicleCapacityTable from './Pages/Master/Submaster/VehicleCapacityTable'
+import UOMTable from './Pages/Master/Submaster/UOMTable'
+import ShedMasterTable from './Pages/Master/ShedMasterTable'
+import VehicleMasterTable from './Pages/VehicleMasterTable'
+
+// Small Master Pages
+
+// Transactions Pages
 import RjSalesOrderCreation from './Pages/RjSalesOrderCreation/RjSalesOrderCreation'
 import VehicleAssignmentFoods from './Pages/VehicleAssignmentFoods/VehicleAssignmentFoods'
 import VehicleAssignmentConsumer from './Pages/VehicleAssignmentConsumer/VehicleAssignmentConsumer'
@@ -26,7 +62,6 @@ import VMain from './Pages/VehicleMaintainence/VMain'
 import DocVerify from './Pages/DocumentVerification/DocsVerify'
 import DocVerifyVendorAvail from './Pages/DocumentVerification/DocVerifyVendorAvail'
 import DocVerifyVendorNotAvail from './Pages/DocumentVerification/DocVerifyVendorNotAvail'
-// import ParkingYardGate from './Pages/ParkingYardGate/ParkingYardGate'
 import TripSheetCreationFG from './Pages/TripSheetCreation/TripSheetCreationFG'
 import TripSheetCreationOwnFG from './Pages/TripSheetCreation/TripSheetCreationOwnFG'
 import TripSheetCreationHome from './Pages/TripSheetCreation/TripSheetCreationHome'
@@ -44,38 +79,6 @@ import VendorCreationHome from './Pages/VendorCreationRequest/VendorCreationHome
 import VendorCreationRequest from './Pages/VendorCreationRequest/VendorCreationRequest'
 import TSClossure from './Pages/TripsheetClossure/TSClossure'
 import TSClossureSto from './Pages/TripsheetClossure/TSClossureSto'
-import VehicleMaster from './Pages/Master/VehicleMaster'
-import DriverMaster from './Pages/Master/DriverMaster'
-import ShedMaster from './Pages/Master/ShedMaster'
-import DieselVendorMaster from './Pages/Master/DieselVendorMaster'
-import UserLoginMaster from './Pages/UserLoginMaster/UserLoginMaster'
-import DefectType from './Pages/Master/Submaster/DefectType'
-import Department from './Pages/Master/Submaster/Department'
-import Designation from './Pages/Master/Submaster/Designation'
-import Division from './Pages/Master/Submaster/Division'
-import MaterialDescription from './Pages/Master/Submaster/MaterialDescription'
-import OtherCharges from './Pages/Master/Submaster/OtherCharges'
-import PreviousLoadDetails from './Pages/Master/Submaster/PreviousLoadDetails'
-import RejectReason from './Pages/Master/Submaster/RejectReason'
-import Status from './Pages/Master/Submaster/Status'
-import UOM from './Pages/Master/Submaster/UOM'
-import VehicleCapacity from './Pages/Master/Submaster/VehicleCapacity'
-import DesignationTable from './Pages/Master/Submaster/DesignationTable'
-import DefectTypeTable from './Pages/Master/Submaster/DefectTypeTable'
-import DepartmentTable from './Pages/Master/Submaster/DepartmentTable'
-import StatusTable from './Pages/Master/Submaster/StatusTable'
-import DivisionTable from './Pages/Master/Submaster/DivisionTable'
-import MaterialDescriptionTable from './Pages/Master/Submaster/MaterialDescriptionTable'
-import OtherChargesTable from './Pages/Master/Submaster/OtherChargesTable'
-import PreviousLoadDetailsTable from './Pages/Master/Submaster/PreviousLoadDetailsTable'
-import RejectReasonTable from './Pages/Master/Submaster/RejectReasonTable'
-import VehicleCapacityTable from './Pages/Master/Submaster/VehicleCapacityTable'
-import UOMTable from './Pages/Master/Submaster/UOMTable'
-import ShedMasterTable from './Pages/Master/ShedMasterTable'
-import VehicleMasterTable from './Pages/VehicleMasterTable'
-import DriverMasterTable from './Pages/Master/DriverMasterTable'
-import DieselVendorMasterTable from './Pages/Master/DieselVendorMasterTable'
-import UserLoginMasterTable from './Pages/Master/UserLoginMasterTable'
 import ShipmentCreation from './Pages/ShipmentCreation/ShipmentCreation'
 import ShipmentCreationConsumer from './Pages/ShipmentCreation/ShipmentCreationConsumer'
 import VendorCreationConfrimationOwn from './Pages/VendorCreationConfrimation/VendorCreationConfrimationOwn'
@@ -90,7 +93,78 @@ import RJcustomerCreationApproval from './Pages/RJcustomerCreation/RJcustomerCre
 import FIScreen from './Pages/FIScreen/FIScreen'
 import ChangeVehicleHome from './Pages/ChangeVehicle/ChangeVehicleHome'
 import ChangeVehicle from './Pages/ChangeVehicle/ChangeVehicle'
+
+// Misc. Pages
+import UserLogin from './Pages/UserLogin'
+import UserRegister from './Pages/UserRegister'
+import Gateout from './Pages/Gateout/Gateout'
+import AllCommonTable from './Pages/AllCommonTable/AllCommonTable'
+
 const routes = [
+  // Master
+  { path: '/VehicleMaster', exact: true, name: 'VehicleMaster', component: VehicleMaster },
+  { path: '/DriverMaster', exact: true, name: 'DriverMaster', component: DriverMaster },
+  { path: '/ShedMaster', exact: true, name: 'ShedMaster', component: ShedMaster },
+  {
+    path: '/DieselVendorMaster',
+    exact: true,
+    name: 'DieselVendorMaster',
+    component: DieselVendorMaster,
+  },
+  { path: '/UserLoginMaster', exact: true, name: 'UserLoginMaster', component: UserLoginMaster },
+  {
+    path: '/VehicleMasterTable',
+    exact: true,
+    name: 'VehicleMasterTable',
+    component: VehicleMasterTable,
+  },
+  { path: '/ShedMasterTable', exact: true, name: 'ShedMasterTable', component: ShedMasterTable },
+  {
+    path: '/DriverMasterTable',
+    exact: true,
+    name: 'DriverMasterTable',
+    component: DriverMasterTable,
+  },
+  {
+    path: '/DieselVendorMasterTable',
+    exact: true,
+    name: 'DieselVendorMasterTable',
+    component: DieselVendorMasterTable,
+  },
+  {
+    path: '/UserLoginMasterTable',
+    exact: true,
+    name: 'UserLoginMasterTable',
+    component: UserLoginMasterTable,
+  },
+
+  // Sub-Master
+  { path: '/DefectType', exact: true, name: 'DefectType', component: DefectType },
+  { path: '/Department', exact: true, name: 'Department', component: Department },
+  { path: '/Designation', exact: true, name: 'Designation', component: Designation },
+  { path: '/Division', exact: true, name: 'Division', component: Division },
+  {
+    path: '/MaterialDescription',
+    exact: true,
+    name: 'MaterialDescription',
+    component: MaterialDescription,
+  },
+  { path: '/OtherCharges', exact: true, name: 'OtherCharges', component: OtherCharges },
+  {
+    path: '/PreviousLoadDetails',
+    exact: true,
+    name: 'PreviousLoadDetails',
+    component: PreviousLoadDetails,
+  },
+  { path: '/RejectReason', exact: true, name: 'RejectReason', component: RejectReason },
+  { path: '/Status', exact: true, name: 'Status', component: Status },
+  { path: '/UOM', exact: true, name: 'UOM', component: UOM },
+  { path: '/VehicleCapacity', exact: true, name: 'VehicleCapacity', component: VehicleCapacity },
+
+  // Small Master
+
+  // Transaction Pages
+
   { path: '/', exact: true, name: 'Home' },
   { path: '/ParkingYardGateIn', exact: true, name: 'Test', component: ParkingYardGate },
   { path: '/GateIn', exact: true, name: 'GateIn', component: GateIn },
@@ -176,9 +250,9 @@ const routes = [
     name: 'Test',
     component: RJcustomerCreationApproval,
   },
-  { path: '/ShipmentCreation/VehicleAssignmentFoods', exact: true, name: 'Test', component: VehicleAssignmentFoods },
+  { path: '/VehicleAssignmentFoods', exact: true, name: 'Test', component: VehicleAssignmentFoods },
   {
-    path: '/ShipmentCreationConsumer/VehicleAssignmentConsumer',
+    path: '/VehicleAssignmentConsumer',
     exact: true,
     name: 'Test',
     component: VehicleAssignmentConsumer,
@@ -294,65 +368,11 @@ const routes = [
   { path: '/', exact: true, name: 'Home' },
   { path: '/TSClossure', exact: true, name: 'Test', component: TSClossure },
   { path: '/TSClossure-sto', exact: true, name: 'Test', component: TSClossureSto },
-  { path: '/VehicleMasterTable/VehicleMaster', exact: true, name: 'VehicleMaster', component: VehicleMaster },
-  { path: '/DriverMasterTable/DriverMaster', exact: true, name: 'DriverMaster', component: DriverMaster },
-  { path: '/ShedMasterTable/ShedMaster', exact: true, name: 'ShedMaster', component: ShedMaster },
-  {
-    path: '/DieselVendorMasterTable/DieselVendorMaster',
-    exact: true,
-    name: 'DieselVendorMaster',
-    component: DieselVendorMaster,
-  },
-  { path: '/UserLoginMasterTable/UserLoginMaster', exact: true, name: 'UserLoginMaster', component: UserLoginMaster },
-  { path: '/DefectType', exact: true, name: 'DefectType', component: DefectType },
-  { path: '/Department', exact: true, name: 'Department', component: Department },
-  { path: '/Designation', exact: true, name: 'Designation', component: Designation },
-  { path: '/Division', exact: true, name: 'Division', component: Division },
-  {
-    path: '/MaterialDescription',
-    exact: true,
-    name: 'MaterialDescription',
-    component: MaterialDescription,
-  },
-  { path: '/OtherCharges', exact: true, name: 'OtherCharges', component: OtherCharges },
-  {
-    path: '/PreviousLoadDetails',
-    exact: true,
-    name: 'PreviousLoadDetails',
-    component: PreviousLoadDetails,
-  },
-  { path: '/RejectReason', exact: true, name: 'RejectReason', component: RejectReason },
-  { path: '/Status', exact: true, name: 'Status', component: Status },
-  { path: '/UOM', exact: true, name: 'UOM', component: UOM },
-  { path: '/VehicleCapacity', exact: true, name: 'VehicleCapacity', component: VehicleCapacity },
-  {
-    path: '/VehicleMasterTable',
-    exact: true,
-    name: 'VehicleMasterTable',
-    component: VehicleMasterTable,
-  },
+
   { path: '/AdvancePayment', exact: true, name: 'AdvancePayment', component: AdvancePayment },
   { path: '/AdvancePayment/AdvanceOwn', exact: true, name: 'AdvanceOwn', component: AdvanceOwn },
   { path: '/AdvancePayment/AdvanceHire', exact: true, name: 'AdvanceHire', component: AdvanceHire },
-  { path: '/ShedMasterTable', exact: true, name: 'ShedMasterTable', component: ShedMasterTable },
-  {
-    path: '/DriverMasterTable',
-    exact: true,
-    name: 'DriverMasterTable',
-    component: DriverMasterTable,
-  },
-  {
-    path: '/DieselVendorMasterTable',
-    exact: true,
-    name: 'DieselVendorMasterTable',
-    component: DieselVendorMasterTable,
-  },
-  {
-    path: '/UserLoginMasterTable',
-    exact: true,
-    name: 'UserLoginMasterTable',
-    component: UserLoginMasterTable,
-  },
+
   {
     path: '/VehicleCapacityTable',
     exact: true,
@@ -431,6 +451,20 @@ const routes = [
     exact: true,
     name: 'ChangeVehicle',
     component: ChangeVehicle,
+  },
+
+  // Misc. Pages
+  {
+    path: '/UserLogin',
+    exact: true,
+    name: 'UserLogin',
+    component: UserLogin,
+  },
+  {
+    path: '/UserRegister',
+    // exact: true,
+    name: 'UserRegister',
+    component: UserRegister,
   },
 ]
 export default routes

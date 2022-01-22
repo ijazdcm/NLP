@@ -1,15 +1,15 @@
 import { authConstant } from "./AuthConstant";
 
 const initialState={
-  is_auth:false,
-  department:""
+  is_auth:true,
+  user_info:{}
 }
 
 
  const AuthReducer=(state=initialState,action)=>{
   switch (action.type) {
     case authConstant.LOGIN_REQUEST:return{
-      ...state,is_auth:true,department:action.payload
+      ...state,is_auth:true,user_info:action.payload
     }
 
 

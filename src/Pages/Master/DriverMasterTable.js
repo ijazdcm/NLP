@@ -294,7 +294,7 @@ const UserLoginMasterTable = () => {
                             className="px-3 text-white"
                             type="submit"
                         >
-                            <Link className="text-white" to="/DriverMasterTable/DriverMaster">
+                            <Link className="text-white" to="/DriverMaster">
                                 New
                             </Link>
                         </CButton>

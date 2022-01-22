@@ -33,8 +33,8 @@ import {
 } from '@coreui/react'
 import { React, useState } from 'react'
 // import CModal from '@coreui/react/src/components/modal/CModal'
-import useForm from 'src/Hooks/useFormValidate'
-import validate from 'src/Validations/FormValidation'
+import useForm from 'src/Hooks/useForm'
+import validate from 'src/Utils/Validation'
 import CustomTable from '../../components/customComponent/CustomTable'
 import { Link } from 'react-router-dom'
 
@@ -117,7 +117,7 @@ const Shipment = () => {
                                             <CCol>
                                                 <CFormLabel htmlFor="VNum">
                                                     Vehicle Number
-                                                    {errors.VNum && <span className="help text-danger">{errors.VNum}</span>}
+                                                    {errors.VNum && <span className="small text-danger">{errors.VNum}</span>}
                                                 </CFormLabel>
                                                 <CFormSelect size="sm" className="mb-3" aria-label="Small select example">
                                                     <option hidden>Select ...</option>
@@ -132,7 +132,7 @@ const Shipment = () => {
                                             <CCol>
                                                 <CFormLabel htmlFor="vCap">
                                                     Vehicle Capacity
-                                                    {errors.vCap && <span className="help text-danger">{errors.vCap}</span>}
+                                                    {errors.vCap && <span className="small text-danger">{errors.vCap}</span>}
                                                 </CFormLabel>
                                                 <CFormInput size="sm" id="vCap"  readOnly />
                                             </CCol>
@@ -141,14 +141,14 @@ const Shipment = () => {
                                             <CCol>
                                                 <CFormLabel htmlFor="vCap">
                                                 Vehicle Type
-                                                    {errors.vehicleType && <span className="help text-danger">{errors.vehicleType}</span>}
+                                                    {errors.vehicleType && <span className="small text-danger">{errors.vehicleType}</span>}
                                                 </CFormLabel>
                                                 <CFormInput size="sm" id="vCap"  readOnly />
                                             </CCol>
                                             <CCol>
                                                 <CFormLabel htmlFor="dName">
                                                     Driver Name
-                                                    {errors.dName && <span className="help text-danger">{errors.dName}</span>}
+                                                    {errors.dName && <span className="small text-danger">{errors.dName}</span>}
                                                 </CFormLabel>
                                                 <CFormInput size="sm" id="dName"  readOnly />
                                             </CCol>
@@ -158,7 +158,7 @@ const Shipment = () => {
                                             <CCol>
                                                 <CFormLabel htmlFor="dMob">
                                                     Driver Mobile Number
-                                                    {errors.dMob && <span className="help text-danger">{errors.dMob}</span>}
+                                                    {errors.dMob && <span className="small text-danger">{errors.dMob}</span>}
                                                 </CFormLabel>
                                                 <CFormInput size="sm" id="dMob"  readOnly />
                                             </CCol>
@@ -316,7 +316,7 @@ const Shipment = () => {
                                     <CTableDataCell>6547234</CTableDataCell>
                                     <CTableDataCell>637534</CTableDataCell>
                                     <CTableDataCell>TN57AT6789</CTableDataCell>
-                                    <CTableDataCell><CButton color="warning" size="sm" className="mx-3 text-white"><Link className="text-white" to="/ShipmentCreation/VehicleAssignmentFoods">
+                                    <CTableDataCell><CButton color="warning" size="sm" className="mx-3 text-white"><Link className="text-white" to="/VehicleAssignmentFoods">
                                         Show
                                     </Link></CButton></CTableDataCell>
                                 </CTableRow>

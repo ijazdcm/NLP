@@ -26,7 +26,7 @@ import {
   CFormTextarea,
 } from '@coreui/react'
 import { React, useState } from 'react'
-import useFormValid from 'src/Hooks/useFormValidate'
+import useFormValid from 'src/Hooks/useForm'
 import validate from 'src/Validations/FormValidation'
 import CustomTable from '../../components/customComponent/CustomTable'
 
@@ -172,7 +172,7 @@ const ParkingYardGate = () => {
                 <CFormLabel htmlFor="vType">
                   Vehicle Type*
                   {errors.vehicleType && (
-                    <span className="help text-danger">{errors.vehicleType}</span>
+                    <span className="small text-danger">{errors.vehicleType}</span>
                   )}
                 </CFormLabel>
 
@@ -198,7 +198,7 @@ const ParkingYardGate = () => {
               <CCol md={3}>
                 <CFormLabel htmlFor="vNum">
                   Vehicle Number*
-                  {errors.vNum && <span className="help text-danger">{errors.vNum}</span>}
+                  {errors.vNum && <span className="small text-danger">{errors.vNum}</span>}
                 </CFormLabel>
                 {hire ? (
                   <CFormInput name="vNum" size="sm" id="inputAddress"  />
@@ -261,7 +261,7 @@ const ParkingYardGate = () => {
                 <CFormLabel htmlFor="odoMeter">
                   Odometer KM*{' '}
                   {errors.OdometerKm && (
-                    <span className="help text-danger">{errors.OdometerKm}</span>
+                    <span className="small text-danger">{errors.OdometerKm}</span>
                   )}
                 </CFormLabel>
                 <CFormInput
@@ -280,7 +280,7 @@ const ParkingYardGate = () => {
                 <CFormLabel htmlFor="odoImg">
                   Odometer Photo*{' '}
                   {errors.odometerPhoto && (
-                    <span className="help text-danger">{errors.odometerPhoto}</span>
+                    <span className="small text-danger">{errors.odometerPhoto}</span>
                   )}
                 </CFormLabel>
                 <CFormInput

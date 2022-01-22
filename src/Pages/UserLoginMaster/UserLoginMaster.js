@@ -29,9 +29,9 @@ import {
     CModalFooter,
 } from '@coreui/react'
 import { React, useState } from 'react'
-import useForm from 'src/Hooks/useFormValidate.js'
-import validate from 'src/Validations/FormValidation'
-import { Link } from "react-router-dom";
+import useForm from 'src/Hooks/useForm.js'
+import validate from 'src/Utils/Validation'
+
 const UserLoginMaster = () => {
     const formValues = {
         vehicleType: '',
@@ -76,7 +76,7 @@ const UserLoginMaster = () => {
                                     <CFormLabel htmlFor="Divison">
                                         Divison*{' '}
                                         {errors.Divison && (
-                                            <span className="help text-danger">{errors.Divison}</span>
+                                            <span className="small text-danger">{errors.Divison}</span>
                                         )}
                                     </CFormLabel>
 
@@ -108,7 +108,7 @@ const UserLoginMaster = () => {
                                     <CFormLabel htmlFor="Department">
                                         Department*{' '}
                                         {errors.Department && (
-                                            <span className="help text-danger">{errors.Department}</span>
+                                            <span className="small text-danger">{errors.Department}</span>
                                         )}
                                     </CFormLabel>
 
@@ -140,7 +140,7 @@ const UserLoginMaster = () => {
                                     <CFormLabel htmlFor="Designation">
                                         Designation*{' '}
                                         {errors.Designation && (
-                                            <span className="help text-danger">{errors.Designation}</span>
+                                            <span className="small text-danger">{errors.Designation}</span>
                                         )}
                                     </CFormLabel>
                                     <CFormSelect
@@ -216,7 +216,7 @@ const UserLoginMaster = () => {
                                     <CFormLabel htmlFor="UserPhoto">
                                         User Photo*{' '}
                                         {errors.UserPhoto && (
-                                            <span className="help text-danger">{errors.UserPhoto}</span>
+                                            <span className="small text-danger">{errors.UserPhoto}</span>
                                         )}
                                     </CFormLabel>
                                     <CFormInput
@@ -251,9 +251,7 @@ const UserLoginMaster = () => {
                                         className="mx-1 px-2 text-white"
                                         type="submit"
                                     >
-                                        <Link className="text-white" to="/UserLoginMasterTable">
-                               Cancel
-                            </Link>
+                                        Cancel
                                     </CButton>
                                 </CCol>
                             </CRow>

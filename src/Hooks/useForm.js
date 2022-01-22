@@ -1,11 +1,9 @@
 import { useState, useEffect } from 'react'
-import { InputValid } from './InputValid'
 
 const useForm = (callback, validate, formValues) => {
   const [values, setValues] = useState(formValues)
   const [errors, setErrors] = useState({})
   const [isTouched, setIsTouched] = useState({})
-  const [screenTyp, setscreenTyp] = useState('ownContract')
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [enableSubmit, setEnableSubmit] = useState(true)
 
@@ -24,21 +22,22 @@ const useForm = (callback, validate, formValues) => {
   }
 
   const handleSubmit = (event) => {
+    console.log(event.target)
     if (event) event.preventDefault()
-    // const submitVal = InputValid(event)
+
     setIsSubmitting(true)
     setErrors(validate(values, isTouched, isSubmitting))
   }
 
   const handleChange = (event) => {
+    // console.log(event.target.name + ':' + event.target.value)
     //While User Changes
     event.persist()
-
     setIsTouched((isTouched) => ({ ...isTouched, [event.target.name]: true }))
-    const inputVal = InputValid(event)
+
     setValues((values) => ({
       ...values,
-      [event.target.name]: inputVal,
+      [event.target.name]: event.target.value,
     }))
   }
 
@@ -56,11 +55,6 @@ const useForm = (callback, validate, formValues) => {
     chechFormFieldMatchs()
   }
 
-  const onClick = (event) => {
-    const yardType = event.target.value
-    yardType === 'hire' ? setscreenTyp(yardType) : setscreenTyp(yardType)
-  }
-
   return {
     handleChange,
     handleSubmit,
@@ -70,7 +64,6 @@ const useForm = (callback, validate, formValues) => {
     errors,
     enableSubmit,
     onBlur,
-    onClick,
   }
 }
 

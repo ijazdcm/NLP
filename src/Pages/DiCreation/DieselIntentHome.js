@@ -1,14 +1,9 @@
 import DataTable from 'react-data-table-component'
 import React from 'react'
 import { CButton } from '@coreui/react'
-import { useHistory } from 'react-router-dom'
 import { Link } from "react-router-dom";
-import DieselIntentHire from './DieselIntentHire';
 const DieselIntentHome = () => {
-    let history = useHistory();
-    const redirect = () => {
-        history.push("/Gateout")
-    }
+
     const columns = [
         {
             name: 'S.No',

@@ -108,7 +108,7 @@ const DieselVendorMasterTable = () => {
                             className="px-3 text-white"
                             type="submit"
                         >
-                            <Link className="text-white" to="/DieselVendorMasterTable/DieselVendorMaster">
+                            <Link className="text-white" to="/DieselVendorMaster">
                                 New
                             </Link>
                         </CButton>

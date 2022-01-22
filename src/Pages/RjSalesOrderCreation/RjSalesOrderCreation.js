@@ -24,9 +24,8 @@ import {
   CFormTextarea,
 } from '@coreui/react'
 import { React, useState } from 'react'
-import useForm from 'src/Hooks/useFormValidate'
-import validate from 'src/Validations/FormValidation'
-import { Link } from 'react-router-dom'
+import useForm from 'src/Hooks/useForm'
+import validate from 'src/Utils/Validation'
 import CustomTable from '../../components/customComponent/CustomTable'
 const ParkingYardGate = () => {
   const formValues = {
@@ -72,7 +71,7 @@ const ParkingYardGate = () => {
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="Payment">
                     Payment Terms
-                    {errors.Payment && <span className="help text-danger">{errors.Payment}</span>}
+                    {errors.Payment && <span className="small text-danger">{errors.Payment}</span>}
                   </CFormLabel>
                   <CFormSelect
                     size="sm"
@@ -169,7 +168,7 @@ const ParkingYardGate = () => {
                   <CFormLabel htmlFor="ordQty">
                     Order Qty Tons*
                     {errors.ordQty && (
-                      <span className="help text-danger">{errors.ordQty}</span>
+                      <span className="small text-danger">{errors.ordQty}</span>
                     )}
                   </CFormLabel>
                   <CFormInput
@@ -188,7 +187,7 @@ const ParkingYardGate = () => {
                   <CFormLabel htmlFor="frightincome">
                     Freight Income*
                     {errors.frightincome && (
-                      <span className="help text-danger">{errors.frightincome}</span>
+                      <span className="small text-danger">{errors.frightincome}</span>
                     )}
                   </CFormLabel>
                   <CFormInput
@@ -245,14 +244,14 @@ const ParkingYardGate = () => {
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="expectDelivery">
                     Expected Delivery Date & Time*
-                    {errors.expectDelivery && <span className="help text-danger">{errors.expectDelivery}</span>}
+                    {errors.expectDelivery && <span className="small text-danger">{errors.expectDelivery}</span>}
                   </CFormLabel>
                   <CFormInput size="sm" type="datetime-local" id="expectDelivery" />
                 </CCol>
                 <CCol xs={12} md={3}>
                   <CFormLabel htmlFor="expectReturn">
                     Expected Return Date & Time*
-                    {errors.expectReturn && <span className="help text-danger">{errors.expectReturn}</span>}
+                    {errors.expectReturn && <span className="small text-danger">{errors.expectReturn}</span>}
                   </CFormLabel>
                   <CFormInput size="sm" type="datetime-local" id="expectReturn" />
                 </CCol>
@@ -275,9 +274,7 @@ const ParkingYardGate = () => {
                     className="text-white"
                     type="submit"
                   >
-         <Link className="text-white" to="/">
-                  Previous
-                </Link>
+                    Previous
                   </CButton>
                 </CCol>
 

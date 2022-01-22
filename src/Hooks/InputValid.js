@@ -1,5 +1,3 @@
-import { useState } from 'react'
-
 export const InputValid = (e) => {
   // const [errors, setErrors] = useState({})
   const { name, value } = e.target

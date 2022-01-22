@@ -24,10 +24,9 @@ import {
   CFormTextarea
 } from '@coreui/react'
 import { React, useState } from 'react'
-import useForm from 'src/Hooks/useFormValidate'
-import validate from 'src/Validations/FormValidation'
+import useForm from 'src/Hooks/useForm'
+import validate from 'src/Utils/Validation'
 import CustomTable from '../../components/customComponent/CustomTable'
-import { Link } from 'react-router-dom'
 const VehicleAssignmentConsumer = () => {
   const formValues = {
     vehicleType: '',
@@ -260,9 +259,7 @@ const VehicleAssignmentConsumer = () => {
               <CRow className="mt-3">
                 <CCol>
                   <CButton size="sm" color="primary" className="text-white" type="button">
-                  <Link className="text-white" to="/ShipmentCreationConsumer">
-                  Previous
-                </Link>
+                    Previous
                   </CButton>
                 </CCol>
 

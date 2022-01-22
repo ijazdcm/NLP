@@ -28,8 +28,8 @@ import {
   CFormTextarea,
 } from '@coreui/react'
 import { useState } from 'react'
-import useForm from 'src/Hooks/useFormValidate'
-import VendorRequestValidation from 'src/Validations/VendorCreation/VendorRequestValidation'
+import useForm from 'src/Hooks/useForm'
+import VendorRequestValidation from 'src/Utils/VendorCreation/VendorRequestValidation'
 import { Link } from 'react-router-dom'
 
 const TripSheetSettleMentFG = () => {
@@ -86,7 +86,7 @@ const TripSheetSettleMentFG = () => {
                 <CFormLabel htmlFor="inputAddress">
                   Vehicle Type
                   {errors.vehicleType && (
-                    <span className="help text-danger">{errors.vehicleType}</span>
+                    <span className="small text-danger">{errors.vehicleType}</span>
                   )}
                 </CFormLabel>
                 <CFormInput size="sm" id="inputAddress" value="" readOnly />
@@ -95,7 +95,7 @@ const TripSheetSettleMentFG = () => {
                 <CFormLabel htmlFor="inputAddress">
                   Vehicle Number
                   {errors.vehicleType && (
-                    <span className="help text-danger">{errors.vehicleType}</span>
+                    <span className="small text-danger">{errors.vehicleType}</span>
                   )}
                 </CFormLabel>
                 <CFormInput size="sm" id="inputAddress" value="" readOnly />
@@ -104,7 +104,7 @@ const TripSheetSettleMentFG = () => {
                 <CFormLabel htmlFor="inputAddress">
                   Vehicle Capacity
                   {errors.vehicleType && (
-                    <span className="help text-danger">{errors.vehicleType}</span>
+                    <span className="small text-danger">{errors.vehicleType}</span>
                   )}
                 </CFormLabel>
                 <CFormInput size="sm" id="inputAddress" value="" readOnly />
@@ -113,7 +113,7 @@ const TripSheetSettleMentFG = () => {
                 <CFormLabel htmlFor="inputAddress">
                   VA Number
                   {errors.vehicleType && (
-                    <span className="help text-danger">{errors.vehicleType}</span>
+                    <span className="small text-danger">{errors.vehicleType}</span>
                   )}
                 </CFormLabel>
                 <CFormInput size="sm" id="inputAddress" value="" readOnly />
@@ -124,7 +124,7 @@ const TripSheetSettleMentFG = () => {
                 <CFormLabel htmlFor="inputAddress">
                   Driver Name
                   {errors.vehicleType && (
-                    <span className="help text-danger">{errors.vehicleType}</span>
+                    <span className="small text-danger">{errors.vehicleType}</span>
                   )}
                 </CFormLabel>
                 <CFormInput size="sm" id="inputAddress" value="" readOnly />
@@ -133,7 +133,7 @@ const TripSheetSettleMentFG = () => {
                 <CFormLabel htmlFor="inputAddress">
                   Driver Mobile Number
                   {errors.vehicleType && (
-                    <span className="help text-danger">{errors.vehicleType}</span>
+                    <span className="small text-danger">{errors.vehicleType}</span>
                   )}
                 </CFormLabel>
                 <CFormInput size="sm" id="inputAddress" readOnly />
@@ -142,7 +142,7 @@ const TripSheetSettleMentFG = () => {
                 <CFormLabel htmlFor="inputAddress">
                   Odometer KM
                   {errors.vehicleType && (
-                    <span className="help text-danger">{errors.vehicleType}</span>
+                    <span className="small text-danger">{errors.vehicleType}</span>
                   )}
                 </CFormLabel>
                 <CFormInput size="sm" id="inputAddress" value="" readOnly />
@@ -151,7 +151,7 @@ const TripSheetSettleMentFG = () => {
                 <CFormLabel htmlFor="inputAddress">
                   Odometer Photo
                   {errors.vehicleType && (
-                    <span className="help text-danger">{errors.vehicleType}</span>
+                    <span className="small text-danger">{errors.vehicleType}</span>
                   )}
                 </CFormLabel>
                 <CFormInput
@@ -185,7 +185,7 @@ const TripSheetSettleMentFG = () => {
                 <CFormLabel htmlFor="inputAddress">
                   Gate-In Date & Time
                   {errors.vehicleType && (
-                    <span className="help text-danger">{errors.vehicleType}</span>
+                    <span className="small text-danger">{errors.vehicleType}</span>
                   )}
                 </CFormLabel>
                 <CFormInput size="sm" type="datetime-local" id="inputAddress" value="" readOnly />
@@ -194,7 +194,7 @@ const TripSheetSettleMentFG = () => {
                 <CFormLabel htmlFor="inputAddress">
                   Inspection Date & Time
                   {errors.vehicleType && (
-                    <span className="help text-danger">{errors.vehicleType}</span>
+                    <span className="small text-danger">{errors.vehicleType}</span>
                   )}
                 </CFormLabel>
                 <CFormInput type="datetime-local" size="sm" id="inputAddress" readOnly />
@@ -203,7 +203,7 @@ const TripSheetSettleMentFG = () => {
                 <CFormLabel htmlFor="inputAddress">
                   Doc. Verification Date & Time
                   {errors.vehicleType && (
-                    <span className="help text-danger">{errors.vehicleType}</span>
+                    <span className="small text-danger">{errors.vehicleType}</span>
                   )}
                 </CFormLabel>
                 <CFormInput type="datetime-local" size="sm" id="inputAddress" readOnly />
@@ -212,7 +212,7 @@ const TripSheetSettleMentFG = () => {
                 <CFormLabel htmlFor="inputAddress">
                   Tripsheet Number
                   {errors.vehicleType && (
-                    <span className="help text-danger">{errors.vehicleType}</span>
+                    <span className="small text-danger">{errors.vehicleType}</span>
                   )}
                 </CFormLabel>
                 <CFormInput size="sm" id="inputAddress" value="" readOnly />
@@ -223,7 +223,7 @@ const TripSheetSettleMentFG = () => {
                 <CFormLabel htmlFor="inputAddress">
                   Shed Name
                   {errors.vehicleType && (
-                    <span className="help text-danger">{errors.vehicleType}</span>
+                    <span className="small text-danger">{errors.vehicleType}</span>
                   )}
                 </CFormLabel>
                 <CFormInput size="sm" id="inputAddress" readOnly />
@@ -232,7 +232,7 @@ const TripSheetSettleMentFG = () => {
                 <CFormLabel htmlFor="inputAddress">
                   Owner Name
                   {errors.vehicleType && (
-                    <span className="help text-danger">{errors.vehicleType}</span>
+                    <span className="small text-danger">{errors.vehicleType}</span>
                   )}
                 </CFormLabel>
                 <CFormInput size="sm" id="inputAddress" value="" readOnly />
@@ -241,7 +241,7 @@ const TripSheetSettleMentFG = () => {
                 <CFormLabel htmlFor="inputAddress">
                   Owner Cell Number
                   {errors.vehicleType && (
-                    <span className="help text-danger">{errors.vehicleType}</span>
+                    <span className="small text-danger">{errors.vehicleType}</span>
                   )}
                 </CFormLabel>
                 <CFormInput size="sm" id="inputAddress" value="" readOnly />
@@ -250,7 +250,7 @@ const TripSheetSettleMentFG = () => {
                 <CFormLabel htmlFor="inputAddress">
                   Gate Out Date & Time
                   {errors.vehicleType && (
-                    <span className="help text-danger">{errors.vehicleType}</span>
+                    <span className="small text-danger">{errors.vehicleType}</span>
                   )}
                 </CFormLabel>
                 <CFormInput size="sm" type="datetime-local" id="inputAddress" value="" readOnly />
@@ -261,7 +261,7 @@ const TripSheetSettleMentFG = () => {
                 <CFormLabel htmlFor="inputAddress">
                   Gate-In Time
                   {errors.vehicleType && (
-                    <span className="help text-danger">{errors.vehicleType}</span>
+                    <span className="small text-danger">{errors.vehicleType}</span>
                   )}
                 </CFormLabel>
                 <CFormInput size="sm" id="inputAddress" value="" readOnly />
@@ -270,7 +270,7 @@ const TripSheetSettleMentFG = () => {
                 <CFormLabel htmlFor="inputAddress">
                   Closing KM
                   {errors.vehicleType && (
-                    <span className="help text-danger">{errors.vehicleType}</span>
+                    <span className="small text-danger">{errors.vehicleType}</span>
                   )}
                 </CFormLabel>
                 <CFormInput onClick size="sm" id="inputAddress" value="" readOnly />
@@ -279,7 +279,7 @@ const TripSheetSettleMentFG = () => {
                 <CFormLabel htmlFor="inputAddress">
                   Closing Odometer KM
                   {errors.vehicleType && (
-                    <span className="help text-danger">{errors.vehicleType}</span>
+                    <span className="small text-danger">{errors.vehicleType}</span>
                   )}
                 </CFormLabel>
                 <CFormInput
@@ -314,7 +314,7 @@ const TripSheetSettleMentFG = () => {
                 <CFormLabel htmlFor="inputAddress">
                   Trip KM
                   {errors.vehicleType && (
-                    <span className="help text-danger">{errors.vehicleType}</span>
+                    <span className="small text-danger">{errors.vehicleType}</span>
                   )}
                 </CFormLabel>
                 <CFormInput size="sm" id="inputAddress" value="" readOnly />
@@ -325,7 +325,7 @@ const TripSheetSettleMentFG = () => {
                 <CFormLabel htmlFor="inputAddress">
                   Budgeted KM
                   {errors.vehicleType && (
-                    <span className="help text-danger">{errors.vehicleType}</span>
+                    <span className="small text-danger">{errors.vehicleType}</span>
                   )}
                 </CFormLabel>
                 <CFormInput size="sm" id="inputAddress" value="" readOnly />
@@ -334,7 +334,7 @@ const TripSheetSettleMentFG = () => {
                 <CFormLabel htmlFor="inputAddress">
                   Actual KM
                   {errors.vehicleType && (
-                    <span className="help text-danger">{errors.vehicleType}</span>
+                    <span className="small text-danger">{errors.vehicleType}</span>
                   )}
                 </CFormLabel>
                 <CFormInput size="sm" id="inputAddress" value="" readOnly />
@@ -343,7 +343,7 @@ const TripSheetSettleMentFG = () => {
                 <CFormLabel htmlFor="inputAddress">
                   Diff KM
                   {errors.vehicleType && (
-                    <span className="help text-danger">{errors.vehicleType}</span>
+                    <span className="small text-danger">{errors.vehicleType}</span>
                   )}
                 </CFormLabel>
                 <CFormInput size="sm" id="inputAddress" value="" readOnly />
@@ -352,7 +352,7 @@ const TripSheetSettleMentFG = () => {
                 <CFormLabel htmlFor="inputAddress">
                   Idle Hrs
                   {errors.vehicleType && (
-                    <span className="help text-danger">{errors.vehicleType}</span>
+                    <span className="small text-danger">{errors.vehicleType}</span>
                   )}
                 </CFormLabel>
                 <CFormInput size="sm" id="inputAddress" value="" readOnly />
@@ -363,7 +363,7 @@ const TripSheetSettleMentFG = () => {
                 <CFormLabel htmlFor="inputAddress">
                   Budged Mileage
                   {errors.vehicleType && (
-                    <span className="help text-danger">{errors.vehicleType}</span>
+                    <span className="small text-danger">{errors.vehicleType}</span>
                   )}
                 </CFormLabel>
                 <CFormInput size="sm" id="inputAddress" value="" readOnly />
@@ -372,7 +372,7 @@ const TripSheetSettleMentFG = () => {
                 <CFormLabel htmlFor="inputAddress">
                   Actual Mileage
                   {errors.vehicleType && (
-                    <span className="help text-danger">{errors.vehicleType}</span>
+                    <span className="small text-danger">{errors.vehicleType}</span>
                   )}
                 </CFormLabel>
                 <CFormInput size="sm" id="inputAddress" value="" readOnly />
@@ -381,7 +381,7 @@ const TripSheetSettleMentFG = () => {
                 <CFormLabel htmlFor="inputAddress">
                   Diff. Mileage
                   {errors.vehicleType && (
-                    <span className="help text-danger">{errors.vehicleType}</span>
+                    <span className="small text-danger">{errors.vehicleType}</span>
                   )}
                 </CFormLabel>
                 <CFormInput size="sm" id="inputAddress" value="" readOnly />

@@ -29,9 +29,9 @@ import {
     CModalFooter,
 } from '@coreui/react'
 import { React, useState } from 'react'
-import useForm from 'src/Hooks/useFormValidate.js'
-import validate from 'src/Validations/FormValidation'
-import { Link } from "react-router-dom";
+import useForm from 'src/Hooks/useForm.js'
+import validate from 'src/Utils/Validation'
+
 const VehicleMaster = () => {
     const formValues = {
         vehicleType: '',
@@ -66,7 +66,7 @@ const VehicleMaster = () => {
                                     <CFormLabel htmlFor="vType">
                                         Vehicle Type*{' '}
                                         {errors.vehicleType && (
-                                            <span className="help text-danger">{errors.vehicleType}</span>
+                                            <span className="small text-danger">{errors.vehicleType}</span>
                                         )}
                                     </CFormLabel>
 
@@ -107,7 +107,7 @@ const VehicleMaster = () => {
                                     <CFormLabel htmlFor="vCap">
                                         Vehicle Capacity*{' '}
                                         {errors.VehicleCapacity && (
-                                            <span className="help text-danger">{errors.VehicleCapacity}</span>
+                                            <span className="small text-danger">{errors.VehicleCapacity}</span>
                                         )}
                                     </CFormLabel>
 
@@ -139,7 +139,7 @@ const VehicleMaster = () => {
                                     <CFormLabel htmlFor="vBody">
                                         Vehicle Body Type*{' '}
                                         {errors.VehicleBodyType && (
-                                            <span className="help text-danger">{errors.VehicleBodyType}</span>
+                                            <span className="small text-danger">{errors.VehicleBodyType}</span>
                                         )}
                                     </CFormLabel>
                                     <CFormSelect
@@ -167,7 +167,7 @@ const VehicleMaster = () => {
                                     <CFormLabel htmlFor="rcFront">
                                         RC Copy Front*{' '}
                                         {errors.RCCopyFront && (
-                                            <span className="help text-danger">{errors.RCCopyFront}</span>
+                                            <span className="small text-danger">{errors.RCCopyFront}</span>
                                         )}
                                     </CFormLabel>
                                     <CFormInput
@@ -181,7 +181,7 @@ const VehicleMaster = () => {
                                     <CFormLabel htmlFor="rcBack">
                                         RC Copy Back*{' '}
                                         {errors.RCCopyBack && (
-                                            <span className="help text-danger">{errors.RCCopyBack}</span>
+                                            <span className="small text-danger">{errors.RCCopyBack}</span>
                                         )}
                                     </CFormLabel>
                                     <CFormInput
@@ -195,7 +195,7 @@ const VehicleMaster = () => {
                                     <CFormLabel htmlFor="iFront">
                                         Insurance Copy Front*{' '}
                                         {errors.InsuranceCopyFront && (
-                                            <span className="help text-danger">{errors.InsuranceCopyFront}</span>
+                                            <span className="small text-danger">{errors.InsuranceCopyFront}</span>
                                         )}
                                     </CFormLabel>
                                     <CFormInput
@@ -209,7 +209,7 @@ const VehicleMaster = () => {
                                     <CFormLabel htmlFor="iBack">
                                         Insurance Copy Back*{' '}
                                         {errors.InsuranceCopyBack && (
-                                            <span className="help text-danger">{errors.InsuranceCopyBack}</span>
+                                            <span className="small text-danger">{errors.InsuranceCopyBack}</span>
                                         )}
                                     </CFormLabel>
                                     <CFormInput
@@ -229,7 +229,7 @@ const VehicleMaster = () => {
                                         // size="sm"
                                         // id="date-input"
                                         // locate="pt-br"
-                                        // 
+                                        //
                                         // placeholder=""
                                         type="date" size="sm" id="iValidaitiy" name="fecha-hasta" placeholder="date"
                                     />
@@ -265,9 +265,7 @@ const VehicleMaster = () => {
                                         className="mx-1 px-2 text-white"
                                         type="submit"
                                     >
-                                       <Link className="text-white" to="/VehicleMasterTable">
-                                Cancel
-                            </Link>
+                                        Cancel
                                     </CButton>
                                 </CCol>
                             </CRow>

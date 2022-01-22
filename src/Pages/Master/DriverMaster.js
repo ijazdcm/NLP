@@ -30,9 +30,9 @@ import {
     CFormTextarea,
 } from '@coreui/react'
 import { React, useState } from 'react'
-import useForm from 'src/Hooks/useFormValidate.js'
-import validate from 'src/Validations/FormValidation'
-import { Link } from 'react-router-dom'
+import useForm from 'src/Hooks/useForm.js'
+import validate from 'src/Utils/Validation'
+
 
 const DriverMaster = () => {
     const formValues = {
@@ -68,7 +68,7 @@ const DriverMaster = () => {
                                     <CFormLabel htmlFor="dType">
                                         Driver Type*{' '}
                                         {errors.DriverType && (
-                                            <span className="help text-danger">{errors.DriverType}</span>
+                                            <span className="small text-danger">{errors.DriverType}</span>
                                         )}
                                     </CFormLabel>
 
@@ -150,7 +150,7 @@ const DriverMaster = () => {
                                     <CFormLabel htmlFor="lFront">
                                         License Copy Front*{' '}
                                         {errors.LicenseCopyFront && (
-                                            <span className="help text-danger">{errors.LicenseCopyFront}</span>
+                                            <span className="small text-danger">{errors.LicenseCopyFront}</span>
                                         )}
                                     </CFormLabel>
                                     <CFormInput
@@ -166,7 +166,7 @@ const DriverMaster = () => {
                                     <CFormLabel htmlFor="lBack">
                                         License Copy Back*{' '}
                                         {errors.LicenseCopyBack && (
-                                            <span className="help text-danger">{errors.LicenseCopyBack}</span>
+                                            <span className="small text-danger">{errors.LicenseCopyBack}</span>
                                         )}
                                     </CFormLabel>
                                     <CFormInput
@@ -190,7 +190,7 @@ const DriverMaster = () => {
                                     <CFormLabel htmlFor="AadharCard">
                                         Aadhar Card*{' '}
                                         {errors.AadharCard && (
-                                            <span className="help text-danger">{errors.AadharCard}</span>
+                                            <span className="small text-danger">{errors.AadharCard}</span>
                                         )}
                                     </CFormLabel>
                                     <CFormInput
@@ -204,7 +204,7 @@ const DriverMaster = () => {
                                     <CFormLabel htmlFor="PANCard">
                                         PAN Card*{' '}
                                         {errors.PANCard && (
-                                            <span className="help text-danger">{errors.PANCard}</span>
+                                            <span className="small text-danger">{errors.PANCard}</span>
                                         )}
                                     </CFormLabel>
                                     <CFormInput
@@ -220,7 +220,7 @@ const DriverMaster = () => {
                                     <CFormLabel htmlFor="DriverPhoto">
                                         Driver Photo*{' '}
                                         {errors.DriverPhoto && (
-                                            <span className="help text-danger">{errors.DriverPhoto}</span>
+                                            <span className="small text-danger">{errors.DriverPhoto}</span>
                                         )}
                                     </CFormLabel>
                                     <CFormInput
@@ -264,9 +264,7 @@ const DriverMaster = () => {
                                         className="mx-1 px-2 text-white"
                                         type="submit"
                                     >
-                                          <Link className="text-white" to="/DriverMasterTable">
-                                            Cancel
-                                          </Link>
+                                        Cancel
                                     </CButton>
                                 </CCol>
                             </CRow>
