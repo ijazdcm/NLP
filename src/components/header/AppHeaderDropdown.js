@@ -23,7 +23,7 @@ import {
 } from '@coreui/icons'
 import CIcon from '@coreui/icons-react'
 import LocalStorageService from 'src/Service/LocalStoage'
-
+import AuthService from 'src/Service/Auth/AuthService'
 // import avatar8 from 'https://cdn.icon-icons.com/icons2/2643/PNG/512/male_boy_person_people_avatar_icon_159358.png'
 
 const AppHeaderDropdown = () => {
@@ -33,8 +33,16 @@ const AppHeaderDropdown = () => {
 
   function logout()
   {
-    LocalStorageService.clear()
-    window.location.href="/login";
+    AuthService.logout().then((res)=>{
+
+      if(res.status==204)
+      {
+        LocalStorageService.clear()
+        window.location.href="/login";
+      }
+
+    })
+
   }
 
 
