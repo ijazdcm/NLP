@@ -5,6 +5,7 @@ import Login from './Pages/Auth/Login'
 import './scss/style.scss'
 import store from './store'
 import LocalStorageService from 'src/Service/LocalStoage'
+export const APIURL = 'http://127.0.0.1:8000/api/v1/'
 const loading = (
   <div className="pt-3 text-center">
     <div className="sk-spinner sk-spinner-pulse"></div>
@@ -24,6 +25,5 @@ function App () {
       </React.Suspense>
     )
   }
-
 
 export default App
