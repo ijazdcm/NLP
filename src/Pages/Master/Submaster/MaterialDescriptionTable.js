@@ -23,7 +23,7 @@ import { Link } from 'react-router-dom'
 import useForm from 'src/Hooks/useForm'
 import validate from 'src/Utils/Validation'
 import CustomTable from 'src/components/customComponent/CustomTable'
-import MaterialDescriptionApi from 'src/services/SubMaster/MaterialDescriptionApi'
+import MaterialDescriptionApi from 'src/Service/SubMaster/MaterialDescriptionApi'
 
 const MaterialDescriptionTable = () => {
   const [modal, setModal] = useState(false)
@@ -113,7 +113,7 @@ const MaterialDescriptionTable = () => {
   }
 
   const Delete = (id) => {
-    if (confirm('Are you sure to delete?') == true) {
+    if (window.confirm('Are you sure to delete?') == true) {
       MaterialDescriptionApi.deleteMaterialDescription(id).then((response) => {
         setDeleted('Material Description Removed Successfully')
       })

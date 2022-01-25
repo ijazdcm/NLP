@@ -28,7 +28,7 @@ const AppHeader = () => {
   const curent_route=routes.find((route)=>{
     return route.path == location.pathname
   })
-  console.log(location.pathname);
+  // console.log(location.pathname);
   return (
     <CHeader position="sticky" className="mb-3 p-0 pt-3">
       <CContainer fluid>

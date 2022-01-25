@@ -23,7 +23,7 @@ import { Link } from 'react-router-dom'
 import useForm from 'src/Hooks/useForm'
 import validate from 'src/Utils/Validation'
 import CustomTable from 'src/components/customComponent/CustomTable'
-import UomApi from 'src/services/SubMaster/UomApi'
+import UomApi from 'src/Service/SubMaster/UomApi'
 
 const UomTable = () => {
   const [modal, setModal] = useState(false)
@@ -113,7 +113,7 @@ const UomTable = () => {
   }
 
   const Delete = (id) => {
-    if (confirm('Are you sure to delete?') == true) {
+    if (window.confirm('Are you sure to delete?') == true) {
       UomApi.deleteUom(id).then((response) => {
         setDeleted('UOM Removed Successfully')
       })

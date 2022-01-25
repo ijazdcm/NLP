@@ -234,6 +234,13 @@ export default function validate(values, isTouched) {
   //================================ Masters Validations =============================================
 
   // Sub-Masters
+  if (isTouched.division && !values.division) {
+    errors.division = 'Required'
+  }
+
+  if (isTouched.department && !values.department) {
+    errors.department = 'Required'
+  }
 
   //================================ Masters Validations =============================================
 
