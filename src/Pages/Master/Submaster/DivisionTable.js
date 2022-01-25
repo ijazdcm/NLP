@@ -22,7 +22,7 @@ import { Link } from 'react-router-dom'
 import useForm from 'src/Hooks/useForm'
 import validate from 'src/Utils/Validation'
 import CustomTable from 'src/components/customComponent/CustomTable'
-import DivisionApi from '../../../Services/SubMaster/DivisionApi'
+import DivisionApi from '../../../Service/SubMaster/DivisionApi'
 
 const DivisionTable = () => {
   const [modal, setModal] = useState(false)

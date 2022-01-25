@@ -19,7 +19,7 @@ import { Link } from 'react-router-dom'
 import useForm from 'src/Hooks/useForm'
 import validate from 'src/Utils/Validation'
 import CustomTable from 'src/components/customComponent/CustomTable'
-import VehicleCapacityApi from '../../../Services/SubMaster/VehicleCapacityApi'
+import VehicleCapacityApi from '../../../Service/SubMaster/VehicleCapacityApi'
 const VehicleCapacityTable = () => {
   const [modal, setModal] = useState(false)
   const [deleteModal, setDeleteModal] = useState(false)

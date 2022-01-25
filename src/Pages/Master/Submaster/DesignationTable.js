@@ -19,7 +19,7 @@ import { Link } from 'react-router-dom'
 import useForm from 'src/Hooks/useForm'
 import validate from 'src/Utils/Validation'
 import CustomTable from 'src/components/customComponent/CustomTable'
-import DesignationApi from '../../../Services/SubMaster/DesignationApi'
+import DesignationApi from '../../../Service/SubMaster/DesignationApi'
 const DesignationTable = () => {
   const [modal, setModal] = useState(false)
   const [deleteModal, setDeleteModal] = useState(false)

@@ -19,7 +19,7 @@ import { Link } from 'react-router-dom'
 import useForm from 'src/Hooks/useForm'
 import validate from 'src/Utils/Validation'
 import CustomTable from 'src/components/customComponent/CustomTable'
-import RejectionReasonApi from '../../../Services/SubMaster/RejectionReasonApi'
+import RejectionReasonApi from '../../../Service/SubMaster/RejectionReasonApi'
 const RejectResonTable = () => {
   const [modal, setModal] = useState(false)
   const [deleteModal, setDeleteModal] = useState(false)
