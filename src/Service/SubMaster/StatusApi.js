@@ -1,27 +1,28 @@
-import axios from 'axios'
-import { APIURL } from 'src/App'
+//Created By Mariavananraj
+import AppConfig from "src/AppConfig";
+import api from "../Config";
 
-const API_BASE_URL = APIURL + 'status' //Development
+const STATUS_URL =AppConfig.api.baseUrl+ '/status' 
 
 class StatusApi {
   getStatus() {
-    return axios.get(API_BASE_URL)
+    return api.get(STATUS_URL)
   }
 
   createStatus(value) {
-    return axios.post(API_BASE_URL, value)
+    return api.post(STATUS_URL, value)
   }
 
   getStatusById(StatusId) {
-    return axios.get(API_BASE_URL + '/' + StatusId)
+    return api.get(STATUS_URL + '/' + StatusId)
   }
 
-  updateStatus(Status, StatusId) {
-    return axios.put(API_BASE_URL + '/' + StatusId, Status)
+  updateStatus(StatusDetails, StatusId) {
+    return api.put(STATUS_URL + '/' + StatusId, StatusDetails)
   }
 
   deleteStatus(StatusId) {
-    return axios.delete(API_BASE_URL + '/' + StatusId)
+    return api.delete(STATUS_URL + '/' + StatusId)
   }
 }
 
