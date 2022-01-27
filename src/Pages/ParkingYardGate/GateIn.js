@@ -30,7 +30,7 @@ import { React, useState, useEffect, useContext, Component } from 'react'
 import useForm from 'src/Hooks/useForm'
 import validate from 'src/Utils/Validation'
 import CustomTable from '../../components/customComponent/CustomTable'
-import VehicleMaster from '../../Service/Master/VehicleMaster'
+import VehicleMaster from '../../Service/Master/VehicleMasterService'
 import PYG from '../../Service/Transactions/PYG'
 
 const ParkingYardGate = () => {

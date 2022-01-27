@@ -34,7 +34,7 @@ import RejectReasonTable from './Pages/Master/Submaster/RejectReasonTable'
 import VehicleCapacityTable from './Pages/Master/Submaster/VehicleCapacityTable'
 import UOMTable from './Pages/Master/Submaster/UOMTable'
 import ShedMasterTable from './Pages/Master/ShedMasterTable'
-import VehicleMasterTable from './Pages/VehicleMasterTable'
+import VehicleMasterTable from './Pages/Master/VehicleMasterTable'
 
 // Small Master Pages
 

@@ -30,7 +30,7 @@ const CustomTable = ({ columns, data }) => {
       },
     },
   }
-  return <DataTable columns={columns} data={data} customStyles={customStyles} />
+  return <DataTable columns={columns} data={data} pagination customStyles={customStyles} />
 }
 
 export default CustomTable

@@ -1,0 +1,368 @@
+import {
+  CButton,
+  CCard,
+  CContainer,
+  CCol,
+  CRow,
+  CModal,
+  CModalHeader,
+  CModalTitle,
+  CModalBody,
+  CCardImage,
+  CModalFooter,
+} from '@coreui/react'
+import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
+import CustomTable from 'src/components/customComponent/CustomTable'
+import VehicleMasterService from 'src/Service/Master/VehicleMasterService'
+const VehicleMasterTable = () => {
+
+  const [RCCopyFront, setRCCopyFront] = useState(false)
+  const [RCCopyBack, setRCCopyBack] = useState(false)
+  const [InsuranceCopyBack, setInsuranceCopyBack] = useState(false)
+  const [InsuranceCopyFront, setInsuranceCopyFront] = useState(false)
+
+  const [deleteModal, setDeleteModal] = useState(false)
+  const [rowData, setRowData] = useState([])
+  const [save, setSave] = useState(true)
+  const [success, setSuccess] = useState('')
+  const [editId, setEditId] = useState('')
+  const [deleteId, setDeleteId] = useState('')
+  const [update, setUpdate] = useState('')
+  const [deleted, setDeleted] = useState('')
+  const [error, setError] = useState('')
+  const [documentSrc, setDocumentSrc] = useState('')
+  let viewData
+  //section for handling view model for each model
+
+  function handleViewDocuments(e, id, type) {
+    switch (type) {
+      case 'RC_FRONT':
+        {
+          let singleVehicleInfo = viewData.filter((data) => data.vehicle_id == id)
+          setDocumentSrc(singleVehicleInfo[0].rc_copy_front)
+          setRCCopyFront(true)
+        }
+        break
+      case 'RC_BACK':
+        {
+          let singleVehicleInfo = viewData.filter((data) => data.vehicle_id == id)
+          setDocumentSrc(singleVehicleInfo[0].rc_copy_back)
+          setRCCopyBack(true)
+        }
+        break
+      case 'INSURANCE_FRONT':
+        {
+          let singleVehicleInfo = viewData.filter((data) => data.vehicle_id == id)
+          setDocumentSrc(singleVehicleInfo[0].insurance_copy_front)
+          setInsuranceCopyFront(true)
+        }
+        break
+      case 'INSURANCE_BACK':
+        {
+          let singleVehicleInfo = viewData.filter((data) => data.vehicle_id == id)
+          setDocumentSrc(singleVehicleInfo[0].insurance_copy_back)
+          setInsuranceCopyBack(true)
+        }
+        break
+    }
+  }
+
+  const Edit = (id) => {
+    setSave(false)
+    setEditId('')
+    VehicleMasterService.getDepartmentById(id).then((response) => {
+      let editData = response.data.data
+      // setModal(true)
+      // values.department = editData.department
+      // setEditId(id)
+    })
+  }
+
+  useEffect(() => {
+    VehicleMasterService.getVehicles().then((response) => {
+      viewData = response.data.data
+      let rowDataList = []
+      viewData.map((data, index) => {
+        rowDataList.push({
+          sno: index + 1,
+          Creation_Date: data.created_at,
+          Vehicle_Type: data.vehicle_type_info.type,
+          Vehicle_Capacity: data.vehicle_capacity_info.capacity,
+          Vehicle_Bodytype: data.vehicle_body_type_info.body_type,
+          RC_Copy_Front: (
+            <span>
+              <CButton
+                onClick={(e) => handleViewDocuments(e, data.vehicle_id, 'RC_FRONT')}
+                className="w-100 m-0"
+                color=""
+                size="sm"
+                id="inputAddress"
+              >
+                <span className="float-start">
+                  <i className="fa fa-eye" aria-hidden="true"></i> &nbsp;View
+                </span>
+              </CButton>
+            </span>
+          ),
+          RC_Copy_Back: (
+            <span>
+              <CButton
+                onClick={(e) => handleViewDocuments(e, data.vehicle_id, 'RC_BACK')}
+                className="w-100 m-0"
+                color=""
+                size="sm"
+                id="inputAddress"
+              >
+                <span className="float-start">
+                  <i className="fa fa-eye" aria-hidden="true"></i> &nbsp;View
+                </span>
+              </CButton>
+            </span>
+          ),
+          Insuranance_Copy_Front: (
+            <span>
+              <CButton
+                onClick={(e) => handleViewDocuments(e, data.vehicle_id, 'INSURANCE_FRONT')}
+                className="w-100 m-0"
+                color=""
+                size="sm"
+                id="inputAddress"
+              >
+                <span className="float-start">
+                  <i className="fa fa-eye" aria-hidden="true"></i> &nbsp;View
+                </span>
+              </CButton>
+            </span>
+          ),
+          Insuranance_Copy_Back: (
+            <span>
+              <CButton
+                onClick={(e) => handleViewDocuments(e, data.vehicle_id, 'INSURANCE_BACK')}
+                className="w-100 m-0"
+                color=""
+                size="sm"
+                id="inputAddress"
+              >
+                <span className="float-start">
+                  <i className="fa fa-eye" aria-hidden="true"></i> &nbsp;View
+                </span>
+              </CButton>
+            </span>
+          ),
+          Insurance_Validity: data.insurance_validity,
+          FC_Validity: data.fc_validity,
+          Status: (
+            <span className="badge rounded-pill bg-info">
+              {data.vehicle_status == 1 ? 'Active' : 'Disabled'}
+            </span>
+          ),
+          Action: (
+            <div className="d-flex justify-content-space-between">
+              <CButton
+                size="sm"
+                color="danger"
+                shape="rounded"
+                id={data.id}
+                onClick={() => {
+                  setDeleteId(data.id)
+                  setDeleteModal(true)
+                }}
+                className="m-1"
+              >
+                {/* Delete */}
+                <i className="fa fa-trash" aria-hidden="true"></i>
+              </CButton>
+              <CButton
+                size="sm"
+                color="secondary"
+                shape="rounded"
+                id={data.id}
+                onClick={() => Edit(data.id)}
+                className="m-1"
+              >
+                {/* Edit */}
+                <i className="fa fa-edit" aria-hidden="true"></i>
+              </CButton>
+            </div>
+          ),
+        })
+      })
+      setRowData(rowDataList)
+    })
+  }, [])
+
+  // ============ Column Header Data =======
+
+  const columns = [
+    {
+      name: 'S.No',
+      selector: (row) => row.sno,
+      sortable: true,
+      center: true,
+    },
+    {
+      name: 'Creation Date',
+      selector: (row) => row.Creation_Date,
+      sortable: true,
+      center: true,
+    },
+
+    {
+      name: 'Vehicle Type',
+      selector: (row) => row.Vehicle_Type,
+      sortable: true,
+      center: true,
+    },
+    {
+      name: 'Vehicle Capacity',
+      selector: (row) => row.Vehicle_Capacity,
+      sortable: true,
+      center: true,
+    },
+    {
+      name: 'Vehicle Body Type',
+      selector: (row) => row.Vehicle_Bodytype,
+      sortable: true,
+      center: true,
+    },
+    {
+      name: 'RC Copy Front',
+      selector: (row) => row.RC_Copy_Front,
+      sortable: true,
+      center: true,
+    },
+    {
+      name: 'RC Copy Back',
+      selector: (row) => row.RC_Copy_Back,
+      sortable: true,
+      center: true,
+    },
+    {
+      name: 'Insurance Copy Front',
+      selector: (row) => row.Insuranance_Copy_Front,
+      center: true,
+    },
+    {
+      name: ' Insurance Copy Back',
+      selector: (row) => row.Insuranance_Copy_Back,
+      center: true,
+    },
+    {
+      name: 'Insurance Validity',
+      selector: (row) => row.Insurance_Validity,
+      center: true,
+    },
+    {
+      name: 'FC Validity',
+      selector: (row) => row.FC_Validity,
+      center: true,
+    },
+    {
+      name: 'Status',
+      selector: (row) => row.Status,
+      center: true,
+    },
+    {
+      name: 'Action',
+      selector: (row) => row.Action,
+      center: true,
+    },
+  ]
+
+  //============ column header data=========
+
+  return (
+    <CCard className="mt-4">
+      <CContainer className="mt-2">
+        <CustomTable columns={columns} data={rowData} />
+        <hr></hr>
+        <CRow className="mt-3">
+          <CCol
+            className="offset-md-6"
+            xs={15}
+            sm={15}
+            md={6}
+            style={{ display: 'flex', justifyContent: 'end' }}
+          >
+            <CButton
+              size="sm"
+              color="warning"
+              // disabled={enableSubmit}
+              className="px-3 text-white"
+              type="submit"
+            >
+              <Link className="text-white" to="/VehicleMaster">
+                New
+              </Link>
+            </CButton>
+          </CCol>
+        </CRow>
+      </CContainer>
+      {/*Rc copy front model*/}
+      <CModal visible={RCCopyFront} onClose={() => setRCCopyFront(false)}>
+        <CModalHeader>
+          <CModalTitle>RC Copy Front</CModalTitle>
+        </CModalHeader>
+        <CModalBody>
+          <CCardImage orientation="top" src={documentSrc} />
+        </CModalBody>
+        <CModalFooter>
+          <CButton color="secondary" onClick={() => setRCCopyFront(false)}>
+            Close
+          </CButton>
+        </CModalFooter>
+      </CModal>
+      {/*Rc copy front model*/}
+      {/*Rc copy back model*/}
+      <CModal visible={RCCopyBack} onClose={() => setRCCopyBack(false)}>
+        <CModalHeader>
+          <CModalTitle>RC Copy Back</CModalTitle>
+        </CModalHeader>
+        <CModalBody>
+          <CCardImage orientation="top" src={documentSrc} />
+        </CModalBody>
+        <CModalFooter>
+          <CButton color="secondary" onClick={() => setRCCopyBack(false)}>
+            Close
+          </CButton>
+          {/* <CButton color="primary">Save changes</CButton> */}
+        </CModalFooter>
+      </CModal>
+      {/*Rc copy back model*/}
+
+      {/*Insurance copy front*/}
+      <CModal visible={InsuranceCopyFront} onClose={() => setInsuranceCopyFront(false)}>
+        <CModalHeader>
+          <CModalTitle>Insurance Copy Front</CModalTitle>
+        </CModalHeader>
+        <CModalBody>
+          <CCardImage orientation="top" src={documentSrc} />
+        </CModalBody>
+        <CModalFooter>
+          <CButton color="secondary" onClick={() => setInsuranceCopyFront(false)}>
+            Close
+          </CButton>
+        </CModalFooter>
+      </CModal>
+      {/*Insurance copy front*/}
+      {/*Insurance copy back*/}
+      <CModal visible={InsuranceCopyBack} onClose={() => setInsuranceCopyBack(false)}>
+        <CModalHeader>
+          <CModalTitle>Insurance Copy Back</CModalTitle>
+        </CModalHeader>
+        <CModalBody>
+          <CCardImage orientation="top" src={documentSrc} />
+        </CModalBody>
+        <CModalFooter>
+          <CButton color="secondary" onClick={() => setInsuranceCopyBack(false)}>
+            Close
+          </CButton>
+        </CModalFooter>
+      </CModal>
+      {/*Insurance copy back*/}
+    </CCard>
+  )
+}
+
+export default VehicleMasterTable

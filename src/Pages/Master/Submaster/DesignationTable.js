@@ -106,6 +106,8 @@ const DesignationTable = () => {
       let viewData = response.data.data
       let rowDataList = []
       viewData.map((data, index) => {
+
+
         rowDataList.push({
           sno: index + 1,
           Designation: data.designation,
@@ -118,6 +120,7 @@ const DesignationTable = () => {
                 id={data.id}
                 onClick={() => {
                   setDeleteId(data.id)
+                  // Delete(data.id)
                   setDeleteModal(true)
                 }}
                 className="m-1"
@@ -282,7 +285,7 @@ const DesignationTable = () => {
           )}
         </CModalBody>
         <CModalFooter>
-          <CButton className="mx-2" onClick={() => Delete()} color="danger">
+          <CButton className="mx-2" onClick={() => Delete(deleteId)} color="danger">
             YES
           </CButton>
           <CButton onClick={() => setDeleteModal(false)} color="primary">

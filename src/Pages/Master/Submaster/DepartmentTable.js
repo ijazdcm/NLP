@@ -21,6 +21,7 @@ import validate from 'src/Utils/Validation'
 import CustomTable from 'src/components/customComponent/CustomTable'
 import DepartmentApi from '../../../Service/SubMaster/DepartmentApi'
 const DepartmentTable = () => {
+
   const [modal, setModal] = useState(false)
   const [deleteModal, setDeleteModal] = useState(false)
   const [rowData, setRowData] = useState([])
@@ -284,7 +285,7 @@ const DepartmentTable = () => {
           )}
         </CModalBody>
         <CModalFooter>
-          <CButton className="mx-2" onClick={() => Delete()} color="danger">
+          <CButton className="mx-2" onClick={() => Delete(deleteId)} color="danger">
             YES
           </CButton>
           <CButton onClick={() => setDeleteModal(false)} color="primary">
