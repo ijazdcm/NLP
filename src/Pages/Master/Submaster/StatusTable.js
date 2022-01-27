@@ -21,21 +21,22 @@ import { Link } from 'react-router-dom'
 import useForm from 'src/Hooks/useForm'
 import validate from 'src/Utils/Validation'
 import CustomTable from 'src/components/customComponent/CustomTable'
-// import DivisionApi from '../../../Services/SubMaster/DivisionApi'
-import StatusApi from 'src/services/SubMaster/StatusApi'
+import StatusApi from '../../../Service/SubMaster/StatusApi'
 
-const Status = () => {
+const StatusTable = () => {
   const [modal, setModal] = useState(false)
+  const [deleteModal, setDeleteModal] = useState(false)
   const [rowData, setRowData] = useState([])
   const [save, setSave] = useState(true)
   const [success, setSuccess] = useState('')
   const [editId, setEditId] = useState('')
+  const [deleteId, setDeleteId] = useState('')
   const [update, setUpdate] = useState('')
   const [deleted, setDeleted] = useState('')
   const [error, setError] = useState('')
 
   const formValues = {
-    Status: '',
+      status: '',
   }
   // =================== Validation ===============
   const {
@@ -63,10 +64,13 @@ const Status = () => {
     let createValues = { status: values.status }
     StatusApi.createStatus(createValues)
       .then((response) => {
-        setSuccess('New status Added Successfully')
+        setSuccess('New Status Added Successfully')
       })
       .catch((error) => {
         setError(error.response.data.errors.status[0])
+        setTimeout(() => {
+          setError('')
+        }, 1000)
       })
   }
 
@@ -86,19 +90,22 @@ const Status = () => {
     console.log(updateValues, id)
     StatusApi.updateStatus(updateValues, id)
       .then((response) => {
-        setSuccess('Status Load Details Updated Successfully')
+        setSuccess('Status Updated Successfully')
       })
       .catch((error) => {
         setError(error.response.data.errors.status[0])
+        setTimeout(() => {
+          setError('')
+        }, 1000)
       })
   }
 
-  const Delete = (id) => {
-    alert('Are you Sure ?')
-    StatusApi.deleteStatus(id).then((response) => {
+  const Delete = () => {
+      StatusApi.deleteStatus(deleteId).then((response) => {
       setDeleted('Status Removed Successfully')
-      alert(deleted)
+      setDeleteId('')
     })
+    setTimeout(() => setDeleteModal(false), 500)
   }
 
   useEffect(() => {
@@ -116,7 +123,10 @@ const Status = () => {
                 color="danger"
                 shape="rounded"
                 id={data.id}
-                onClick={() => Delete(data.id)}
+                onClick={() => {
+                  setDeleteId(data.id)
+                  setDeleteModal(true)
+                }}
                 className="m-1"
               >
                 {/* Delete */}
@@ -142,7 +152,6 @@ const Status = () => {
       setTimeout(() => {
         setSuccess('')
         setUpdate('')
-        setError('')
         setDeleted('')
       }, 1500)
     })
@@ -161,7 +170,6 @@ const Status = () => {
     {
       name: 'Status',
       selector: (row) => row.Status,
-      sortable: true,
       left: true,
     },
 
@@ -188,21 +196,27 @@ const Status = () => {
               size="md"
               color="warning"
               className="px-3 text-white"
-              onClick={() => setModal(!modal)}
+              onClick={() => {
+                values.status = ''
+                setSuccess('')
+                setUpdate('')
+                setError('')
+                setDeleted('')
+                setModal(!modal)
+              }}
             >
               <span className="float-start">
-                <i className="" aria-hidden="true"></i> &nbsp;New
+                <i className="" aria-hidden="true"></i> &nbsp;New Status
               </span>
             </CButton>
           </CCol>
         </CRow>
-
-        <CCard className="mt-3">
+        <CCard className="mt-1">
           <CustomTable columns={columns} data={rowData || ''} />
         </CCard>
       </CContainer>
 
-      {/* Modal Section */}
+      {/* View & Edit Modal Section */}
       <CModal visible={modal} onClose={() => setModal(false)}>
         <CModalHeader>
           <CModalTitle>Status</CModalTitle>
@@ -211,32 +225,32 @@ const Status = () => {
           <CRow>
             <CCol>
               {update && (
-                <CAlert color="primary" dismissible>
+                <CAlert color="primary" data-aos="fade-down" dismissible>
                   {update}
                 </CAlert>
               )}
               {success && (
-                <CAlert color="success" dismissible>
+                <CAlert color="success" data-aos="fade-down" dismissible>
                   {success}
                 </CAlert>
               )}
               {error && (
-                <CAlert color="danger" dismissible>
+                <CAlert color="danger" data-aos="fade-down" dismissible>
                   {error}
                 </CAlert>
               )}
 
               <CFormLabel htmlFor="status">
               Status*{' '}
-                {errors.Status && <span className="small text-danger">{errors.Status}</span>}
+                {errors.status && <span className="small text-danger">{errors.status}</span>}
               </CFormLabel>
               <CFormInput
                 size="sm"
-                id="Status"
-                maxLength={40}
-                className={`${errors.Status && 'is-invalid'}`}
-                name="Status"
-                value={values.Status || ''}
+                id="status"
+                maxLength={30}
+                className={`${errors.status && 'is-invalid'}`}
+                name="status"
+                value={values.status || ''}
                 onFocus={onFocus}
                 onBlur={onBlur}
                 onChange={handleChange}
@@ -251,12 +265,40 @@ const Status = () => {
           </CButton>
         </CModalFooter>
       </CModal>
-      {/* Modal Section */}
+      {/* View & Edit Modal Section */}
+
+      {/* Delete Modal Section */}
+      <CModal visible={deleteModal} onClose={() => setDeleteModal(false)}>
+        <CModalHeader>
+          <CModalTitle className="h4">Confirm To Delete</CModalTitle>
+        </CModalHeader>
+        <CModalBody>
+          <CRow>
+            <CCol>
+              <CFormLabel htmlFor="status">Are you sure want to Delete ?</CFormLabel>
+            </CCol>
+          </CRow>
+          {deleted && (
+            <CAlert color="danger" dismissible>
+              {deleted}
+            </CAlert>
+          )}
+        </CModalBody>
+        <CModalFooter>
+          <CButton onClick={() => Delete()} color="danger">
+            YES
+          </CButton>
+          <CButton onClick={() => setDeleteModal(false)} color="primary">
+            NO
+          </CButton>
+        </CModalFooter>
+      </CModal>
+      {/* Delete Modal Section */}
     </>
   )
 }
 
-export default Status
+export default StatusTable
 
 // {
 //   name: 'Creation Date',

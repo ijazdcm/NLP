@@ -1,4 +1,4 @@
-// Created By Mariavanaraj
+// Created By Dev - David Prabu
 import {
   CForm,
   CButton,
@@ -21,15 +21,16 @@ import { Link } from 'react-router-dom'
 import useForm from 'src/Hooks/useForm'
 import validate from 'src/Utils/Validation'
 import CustomTable from 'src/components/customComponent/CustomTable'
-// import DivisionApi from '../../../Services/SubMaster/DivisionApi'
-import PreviousLoadDetailsApi from 'src/services/SubMaster/PreviousLoadDetailsApi'
+import PreviousLoadDetailsApi from '../../../Service/SubMaster/PreviousLoadDetailsApi'
 
 const PreviousLoadDetails = () => {
   const [modal, setModal] = useState(false)
+  const [deleteModal, setDeleteModal] = useState(false)
   const [rowData, setRowData] = useState([])
   const [save, setSave] = useState(true)
   const [success, setSuccess] = useState('')
   const [editId, setEditId] = useState('')
+  const [deleteId, setDeleteId] = useState('')
   const [update, setUpdate] = useState('')
   const [deleted, setDeleted] = useState('')
   const [error, setError] = useState('')
@@ -67,6 +68,9 @@ const PreviousLoadDetails = () => {
       })
       .catch((error) => {
         setError(error.response.data.errors.previous_load_details[0])
+        setTimeout(() => {
+          setError('')
+        }, 1000)
       })
   }
 
@@ -90,15 +94,18 @@ const PreviousLoadDetails = () => {
       })
       .catch((error) => {
         setError(error.response.data.errors.previous_load_details[0])
+        setTimeout(() => {
+          setError('')
+        }, 1000)
       })
   }
 
-  const Delete = (id) => {
-    alert('Are you Sure ?')
-    PreviousLoadDetailsApi.deletePreviousLoadDetails(id).then((response) => {
-      setDeleted('PreviousLoadDetails Removed Successfully')
-      alert(deleted)
+  const Delete = () => {
+    PreviousLoadDetailsApi.deletePreviousLoadDetails(deleteId).then((response) => {
+      setDeleted('Previous Load Details Removed Successfully')
+      setDeleteId('')
     })
+    setTimeout(() => setDeleteModal(false), 500)
   }
 
   useEffect(() => {
@@ -116,7 +123,10 @@ const PreviousLoadDetails = () => {
                 color="danger"
                 shape="rounded"
                 id={data.id}
-                onClick={() => Delete(data.id)}
+                onClick={() => {
+                  setDeleteId(data.id)
+                  setDeleteModal(true)
+                }}
                 className="m-1"
               >
                 {/* Delete */}
@@ -142,7 +152,6 @@ const PreviousLoadDetails = () => {
       setTimeout(() => {
         setSuccess('')
         setUpdate('')
-        setError('')
         setDeleted('')
       }, 1500)
     })
@@ -161,7 +170,6 @@ const PreviousLoadDetails = () => {
     {
       name: 'PreviousLoadDetails',
       selector: (row) => row.PreviousLoadDetails,
-      sortable: true,
       left: true,
     },
 
@@ -188,21 +196,27 @@ const PreviousLoadDetails = () => {
               size="md"
               color="warning"
               className="px-3 text-white"
-              onClick={() => setModal(!modal)}
+              onClick={() => {
+                values.previous_load_details = ''
+                setSuccess('')
+                setUpdate('')
+                setError('')
+                setDeleted('')
+                setModal(!modal)
+              }}
             >
               <span className="float-start">
-                <i className="" aria-hidden="true"></i> &nbsp;New
+                <i className="" aria-hidden="true"></i> &nbsp;New Previous Load Details
               </span>
             </CButton>
           </CCol>
         </CRow>
-
-        <CCard className="mt-3">
+        <CCard className="mt-1">
           <CustomTable columns={columns} data={rowData || ''} />
         </CCard>
       </CContainer>
 
-      {/* Modal Section */}
+      {/* View & Edit Modal Section */}
       <CModal visible={modal} onClose={() => setModal(false)}>
         <CModalHeader>
           <CModalTitle>Previous Load Details</CModalTitle>
@@ -211,17 +225,17 @@ const PreviousLoadDetails = () => {
           <CRow>
             <CCol>
               {update && (
-                <CAlert color="primary" dismissible>
+                <CAlert color="primary" data-aos="fade-down" dismissible>
                   {update}
                 </CAlert>
               )}
               {success && (
-                <CAlert color="success" dismissible>
+                <CAlert color="success" data-aos="fade-down" dismissible>
                   {success}
                 </CAlert>
               )}
               {error && (
-                <CAlert color="danger" dismissible>
+                <CAlert color="danger" data-aos="fade-down" dismissible>
                   {error}
                 </CAlert>
               )}
@@ -233,7 +247,7 @@ const PreviousLoadDetails = () => {
               <CFormInput
                 size="sm"
                 id="previous_load_details"
-                maxLength={40}
+                maxLength={20}
                 className={`${errors.previous_load_details && 'is-invalid'}`}
                 name="previous_load_details"
                 value={values.previous_load_details || ''}
@@ -251,7 +265,35 @@ const PreviousLoadDetails = () => {
           </CButton>
         </CModalFooter>
       </CModal>
-      {/* Modal Section */}
+      {/* View & Edit Modal Section */}
+
+      {/* Delete Modal Section */}
+      <CModal visible={deleteModal} onClose={() => setDeleteModal(false)}>
+        <CModalHeader>
+          <CModalTitle className="h4">Confirm To Delete</CModalTitle>
+        </CModalHeader>
+        <CModalBody>
+          <CRow>
+            <CCol>
+              <CFormLabel htmlFor="previous_load_details">Are you sure want to Delete ?</CFormLabel>
+            </CCol>
+          </CRow>
+          {deleted && (
+            <CAlert color="danger" dismissible>
+              {deleted}
+            </CAlert>
+          )}
+        </CModalBody>
+        <CModalFooter>
+          <CButton onClick={() => Delete()} color="danger">
+            YES
+          </CButton>
+          <CButton onClick={() => setDeleteModal(false)} color="primary">
+            NO
+          </CButton>
+        </CModalFooter>
+      </CModal>
+      {/* Delete Modal Section */}
     </>
   )
 }
