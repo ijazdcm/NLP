@@ -34,6 +34,7 @@ const useForm = (callback, validate, formValues) => {
     //While User Changes
     event.persist()
     setIsTouched((isTouched) => ({ ...isTouched, [event.target.name]: true }))
+    setErrors(validate(values, isTouched))
 
     setValues((values) => ({
       ...values,

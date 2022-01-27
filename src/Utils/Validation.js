@@ -212,12 +212,20 @@ export default function validate(values, isTouched) {
   if (isTouched.division && !values.division) {
     errors.division = 'Required'
   }
+
+  // ===================By Alwin================(start)========================
+
   if (isTouched.material_description && !values.material_description) {
     errors.material_description = 'Required'
   }
   if (isTouched.uom && !values.uom) {
     errors.uom = 'Required'
   }
+  if (isTouched.defect_type && !values.defect_type.trim()) {
+    errors.defect_type = 'Required'
+  }
+
+  // ===================By Alwin================(end)========================
 
   // Change Vehicle
   if (isTouched.status && !values.status) {
