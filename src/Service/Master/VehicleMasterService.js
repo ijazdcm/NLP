@@ -17,8 +17,9 @@ class VehicleMasterService {
     return api.get(VEHILCE_MASTER_BASE_URL + '/' + VehiclesId)
   }
 
-  updateVehicles(Vehicles, VehiclesId) {
-    return api.put(VEHILCE_MASTER_BASE_URL + '/' + VehiclesId, Vehicles)
+  updateVehicles( VehiclesId,Vehicles) {
+
+    return api.post(VEHILCE_MASTER_BASE_URL + '/' + VehiclesId, Vehicles)
   }
 
   deleteVehicles(VehiclesId) {

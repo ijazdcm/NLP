@@ -5,6 +5,7 @@ import api from '../Config'
 const DEFECT_TYPE_URL = AppConfig.api.baseUrl + '/defectType' //Development
 
 class DefectTypeApi {
+
   getDefectType() {
     return api.get(DEFECT_TYPE_URL)
   }

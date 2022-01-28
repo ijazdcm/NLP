@@ -358,12 +358,6 @@ const _nav = [
           },
           {
             component: CNavItem,
-            name: 'Other Charges',
-            to: '/OtherChargesTable',
-            title: 'Other Charges',
-          },
-          {
-            component: CNavItem,
             name: 'Previous Load Details',
             to: '/PreviousLoadDetailsTable',
             title: 'Previous Load Details',

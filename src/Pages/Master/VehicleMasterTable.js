@@ -15,6 +15,10 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import CustomTable from 'src/components/customComponent/CustomTable'
 import VehicleMasterService from 'src/Service/Master/VehicleMasterService'
+import {  useNavigate } from 'react-router-dom'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
+
 const VehicleMasterTable = () => {
 
   const [RCCopyFront, setRCCopyFront] = useState(false)
@@ -24,15 +28,23 @@ const VehicleMasterTable = () => {
 
   const [deleteModal, setDeleteModal] = useState(false)
   const [rowData, setRowData] = useState([])
-  const [save, setSave] = useState(true)
-  const [success, setSuccess] = useState('')
-  const [editId, setEditId] = useState('')
-  const [deleteId, setDeleteId] = useState('')
-  const [update, setUpdate] = useState('')
-  const [deleted, setDeleted] = useState('')
-  const [error, setError] = useState('')
+  const [mount, setMount] = useState(1)
+
   const [documentSrc, setDocumentSrc] = useState('')
   let viewData
+
+
+  function changeVehicleStatus(id)
+  {
+    VehicleMasterService.deleteVehicles(id).then(res=>{
+      toast.success("Vehicle Status Updated Successfully!")
+      setMount(preState=>preState+1)
+    })
+  }
+
+
+
+
   //section for handling view model for each model
 
   function handleViewDocuments(e, id, type) {
@@ -68,16 +80,7 @@ const VehicleMasterTable = () => {
     }
   }
 
-  const Edit = (id) => {
-    setSave(false)
-    setEditId('')
-    VehicleMasterService.getDepartmentById(id).then((response) => {
-      let editData = response.data.data
-      // setModal(true)
-      // values.department = editData.department
-      // setEditId(id)
-    })
-  }
+
 
   useEffect(() => {
     VehicleMasterService.getVehicles().then((response) => {
@@ -87,8 +90,9 @@ const VehicleMasterTable = () => {
         rowDataList.push({
           sno: index + 1,
           Creation_Date: data.created_at,
+          vehicle_Number: data.vehicle_number,
           Vehicle_Type: data.vehicle_type_info.type,
-          Vehicle_Capacity: data.vehicle_capacity_info.capacity,
+          Vehicle_Capacity: data.vehicle_capacity_info.capacity+"-TON",
           Vehicle_Bodytype: data.vehicle_body_type_info.body_type,
           RC_Copy_Front: (
             <span>
@@ -165,32 +169,32 @@ const VehicleMasterTable = () => {
                 shape="rounded"
                 id={data.id}
                 onClick={() => {
-                  setDeleteId(data.id)
-                  setDeleteModal(true)
+                  changeVehicleStatus(data.vehicle_id)
                 }}
                 className="m-1"
               >
                 {/* Delete */}
                 <i className="fa fa-trash" aria-hidden="true"></i>
               </CButton>
-              <CButton
-                size="sm"
-                color="secondary"
-                shape="rounded"
-                id={data.id}
-                onClick={() => Edit(data.id)}
-                className="m-1"
-              >
-                {/* Edit */}
-                <i className="fa fa-edit" aria-hidden="true"></i>
-              </CButton>
+              <Link to={`VehicleMaster/${data.vehicle_id}`}>
+                <CButton
+                  size="sm"
+                  color="secondary"
+                  shape="rounded"
+                  id={data.id}
+                  className="m-1"
+                >
+                  {/* Edit */}
+                  <i className="fa fa-edit" aria-hidden="true"></i>
+                </CButton>
+              </Link>
             </div>
           ),
         })
       })
       setRowData(rowDataList)
     })
-  }, [])
+  }, [mount])
 
   // ============ Column Header Data =======
 
@@ -207,7 +211,12 @@ const VehicleMasterTable = () => {
       sortable: true,
       center: true,
     },
-
+    {
+      name: 'Vehicle Number',
+      selector: (row) => row.vehicle_Number,
+      sortable: true,
+      center: true,
+    },
     {
       name: 'Vehicle Type',
       selector: (row) => row.Vehicle_Type,
@@ -285,6 +294,7 @@ const VehicleMasterTable = () => {
             md={6}
             style={{ display: 'flex', justifyContent: 'end' }}
           >
+            <Link className="text-white" to="/VehicleMaster">
             <CButton
               size="sm"
               color="warning"
@@ -292,10 +302,9 @@ const VehicleMasterTable = () => {
               className="px-3 text-white"
               type="submit"
             >
-              <Link className="text-white" to="/VehicleMaster">
                 New
-              </Link>
             </CButton>
+            </Link>
           </CCol>
         </CRow>
       </CContainer>

@@ -11,24 +11,15 @@ import DieselVendorMasterTable from './Pages/Master/DieselVendorMasterTable'
 import UserLoginMasterTable from './Pages/Master/UserLoginMasterTable'
 
 // Sub-Master Pages
-import Department from './Pages/Master/Submaster/Department'
-import Designation from './Pages/Master/Submaster/Designation'
-import Division from './Pages/Master/Submaster/Division'
-import MaterialDescription from './Pages/Master/Submaster/MaterialDescription'
-import OtherCharges from './Pages/Master/Submaster/OtherCharges'
-import PreviousLoadDetails from './Pages/Master/Submaster/PreviousLoadDetails'
-import RejectReason from './Pages/Master/Submaster/RejectReason'
-import Status from './Pages/Master/Submaster/Status'
-import UOM from './Pages/Master/Submaster/UOM'
-import VehicleCapacity from './Pages/Master/Submaster/VehicleCapacity'
+
+
 import DesignationTable from './Pages/Master/Submaster/DesignationTable'
-import DefectType from './Pages/Master/Submaster/DefectType'
 import DefectTypeTable from './Pages/Master/Submaster/DefectTypeTable'
 import DepartmentTable from './Pages/Master/Submaster/DepartmentTable'
 import StatusTable from './Pages/Master/Submaster/StatusTable'
 import DivisionTable from './Pages/Master/Submaster/DivisionTable'
 import MaterialDescriptionTable from './Pages/Master/Submaster/MaterialDescriptionTable'
-import OtherChargesTable from './Pages/Master/Submaster/OtherChargesTable'
+// import OtherChargesTable from './Pages/Master/Submaster/OtherChargesTable'
 import PreviousLoadDetailsTable from './Pages/Master/Submaster/PreviousLoadDetailsTable'
 import RejectReasonTable from './Pages/Master/Submaster/RejectReasonTable'
 import VehicleCapacityTable from './Pages/Master/Submaster/VehicleCapacityTable'
@@ -99,6 +90,7 @@ import UserLogin from './Pages/UserLogin'
 import UserRegister from './Pages/UserRegister'
 import Gateout from './Pages/Gateout/Gateout'
 import AllCommonTable from './Pages/AllCommonTable/AllCommonTable'
+import VehicleMasterEdit from './Pages/Master/VehicleMasterEdit'
 
 const routes = [
   // Master
@@ -117,6 +109,12 @@ const routes = [
     exact: true,
     name: 'VehicleMasterTable',
     component: VehicleMasterTable,
+  },
+  {
+    path: '/VehicleMasterTable/VehicleMaster/:id',
+    exact: true,
+    name: 'VehicleMasterTableEdit',
+    component: VehicleMasterEdit,
   },
   { path: '/ShedMasterTable', exact: true, name: 'ShedMasterTable', component: ShedMasterTable },
   {
@@ -139,27 +137,27 @@ const routes = [
   },
 
   // Sub-Master
-  { path: '/DefectType', exact: true, name: 'DefectType', component: DefectType },
-  { path: '/Department', exact: true, name: 'Department', component: Department },
-  { path: '/Designation', exact: true, name: 'Designation', component: Designation },
-  { path: '/Division', exact: true, name: 'Division', component: Division },
-  {
-    path: '/MaterialDescription',
-    exact: true,
-    name: 'MaterialDescription',
-    component: MaterialDescription,
-  },
-  { path: '/OtherCharges', exact: true, name: 'OtherCharges', component: OtherCharges },
-  {
-    path: '/PreviousLoadDetails',
-    exact: true,
-    name: 'PreviousLoadDetails',
-    component: PreviousLoadDetails,
-  },
-  { path: '/RejectReason', exact: true, name: 'RejectReason', component: RejectReason },
-  { path: '/Status', exact: true, name: 'Status', component: Status },
-  { path: '/UOM', exact: true, name: 'UOM', component: UOM },
-  { path: '/VehicleCapacity', exact: true, name: 'VehicleCapacity', component: VehicleCapacity },
+  // { path: '/DefectType', exact: true, name: 'DefectType', component: DefectType },
+  // { path: '/Department', exact: true, name: 'Department', component: Department },
+  // { path: '/Designation', exact: true, name: 'Designation', component: Designation },
+  // { path: '/Division', exact: true, name: 'Division', component: Division },
+  // {
+  //   path: '/MaterialDescription',
+  //   exact: true,
+  //   name: 'MaterialDescription',
+  //   component: MaterialDescription,
+  // },
+  // { path: '/OtherCharges', exact: true, name: 'OtherCharges', component: OtherCharges },
+  // {
+  //   path: '/PreviousLoadDetails',
+  //   exact: true,
+  //   name: 'PreviousLoadDetails',
+  //   component: PreviousLoadDetails,
+  // },
+  // { path: '/RejectReason', exact: true, name: 'RejectReason', component: RejectReason },
+  // { path: '/Status', exact: true, name: 'Status', component: Status },
+  // { path: '/UOM', exact: true, name: 'UOM', component: UOM },
+  // { path: '/VehicleCapacity', exact: true, name: 'VehicleCapacity', component: VehicleCapacity },
 
   // Small Master
 
@@ -388,12 +386,7 @@ const routes = [
     name: 'MaterialDescriptionTable',
     component: MaterialDescriptionTable,
   },
-  {
-    path: '/OtherChargesTable',
-    exact: true,
-    name: 'OtherChargesTable',
-    component: OtherChargesTable,
-  },
+
   {
     path: '/PreviousLoadDetailsTable',
     exact: true,

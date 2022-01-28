@@ -1,7 +1,10 @@
 import DataTable from 'react-data-table-component'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { CButton } from '@coreui/react'
 const CustomTable = ({ columns, data }) => {
+
+
+
   const customStyles = {
     rows: {
       style: {
@@ -30,7 +33,10 @@ const CustomTable = ({ columns, data }) => {
       },
     },
   }
-  return <DataTable columns={columns} data={data} pagination customStyles={customStyles} />
+
+
+
+  return <DataTable columns={columns} data={data} pagination  customStyles={customStyles} />
 }
 
 export default CustomTable

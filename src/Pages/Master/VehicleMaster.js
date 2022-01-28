@@ -35,12 +35,14 @@ import VehicleTypeService from "src/Service/SmallMaster/Vehicles/VehicleTypeServ
 import VehicleCapacityService from "src/Service/SmallMaster/Vehicles/VehicleCapacityService"
 import VehicleBodyTypeService from "src/Service/SmallMaster/Vehicles/VehicleBodyTypeService"
 import VehicleMasterService from 'src/Service/Master/VehicleMasterService'
+import { Link, useNavigate } from 'react-router-dom'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const VehicleMaster = () => {
   const formValues = {
     vehicleType: '',
     vechileNumber: '',
     VehicleCapacity: '',
-    VehicleBodyType: '',
     VehicleBodyType: '',
     RCCopyFront: '',
     RCCopyBack: '',
@@ -54,6 +56,7 @@ const VehicleMaster = () => {
   const [vehicleCapacity,setVehicleCapacity]=useState([]);
   const [vehicleBody,setVehicleBody]=useState([]);
 
+  const navigation= useNavigate()
 
   const { values, errors, handleChange, onFocus, handleSubmit, enableSubmit, onBlur } = useForm(
     addNewVehicle,
@@ -63,9 +66,34 @@ const VehicleMaster = () => {
 
   function addNewVehicle() {
 
-    VehicleMasterService.createVehicles(values).then(res=>{
 
-      console.log(res);
+    const formData = new FormData();
+
+    formData.append("vehicle_type_id",  values.vehicleType);
+    formData.append("vehicle_number",  values.vechileNumber);
+    formData.append("vehicle_capacity_id",  values.VehicleCapacity);
+    formData.append("vehicle_body_type_id",  values.VehicleBodyType);
+    formData.append("rc_copy_front",  values.RCCopyFront);
+    formData.append("rc_copy_back",  values.RCCopyBack);
+    formData.append("insurance_copy_front",  values.InsuranceCopyFront);
+    formData.append("insurance_copy_back",  values.InsuranceCopyBack);
+    formData.append("insurance_validity",  values.InsuranceValidity);
+    formData.append("fc_validity",  values.FCValidity);
+
+    VehicleMasterService.createVehicles(formData).then(res=>{
+
+          if(res.status===201)
+          {
+
+            toast.success("Vehicle Created Successfully!")
+
+            setTimeout(() => {
+              navigation("/VehicleMasterTable")
+            }, 1000);
+
+
+          }
+
     });
 
   }
@@ -89,7 +117,7 @@ const VehicleMaster = () => {
 
   },[])
 
-
+  // console.log(values);
 
   return (
     <>
@@ -117,7 +145,11 @@ const VehicleMaster = () => {
                   >
                     <option value="0">Select ...</option>
                     { vehicleType.map(({id,type})=>{
-                       return  <><option key={id} value={id}>{type}</option></>
+                         if(id<=2)
+                         {
+                          return  <><option key={id} value={id}>{type}</option></>
+                         }
+
                     })}
                   </CFormSelect>
                 </CCol>
@@ -277,6 +309,7 @@ const VehicleMaster = () => {
                     onChange={handleChange}
                     size="sm"
                     required
+                    value={values.InsuranceValidity}
                     id="iValidaitiy"
                     name="InsuranceValidity"
                     placeholder="date"
@@ -290,6 +323,7 @@ const VehicleMaster = () => {
                     type="date"
                     size="sm"
                     required
+                    value={values.FCValidity}
                     onBlur={onBlur}
                     onChange={handleChange}
                     id="fcvalid"
@@ -315,15 +349,14 @@ const VehicleMaster = () => {
                   >
                     ADD
                   </CButton>
-
-                  <CButton
+                  <Link to={"/VehicleMasterTable"}><CButton
                     size="s-lg"
                     color="warning"
                     className="mx-1 px-2 text-white"
-                    type="submit"
+                    type="button"
                   >
                     BACK
-                  </CButton>
+                  </CButton></Link>
                 </CCol>
               </CRow>
             </CForm>
