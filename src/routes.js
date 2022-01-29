@@ -1,7 +1,7 @@
 import React from 'react'
 
 // Master Pages
-import VehicleMaster from './Pages/Master/VehicleMaster'
+import VehicleMaster from './Pages/Master/VehicleMaster/VehicleMaster'
 import DriverMaster from './Pages/Master/DriverMaster'
 import ShedMaster from './Pages/Master/ShedMaster'
 import DieselVendorMaster from './Pages/Master/DieselVendorMaster'
@@ -25,7 +25,7 @@ import RejectReasonTable from './Pages/Master/Submaster/RejectReasonTable'
 import VehicleCapacityTable from './Pages/Master/Submaster/VehicleCapacityTable'
 import UOMTable from './Pages/Master/Submaster/UOMTable'
 import ShedMasterTable from './Pages/Master/ShedMasterTable'
-import VehicleMasterTable from './Pages/Master/VehicleMasterTable'
+import VehicleMasterTable from './Pages/Master/VehicleMaster/VehicleMasterTable'
 
 // Small Master Pages
 
@@ -90,7 +90,7 @@ import UserLogin from './Pages/UserLogin'
 import UserRegister from './Pages/UserRegister'
 import Gateout from './Pages/Gateout/Gateout'
 import AllCommonTable from './Pages/AllCommonTable/AllCommonTable'
-import VehicleMasterEdit from './Pages/Master/VehicleMasterEdit'
+import VehicleMasterEdit from './Pages/Master/VehicleMaster/VehicleMasterEdit'
 
 const routes = [
   // Master

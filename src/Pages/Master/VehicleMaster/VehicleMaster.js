@@ -30,7 +30,7 @@ import {
 } from '@coreui/react'
 import { React, useEffect, useState } from 'react'
 import useForm from 'src/Hooks/useForm.js'
-import VehicleMasterValidation from '../../Utils/Master/VehicleMasterValidation'
+import VehicleMasterValidation from '../../../Utils/Master/VehicleMasterValidation'
 import VehicleTypeService from "src/Service/SmallMaster/Vehicles/VehicleTypeService"
 import VehicleCapacityService from "src/Service/SmallMaster/Vehicles/VehicleCapacityService"
 import VehicleBodyTypeService from "src/Service/SmallMaster/Vehicles/VehicleBodyTypeService"

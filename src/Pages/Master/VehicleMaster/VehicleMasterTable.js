@@ -18,6 +18,7 @@ import VehicleMasterService from 'src/Service/Master/VehicleMasterService'
 import {  useNavigate } from 'react-router-dom'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
+import CustomSpanButton from 'src/components/customComponent/CustomSpanButton'
 
 const VehicleMasterTable = () => {
 
@@ -95,70 +96,22 @@ const VehicleMasterTable = () => {
           Vehicle_Capacity: data.vehicle_capacity_info.capacity+"-TON",
           Vehicle_Bodytype: data.vehicle_body_type_info.body_type,
           RC_Copy_Front: (
-            <span>
-              <CButton
-                onClick={(e) => handleViewDocuments(e, data.vehicle_id, 'RC_FRONT')}
-                className="w-100 m-0"
-                color=""
-                size="sm"
-                id="inputAddress"
-              >
-                <span className="float-start">
-                  <i className="fa fa-eye" aria-hidden="true"></i> &nbsp;View
-                </span>
-              </CButton>
-            </span>
+            <CustomSpanButton handleViewDocuments={handleViewDocuments} vehicleId={data.vehicle_id} documentType={'RC_FRONT'} />
           ),
           RC_Copy_Back: (
-            <span>
-              <CButton
-                onClick={(e) => handleViewDocuments(e, data.vehicle_id, 'RC_BACK')}
-                className="w-100 m-0"
-                color=""
-                size="sm"
-                id="inputAddress"
-              >
-                <span className="float-start">
-                  <i className="fa fa-eye" aria-hidden="true"></i> &nbsp;View
-                </span>
-              </CButton>
-            </span>
+            <CustomSpanButton handleViewDocuments={handleViewDocuments} vehicleId={data.vehicle_id} documentType={'RC_BACK'} />
           ),
           Insuranance_Copy_Front: (
-            <span>
-              <CButton
-                onClick={(e) => handleViewDocuments(e, data.vehicle_id, 'INSURANCE_FRONT')}
-                className="w-100 m-0"
-                color=""
-                size="sm"
-                id="inputAddress"
-              >
-                <span className="float-start">
-                  <i className="fa fa-eye" aria-hidden="true"></i> &nbsp;View
-                </span>
-              </CButton>
-            </span>
+            <CustomSpanButton handleViewDocuments={handleViewDocuments} vehicleId={data.vehicle_id} documentType={'INSURANCE_FRONT'} />
           ),
           Insuranance_Copy_Back: (
-            <span>
-              <CButton
-                onClick={(e) => handleViewDocuments(e, data.vehicle_id, 'INSURANCE_BACK')}
-                className="w-100 m-0"
-                color=""
-                size="sm"
-                id="inputAddress"
-              >
-                <span className="float-start">
-                  <i className="fa fa-eye" aria-hidden="true"></i> &nbsp;View
-                </span>
-              </CButton>
-            </span>
+            <CustomSpanButton handleViewDocuments={handleViewDocuments} vehicleId={data.vehicle_id} documentType={'INSURANCE_BACK'} />
           ),
           Insurance_Validity: data.insurance_validity,
           FC_Validity: data.fc_validity,
           Status: (
-            <span className="badge rounded-pill bg-info">
-              {data.vehicle_status == 1 ? 'Active' : 'Disabled'}
+            <span className="badge rounded-pill bg-info" >
+              {data.vehicle_status === 1 ? 'Active' : 'Disabled'}
             </span>
           ),
           Action: (
