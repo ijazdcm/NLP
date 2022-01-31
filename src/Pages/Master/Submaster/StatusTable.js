@@ -36,7 +36,7 @@ const StatusTable = () => {
   const [error, setError] = useState('')
 
   const formValues = {
-      status: '',
+    status: '',
   }
   // =================== Validation ===============
   const {
@@ -101,7 +101,7 @@ const StatusTable = () => {
   }
 
   const Delete = () => {
-      StatusApi.deleteStatus(deleteId).then((response) => {
+    StatusApi.deleteStatus(deleteId).then((response) => {
       setDeleted('Status Removed Successfully')
       setDeleteId('')
     })
@@ -170,6 +170,7 @@ const StatusTable = () => {
     {
       name: 'Status',
       selector: (row) => row.Status,
+      sortable: true,
       left: true,
     },
 
@@ -241,7 +242,7 @@ const StatusTable = () => {
               )}
 
               <CFormLabel htmlFor="status">
-              Status*{' '}
+                Status*{' '}
                 {errors.status && <span className="small text-danger">{errors.status}</span>}
               </CFormLabel>
               <CFormInput

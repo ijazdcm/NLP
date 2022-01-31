@@ -31,13 +31,13 @@ import {
 import { React, useEffect, useState } from 'react'
 import useForm from 'src/Hooks/useForm.js'
 import VehicleMasterValidation from '../../../Utils/Master/VehicleMasterValidation'
-import VehicleTypeService from "src/Service/SmallMaster/Vehicles/VehicleTypeService"
-import VehicleCapacityService from "src/Service/SmallMaster/Vehicles/VehicleCapacityService"
-import VehicleBodyTypeService from "src/Service/SmallMaster/Vehicles/VehicleBodyTypeService"
+import VehicleTypeService from 'src/Service/SmallMaster/Vehicles/VehicleTypeService'
+import VehicleCapacityService from 'src/Service/SmallMaster/Vehicles/VehicleCapacityService'
+import VehicleBodyTypeService from 'src/Service/SmallMaster/Vehicles/VehicleBodyTypeService'
 import VehicleMasterService from 'src/Service/Master/VehicleMasterService'
 import { Link, useNavigate } from 'react-router-dom'
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 const VehicleMaster = () => {
   const formValues = {
     vehicleType: '',
@@ -52,11 +52,11 @@ const VehicleMaster = () => {
     FCValidity: '',
   }
 
-  const [vehicleType,setVehicleType]=useState([]);
-  const [vehicleCapacity,setVehicleCapacity]=useState([]);
-  const [vehicleBody,setVehicleBody]=useState([]);
+  const [vehicleType, setVehicleType] = useState([])
+  const [vehicleCapacity, setVehicleCapacity] = useState([])
+  const [vehicleBody, setVehicleBody] = useState([])
 
-  const navigation= useNavigate()
+  const navigation = useNavigate()
 
   const { values, errors, handleChange, onFocus, handleSubmit, enableSubmit, onBlur } = useForm(
     addNewVehicle,
@@ -65,57 +65,45 @@ const VehicleMaster = () => {
   )
 
   function addNewVehicle() {
+    const formData = new FormData()
 
+    formData.append('vehicle_type_id', values.vehicleType)
+    formData.append('vehicle_number', values.vechileNumber)
+    formData.append('vehicle_capacity_id', values.VehicleCapacity)
+    formData.append('vehicle_body_type_id', values.VehicleBodyType)
+    formData.append('rc_copy_front', values.RCCopyFront)
+    formData.append('rc_copy_back', values.RCCopyBack)
+    formData.append('insurance_copy_front', values.InsuranceCopyFront)
+    formData.append('insurance_copy_back', values.InsuranceCopyBack)
+    formData.append('insurance_validity', values.InsuranceValidity)
+    formData.append('fc_validity', values.FCValidity)
 
-    const formData = new FormData();
+    VehicleMasterService.createVehicles(formData).then((res) => {
+      if (res.status === 201) {
+        toast.success('Vehicle Created Successfully!')
 
-    formData.append("vehicle_type_id",  values.vehicleType);
-    formData.append("vehicle_number",  values.vechileNumber);
-    formData.append("vehicle_capacity_id",  values.VehicleCapacity);
-    formData.append("vehicle_body_type_id",  values.VehicleBodyType);
-    formData.append("rc_copy_front",  values.RCCopyFront);
-    formData.append("rc_copy_back",  values.RCCopyBack);
-    formData.append("insurance_copy_front",  values.InsuranceCopyFront);
-    formData.append("insurance_copy_back",  values.InsuranceCopyBack);
-    formData.append("insurance_validity",  values.InsuranceValidity);
-    formData.append("fc_validity",  values.FCValidity);
-
-    VehicleMasterService.createVehicles(formData).then(res=>{
-
-          if(res.status===201)
-          {
-
-            toast.success("Vehicle Created Successfully!")
-
-            setTimeout(() => {
-              navigation("/VehicleMasterTable")
-            }, 1000);
-
-
-          }
-
-    });
-
+        setTimeout(() => {
+          navigation('/VehicleMasterTable')
+        }, 1000)
+      }
+    })
   }
 
-
-  useEffect(()=>{
-
+  useEffect(() => {
     //section for getting vehicle type from database
-    VehicleTypeService.getVehicleTypes().then(res=>{
+    VehicleTypeService.getVehicleTypes().then((res) => {
       setVehicleType(res.data.data)
     })
 
     //section for getting vehicle capacity from database
-    VehicleCapacityService.getVehicleCapacity().then(res=>{
+    VehicleCapacityService.getVehicleCapacity().then((res) => {
       setVehicleCapacity(res.data.data)
     })
 
-    VehicleBodyTypeService.getVehicleBody().then(res=>{
+    VehicleBodyTypeService.getVehicleBody().then((res) => {
       setVehicleBody(res.data.data)
     })
-
-  },[])
+  }, [])
 
   // console.log(values);
 
@@ -144,12 +132,16 @@ const VehicleMaster = () => {
                     id="vType"
                   >
                     <option value="0">Select ...</option>
-                    { vehicleType.map(({id,type})=>{
-                         if(id<=2)
-                         {
-                          return  <><option key={id} value={id}>{type}</option></>
-                         }
-
+                    {vehicleType.map(({ id, type }) => {
+                      if (id <= 2) {
+                        return (
+                          <>
+                            <option key={id} value={id}>
+                              {type}
+                            </option>
+                          </>
+                        )
+                      }
                     })}
                   </CFormSelect>
                 </CCol>
@@ -193,8 +185,14 @@ const VehicleMaster = () => {
                     id="vCap"
                   >
                     <option value="0">Select ...</option>
-                    { vehicleCapacity.map(({id,capacity})=>{
-                       return  <><option key={id} value={id}>{capacity}</option></>
+                    {vehicleCapacity.map(({ id, capacity }) => {
+                      return (
+                        <>
+                          <option key={id} value={id}>
+                            {capacity}
+                          </option>
+                        </>
+                      )
                     })}
                   </CFormSelect>
                 </CCol>
@@ -218,8 +216,14 @@ const VehicleMaster = () => {
                   >
                     <option value="0">Select ...</option>
 
-                    { vehicleBody.map(({id,body_type})=>{
-                       return  <><option key={id} value={id}>{body_type}</option></>
+                    {vehicleBody.map(({ id, body_type }) => {
+                      return (
+                        <>
+                          <option key={id} value={id}>
+                            {body_type}
+                          </option>
+                        </>
+                      )
                     })}
                   </CFormSelect>
                 </CCol>
@@ -316,9 +320,12 @@ const VehicleMaster = () => {
                   />
                 </CCol>
                 <CCol md={3}>
-                  <CFormLabel htmlFor="fcvalid">FC Validity*{errors.FCValidity && (
+                  <CFormLabel htmlFor="fcvalid">
+                    FC Validity*
+                    {errors.FCValidity && (
                       <span className="small text-danger">{errors.FCValidity}</span>
-                    )}</CFormLabel>
+                    )}
+                  </CFormLabel>
                   <CFormInput
                     type="date"
                     size="sm"
@@ -349,14 +356,16 @@ const VehicleMaster = () => {
                   >
                     ADD
                   </CButton>
-                  <Link to={"/VehicleMasterTable"}><CButton
-                    size="s-lg"
-                    color="warning"
-                    className="mx-1 px-2 text-white"
-                    type="button"
-                  >
-                    BACK
-                  </CButton></Link>
+                  <Link to={'/VehicleMasterTable'}>
+                    <CButton
+                      size="s-lg"
+                      color="warning"
+                      className="mx-1 px-2 text-white"
+                      type="button"
+                    >
+                      BACK
+                    </CButton>
+                  </Link>
                 </CCol>
               </CRow>
             </CForm>
