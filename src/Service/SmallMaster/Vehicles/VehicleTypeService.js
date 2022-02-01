@@ -10,6 +10,9 @@ class VehicleTypeService {
       return api.get(VEHICLE_TYPE_URL)
      }
 
+
+
+
 }
 
 export default new VehicleTypeService()

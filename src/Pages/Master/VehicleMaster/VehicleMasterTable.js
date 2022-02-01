@@ -15,7 +15,6 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import CustomTable from 'src/components/customComponent/CustomTable'
 import VehicleMasterService from 'src/Service/Master/VehicleMasterService'
-import {  useNavigate } from 'react-router-dom'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import CustomSpanButton from 'src/components/customComponent/CustomSpanButton'
@@ -27,7 +26,6 @@ const VehicleMasterTable = () => {
   const [InsuranceCopyBack, setInsuranceCopyBack] = useState(false)
   const [InsuranceCopyFront, setInsuranceCopyFront] = useState(false)
 
-  const [deleteModal, setDeleteModal] = useState(false)
   const [rowData, setRowData] = useState([])
   const [mount, setMount] = useState(1)
 
@@ -78,6 +76,7 @@ const VehicleMasterTable = () => {
           setInsuranceCopyBack(true)
         }
         break
+        default:return 0
     }
   }
 

@@ -368,6 +368,12 @@ const _nav = [
             to: '/StatusTable',
             title: 'Status',
           },
+          {
+            component: CNavItem,
+            name: 'Bank Master',
+            to: '/bankmaster',
+            title: 'Bank Master',
+          },
         ],
       },
     ],
