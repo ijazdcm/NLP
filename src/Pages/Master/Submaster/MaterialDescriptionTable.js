@@ -197,6 +197,7 @@ const MaterialDescriptionTable = () => {
     {
       name: 'Status',
       selector: (row) => row.Status,
+      sortable: true,
       center: true,
     },
     {

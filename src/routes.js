@@ -2,30 +2,31 @@ import React from 'react'
 
 // Master Pages
 import VehicleMaster from './Pages/Master/VehicleMaster/VehicleMaster'
+import DieselVendorMaster from './Pages/Master/DieselVendorMaster/DieselVendorMaster'
 import DriverMaster from './Pages/Master/DriverMaster'
 import ShedMaster from './Pages/Master/ShedMaster'
-import DieselVendorMaster from './Pages/Master/DieselVendorMaster'
+// import DieselVendorMaster from './Pages/Master/DieselVendorMaster'
 import UserLoginMaster from './Pages/UserLoginMaster/UserLoginMaster'
 import DriverMasterTable from './Pages/Master/DriverMasterTable'
-import DieselVendorMasterTable from './Pages/Master/DieselVendorMasterTable'
+// import DieselVendorMasterTable from './Pages/Master/DieselVendorMasterTable'
 import UserLoginMasterTable from './Pages/Master/UserLoginMasterTable'
 
 // Sub-Master Pages
 
-
 import DesignationTable from './Pages/Master/Submaster/DesignationTable'
+
 import DefectTypeTable from './Pages/Master/Submaster/DefectTypeTable'
 import DepartmentTable from './Pages/Master/Submaster/DepartmentTable'
 import StatusTable from './Pages/Master/Submaster/StatusTable'
 import DivisionTable from './Pages/Master/Submaster/DivisionTable'
 import MaterialDescriptionTable from './Pages/Master/Submaster/MaterialDescriptionTable'
-// import OtherChargesTable from './Pages/Master/Submaster/OtherChargesTable'
 import PreviousLoadDetailsTable from './Pages/Master/Submaster/PreviousLoadDetailsTable'
 import RejectReasonTable from './Pages/Master/Submaster/RejectReasonTable'
 import VehicleCapacityTable from './Pages/Master/Submaster/VehicleCapacityTable'
 import UOMTable from './Pages/Master/Submaster/UOMTable'
 import ShedMasterTable from './Pages/Master/ShedMasterTable'
 import VehicleMasterTable from './Pages/Master/VehicleMaster/VehicleMasterTable'
+import DieselVendorMasterTable from './Pages/Master/DieselVendorMaster/DieselVendorMasterTable'
 
 // Small Master Pages
 
@@ -91,6 +92,7 @@ import UserRegister from './Pages/UserRegister'
 import Gateout from './Pages/Gateout/Gateout'
 import AllCommonTable from './Pages/AllCommonTable/AllCommonTable'
 import VehicleMasterEdit from './Pages/Master/VehicleMaster/VehicleMasterEdit'
+import DieselVendorMasterEdit from './Pages/Master/DieselVendorMaster/DieselVendorMasterEdit'
 import BankMasterTable from './Pages/Master/Submaster/Bank/BankMasterTable'
 
 const routes = [
@@ -117,6 +119,12 @@ const routes = [
     name: 'VehicleMasterTableEdit',
     component: VehicleMasterEdit,
   },
+  {
+    path: '/DieselVendorMasterTable/DieselVendorMaster/:id',
+    exact: true,
+    name: 'DieselVendorMasterTableEdit',
+    component: DieselVendorMasterEdit,
+  },
   { path: '/ShedMasterTable', exact: true, name: 'ShedMasterTable', component: ShedMasterTable },
   {
     path: '/DriverMasterTable',
@@ -139,7 +147,6 @@ const routes = [
 
   // Sub-Master
   { path: '/bankmaster', exact: true, name: 'Bank Master', component: BankMasterTable },
-
 
   // Small Master
 

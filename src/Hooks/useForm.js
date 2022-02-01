@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect } from 'react'
 
 const useForm = (callback, validate, formValues) => {
   const [values, setValues] = useState(formValues)
@@ -7,26 +7,17 @@ const useForm = (callback, validate, formValues) => {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [enableSubmit, setEnableSubmit] = useState(true)
 
-  useEffect(
-    () => {
-      if (Object.keys(errors).length === 0 && isSubmitting) {
-        callback()
-      }
-    },
-    [errors]
-  )
+  useEffect(() => {
+    if (Object.keys(errors).length === 0 && isSubmitting) {
+      callback()
+    }
+  }, [errors])
 
-  useEffect(
-    () => {
-
-    if(Object.keys(isTouched).length>0)
-    {
+  useEffect(() => {
+    if (Object.keys(isTouched).length > 0) {
       setErrors(validate(values, isTouched))
     }
-
-    },
-    [values]
-  )
+  }, [values])
 
   const chechFormFieldMatchs = () => {
     if (Object.keys(formValues).length === Object.keys(isTouched).length) {
@@ -36,48 +27,42 @@ const useForm = (callback, validate, formValues) => {
     }
   }
 
-  const handleSubmit = event => {
+  const handleSubmit = (event) => {
     if (event) event.preventDefault()
     setIsSubmitting(true)
     setErrors(validate(values, isTouched, isSubmitting))
   }
 
-  const handleChange = event => {
+  const handleChange = (event) => {
     event.persist()
     setEnableSubmit(true)
     setIsSubmitting(false)
-    let value= event.target.value
-    setIsTouched(isTouched => ({ ...isTouched, [event.target.name]: true }))
-     if(event.target.type==="file")
-     {
-
-      setValues(values => ({
+    let value = event.target.value
+    setIsTouched((isTouched) => ({ ...isTouched, [event.target.name]: true }))
+    if (event.target.type === 'file') {
+      setValues((values) => ({
         ...values,
-        [event.target.name]: event.target.files[0]
+        [event.target.name]: event.target.files[0],
       }))
-
-     }
-     else
-     {
-      setValues(values => ({
+    } else {
+      setValues((values) => ({
         ...values,
-        [event.target.name]: value.toUpperCase()
+        // [event.target.name]: value.toUpperCase()
+        [event.target.name]: value,
       }))
-     }
-
-
+    }
   }
 
-  const onFocus = event => {
+  const onFocus = (event) => {
     event.persist()
-    setIsTouched(isTouched => ({ ...isTouched, [event.target.name]: true }))
+    setIsTouched((isTouched) => ({ ...isTouched, [event.target.name]: true }))
     chechFormFieldMatchs()
   }
 
-  const onBlur = event => {
+  const onBlur = (event) => {
     event.persist()
     setIsSubmitting(false)
-    setIsTouched(isTouched => ({ ...isTouched, [event.target.name]: true }))
+    setIsTouched((isTouched) => ({ ...isTouched, [event.target.name]: true }))
     setErrors(validate(values, isTouched))
     chechFormFieldMatchs()
   }
@@ -89,7 +74,7 @@ const useForm = (callback, validate, formValues) => {
     values,
     errors,
     enableSubmit,
-    onBlur
+    onBlur,
   }
 }
 
