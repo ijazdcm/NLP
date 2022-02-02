@@ -236,7 +236,7 @@ const VehicleMasterTable = () => {
   return (
     <CCard className="mt-4">
       <CContainer className="mt-2">
-        <CustomTable columns={columns} data={rowData} />
+        <CustomTable columns={columns} data={rowData} showSearchFilter={true} />
         <hr></hr>
         <CRow className="mt-3">
           <CCol

@@ -193,7 +193,7 @@ const BankMasterTable = () => {
           </CCol>
         </CRow>
         <CCard className="mt-1">
-          <CustomTable columns={columns} data={rowData} />
+          <CustomTable  columns={columns} data={rowData} feildName={'Bank'} showSearchFilter={true} />
         </CCard>
         {/*add New Bank model*/}
       <CModal visible={newBankModel} onClose={() => setNewBankModel(false)}>
@@ -224,7 +224,7 @@ const BankMasterTable = () => {
             </CCol>
           </CRow>
         </CModalBody>
-        <CModalFooter>
+        <CModalFooter>CButton
         <CButton color="secondary" onClick={() => {
            values.bankName=""
           setNewBankModel(false)

@@ -212,7 +212,7 @@ const DivisionTable = () => {
           </CCol>
         </CRow>
         <CCard className="mt-1">
-          <CustomTable columns={columns} data={rowData || ''} />
+          <CustomTable columns={columns} data={rowData || ''} feildName={'Division'} showSearchFilter={true} />
         </CCard>
       </CContainer>
 
