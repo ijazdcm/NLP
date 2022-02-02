@@ -310,6 +310,7 @@ const VehicleMaster = () => {
                   <CFormInput
                     type="date"
                     onBlur={onBlur}
+                    onFocus={onFocus}
                     onChange={handleChange}
                     size="sm"
                     required
@@ -332,6 +333,7 @@ const VehicleMaster = () => {
                     required
                     value={values.FCValidity}
                     onBlur={onBlur}
+                    onFocus={onFocus}
                     onChange={handleChange}
                     id="fcvalid"
                     name="FCValidity"

@@ -25,13 +25,13 @@ import {
   CFormCheck,
   CFormTextarea,
 } from '@coreui/react'
-
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 import { React, useState, useEffect } from 'react'
 import useForm from 'src/Hooks/useForm'
-import validate from 'src/Utils/Validation'
+import ParkingYardGateValidation from 'src/Utils/TransactionPages/ParkingYardGate/ParkingYardGateValidation'
 import CustomTable from '../../components/customComponent/CustomTable'
-
-
+import ParkingYardGateService from 'src/Service/ParkingYardGate/ParkingYardGateService'
 import VehicleTypeService from 'src/Service/SmallMaster/Vehicles/VehicleTypeService'
 import VehicleCapacityService from 'src/Service/SmallMaster/Vehicles/VehicleCapacityService'
 import VehicleBodyTypeService from 'src/Service/SmallMaster/Vehicles/VehicleBodyTypeService'
@@ -40,45 +40,161 @@ import HireSection from './FormSection/HireSection'
 import PartySection from './FormSection/PartySection'
 
 const ParkingYardGate = () => {
-  const [hire, setHire] = useState(false)
-  const [api, setApi] = useState({})
+  const [rowData, setRowData] = useState([])
+  const [mount, setMount] = useState(1)
+  let tableData = []
 
   const [vehicleType, setVehicleType] = useState([])
-  const [vehicleCapacity, setVehicleCapacity] = useState([])
-  const [vehicleBody, setVehicleBody] = useState([])
+
+  const ACTION = {
+    GATE_IN: 1,
+    GATE_OUT: 2,
+    WAIT_OUTSIDE: 3,
+  }
 
   const formValues = {
     vehicleType: '',
+    vehicleId: '',
     vehicleNumber: '',
-    vehicleCap: '',
+    vehicleCapacity: '',
+    driverId: '',
     driverName: '',
-    driverNum: '',
-    odometerKm: '',
+    driverPhoneNumber: '',
+    odometerKm:'',
     odometerImg: '',
     partyName: '',
     vehicleBody: '',
+    remarks: '',
   }
 
-  const { values, errors, handleChange, onFocus, enableSubmit, onBlur } = useForm(
-    login,
-    validate,
-    formValues
-  )
-
-  function login() {
-    // alert('No Errors CallBack Called')
+  const resetFormValues = () => {
+    values.vehicleType = ''
+    values.vehicleId = ''
+    values.vehicleNumber = ''
+    values.vehicleCapacity = ''
+    values.driverId = ''
+    values.driverName = ''
+    values.driverPhoneNumber = ''
+    values.odometerKm = ''
+    values.odometerImg = ''
+    values.partyName = ''
+    values.vehicleBody = ''
+    values.remarks = ''
   }
 
+  const resetIsTouched = () => {
+    isTouched.vehicleType = false
+    isTouched.vehicleId = false
+    isTouched.vehicleNumber = false
+    isTouched.vehicleCapacity = false
+    isTouched.driverId = false
+    isTouched.driverName = false
+    isTouched.driverPhoneNumber = false
+    isTouched.odometerKm = false
+    isTouched.odometerImg = false
+    isTouched.partyName = false
+    isTouched.vehicleBody = false
+    isTouched.remarks = false
+  }
+
+  const { values, errors, handleChange, onFocus, enableSubmit, onBlur, isTouched, setIsTouched,setErrors } =
+    useForm(action, ParkingYardGateValidation, formValues)
+
+  function action(type) {
+    const formData = new FormData()
+    formData.append('vehicle_type_id', values.vehicleType)
+    formData.append('vehicle_id', values.vehicleId)
+    formData.append('driver_id', values.driverId)
+    formData.append('odometer_km', values.odometerKm)
+    if(values.odometerImg!=="")
+    {
+      formData.append('odometer_photo', values.odometerImg)
+    }
+    formData.append('vehicle_number', values.vehicleNumber)
+    formData.append('vehicle_capacity_id', values.vehicleCapacity)
+    formData.append('driver_name', values.driverName)
+    formData.append('driver_contact_number', values.driverPhoneNumber)
+    formData.append('vehicle_body_type_id', values.vehicleBody)
+    formData.append('party_name', values.partyName)
+    formData.append('remarks', values.remarks)
+    formData.append('action_type', type)
+
+    ParkingYardGateService.handleParkingYardGateAction(formData).then((res) => {
+      if (res.status === 200) {
+        toast.success('process done!')
+        //reseting the fromValues
+        resetFormValues()
+        loadParkingYardGateTable()
+        setIsTouched({})
+        setErrors({})
+
+      } else {
+        toast.danger('something went wrong!')
+      }
+    })
+  }
+
+  function loadParkingYardGateTable() {
+    ParkingYardGateService.getParkingYardGateTrucks().then((res) => {
+      tableData = res.data.data
+      let rowDataList = []
+      tableData.map((data, index) => {
+        rowDataList.push({
+          sno: index + 1,
+          Tripsheet_No: '',
+          Vehicle_Type: data.vehicle_type_id.type,
+          Vehicle_No: data.vehicle_number,
+          Driver_Name: data.driver_name,
+          Waiting_At: (
+            <span className="badge rounded-pill bg-info">
+              {data.parking_status == ACTION.GATE_IN
+                ? 'Vehicle Inspection'
+                : data.parking_status == ACTION.WAIT_OUTSIDE
+                ? 'Waiting Outside'
+                : 'Gate Out'}
+            </span>
+          ),
+          Screen_Duration: '0 Hrs 07 Mins',
+          Overall_Duration: '0 Hrs 55 Mins',
+          Action:
+            data.parking_status == ACTION.GATE_IN ? (
+              <CButton className="badge text-white" color="warning">
+                Vehicle Inspection
+              </CButton>
+            ) : data.parking_status == ACTION.WAIT_OUTSIDE ? (
+              <CButton className="badge text-white" color="warning">
+                Gate IN
+              </CButton>
+            ) : (
+              <></>
+            ),
+        })
+      })
+      setRowData(rowDataList)
+    })
+  }
+
+
+  useEffect(() => {
+    isTouched.remarks = true
+    //section for getting vehicle type from database
+    VehicleTypeService.getVehicleTypes().then((res) => {
+      setVehicleType(res.data.data)
+    })
+
+    loadParkingYardGateTable()
+
+  }, [])
+
+
+
+   console.log(values);
+   console.log(isTouched);
+   console.log(errors);
   const columns = [
     {
       name: 'S.No',
       selector: (row) => row.sno,
-      sortable: true,
-      center: true,
-    },
-    {
-      name: 'VA No',
-      selector: (row) => row.VA_No,
       sortable: true,
       center: true,
     },
@@ -101,7 +217,7 @@ const ParkingYardGate = () => {
       center: true,
     },
     {
-      name: 'Driver Nam',
+      name: 'Driver Name',
       selector: (row) => row.Driver_Name,
       sortable: true,
       center: true,
@@ -128,78 +244,6 @@ const ParkingYardGate = () => {
       center: true,
     },
   ]
-
-  const data = [
-    {
-      id: 1,
-      sno: 1,
-      VA_No: 12000,
-      Tripsheet_No: 102556,
-      Vehicle_Type: 'own',
-      Vehicle_No: 'TN45AT8417',
-      Driver_Name: 'Saravana',
-      Waiting_At: <span className="badge rounded-pill bg-info">DI Creation</span>,
-      Screen_Duration: '0 Hrs 07 Mins',
-      Overall_Duration: '0 Hrs 55 Mins',
-      Action: (
-        <CButton className="badge text-white" color="warning">
-          Vehicle Insp
-        </CButton>
-      ),
-    },
-    {
-      id: 2,
-      sno: 2,
-      VA_No: 12070,
-      Tripsheet_No: 102501,
-      Vehicle_Type: 'contract',
-      Vehicle_No: 'TN54AT8417',
-      Driver_Name: 'David',
-      Waiting_At: <span className="badge rounded-pill bg-info">Waiting</span>,
-      Screen_Duration: '0 Hrs 07 Mins',
-      Overall_Duration: '0 Hrs 55 Mins',
-      Action: (
-        <CButton className="badge text-white" color="warning">
-          Gate In
-        </CButton>
-      ),
-    },
-    {
-      id: 3,
-      sno: 3,
-      VA_No: 12018,
-      Tripsheet_No: 102501,
-      Vehicle_Type: 'Hire',
-      Vehicle_No: 'TN54CT8417',
-      Driver_Name: 'Alvin',
-      Waiting_At: <span className="badge rounded-pill bg-info">Ts Creation</span>,
-      Screen_Duration: '1 Hrs 07 Mins',
-      Overall_Duration: '2 Hrs 55 Mins',
-      Action: (
-        <CButton className="badge text-white" color="warning">
-          Gate Out
-        </CButton>
-      ),
-    },
-  ]
-
-  useEffect(() => {
-    //section for getting vehicle type from database
-    VehicleTypeService.getVehicleTypes().then((res) => {
-      setVehicleType(res.data.data)
-    })
-
-    //section for getting vehicle capacity from database
-    VehicleCapacityService.getVehicleCapacity().then((res) => {
-      setVehicleCapacity(res.data.data)
-    })
-
-    VehicleBodyTypeService.getVehicleBody().then((res) => {
-      setVehicleBody(res.data.data)
-    })
-  }, [])
-
-
 
 
 
@@ -243,29 +287,50 @@ const ParkingYardGate = () => {
                 <OwnAndContractSection
                   errors={errors}
                   onBlur={onBlur}
+                  onFocus={onFocus}
                   handleChange={handleChange}
                   values={values}
+                  isTouched={isTouched}
+                  setIsTouched={setIsTouched}
+                  setErrors={setErrors}
                 />
               )}
               {values.vehicleType == 3 && (
                 <HireSection
                   errors={errors}
+                  onFocus={onFocus}
                   onBlur={onBlur}
                   handleChange={handleChange}
                   values={values}
+                  isTouched={isTouched}
+                  setIsTouched={setIsTouched}
+                  setErrors={setErrors}
                 />
               )}
               {values.vehicleType == 4 && (
                 <PartySection
                   errors={errors}
+                  onFocus={onFocus}
                   onBlur={onBlur}
                   handleChange={handleChange}
                   values={values}
+                  isTouched={isTouched}
+                  setIsTouched={setIsTouched}
+                  setErrors={setErrors}
                 />
               )}
               <CCol xs={12} md={3}>
                 <CFormLabel htmlFor="remarks">Remarks</CFormLabel>
-                <CFormTextarea name="remarks" id="remarks" rows="1"></CFormTextarea>
+                <CFormTextarea
+                  name="remarks"
+                  id="remarks"
+                  onBlur={onBlur}
+                  onChange={handleChange}
+                  value={values.remarks}
+                  rows="1"
+                >
+                  {values.remarks}
+                </CFormTextarea>
               </CCol>
             </CRow>
             <CRow className="mt-1">
@@ -279,19 +344,26 @@ const ParkingYardGate = () => {
                 <CButton
                   size="sm"
                   color="warning"
-                  // disabled={enableSubmit}
+                  disabled={enableSubmit}
+                  onClick={(e) => {
+                    e.preventDefault()
+                    action(ACTION.WAIT_OUTSIDE)
+                  }}
                   className="mx-1 text-white"
                   type="submit"
                 >
                   Wait OutSide
                 </CButton>
-                {hire}
                 <CButton
                   size="sm"
-                  // disabled={enableSubmit}
+                  disabled={enableSubmit}
+                  onClick={(e) => {
+                    e.preventDefault()
+                    action(ACTION.GATE_IN)
+                  }}
                   color="warning"
                   className="mx-1 text-white"
-                  type="submit"
+                  type="button"
                 >
                   Gate In
                 </CButton>
@@ -301,7 +373,7 @@ const ParkingYardGate = () => {
         </CCard>
         <CCard className="mt-3">
           <CContainer className="mt-2">
-            <CustomTable columns={columns} data={data} />
+            <CustomTable columns={columns} data={rowData} />
           </CContainer>
         </CCard>
       </CContainer>

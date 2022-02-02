@@ -1,102 +1,91 @@
 import { CCol, CFormInput, CFormLabel, CFormSelect } from '@coreui/react'
-import React from 'react'
+import React, { useEffect } from 'react'
+import VehicleCapacitySelectField from '../CommonComponent/VehicleCapacitySelectField'
+import VehicleTypeSelectField from '../CommonComponent/VehicleTypeSelectField'
 
-const HireSection = ({errors,onFocus,onBlur,handleChange,values}) => {
+const HireSection = ({ errors, onFocus, onBlur, handleChange, values,isTouched,setIsTouched, setErrors }) => {
+
+
+  useEffect(()=>{
+
+       setErrors({})
+      isTouched.driverId=true
+      isTouched.odometerImg=true
+      isTouched.odometerKm=true
+      isTouched.partyName=true
+      isTouched.vehicleId=true
+      values.odometerImg=''
+
+  },[])
+
+
   return (
     <>
       <CCol xs={12} md={3}>
-        <CFormLabel htmlFor="vNum">
+        <CFormLabel htmlFor="vehicleNumber">
           Vehicle Number*
-          {errors.vNum && <span className="small text-danger">{errors.vNum}</span>}
+          {errors.vehicleNumber && <span className="small text-danger">{errors.vehicleNumber}</span>}
         </CFormLabel>
         <CFormInput
           size="sm"
-          name="vNum"
-          id="vNum"
+          name="vehicleNumber"
+          id="vehicleNumber"
           maxLength={10}
           onFocus={onFocus}
           onBlur={onBlur}
           onChange={handleChange}
-          value={values.vNum}
+          value={values.vehicleNumber}
         />
       </CCol>
 
       <CCol xs={12} md={3}>
-        <CFormLabel htmlFor="vCap">
+        <CFormLabel htmlFor="vehicleCapacity">
           Vehicle Capacity In MTS*{' '}
-          {errors.vCap && <span className="small text-danger">{errors.vCap}</span>}
+          {errors.vehicleCapacity && <span className="small text-danger">{errors.vehicleCapacity}</span>}
         </CFormLabel>
-        <CFormSelect
-          size="sm"
-          name="vCap"
-          className=""
-          onFocus={onFocus}
-          onBlur={onBlur}
-          onChange={handleChange}
-          aria-label="Small select example"
-        >
-          <option value="" hidden selected>
-            Select...
-          </option>
-          <option value="10">10</option>
-          <option value="12">12</option>
-          <option value="19">19</option>
-          <option value="25">25</option>
-          <option value="30">30</option>
-        </CFormSelect>
+        <VehicleCapacitySelectField onBlur={onBlur} onFocus={onFocus} handleChange={handleChange} />
       </CCol>
 
       <CCol xs={12} md={3}>
-        <CFormLabel htmlFor="dName">
+        <CFormLabel htmlFor="driverName">
           Driver Name*
-          {errors.dName && <span className="small text-danger">{errors.dName}</span>}
+          {errors.driverName && <span className="small text-danger">{errors.driverName}</span>}
         </CFormLabel>
         <CFormInput
           size="sm"
-          name="dName"
-          id="dName"
+          name="driverName"
+          id="driverName"
           onFocus={onFocus}
           onBlur={onBlur}
           onChange={handleChange}
-          value={values.dName}
+          value={values.driverName}
         />
       </CCol>
 
       <CCol xs={12} md={3}>
-        <CFormLabel htmlFor="dNum">
+        <CFormLabel htmlFor="driverPhoneNumber">
           Driver Contact Number*
-          {errors.dNum && <span className="small text-danger">{errors.dNum}</span>}
+          {errors.driverPhoneNumber && <span className="small text-danger">{errors.driverPhoneNumber}</span>}
         </CFormLabel>
         <CFormInput
           size="sm"
-          name="dNum"
-          id="dNum"
+          type='number'
+          name="driverPhoneNumber"
+          id="driverPhoneNumber"
           maxLength={10}
           onFocus={onFocus}
           onBlur={onBlur}
           onChange={handleChange}
-          value={values.dNum}
+          value={values.driverPhoneNumber}
         />
       </CCol>
 
       <CCol xs={12} md={3}>
-        <CFormLabel htmlFor="vBody">
+        <CFormLabel htmlFor="vehicleBody">
           Vehicle Body*
-          {errors.vBody && <span className="small text-danger">{errors.vBody}</span>}
+          {errors.vehicleBody && <span className="small text-danger">{errors.vehicleBody}</span>}
         </CFormLabel>
-        <CFormSelect
-          size="sm"
-          name="vBody"
-          className=""
-          onFocus={onFocus}
-          onBlur={onBlur}
-          onChange={handleChange}
-          aria-label="Small select example"
-        >
-          <option hidden>Select...</option>
-          <option value="1">Open</option>
-          <option value="2">Closed</option>
-        </CFormSelect>
+        <VehicleTypeSelectField onBlur={onBlur} onFocus={onFocus} handleChange={handleChange} />
       </CCol>
     </>
   )
