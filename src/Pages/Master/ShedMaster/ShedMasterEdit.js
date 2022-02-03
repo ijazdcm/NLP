@@ -121,6 +121,7 @@ const ShedMasterEdit = () => {
             values.AadharNumber = res.data.data.shed_adhar_number
             values.PANNumber = res.data.data.pan_number
             values.GSTNumber = res.data.data.gst_no
+            setsingleShed(res.data.data)
     })
 
     //section for getting vehicle type from database
@@ -373,7 +374,7 @@ const ShedMasterEdit = () => {
                     className="mx-1 px-2 text-white"
                     type="submit"
                   >
-                    Submit
+                    Update
                   </CButton>
                   <Link to={"/ShedMasterTable"}><CButton
                     size="s-lg"
