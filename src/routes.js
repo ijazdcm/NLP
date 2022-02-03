@@ -3,12 +3,9 @@ import React from 'react'
 // Master Pages
 import VehicleMaster from './Pages/Master/VehicleMaster/VehicleMaster'
 import DieselVendorMaster from './Pages/Master/DieselVendorMaster/DieselVendorMaster'
-import DriverMaster from './Pages/Master/DriverMaster'
+import DriverMaster from './Pages/Master/DriverMaster/DriverMaster'
 import ShedMaster from './Pages/Master/ShedMaster'
-// import DieselVendorMaster from './Pages/Master/DieselVendorMaster'
 import UserLoginMaster from './Pages/UserLoginMaster/UserLoginMaster'
-import DriverMasterTable from './Pages/Master/DriverMasterTable'
-// import DieselVendorMasterTable from './Pages/Master/DieselVendorMasterTable'
 import UserLoginMasterTable from './Pages/Master/UserLoginMasterTable'
 
 // Sub-Master Pages
@@ -27,6 +24,7 @@ import UOMTable from './Pages/Master/Submaster/UOMTable'
 import ShedMasterTable from './Pages/Master/ShedMasterTable'
 import VehicleMasterTable from './Pages/Master/VehicleMaster/VehicleMasterTable'
 import DieselVendorMasterTable from './Pages/Master/DieselVendorMaster/DieselVendorMasterTable'
+import DriverMasterTable from './Pages/Master/DriverMaster/DriverMasterTable'
 
 // Small Master Pages
 
@@ -93,6 +91,7 @@ import Gateout from './Pages/Gateout/Gateout'
 import AllCommonTable from './Pages/AllCommonTable/AllCommonTable'
 import VehicleMasterEdit from './Pages/Master/VehicleMaster/VehicleMasterEdit'
 import DieselVendorMasterEdit from './Pages/Master/DieselVendorMaster/DieselVendorMasterEdit'
+import DriverMasterEdit from './Pages/Master/DriverMaster/DriverMasterEdit'
 
 const routes = [
   // Master
@@ -123,6 +122,12 @@ const routes = [
     exact: true,
     name: 'DieselVendorMasterTableEdit',
     component: DieselVendorMasterEdit,
+  },
+  {
+    path: '/DriverMasterTable/DriverMaster/:id',
+    exact: true,
+    name: 'DriverMasterTableEdit',
+    component: DriverMasterEdit,
   },
   { path: '/ShedMasterTable', exact: true, name: 'ShedMasterTable', component: ShedMasterTable },
   {

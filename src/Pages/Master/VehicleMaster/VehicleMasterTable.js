@@ -15,13 +15,12 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import CustomTable from 'src/components/customComponent/CustomTable'
 import VehicleMasterService from 'src/Service/Master/VehicleMasterService'
-import {  useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import CustomSpanButton from 'src/components/customComponent/CustomSpanButton'
 
 const VehicleMasterTable = () => {
-
   const [RCCopyFront, setRCCopyFront] = useState(false)
   const [RCCopyBack, setRCCopyBack] = useState(false)
   const [InsuranceCopyBack, setInsuranceCopyBack] = useState(false)
@@ -34,17 +33,12 @@ const VehicleMasterTable = () => {
   const [documentSrc, setDocumentSrc] = useState('')
   let viewData
 
-
-  function changeVehicleStatus(id)
-  {
-    VehicleMasterService.deleteVehicles(id).then(res=>{
-      toast.success("Vehicle Status Updated Successfully!")
-      setMount(preState=>preState+1)
+  function changeVehicleStatus(id) {
+    VehicleMasterService.deleteVehicles(id).then((res) => {
+      toast.success('Vehicle Status Updated Successfully!')
+      setMount((preState) => preState + 1)
     })
   }
-
-
-
 
   //section for handling view model for each model
 
@@ -53,6 +47,8 @@ const VehicleMasterTable = () => {
       case 'RC_FRONT':
         {
           let singleVehicleInfo = viewData.filter((data) => data.vehicle_id == id)
+          console.log(viewData)
+          console.log(singleVehicleInfo[0].rc_copy_front)
           setDocumentSrc(singleVehicleInfo[0].rc_copy_front)
           setRCCopyFront(true)
         }
@@ -81,8 +77,6 @@ const VehicleMasterTable = () => {
     }
   }
 
-
-
   useEffect(() => {
     VehicleMasterService.getVehicles().then((response) => {
       viewData = response.data.data
@@ -93,24 +87,40 @@ const VehicleMasterTable = () => {
           Creation_Date: data.created_at,
           vehicle_Number: data.vehicle_number,
           Vehicle_Type: data.vehicle_type_info.type,
-          Vehicle_Capacity: data.vehicle_capacity_info.capacity+"-TON",
+          Vehicle_Capacity: data.vehicle_capacity_info.capacity + '-TON',
           Vehicle_Bodytype: data.vehicle_body_type_info.body_type,
           RC_Copy_Front: (
-            <CustomSpanButton handleViewDocuments={handleViewDocuments} vehicleId={data.vehicle_id} documentType={'RC_FRONT'} />
+            <CustomSpanButton
+              handleViewDocuments={handleViewDocuments}
+              vehicleId={data.vehicle_id}
+              documentType={'RC_FRONT'}
+            />
           ),
           RC_Copy_Back: (
-            <CustomSpanButton handleViewDocuments={handleViewDocuments} vehicleId={data.vehicle_id} documentType={'RC_BACK'} />
+            <CustomSpanButton
+              handleViewDocuments={handleViewDocuments}
+              vehicleId={data.vehicle_id}
+              documentType={'RC_BACK'}
+            />
           ),
           Insuranance_Copy_Front: (
-            <CustomSpanButton handleViewDocuments={handleViewDocuments} vehicleId={data.vehicle_id} documentType={'INSURANCE_FRONT'} />
+            <CustomSpanButton
+              handleViewDocuments={handleViewDocuments}
+              vehicleId={data.vehicle_id}
+              documentType={'INSURANCE_FRONT'}
+            />
           ),
           Insuranance_Copy_Back: (
-            <CustomSpanButton handleViewDocuments={handleViewDocuments} vehicleId={data.vehicle_id} documentType={'INSURANCE_BACK'} />
+            <CustomSpanButton
+              handleViewDocuments={handleViewDocuments}
+              vehicleId={data.vehicle_id}
+              documentType={'INSURANCE_BACK'}
+            />
           ),
           Insurance_Validity: data.insurance_validity,
           FC_Validity: data.fc_validity,
           Status: (
-            <span className="badge rounded-pill bg-info" >
+            <span className="badge rounded-pill bg-info">
               {data.vehicle_status === 1 ? 'Active' : 'Disabled'}
             </span>
           ),
@@ -130,13 +140,7 @@ const VehicleMasterTable = () => {
                 <i className="fa fa-trash" aria-hidden="true"></i>
               </CButton>
               <Link to={`VehicleMaster/${data.vehicle_id}`}>
-                <CButton
-                  size="sm"
-                  color="secondary"
-                  shape="rounded"
-                  id={data.id}
-                  className="m-1"
-                >
+                <CButton size="sm" color="secondary" shape="rounded" id={data.id} className="m-1">
                   {/* Edit */}
                   <i className="fa fa-edit" aria-hidden="true"></i>
                 </CButton>
@@ -248,15 +252,15 @@ const VehicleMasterTable = () => {
             style={{ display: 'flex', justifyContent: 'end' }}
           >
             <Link className="text-white" to="/VehicleMaster">
-            <CButton
-              size="sm"
-              color="warning"
-              // disabled={enableSubmit}
-              className="px-3 text-white"
-              type="submit"
-            >
+              <CButton
+                size="sm"
+                color="warning"
+                // disabled={enableSubmit}
+                className="px-3 text-white"
+                type="submit"
+              >
                 New
-            </CButton>
+              </CButton>
             </Link>
           </CCol>
         </CRow>
