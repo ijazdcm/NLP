@@ -104,7 +104,7 @@ const DieselVendorMasterTable = () => {
       center: true,
     },
     {
-      name: 'Diesel Vendor Number',
+      name: 'Diesel Vendor Name',
       selector: (row) => row.diesel_Vendor_Name,
       sortable: true,
       center: true,

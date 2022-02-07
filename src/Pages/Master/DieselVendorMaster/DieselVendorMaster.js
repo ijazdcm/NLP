@@ -122,7 +122,7 @@ const DieselVendorMaster = () => {
                   <CFormInput
                     name="dieselVendorCode"
                     size="sm"
-                    maxLength={5}
+                    maxLength={6}
                     id="dvCode"
                     onChange={handleChange}
                     value={values.dieselVendorCode}
