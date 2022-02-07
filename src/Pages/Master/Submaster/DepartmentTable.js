@@ -20,6 +20,9 @@ import useForm from 'src/Hooks/useForm'
 import validate from 'src/Utils/Validation'
 import CustomTable from 'src/components/customComponent/CustomTable'
 import DepartmentApi from '../../../Service/SubMaster/DepartmentApi'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
+
 const DepartmentTable = () => {
 
   const [modal, setModal] = useState(false)
@@ -32,6 +35,7 @@ const DepartmentTable = () => {
   const [update, setUpdate] = useState('')
   const [deleted, setDeleted] = useState('')
   const [error, setError] = useState('')
+  const [mount, setMount] = useState(1)
 
   const formValues = {
     department: '',
@@ -85,8 +89,15 @@ const DepartmentTable = () => {
     let updateValues = { department_name: values.department }
     console.log(updateValues, id)
     DepartmentApi.updateDepartment(updateValues, id)
-      .then((response) => {
-        setSuccess('Department Updated Successfully')
+      .then((res) => {
+
+        if(res.status==200)
+        {
+          setModal(false)
+          toast.success("Department Info Updated Successfully!")
+          setMount((prevState) => (prevState = prevState + 1))
+        }
+
       })
       .catch((error) => {
         setError(error.response.data.errors.department_name[0])
@@ -96,8 +107,8 @@ const DepartmentTable = () => {
       })
   }
 
-  const Delete = (id) => {
-    DepartmentApi.deleteDepartment(id).then((response) => {
+  const Delete = (departmentid) => {
+    DepartmentApi.deleteDepartment(departmentid).then((response) => {
       setDeleted('Division Removed Successfully')
       setDeleteId('')
     })
@@ -112,6 +123,14 @@ const DepartmentTable = () => {
         rowDataList.push({
           sno: index + 1,
           Department: data.department,
+          Created_at: data.created_at,
+          Status: (
+            <span
+              className={`badge rounded-pill bg-${data.department_status === 1 ? 'info' : 'danger'}`}
+            >
+              {data.department_status === 1 ? 'Active' : 'InActive'}
+            </span>
+          ),
           Action: (
             <div className="d-flex justify-content-space-between">
               <CButton
@@ -119,16 +138,14 @@ const DepartmentTable = () => {
                 color="danger"
                 shape="rounded"
                 id={data.id}
-                onClick={() => {
-                  setDeleteId(data.id)
-                  setDeleteModal(true)
-                }}
+                onClick={() => Delete(data.id)}
                 className="m-1"
               >
                 {/* Delete */}
                 <i className="fa fa-trash" aria-hidden="true"></i>
               </CButton>
               <CButton
+               disabled={data.department_status === 1 ? false : true}
                 size="sm"
                 color="secondary"
                 shape="rounded"
@@ -152,7 +169,7 @@ const DepartmentTable = () => {
         setDeleted('')
       }, 1500)
     })
-  }, [modal, save, success, update, deleted])
+  }, [mount,modal, save, success, update, deleted])
   // ============ CRUD =====================
   /*                    */
   // ============ Column Header Data =======
@@ -163,12 +180,22 @@ const DepartmentTable = () => {
       sortable: true,
       center: true,
     },
-
+    {
+      name: 'Created_at',
+      selector: (row) => row.Created_at,
+      left: true,
+    },
     {
       name: 'Department',
       selector: (row) => row.Department,
       left: true,
     },
+    {
+      name: 'Status',
+      selector: (row) => row.Status,
+      left: true,
+    },
+
     {
       name: 'Action',
       selector: (row) => row.Action,

@@ -97,6 +97,7 @@ const BankMasterTable = () => {
       viewData.map((data, index) => {
         rowDataList.push({
           sno: index + 1,
+          Created_at: data.created_at,
           Bank: data.bank_name,
           Status: (
             <span className={`badge rounded-pill bg-${ (data.bank_status === 1) ? 'info' : 'danger'}`} >
@@ -149,6 +150,11 @@ const BankMasterTable = () => {
       selector: (row) => row.sno,
       sortable: true,
       center: true,
+    },
+    {
+      name: 'Created_at',
+      selector: (row) => row.Created_at,
+      left: true,
     },
     {
       name: 'Bank Name',

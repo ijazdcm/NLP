@@ -20,6 +20,9 @@ import useForm from 'src/Hooks/useForm'
 import validate from 'src/Utils/Validation'
 import CustomTable from 'src/components/customComponent/CustomTable'
 import RejectionReasonApi from '../../../Service/SubMaster/RejectionReasonApi'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
+
 const RejectResonTable = () => {
   const [modal, setModal] = useState(false)
   const [deleteModal, setDeleteModal] = useState(false)
@@ -31,7 +34,7 @@ const RejectResonTable = () => {
   const [update, setUpdate] = useState('')
   const [deleted, setDeleted] = useState('')
   const [error, setError] = useState('')
-
+  const [mount, setMount] = useState(1)
   const formValues = {
     rejection_reason: '',
   }
@@ -86,8 +89,12 @@ const RejectResonTable = () => {
     let updateValues = { rejection_reason: values.rejection_reason }
     console.log(updateValues, id)
     RejectionReasonApi.updateRejectionReason(updateValues, id)
-      .then((response) => {
-        setSuccess('Rejection Reason Updated Successfully')
+      .then((res) => {
+        if (res.status == 200) {
+          setModal(false)
+          toast.success('Rejection Reason Updated Successfully!')
+          setMount((prevState) => (prevState = prevState + 1))
+        }
       })
       .catch((error) => {
         setError(error.response.data.errors.rejection_reason[0])
@@ -97,10 +104,12 @@ const RejectResonTable = () => {
       })
   }
 
-  const Delete = () => {
-    RejectionReasonApi.deleteRejectionReason(deleteId).then((response) => {
-      setDeleted('Rejection Reason Removed Successfully')
-      setDeleteId('')
+  const Delete = (deleteId) => {
+    RejectionReasonApi.deleteRejectionReason(deleteId).then((res) => {
+      if (res.status === 204) {
+        setMount((prevState) => (prevState = prevState + 1))
+        toast.success('Rejection Reason Status Updated Successfully!')
+      }
     })
     setTimeout(() => setDeleteModal(false), 500)
   }
@@ -113,6 +122,14 @@ const RejectResonTable = () => {
         rowDataList.push({
           sno: index + 1,
           Rejection: data.rejection_reason,
+          Created_at: data.created_at,
+          Status: (
+            <span
+              className={`badge rounded-pill bg-${data.rejection_reason_status === 1 ? 'info' : 'danger'}`}
+            >
+              {data.rejection_reason_status === 1 ? 'Active' : 'InActive'}
+            </span>
+          ),
           Action: (
             <div className="d-flex justify-content-space-between">
               <CButton
@@ -120,16 +137,14 @@ const RejectResonTable = () => {
                 color="danger"
                 shape="rounded"
                 id={data.id}
-                onClick={() => {
-                  setDeleteId(data.id)
-                  setDeleteModal(true)
-                }}
+                onClick={() => Delete(data.id)}
                 className="m-1"
               >
                 {/* Delete */}
                 <i className="fa fa-trash" aria-hidden="true"></i>
               </CButton>
               <CButton
+              disabled={data.rejection_reason_status === 1 ? false : true}
                 size="sm"
                 color="secondary"
                 shape="rounded"
@@ -152,7 +167,7 @@ const RejectResonTable = () => {
         setDeleted('')
       }, 1500)
     })
-  }, [modal, save, success, update, deleted])
+  }, [mount, modal, save, success, update, deleted])
   // ============ CRUD =====================
   /*                    */
   // ============ Column Header Data =======
@@ -163,10 +178,19 @@ const RejectResonTable = () => {
       sortable: true,
       center: true,
     },
-
+    {
+      name: 'Created_at',
+      selector: (row) => row.Created_at,
+      left: true,
+    },
     {
       name: 'Rejection Reason',
       selector: (row) => row.Rejection,
+      left: true,
+    },
+    {
+      name: 'Status',
+      selector: (row) => row.Status,
       left: true,
     },
 

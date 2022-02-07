@@ -24,6 +24,8 @@ import useForm from 'src/Hooks/useForm'
 import validate from 'src/Utils/Validation'
 import CustomTable from 'src/components/customComponent/CustomTable'
 import MaterialDescriptionApi from 'src/Service/SubMaster/MaterialDescriptionApi'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 const MaterialDescriptionTable = () => {
   const [modal, setModal] = useState(false)
@@ -35,7 +37,7 @@ const MaterialDescriptionTable = () => {
   const [update, setUpdate] = useState('')
   const [deleted, setDeleted] = useState('')
   const [error, setError] = useState('')
-
+  const [mount, setMount] = useState(1)
   const checkRadio = (param) => {
     if (param == 'enab') {
       values.material_description = ''
@@ -84,15 +86,8 @@ const MaterialDescriptionTable = () => {
     setEditId('')
     MaterialDescriptionApi.getMaterialDescriptionById(id).then((response) => {
       let editData = response.data.data
-      // setModal(true)
-      checkRadio('unab')
+      setModal(true)
       values.material_description = editData.material_description
-      values.material_description_status = editData.status
-      if (editData.status == '1') {
-        document.getElementById('mds_1').checked = true
-      } else {
-        document.getElementById('mds_0').checked = true
-      }
       setEditId(id)
     })
   }
@@ -100,12 +95,15 @@ const MaterialDescriptionTable = () => {
   const Update = (id) => {
     let updateValues = {
       material_description: values.material_description,
-      material_description_status: parseInt(values.material_description_status),
     }
-    console.log(updateValues, id)
+
     MaterialDescriptionApi.updateMaterialDescription(updateValues, id)
-      .then((response) => {
-        setSuccess('Material Description Updated Successfully')
+      .then((res) => {
+        if (res.status == 200) {
+          setModal(false)
+          toast.success('Material Info Updated Successfully!')
+          setMount((prevState) => (prevState = prevState + 1))
+        }
       })
       .catch((error) => {
         setError(error.response.data.errors.material_description[0])
@@ -113,11 +111,12 @@ const MaterialDescriptionTable = () => {
   }
 
   const Delete = (id) => {
-    if (window.confirm('Are you sure to delete?') == true) {
-      MaterialDescriptionApi.deleteMaterialDescription(id).then((response) => {
-        setDeleted('Material Description Removed Successfully')
-      })
-    }
+    MaterialDescriptionApi.deleteMaterialDescription(id).then((res) => {
+      if (res.status === 204) {
+        setMount((prevState) => (prevState = prevState + 1))
+        toast.success('Material Status Updated Successfully!')
+      }
+    })
   }
 
   useEffect(() => {
@@ -131,14 +130,15 @@ const MaterialDescriptionTable = () => {
           CreationDate: data.creation_date.substring(0, 10),
           MaterialDescription: data.material_description,
           Status: (
-            <span className="badge rounded-pill bg-info">
-              {data.status == '1' ? 'Active' : 'In Active'}
+            <span className={`badge rounded-pill bg-${data.status === 1 ? 'info' : 'danger'}`}>
+              {data.status === 1 ? 'Active' : 'In Active'}
             </span>
           ),
           // data.status,
           Action: (
             <div className="d-flex justify-content-space-between">
               <CButton
+
                 size="sm"
                 color="danger"
                 shape="rounded"
@@ -150,6 +150,7 @@ const MaterialDescriptionTable = () => {
                 <i className="fa fa-trash" aria-hidden="true"></i>
               </CButton>
               <CButton
+               disabled={data.status === 1 ? false : true}
                 size="sm"
                 color="secondary"
                 shape="rounded"
@@ -173,7 +174,7 @@ const MaterialDescriptionTable = () => {
         setDeleted('')
       }, 1500)
     })
-  }, [modal, save, success, update, deleted])
+  }, [mount, modal, save, success, update, deleted])
 
   const columns = [
     {
@@ -245,22 +246,6 @@ const MaterialDescriptionTable = () => {
         <CModalBody>
           <CRow>
             <CCol>
-              {update && (
-                <CAlert color="primary" dismissible>
-                  {update}
-                </CAlert>
-              )}
-              {success && (
-                <CAlert color="success" dismissible>
-                  {success}
-                </CAlert>
-              )}
-              {error && (
-                <CAlert color="danger" dismissible>
-                  {error}
-                </CAlert>
-              )}
-
               <CFormLabel htmlFor="material_description">
                 MaterialDescription*{' '}
                 {errors.material_description && (
@@ -273,45 +258,12 @@ const MaterialDescriptionTable = () => {
                 maxLength={20}
                 className={`${errors.material_description && 'is-invalid'}`}
                 name="material_description"
-                value={values.material_description || ''}
+                value={values.material_description}
                 onFocus={onFocus}
                 onBlur={onBlur}
                 onChange={handleChange}
                 aria-label="Small select example"
               />
-
-              {radio && (
-                <div className="mt-2">
-                  <CFormLabel htmlFor="material_description_status">
-                    Material Description Status*{' '}
-                    {/* {errors.material_description && (
-                  <span className="small text-danger">{errors.material_description}</span>
-                )} */}
-                  </CFormLabel>
-                  {/* <div style={{ display: 'flex' }}> */}
-                  <CFormCheck
-                    type="radio"
-                    size="sm"
-                    value="1"
-                    id="mds_1"
-                    name="material_description_status"
-                    label="Active"
-                    onChange={handleChange}
-                    defaultChecked={false}
-                  />
-                  <CFormCheck
-                    type="radio"
-                    size="sm"
-                    value="0"
-                    id="mds_0"
-                    name="material_description_status"
-                    label="In Active"
-                    onChange={handleChange}
-                    defaultChecked={false}
-                  />
-                  {/* </div> */}
-                </div>
-              )}
             </CCol>
           </CRow>
         </CModalBody>

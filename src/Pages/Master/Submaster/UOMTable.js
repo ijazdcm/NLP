@@ -24,6 +24,8 @@ import useForm from 'src/Hooks/useForm'
 import validate from 'src/Utils/Validation'
 import CustomTable from 'src/components/customComponent/CustomTable'
 import UomApi from 'src/Service/SubMaster/UomApi'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 const UomTable = () => {
   const [modal, setModal] = useState(false)
@@ -35,6 +37,7 @@ const UomTable = () => {
   const [update, setUpdate] = useState('')
   const [deleted, setDeleted] = useState('')
   const [error, setError] = useState('')
+  const [mount, setMount] = useState(1)
 
   const checkRadio = (param) => {
     if (param == 'enab') {
@@ -84,15 +87,8 @@ const UomTable = () => {
     setEditId('')
     UomApi.getUomById(id).then((response) => {
       let editData = response.data.data
-      // setModal(true)
-      checkRadio('unab')
+      setModal(true)
       values.uom = editData.uom
-      values.uom_status = editData.status
-      if (editData.status == '1') {
-        document.getElementById('uom_1').checked = true
-      } else {
-        document.getElementById('uom_0').checked = true
-      }
       setEditId(id)
     })
   }
@@ -100,12 +96,14 @@ const UomTable = () => {
   const Update = (id) => {
     let updateValues = {
       uom: values.uom,
-      uom_status: parseInt(values.uom_status),
     }
-    console.log(updateValues, id)
     UomApi.updateUom(updateValues, id)
-      .then((response) => {
-        setSuccess('UOM Updated Successfully')
+      .then((res) => {
+        if (res.status == 200) {
+          setModal(false)
+          toast.success("Uom Info Updated Successfully!")
+          setMount((prevState) => (prevState = prevState + 1))
+        }
       })
       .catch((error) => {
         setError(error.response.data.errors.uom[0])
@@ -113,11 +111,14 @@ const UomTable = () => {
   }
 
   const Delete = (id) => {
-    if (window.confirm('Are you sure to delete?') == true) {
-      UomApi.deleteUom(id).then((response) => {
-        setDeleted('UOM Removed Successfully')
+
+      UomApi.deleteUom(id).then((res) => {
+        if (res.status === 204) {
+          setMount((prevState) => (prevState = prevState + 1))
+          toast.success('Uom Status Updated Successfully!')
+        }
       })
-    }
+
   }
 
   useEffect(() => {
@@ -127,12 +128,11 @@ const UomTable = () => {
       viewData.map((data, index) => {
         rowDataList.push({
           sno: index + 1,
-          // CreationDate: data.creation_date,
           CreationDate: data.creation_date.substring(0, 10),
           Uom: data.uom,
           Status: (
-            <span className="badge rounded-pill bg-info">
-              {data.status == '1' ? 'Active' : 'In Active'}
+            <span className={`badge rounded-pill bg-${data.status === 1 ? 'info' : 'danger'}`}>
+              {data.status === 1 ? 'Active' : 'In Active'}
             </span>
           ),
           // data.status,
@@ -150,6 +150,7 @@ const UomTable = () => {
                 <i className="fa fa-trash" aria-hidden="true"></i>
               </CButton>
               <CButton
+                disabled={data.status === 1 ? false : true}
                 size="sm"
                 color="secondary"
                 shape="rounded"
@@ -173,7 +174,7 @@ const UomTable = () => {
         setDeleted('')
       }, 1500)
     })
-  }, [modal, save, success, update, deleted])
+  }, [mount,modal, save, success, update, deleted])
 
   const columns = [
     {
@@ -244,22 +245,6 @@ const UomTable = () => {
         <CModalBody>
           <CRow>
             <CCol>
-              {update && (
-                <CAlert color="primary" dismissible>
-                  {update}
-                </CAlert>
-              )}
-              {success && (
-                <CAlert color="success" dismissible>
-                  {success}
-                </CAlert>
-              )}
-              {error && (
-                <CAlert color="danger" dismissible>
-                  {error}
-                </CAlert>
-              )}
-
               <CFormLabel htmlFor="uom">
                 UOM* {errors.uom && <span className="small text-danger">{errors.uom}</span>}
               </CFormLabel>
@@ -269,40 +254,12 @@ const UomTable = () => {
                 maxLength={20}
                 className={`${errors.uom && 'is-invalid'}`}
                 name="uom"
-                value={values.uom || ''}
+                value={values.uom }
                 onFocus={onFocus}
                 onBlur={onBlur}
                 onChange={handleChange}
                 aria-label="Small select example"
               />
-
-              {radio && (
-                <div className="mt-2">
-                  <CFormLabel htmlFor="uom_status">UOM Status* </CFormLabel>
-                  {/* <div style={{ display: 'flex' }}> */}
-                  <CFormCheck
-                    type="radio"
-                    size="sm"
-                    value="1"
-                    id="uom_1"
-                    name="uom_status"
-                    label="Active"
-                    onChange={handleChange}
-                    defaultChecked={false}
-                  />
-                  <CFormCheck
-                    type="radio"
-                    size="sm"
-                    value="0"
-                    id="uom_0"
-                    name="uom_status"
-                    label="In Active"
-                    onChange={handleChange}
-                    defaultChecked={false}
-                  />
-                  {/* </div> */}
-                </div>
-              )}
             </CCol>
           </CRow>
         </CModalBody>
