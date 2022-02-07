@@ -109,8 +109,8 @@ const VehicleMasterTable = () => {
           Insurance_Validity: data.insurance_validity,
           FC_Validity: data.fc_validity,
           Status: (
-            <span className="badge rounded-pill bg-info" >
-              {data.vehicle_status === 1 ? 'Active' : 'Disabled'}
+            <span className={`badge rounded-pill bg-${ (data.vehicle_status === 1) ? 'info' : 'danger'}`} >
+              {data.vehicle_status === 1 ? 'Active' : 'Inactive'}
             </span>
           ),
           Action: (
@@ -128,18 +128,20 @@ const VehicleMasterTable = () => {
                 {/* Delete */}
                 <i className="fa fa-trash" aria-hidden="true"></i>
               </CButton>
-              <Link to={`VehicleMaster/${data.vehicle_id}`}>
+              <Link to={ data.vehicle_status === 1 ? `VehicleMaster/${data.vehicle_id}` :''}>
                 <CButton
+                  disabled={data.vehicle_status === 1 ? false : true}
                   size="sm"
                   color="secondary"
                   shape="rounded"
                   id={data.id}
                   className="m-1"
+                  type='button'
                 >
                   {/* Edit */}
                   <i className="fa fa-edit" aria-hidden="true"></i>
                 </CButton>
-              </Link>
+                </Link>
             </div>
           ),
         })
@@ -236,7 +238,7 @@ const VehicleMasterTable = () => {
   return (
     <CCard className="mt-4">
       <CContainer className="mt-2">
-        <CustomTable columns={columns} data={rowData} showSearchFilter={true} />
+        <CustomTable columns={columns} data={rowData} />
         <hr></hr>
         <CRow className="mt-3">
           <CCol

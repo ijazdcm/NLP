@@ -217,7 +217,7 @@ const VehicleCapacityTable = () => {
       {/* View & Edit Modal Section */}
       <CModal visible={modal} onClose={() => setModal(false)}>
         <CModalHeader>
-          <CModalTitle>Division</CModalTitle>
+          <CModalTitle>Vehicle Capacity</CModalTitle>
         </CModalHeader>
         <CModalBody>
           <CRow>
@@ -239,7 +239,7 @@ const VehicleCapacityTable = () => {
               )}
 
               <CFormLabel htmlFor="capacity">
-                Division*{' '}
+                Vehicle Capacity*{' '}
                 {errors.capacity && <span className="small text-danger">{errors.capacity}</span>}
               </CFormLabel>
               <CFormInput

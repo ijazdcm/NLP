@@ -1,47 +1,55 @@
 import DataTable from 'react-data-table-component'
 import React, { useEffect } from 'react'
-import { CButton, CFormInput } from '@coreui/react'
+import { CButton, CCol, CFormInput, CInputGroup, CInputGroupText, CRow } from '@coreui/react'
 
-const CustomTable = ({ columns, data,feildName,showSearchFilter=false }) => {
-
-
-  const [filterText, setFilterText] = React.useState('');
-	const [resetPaginationToggle, setResetPaginationToggle] = React.useState(false);
-
+const CustomTable = ({ columns, data, feildName, showSearchFilter = false }) => {
+  const [filterText, setFilterText] = React.useState('')
+  const [resetPaginationToggle, setResetPaginationToggle] = React.useState(false)
 
   const FilterComponent = ({ filterText, onFilter, onClear }) => (
-  	<>
-  		<CFormInput
-  			id="search"
-  			type="text"
-  			placeholder="Filter By Name"
-  			aria-label="Search Input"
-  			value={filterText}
-  			onChange={onFilter}
-  		/>
-  		<CButton  color="secondary" type="button" onClick={onClear}>
-  			X
-  		</CButton >
-  	</>
-  );
+    <>
+      <CRow>
+        <CCol className="display-flex">
+          <CInputGroup>
+            <CFormInput
+              id="search"
+              type="text"
+              placeholder={`Search By ${feildName}`}
+              aria-label="Search Input"
+              onChange={onFilter}
+              value={filterText}
+            />
+            <CInputGroupText>
+              <CButton color="secondary" type="button" onClick={onClear}>
+                X
+              </CButton>
+            </CInputGroupText>
+          </CInputGroup>
+        </CCol>
+      </CRow>
+    </>
+  )
 
   const filteredItems = data.filter(
     (item) => item[feildName] && item[feildName].toLowerCase().includes(filterText.toLowerCase())
   )
 
-
   const subHeaderComponentMemo = React.useMemo(() => {
-		const handleClear = () => {
-			if (filterText) {
-				setResetPaginationToggle(!resetPaginationToggle);
-				setFilterText('');
-			}
-		};
+    const handleClear = () => {
+      if (filterText) {
+        setResetPaginationToggle(!resetPaginationToggle)
+        setFilterText('')
+      }
+    }
 
-		return (
-			<FilterComponent onFilter={e => setFilterText(e.target.value)} onClear={handleClear} filterText={filterText} />
-		);
-	}, [filterText, resetPaginationToggle]);
+    return (
+      <FilterComponent
+        onFilter={(e) => setFilterText(e.target.value)}
+        onClear={handleClear}
+        filterText={filterText}
+      />
+    )
+  }, [filterText, resetPaginationToggle])
 
   const customStyles = {
     rows: {
@@ -72,14 +80,8 @@ const CustomTable = ({ columns, data,feildName,showSearchFilter=false }) => {
     },
   }
 
-
-
-  return (
-
-
-
-
-    (showSearchFilter) ? (<DataTable
+  return showSearchFilter ? (
+    <DataTable
       data={filteredItems}
       columns={columns}
       // data={data}
@@ -87,13 +89,9 @@ const CustomTable = ({ columns, data,feildName,showSearchFilter=false }) => {
       subHeaderComponent={subHeaderComponentMemo}
       pagination
       customStyles={customStyles}
-    />) : ( <DataTable
-      data={data}
-      columns={columns}
-      pagination
-      customStyles={customStyles}
-    />)
-
+    />
+  ) : (
+    <DataTable data={data} columns={columns} pagination customStyles={customStyles} />
   )
 }
 

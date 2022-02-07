@@ -46,7 +46,7 @@ import DiConfirmation from './Pages/DiConfirmation/DiConfirmation'
 // import ParkingYardGate from './Pages/ParkingYardGate/ParkingYardGateIn'
 import GateIn from './Pages/ParkingYardGate/GateIn'
 // import hire from './Pages/ParkingYardGate/hire'
-import vInspection from './Pages/VehicleInspection/vInspection'
+import vInspection from './Pages/VehicleInspection/VInspection'
 import vehicleInspection from './Pages/VehicleInspection/vehicleInspection'
 import VehicleInspectionHire from './Pages/VehicleInspection/VehicleInspectionHire'
 import vehicleMaintainence from './Pages/VehicleMaintainence/vehicleMaintainence'
@@ -160,11 +160,11 @@ const routes = [
   {
     path: '/vInspection',
     exact: true,
-    name: 'vInspection',
+    name: 'Vehicle Inspection',
     component: vInspection,
   },
   {
-    path: '/vInspection/vehicleInspection',
+    path: '/vInspection/vehicleInspection/:id',
     exact: true,
     name: 'vehicleInspection',
     component: vehicleInspection,

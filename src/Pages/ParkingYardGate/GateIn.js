@@ -33,15 +33,13 @@ import ParkingYardGateValidation from 'src/Utils/TransactionPages/ParkingYardGat
 import CustomTable from '../../components/customComponent/CustomTable'
 import ParkingYardGateService from 'src/Service/ParkingYardGate/ParkingYardGateService'
 import VehicleTypeService from 'src/Service/SmallMaster/Vehicles/VehicleTypeService'
-import VehicleCapacityService from 'src/Service/SmallMaster/Vehicles/VehicleCapacityService'
-import VehicleBodyTypeService from 'src/Service/SmallMaster/Vehicles/VehicleBodyTypeService'
 import OwnAndContractSection from './FormSection/OwnAndContractSection'
 import HireSection from './FormSection/HireSection'
 import PartySection from './FormSection/PartySection'
+import { Link, useNavigate } from 'react-router-dom'
 
 const ParkingYardGate = () => {
   const [rowData, setRowData] = useState([])
-  const [mount, setMount] = useState(1)
   let tableData = []
 
   const [vehicleType, setVehicleType] = useState([])
@@ -97,6 +95,9 @@ const ParkingYardGate = () => {
     isTouched.remarks = false
   }
 
+
+  let navigation=useNavigate()
+
   const { values, errors, handleChange, onFocus, enableSubmit, onBlur, isTouched, setIsTouched,setErrors } =
     useForm(action, ParkingYardGateValidation, formValues)
 
@@ -134,7 +135,35 @@ const ParkingYardGate = () => {
     })
   }
 
-  function loadParkingYardGateTable() {
+
+
+
+  const gateInAction=(vehicleId)=>{
+
+       ParkingYardGateService.actionWaitingOutsideToGateIn(vehicleId).then(res=>{
+          if(res.status===201)
+          {
+            toast.success('Vehicle Gate In process completed')
+            loadParkingYardGateTable()
+          }
+       })
+
+  }
+
+  const gateOutAction=(vehicleId)=>{
+
+    ParkingYardGateService.actionGateOut(vehicleId).then(res=>{
+       if(res.status===201)
+       {
+         toast.success('Vehicle Gate Out process completed')
+         loadParkingYardGateTable()
+       }
+    })
+
+}
+
+
+  const loadParkingYardGateTable=()=>{
     ParkingYardGateService.getParkingYardGateTrucks().then((res) => {
       tableData = res.data.data
       let rowDataList = []
@@ -154,19 +183,25 @@ const ParkingYardGate = () => {
                 : 'Gate Out'}
             </span>
           ),
-          Screen_Duration: '0 Hrs 07 Mins',
-          Overall_Duration: '0 Hrs 55 Mins',
+          Screen_Duration:data.updated_at ,
+          Overall_Duration: data.created_at,
           Action:
             data.parking_status == ACTION.GATE_IN ? (
-              <CButton className="badge text-white" color="warning">
+              <CButton className="badge text-white" color="warning" type='button' >
+
                 Vehicle Inspection
+
               </CButton>
             ) : data.parking_status == ACTION.WAIT_OUTSIDE ? (
-              <CButton className="badge text-white" color="warning">
+              <CButton type='button' onClick={(e)=>
+              gateInAction(data.parking_yard_gate_id)} className="badge text-white" color="warning">
                 Gate IN
               </CButton>
             ) : (
-              <></>
+              <> <CButton type='button' onClick={(e)=>
+                gateOutAction(data.parking_yard_gate_id)} className="badge text-white" color="warning">
+                  Gate Out
+                </CButton></>
             ),
         })
       })
@@ -186,11 +221,6 @@ const ParkingYardGate = () => {
 
   }, [])
 
-
-
-   console.log(values);
-   console.log(isTouched);
-   console.log(errors);
   const columns = [
     {
       name: 'S.No',
