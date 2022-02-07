@@ -22,6 +22,8 @@ import useForm from 'src/Hooks/useForm'
 import validate from 'src/Utils/Validation'
 import CustomTable from 'src/components/customComponent/CustomTable'
 import StatusApi from '../../../Service/SubMaster/StatusApi'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 const StatusTable = () => {
   const [modal, setModal] = useState(false)
@@ -34,7 +36,7 @@ const StatusTable = () => {
   const [update, setUpdate] = useState('')
   const [deleted, setDeleted] = useState('')
   const [error, setError] = useState('')
-
+  const [mount, setMount] = useState(1)
   const formValues = {
     status: '',
   }
@@ -89,8 +91,12 @@ const StatusTable = () => {
     let updateValues = { status: values.status }
     console.log(updateValues, id)
     StatusApi.updateStatus(updateValues, id)
-      .then((response) => {
-        setSuccess('Status Updated Successfully')
+      .then((res) => {
+        if (res.status == 200) {
+          setModal(false)
+          toast.success('Status Updated Successfully!')
+          setMount((prevState) => (prevState = prevState + 1))
+        }
       })
       .catch((error) => {
         setError(error.response.data.errors.status[0])
@@ -100,10 +106,12 @@ const StatusTable = () => {
       })
   }
 
-  const Delete = () => {
-    StatusApi.deleteStatus(deleteId).then((response) => {
-      setDeleted('Status Removed Successfully')
-      setDeleteId('')
+  const Delete = (deleteId) => {
+    StatusApi.deleteStatus(deleteId).then((res) => {
+      if (res.status === 204) {
+        setMount((prevState) => (prevState = prevState + 1))
+        toast.success('Status Status Updated Successfully!')
+      }
     })
     setTimeout(() => setDeleteModal(false), 500)
   }
@@ -115,7 +123,15 @@ const StatusTable = () => {
       viewData.map((data, index) => {
         rowDataList.push({
           sno: index + 1,
-          Status: data.status,
+          StatusName: data.status,
+          Created_at: data.created_at,
+          Status: (
+            <span
+              className={`badge rounded-pill bg-${data.status_status === 1 ? 'info' : 'danger'}`}
+            >
+              {data.status_status === 1 ? 'Active' : 'InActive'}
+            </span>
+          ),
           Action: (
             <div className="d-flex justify-content-space-between">
               <CButton
@@ -123,16 +139,14 @@ const StatusTable = () => {
                 color="danger"
                 shape="rounded"
                 id={data.id}
-                onClick={() => {
-                  setDeleteId(data.id)
-                  setDeleteModal(true)
-                }}
+                onClick={() => Delete(data.id)}
                 className="m-1"
               >
                 {/* Delete */}
                 <i className="fa fa-trash" aria-hidden="true"></i>
               </CButton>
               <CButton
+              disabled={data.status_status === 1 ? false : true}
                 size="sm"
                 color="secondary"
                 shape="rounded"
@@ -155,7 +169,7 @@ const StatusTable = () => {
         setDeleted('')
       }, 1500)
     })
-  }, [modal, save, success, update, deleted])
+  }, [mount, modal, save, success, update, deleted])
   // ============ CRUD =====================
   /*                    */
   // ============ Column Header Data =======
@@ -166,14 +180,22 @@ const StatusTable = () => {
       sortable: true,
       center: true,
     },
-
+    {
+      name: 'Created_at',
+      selector: (row) => row.Created_at,
+      left: true,
+    },
     {
       name: 'Status',
-      selector: (row) => row.Status,
+      selector: (row) => row.StatusName,
       sortable: true,
       left: true,
     },
-
+    {
+      name: 'Status',
+      selector: (row) => row.Status,
+      left: true,
+    },
     {
       name: 'Action',
       selector: (row) => row.Action,

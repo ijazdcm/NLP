@@ -20,6 +20,9 @@ import useForm from 'src/Hooks/useForm'
 import validate from 'src/Utils/Validation'
 import CustomTable from 'src/components/customComponent/CustomTable'
 import VehicleCapacityApi from '../../../Service/SubMaster/VehicleCapacityApi'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
+
 const VehicleCapacityTable = () => {
   const [modal, setModal] = useState(false)
   const [deleteModal, setDeleteModal] = useState(false)
@@ -27,10 +30,10 @@ const VehicleCapacityTable = () => {
   const [save, setSave] = useState(true)
   const [success, setSuccess] = useState('')
   const [editId, setEditId] = useState('')
-  const [deleteId, setDeleteId] = useState('')
   const [update, setUpdate] = useState('')
   const [deleted, setDeleted] = useState('')
   const [error, setError] = useState('')
+  const [mount, setMount] = useState(1)
 
   const formValues = {
     vehicleCapacity: '',
@@ -84,11 +87,15 @@ const VehicleCapacityTable = () => {
   }
 
   const Update = (id) => {
-    let updateValues = { capacity_name: values.capacity }
+    let updateValues = { vehicle_capacity: values.capacity }
     console.log(updateValues, id)
     VehicleCapacityApi.updateVehicleCapacity(updateValues, id)
-      .then((response) => {
-        setSuccess('Vehicle Capacity Updated Successfully')
+      .then((res) => {
+        if (res.status == 200) {
+          setModal(false)
+          toast.success('Vehicle Capacity Info Updated Successfully!')
+          setMount((prevState) => (prevState = prevState + 1))
+        }
       })
       .catch((error) => {
         setError(error.response.data.errors.capacity[0])
@@ -98,10 +105,12 @@ const VehicleCapacityTable = () => {
       })
   }
 
-  const Delete = () => {
-    VehicleCapacityApi.deleteVehicleCapacity(deleteId).then((response) => {
-      setDeleted('Vehicle Capacity Removed Successfully')
-      setDeleteId('')
+  const Delete = (vehicleId) => {
+    VehicleCapacityApi.deleteVehicleCapacity(vehicleId).then((res) => {
+      if (res.status === 204) {
+        setMount((prevState) => (prevState = prevState + 1))
+        toast.success('Vehicle Capacity Status Updated Successfully!')
+      }
     })
     setTimeout(() => setDeleteModal(false), 500)
   }
@@ -114,17 +123,23 @@ const VehicleCapacityTable = () => {
         rowDataList.push({
           sno: index + 1,
           Vehicle_Capacity: data.capacity,
+          Created_at: data.created_at,
+          Status: (
+            <span
+              className={`badge rounded-pill bg-${data.vehicle_status === 1 ? 'info' : 'danger'}`}
+            >
+              {data.vehicle_status === 1 ? 'Active' : 'InActive'}
+            </span>
+          ),
           Action: (
             <div className="d-flex justify-content-space-between">
               <CButton
+
                 size="sm"
                 color="danger"
                 shape="rounded"
                 id={data.id}
-                onClick={() => {
-                  setDeleteId(data.id)
-                  setDeleteModal(true)
-                }}
+                onClick={() => Delete(data.id)}
                 className="m-1"
               >
                 {/* Delete */}
@@ -136,6 +151,7 @@ const VehicleCapacityTable = () => {
                 shape="rounded"
                 id={data.id}
                 onClick={() => Edit(data.id)}
+                disabled={data.vehicle_status === 1 ? false : true}
                 className="m-1"
               >
                 {/* Edit */}
@@ -153,7 +169,7 @@ const VehicleCapacityTable = () => {
         setDeleted('')
       }, 1500)
     })
-  }, [modal, save, success, update, deleted])
+  }, [mount, modal, save, success, update, deleted])
   // ============ CRUD =====================
   /*                    */
   // ============ Column Header Data =======
@@ -164,13 +180,22 @@ const VehicleCapacityTable = () => {
       sortable: true,
       center: true,
     },
+    {
+      name: 'Created_at',
+      selector: (row) => row.Created_at,
+      left: true,
+    },
 
     {
       name: 'Vehicle Capacity',
       selector: (row) => row.Vehicle_Capacity,
       center: true,
     },
-
+    {
+      name: 'Status',
+      selector: (row) => row.Status,
+      left: true,
+    },
     {
       name: 'Action',
       selector: (row) => row.Action,

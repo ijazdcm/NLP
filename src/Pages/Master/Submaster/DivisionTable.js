@@ -22,19 +22,19 @@ import useForm from 'src/Hooks/useForm'
 import validate from 'src/Utils/Validation'
 import CustomTable from 'src/components/customComponent/CustomTable'
 import DivisionApi from '../../../Service/SubMaster/DivisionApi'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 const DivisionTable = () => {
   const [modal, setModal] = useState(false)
-  const [deleteModal, setDeleteModal] = useState(false)
   const [rowData, setRowData] = useState([])
   const [save, setSave] = useState(true)
   const [success, setSuccess] = useState('')
   const [editId, setEditId] = useState('')
-  const [deleteId, setDeleteId] = useState('')
   const [update, setUpdate] = useState('')
   const [deleted, setDeleted] = useState('')
   const [error, setError] = useState('')
-
+  const [mount, setMount] = useState(1)
   const formValues = {
     division: '',
   }
@@ -89,8 +89,12 @@ const DivisionTable = () => {
     let updateValues = { division_name: values.division }
     console.log(updateValues, id)
     DivisionApi.updateDivision(updateValues, id)
-      .then((response) => {
-        setSuccess('Division Updated Successfully')
+      .then((res) => {
+        if (res.status == 200) {
+          setModal(false)
+          toast.success("Division Info Updated Successfully!")
+          setMount((prevState) => (prevState = prevState + 1))
+        }
       })
       .catch((error) => {
         setError(error.response.data.errors.division_name[0])
@@ -100,12 +104,13 @@ const DivisionTable = () => {
       })
   }
 
-  const Delete = () => {
-    DivisionApi.deleteDivision(deleteId).then((response) => {
-      setDeleted('Division Removed Successfully')
-      setDeleteId('')
+  const Delete = (divisonID) => {
+    DivisionApi.deleteDivision(divisonID).then((res) => {
+      if (res.status === 204) {
+        setMount((prevState) => (prevState = prevState + 1))
+        toast.success('Division Status Updated Successfully!')
+      }
     })
-    setTimeout(() => setDeleteModal(false), 500)
   }
 
   useEffect(() => {
@@ -116,6 +121,14 @@ const DivisionTable = () => {
         rowDataList.push({
           sno: index + 1,
           Division: data.division,
+          Created_at: data.created_at,
+          Status: (
+            <span
+              className={`badge rounded-pill bg-${data.division_status === 1 ? 'info' : 'danger'}`}
+            >
+              {data.division_status === 1 ? 'Active' : 'InActive'}
+            </span>
+          ),
           Action: (
             <div className="d-flex justify-content-space-between">
               <CButton
@@ -123,16 +136,14 @@ const DivisionTable = () => {
                 color="danger"
                 shape="rounded"
                 id={data.id}
-                onClick={() => {
-                  setDeleteId(data.id)
-                  setDeleteModal(true)
-                }}
+                onClick={() => Delete(data.id)}
                 className="m-1"
               >
                 {/* Delete */}
                 <i className="fa fa-trash" aria-hidden="true"></i>
               </CButton>
               <CButton
+                disabled={data.division_status === 1 ? false : true}
                 size="sm"
                 color="secondary"
                 shape="rounded"
@@ -155,7 +166,7 @@ const DivisionTable = () => {
         setDeleted('')
       }, 1500)
     })
-  }, [modal, save, success, update, deleted])
+  }, [mount])
   // ============ CRUD =====================
   /*                    */
   // ============ Column Header Data =======
@@ -166,10 +177,19 @@ const DivisionTable = () => {
       sortable: true,
       center: true,
     },
-
+    {
+      name: 'Created_at',
+      selector: (row) => row.Created_at,
+      left: true,
+    },
     {
       name: 'Division',
       selector: (row) => row.Division,
+      left: true,
+    },
+    {
+      name: 'Status',
+      selector: (row) => row.Status,
       left: true,
     },
 
@@ -212,7 +232,12 @@ const DivisionTable = () => {
           </CCol>
         </CRow>
         <CCard className="mt-1">
-          <CustomTable columns={columns} data={rowData || ''} feildName={'Division'} showSearchFilter={true} />
+          <CustomTable
+            columns={columns}
+            data={rowData || ''}
+            feildName={'Division'}
+            showSearchFilter={true}
+          />
         </CCard>
       </CContainer>
 
@@ -266,34 +291,6 @@ const DivisionTable = () => {
         </CModalFooter>
       </CModal>
       {/* View & Edit Modal Section */}
-
-      {/* Delete Modal Section */}
-      <CModal visible={deleteModal} onClose={() => setDeleteModal(false)}>
-        <CModalHeader>
-          <CModalTitle className="h4">Confirm To Delete</CModalTitle>
-        </CModalHeader>
-        <CModalBody>
-          <CRow>
-            <CCol>
-              <CFormLabel htmlFor="division">Are you sure want to Delete ?</CFormLabel>
-            </CCol>
-          </CRow>
-          {deleted && (
-            <CAlert color="danger" dismissible>
-              {deleted}
-            </CAlert>
-          )}
-        </CModalBody>
-        <CModalFooter>
-          <CButton onClick={() => Delete()} color="danger">
-            YES
-          </CButton>
-          <CButton onClick={() => setDeleteModal(false)} color="primary">
-            NO
-          </CButton>
-        </CModalFooter>
-      </CModal>
-      {/* Delete Modal Section */}
     </>
   )
 }

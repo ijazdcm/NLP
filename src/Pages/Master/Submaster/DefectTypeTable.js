@@ -22,6 +22,8 @@ import useForm from 'src/Hooks/useForm'
 import validate from 'src/Utils/DefectTypeValidation'
 import CustomTable from 'src/components/customComponent/CustomTable'
 import DefectTypeApi from '../../../Service/SubMaster/DefectTypeApi.js'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 const DefectTypeTable = () => {
   const [modal, setModal] = useState(false)
@@ -35,7 +37,7 @@ const DefectTypeTable = () => {
   const [update, setUpdate] = useState('')
   const [deleted, setDeleted] = useState('')
   const [error, setError] = useState('')
-
+  const [mount, setMount] = useState(1)
   const formValues = {
     defect_type: '',
   }
@@ -95,8 +97,12 @@ const DefectTypeTable = () => {
     let updateValues = { defect_type: values.defect_type }
     console.log(updateValues, id)
     DefectTypeApi.updateDefectType(updateValues, id)
-      .then((response) => {
-        setSuccess('Defect Type Updated Successfully')
+      .then((res) => {
+        if (res.status ===200) {
+          setModal(false)
+          toast.success('Defect Type Info Updated Successfully!')
+          setMount((prevState) => (prevState = prevState + 1))
+        }
       })
       .catch((error) => {
         setError(error.response.data.errors.defect_type[0])
@@ -106,10 +112,12 @@ const DefectTypeTable = () => {
       })
   }
 
-  const Delete = () => {
-    DefectTypeApi.deleteDefectType(deleteId).then((response) => {
-      setDeleted('Defect Type Removed Successfully')
-      setDeleteId('')
+  const Delete = (deleteId) => {
+    DefectTypeApi.deleteDefectType(deleteId).then((res) => {
+      if (res.status === 204) {
+        setMount((prevState) => (prevState = prevState + 1))
+        toast.success('Defect Type Status Updated Successfully!')
+      }
     })
     setTimeout(() => setDeleteModal(false), 500)
   }
@@ -122,6 +130,14 @@ const DefectTypeTable = () => {
         rowDataList.push({
           sno: index + 1,
           DefectType: data.defect_type,
+          Created_at: data.created_at,
+          Status: (
+            <span
+              className={`badge rounded-pill bg-${data.defect_type_status === 1 ? 'info' : 'danger'}`}
+            >
+              {data.defect_type_status === 1 ? 'Active' : 'InActive'}
+            </span>
+          ),
           Action: (
             <div className="d-flex justify-content-space-between">
               <CButton
@@ -129,16 +145,14 @@ const DefectTypeTable = () => {
                 color="danger"
                 shape="rounded"
                 id={data.defect_type_id}
-                onClick={() => {
-                  setDeleteId(data.defect_type_id)
-                  setDeleteModal(true)
-                }}
+                onClick={() => Delete(data.defect_type_id)}
                 className="m-1"
               >
                 {/* Delete */}
                 <i className="fa fa-trash" aria-hidden="true"></i>
               </CButton>
               <CButton
+              disabled={data.defect_type_status === 1 ? false : true}
                 size="sm"
                 color="secondary"
                 shape="rounded"
@@ -161,7 +175,7 @@ const DefectTypeTable = () => {
         setDeleted('')
       }, 1500)
     })
-  }, [modal, save, success, update, deleted])
+  }, [mount, modal, save, success, update, deleted])
 
   const columns = [
     {
@@ -170,13 +184,22 @@ const DefectTypeTable = () => {
       sortable: true,
       center: true,
     },
+    {
+      name: 'Created_at',
+      selector: (row) => row.Created_at,
+      left: true,
+    },
 
     {
       name: 'Defect Type',
       selector: (row) => row.DefectType,
       left: true,
     },
-
+    {
+      name: 'Status',
+      selector: (row) => row.Status,
+      left: true,
+    },
     {
       name: 'Action',
       selector: (row) => row.Action,

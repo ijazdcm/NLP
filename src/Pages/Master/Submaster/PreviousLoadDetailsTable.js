@@ -22,6 +22,8 @@ import useForm from 'src/Hooks/useForm'
 import validate from 'src/Utils/Validation'
 import CustomTable from 'src/components/customComponent/CustomTable'
 import PreviousLoadDetailsApi from '../../../Service/SubMaster/PreviousLoadDetailsApi'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 const PreviousLoadDetails = () => {
   const [modal, setModal] = useState(false)
@@ -34,6 +36,7 @@ const PreviousLoadDetails = () => {
   const [update, setUpdate] = useState('')
   const [deleted, setDeleted] = useState('')
   const [error, setError] = useState('')
+  const [mount, setMount] = useState(1)
 
   const formValues = {
     PreviousLoadDetails: '',
@@ -89,8 +92,12 @@ const PreviousLoadDetails = () => {
     let updateValues = { previous_load_details: values.previous_load_details }
     console.log(updateValues, id)
     PreviousLoadDetailsApi.updatePreviousLoadDetails(updateValues, id)
-      .then((response) => {
-        setSuccess('Previous Load Details Updated Successfully')
+      .then((res) => {
+        if (res.status == 200) {
+          setModal(false)
+          toast.success('Pervious Load Details Updated Successfully!')
+          setMount((prevState) => (prevState = prevState + 1))
+        }
       })
       .catch((error) => {
         setError(error.response.data.errors.previous_load_details[0])
@@ -100,10 +107,12 @@ const PreviousLoadDetails = () => {
       })
   }
 
-  const Delete = () => {
-    PreviousLoadDetailsApi.deletePreviousLoadDetails(deleteId).then((response) => {
-      setDeleted('Previous Load Details Removed Successfully')
-      setDeleteId('')
+  const Delete = (deleteId) => {
+    PreviousLoadDetailsApi.deletePreviousLoadDetails(deleteId).then((res) => {
+      if (res.status === 204) {
+        setMount((prevState) => (prevState = prevState + 1))
+        toast.success('Pervious Load Details Status Updated Successfully!')
+      }
     })
     setTimeout(() => setDeleteModal(false), 500)
   }
@@ -116,6 +125,14 @@ const PreviousLoadDetails = () => {
         rowDataList.push({
           sno: index + 1,
           PreviousLoadDetails: data.previous_load_details,
+          Created_at: data.created_at,
+          Status: (
+            <span
+              className={`badge rounded-pill bg-${data.previous_load_status === 1 ? 'info' : 'danger'}`}
+            >
+              {data.previous_load_status === 1 ? 'Active' : 'InActive'}
+            </span>
+          ),
           Action: (
             <div className="d-flex justify-content-space-between">
               <CButton
@@ -123,16 +140,14 @@ const PreviousLoadDetails = () => {
                 color="danger"
                 shape="rounded"
                 id={data.id}
-                onClick={() => {
-                  setDeleteId(data.id)
-                  setDeleteModal(true)
-                }}
+                onClick={() => Delete(data.id)}
                 className="m-1"
               >
                 {/* Delete */}
                 <i className="fa fa-trash" aria-hidden="true"></i>
               </CButton>
               <CButton
+              disabled={data.previous_load_status === 1 ? false : true}
                 size="sm"
                 color="secondary"
                 shape="rounded"
@@ -155,7 +170,7 @@ const PreviousLoadDetails = () => {
         setDeleted('')
       }, 1500)
     })
-  }, [modal, save, success, update, deleted])
+  }, [mount, modal, save, success, update, deleted])
   // ============ CRUD =====================
   /*                    */
   // ============ Column Header Data =======
@@ -166,10 +181,20 @@ const PreviousLoadDetails = () => {
       sortable: true,
       center: true,
     },
+    {
+      name: 'Created_at',
+      selector: (row) => row.Created_at,
+      left: true,
+    },
 
     {
       name: 'PreviousLoadDetails',
       selector: (row) => row.PreviousLoadDetails,
+      left: true,
+    },
+    {
+      name: 'Status',
+      selector: (row) => row.Status,
       left: true,
     },
 
@@ -241,8 +266,10 @@ const PreviousLoadDetails = () => {
               )}
 
               <CFormLabel htmlFor="previous_load_details">
-              Previous Load Details*{' '}
-                {errors.previous_load_details && <span className="small text-danger">{errors.previous_load_details}</span>}
+                Previous Load Details*{' '}
+                {errors.previous_load_details && (
+                  <span className="small text-danger">{errors.previous_load_details}</span>
+                )}
               </CFormLabel>
               <CFormInput
                 size="sm"

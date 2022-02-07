@@ -20,6 +20,9 @@ import useForm from 'src/Hooks/useForm'
 import validate from 'src/Utils/Validation'
 import CustomTable from 'src/components/customComponent/CustomTable'
 import DesignationApi from '../../../Service/SubMaster/DesignationApi'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
+
 const DesignationTable = () => {
   const [modal, setModal] = useState(false)
   const [deleteModal, setDeleteModal] = useState(false)
@@ -31,6 +34,7 @@ const DesignationTable = () => {
   const [update, setUpdate] = useState('')
   const [deleted, setDeleted] = useState('')
   const [error, setError] = useState('')
+  const [mount, setMount] = useState(1)
   const formValues = {
     designation: '',
   }
@@ -94,11 +98,13 @@ const DesignationTable = () => {
   }
 
   const Delete = (id) => {
-    DesignationApi.deleteDesignation(id).then((response) => {
-      setDeleted('Division Removed Successfully')
-      setDeleteId('')
+    DesignationApi.deleteDesignation(id).then((res) => {
+      if (res.status == 204) {
+        setModal(false)
+        toast.success('Designation Status Updated Successfully!')
+        setMount((prevState) => (prevState = prevState + 1))
+      }
     })
-    setTimeout(() => setDeleteModal(false), 500)
   }
 
   useEffect(() => {
@@ -106,11 +112,17 @@ const DesignationTable = () => {
       let viewData = response.data.data
       let rowDataList = []
       viewData.map((data, index) => {
-
-
         rowDataList.push({
           sno: index + 1,
           Designation: data.designation,
+          Created_at: data.created_at,
+          Status: (
+            <span
+              className={`badge rounded-pill bg-${data.designation_status === 1 ? 'info' : 'danger'}`}
+            >
+              {data.designation_status === 1 ? 'Active' : 'InActive'}
+            </span>
+          ),
           Action: (
             <div className="d-flex justify-content-space-between">
               <CButton
@@ -118,17 +130,14 @@ const DesignationTable = () => {
                 color="danger"
                 shape="rounded"
                 id={data.id}
-                onClick={() => {
-                  setDeleteId(data.id)
-                  // Delete(data.id)
-                  setDeleteModal(true)
-                }}
+                onClick={() => Delete(data.id)}
                 className="m-1"
               >
                 {/* Delete */}
                 <i className="fa fa-trash" aria-hidden="true"></i>
               </CButton>
               <CButton
+              disabled={data.designation_status === 1 ? false : true}
                 size="sm"
                 color="secondary"
                 shape="rounded"
@@ -152,7 +161,7 @@ const DesignationTable = () => {
         setDeleted('')
       }, 1500)
     })
-  }, [modal, save, success, update, deleted])
+  }, [mount,modal, save, success, update, deleted])
   // ============ CRUD =====================
   /*                    */
   // ============ Column Header Data =======
@@ -163,10 +172,19 @@ const DesignationTable = () => {
       sortable: true,
       center: true,
     },
-
+    {
+      name: 'Created_at',
+      selector: (row) => row.Created_at,
+      left: true,
+    },
     {
       name: 'Designation',
       selector: (row) => row.Designation,
+      left: true,
+    },
+    {
+      name: 'Status',
+      selector: (row) => row.Status,
       left: true,
     },
     {
