@@ -4,8 +4,8 @@ import React from 'react'
 import VehicleMaster from './Pages/Master/VehicleMaster/VehicleMaster'
 import DieselVendorMaster from './Pages/Master/DieselVendorMaster/DieselVendorMaster'
 
-import DriverMaster from './Pages/Master/DriverMaster'
-import ShedMaster from './Pages/Master/ShedMaster/ShedMaster'
+// import DriverMaster from './Pages/Master/DriverMaster'
+// import ShedMaster from './Pages/Master/ShedMaster/ShedMaster'
 import ShedMasterEdit from './Pages/Master/ShedMaster/ShedMasterEdit'
 // import DieselVendorMaster from './Pages/Master/DieselVendorMaster'
 
@@ -31,7 +31,7 @@ import UOMTable from './Pages/Master/Submaster/UOMTable'
 import ShedMasterTable from './Pages/Master/ShedMaster/ShedMasterTable'
 import VehicleMasterTable from './Pages/Master/VehicleMaster/VehicleMasterTable'
 import DieselVendorMasterTable from './Pages/Master/DieselVendorMaster/DieselVendorMasterTable'
-import DriverMasterTable from './Pages/Master/DriverMaster/DriverMasterTable'
+// import DriverMasterTable from './Pages/Master/DriverMaster/DriverMasterTable'
 
 // Small Master Pages
 
@@ -102,6 +102,7 @@ import DieselVendorMasterEdit from './Pages/Master/DieselVendorMaster/DieselVend
 import DriverMasterEdit from './Pages/Master/DriverMaster/DriverMasterEdit'
 
 import BankMasterTable from './Pages/Master/Submaster/Bank/BankMasterTable'
+import DriverMasterTable from './Pages/Master/DriverMaster/DriverMasterTable'
 
 
 const routes = [
