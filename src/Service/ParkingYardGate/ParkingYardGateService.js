@@ -6,6 +6,9 @@ import {VEHILCE_MASTER_BASE_URL} from "src/Service/Master/VehicleMasterService"
 
 const PARKING_YRD_URL = AppConfig.api.baseUrl+ '/parkingYard'
 
+const PARKING_YRD_GATE_IN_ACTION_URL = AppConfig.api.baseUrl+ '/parkingYard/action/gateIn/'
+const PARKING_YRD_GATE_OUT_ACTION_URL = AppConfig.api.baseUrl+ '/parkingYard/action/gateOut/'
+
 const VEHILCE_BY_TYPE_URLS = VEHILCE_MASTER_BASE_URL+"/type/"
 
 const VEHILCE_INFO_BY_VID_URLS = VEHILCE_MASTER_BASE_URL+"/"
@@ -45,6 +48,16 @@ class ParkingYardGateService {
    handleParkingYardGateAction(data)
    {
       return api.post(PARKING_YRD_URL,data)
+   }
+
+   actionWaitingOutsideToGateIn(vehicleRowId)
+   {
+    return api.put(PARKING_YRD_GATE_IN_ACTION_URL+vehicleRowId)
+   }
+
+   actionGateOut(vehicleRowId)
+   {
+    return api.put(PARKING_YRD_GATE_OUT_ACTION_URL+vehicleRowId)
    }
 
 }

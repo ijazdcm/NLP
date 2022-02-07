@@ -44,7 +44,7 @@ const DieselVendorMasterTable = () => {
           diesel_Vendor_Mobile2: data.vendor_phone_2,
           diesel_Vendor_Mail: data.vendor_email,
           Status: (
-            <span className="badge rounded-pill bg-info">
+            <span className={`badge rounded-pill bg-${ (data.diesel_vendor_status === 1) ? 'info' : 'danger'}`}>
               {data.diesel_vendor_status === 1 ? 'Active' : 'InActive'}
             </span>
           ),

@@ -118,6 +118,7 @@ const BankMasterTable = () => {
                 <i className="fa fa-trash" aria-hidden="true"></i>
               </CButton>
                 <CButton
+                disabled={data.bank_status === 1 ? false : true}
                   size="sm"
                   color="secondary"
                   shape="rounded"

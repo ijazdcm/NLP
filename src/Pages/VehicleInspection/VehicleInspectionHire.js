@@ -93,12 +93,6 @@ const VehicleInspectionHire = () => {
                                     <CFormLabel htmlFor="vCap">Vehicle Capacity In MTS</CFormLabel>
                                     <CFormInput name="vCap" size="sm" id="vCap" value="10" placeholder="10" readOnly />
                                 </CCol>
-
-                                {/* <CCol xs={12} md={3}>
-                    <CFormLabel htmlFor="vaNum">VA Number</CFormLabel>
-                    <CFormInput name="vaNum" size="sm" id="" value="11113" placeholder="" readOnly />
-                  </CCol> */}
-
                                 <CCol xs={12} md={3}>
                                     <CFormLabel htmlFor="dName">
                                         Driver Name*
