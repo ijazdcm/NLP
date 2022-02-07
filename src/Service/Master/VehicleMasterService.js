@@ -2,7 +2,7 @@ import AppConfig from "src/AppConfig";
 import api from "../Config";
 
 
-const VEHILCE_MASTER_BASE_URL = AppConfig.api.baseUrl+'/vehicles'
+export const VEHILCE_MASTER_BASE_URL = AppConfig.api.baseUrl+'/vehicles'
 
 class VehicleMasterService {
   getVehicles() {

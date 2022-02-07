@@ -41,9 +41,9 @@ import DieselIntentOwn from './Pages/DiCreation/DieselIntentOwn'
 import DieselIntentHire from './Pages/DiCreation/DieselIntentHire'
 import DieselIntentHome from './Pages/DiCreation/DieselIntentHome'
 import DiConfirmation from './Pages/DiConfirmation/DiConfirmation'
-import ParkingYardGate from './Pages/ParkingYardGate/ParkingYardGateIn'
+// import ParkingYardGate from './Pages/ParkingYardGate/ParkingYardGateIn'
 import GateIn from './Pages/ParkingYardGate/GateIn'
-import hire from './Pages/ParkingYardGate/hire'
+// import hire from './Pages/ParkingYardGate/hire'
 import vInspection from './Pages/VehicleInspection/vInspection'
 import vehicleInspection from './Pages/VehicleInspection/vehicleInspection'
 import VehicleInspectionHire from './Pages/VehicleInspection/VehicleInspectionHire'
@@ -91,7 +91,11 @@ import Gateout from './Pages/Gateout/Gateout'
 import AllCommonTable from './Pages/AllCommonTable/AllCommonTable'
 import VehicleMasterEdit from './Pages/Master/VehicleMaster/VehicleMasterEdit'
 import DieselVendorMasterEdit from './Pages/Master/DieselVendorMaster/DieselVendorMasterEdit'
+
 import DriverMasterEdit from './Pages/Master/DriverMaster/DriverMasterEdit'
+
+import BankMasterTable from './Pages/Master/Submaster/Bank/BankMasterTable'
+
 
 const routes = [
   // Master
@@ -149,12 +153,15 @@ const routes = [
     component: UserLoginMasterTable,
   },
 
+  // Sub-Master
+  { path: '/bankmaster', exact: true, name: 'Bank Master', component: BankMasterTable },
+
   // Small Master
 
   // Transaction Pages
 
   { path: '/', exact: true, name: 'Home' },
-  { path: '/ParkingYardGateIn', exact: true, name: 'Test', component: ParkingYardGate },
+  // { path: '/ParkingYardGateIn', exact: true, name: 'Test', component: ParkingYardGate },
   { path: '/GateIn', exact: true, name: 'GateIn', component: GateIn },
   { path: '/Gateout', exact: true, name: 'Test', component: Gateout },
   { path: '/AllCommonTable', exact: true, name: 'Test', component: AllCommonTable },
@@ -255,7 +262,7 @@ const routes = [
     component: DiApproval,
   },
   { path: '/DiConfirmation', exact: true, name: 'Test', component: DiConfirmation },
-  { path: '/hire', exact: true, name: 'Test', component: hire },
+  // { path: '/hire', exact: true, name: 'Test', component: hire },
 
   {
     path: '/VendorCreationHome',

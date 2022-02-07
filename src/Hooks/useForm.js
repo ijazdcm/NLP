@@ -47,8 +47,8 @@ const useForm = (callback, validate, formValues) => {
     } else {
       setValues((values) => ({
         ...values,
-        // [event.target.name]: value.toUpperCase()
-        [event.target.name]: value,
+        [event.target.name]: value.toUpperCase()
+        // [event.target.name]: value,
       }))
     }
   }
@@ -75,6 +75,8 @@ const useForm = (callback, validate, formValues) => {
     errors,
     enableSubmit,
     onBlur,
+    setIsTouched,
+    setErrors
   }
 }
 

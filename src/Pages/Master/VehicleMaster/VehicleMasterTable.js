@@ -26,7 +26,6 @@ const VehicleMasterTable = () => {
   const [InsuranceCopyBack, setInsuranceCopyBack] = useState(false)
   const [InsuranceCopyFront, setInsuranceCopyFront] = useState(false)
 
-  const [deleteModal, setDeleteModal] = useState(false)
   const [rowData, setRowData] = useState([])
   const [mount, setMount] = useState(1)
 
@@ -74,6 +73,7 @@ const VehicleMasterTable = () => {
           setInsuranceCopyBack(true)
         }
         break
+        default:return 0
     }
   }
 
@@ -241,7 +241,7 @@ const VehicleMasterTable = () => {
   return (
     <CCard className="mt-4">
       <CContainer className="mt-2">
-        <CustomTable columns={columns} data={rowData} />
+        <CustomTable columns={columns} data={rowData} showSearchFilter={true} />
         <hr></hr>
         <CRow className="mt-3">
           <CCol
