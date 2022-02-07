@@ -79,7 +79,6 @@ const VehicleMasterEdit = () => {
   )
 
   function addNewVehicle() {
-
     const formData = new FormData()
 
     formData.append('_method', 'PUT')
@@ -93,19 +92,19 @@ const VehicleMasterEdit = () => {
     formData.append('insurance_copy_back', values.InsuranceCopyBack)
     formData.append('insurance_validity', values.InsuranceValidity)
     formData.append('fc_validity', values.FCValidity)
+    console.log(values)
+    VehicleMasterService.updateVehicles(id, formData).then((res) => {
+      if (res.status === 200) {
+        for (let value of formData.values()) {
+          console.log(value)
+        }
 
-    VehicleMasterService.updateVehicles(id,formData).then((res) => {
-
-       if(res.status===200)
-       {
-
-        toast.success("Vehicle Updated Successfully!")
+        toast.success('Vehicle Updated Successfully!')
 
         setTimeout(() => {
-          navigation("/VehicleMasterTable")
-        }, 1000);
-       }
-
+          navigation('/VehicleMasterTable')
+        }, 1000)
+      }
     })
   }
 
@@ -135,7 +134,6 @@ const VehicleMasterEdit = () => {
       setVehicleBody(res.data.data)
     })
   }, [id])
-
 
   return (
     <>
@@ -338,14 +336,14 @@ const VehicleMasterEdit = () => {
                     </CButton>
                   ) : (
                     <CFormInput
-                    onBlur={onBlur}
-                    onChange={handleChange}
-                    type="file"
-                    accept=".jpg,.jpeg,.png,.pdf"
-                    name="RCCopyBack"
-                    size="sm"
-                    id="rcBack"
-                  />
+                      onBlur={onBlur}
+                      onChange={handleChange}
+                      type="file"
+                      accept=".jpg,.jpeg,.png,.pdf"
+                      name="RCCopyBack"
+                      size="sm"
+                      id="rcBack"
+                    />
                   )}
                 </CCol>
                 {/*Rc copy back model*/}
@@ -371,7 +369,7 @@ const VehicleMasterEdit = () => {
                       <span className="small text-danger">{errors.InsuranceCopyFront}</span>
                     )}
                   </CFormLabel>
-                  { InsuranceCopyFrontDel  ? (
+                  {InsuranceCopyFrontDel ? (
                     <CButton className="w-100 m-0" color="info" size="sm" id="inputAddress">
                       <span className="float-start">
                         <i
@@ -391,16 +389,15 @@ const VehicleMasterEdit = () => {
                     </CButton>
                   ) : (
                     <CFormInput
-                    onBlur={onBlur}
-                    onChange={handleChange}
-                    type="file"
-                    accept=".jpg,.jpeg,.png,.pdf"
-                    name="InsuranceCopyFront"
-                    size="sm"
-                    id="iFront"
-                  />
+                      onBlur={onBlur}
+                      onChange={handleChange}
+                      type="file"
+                      accept=".jpg,.jpeg,.png,.pdf"
+                      name="InsuranceCopyFront"
+                      size="sm"
+                      id="iFront"
+                    />
                   )}
-
                 </CCol>
                 {/*Insurance copy front*/}
                 <CModal visible={InsuranceCopyFront} onClose={() => setInsuranceCopyFront(false)}>
@@ -424,7 +421,7 @@ const VehicleMasterEdit = () => {
                       <span className="small text-danger">{errors.InsuranceCopyBack}</span>
                     )}
                   </CFormLabel>
-                  { InsuranceCopyBackDel ? (
+                  {InsuranceCopyBackDel ? (
                     <CButton className="w-100 m-0" color="info" size="sm" id="inputAddress">
                       <span className="float-start">
                         <i
@@ -444,15 +441,15 @@ const VehicleMasterEdit = () => {
                     </CButton>
                   ) : (
                     <CFormInput
-                    onBlur={onBlur}
-                    onChange={handleChange}
-                    type="file"
-                    required
-                    accept=".jpg,.jpeg"
-                    name="InsuranceCopyBack"
-                    size="sm"
-                    id="iBack"
-                  />
+                      onBlur={onBlur}
+                      onChange={handleChange}
+                      type="file"
+                      required
+                      accept=".jpg,.jpeg"
+                      name="InsuranceCopyBack"
+                      size="sm"
+                      id="iBack"
+                    />
                   )}
                 </CCol>
                 {/*Insurance copy back*/}
