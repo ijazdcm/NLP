@@ -5,8 +5,6 @@ import CustomTable from 'src/components/customComponent/CustomTable'
 import VehicleInspectionService from 'src/Service/VehicleInspection/VehicleInspectionService'
 
 const VInspection = () => {
-
-
   const [rowData, setRowData] = useState([])
   let tableData = []
 
@@ -15,7 +13,7 @@ const VInspection = () => {
     GATE_OUT: 2,
     WAIT_OUTSIDE: 3,
   }
-  const loadVehicleInspectionTable=()=>{
+  const loadVehicleInspectionTable = () => {
     VehicleInspectionService.getVehicleReadyToInspect().then((res) => {
       tableData = res.data.data
       let rowDataList = []
@@ -35,26 +33,22 @@ const VInspection = () => {
                 : 'Gate Out'}
             </span>
           ),
-          Screen_Duration:data.updated_at ,
+          Screen_Duration: data.updated_at,
           Overall_Duration: data.created_at,
-          Action:
-              <CButton className="badge text-white" color="warning">
-                <Link to={`vehicleInspection/${data.parking_yard_gate_id}`}>
-                Vehicle Inspection
-                </Link>
-              </CButton>
+          Action: (
+            <CButton className="badge text-white" color="warning">
+              <Link to={`vehicleInspection/${data.parking_yard_gate_id}`}>Vehicle Inspection</Link>
+            </CButton>
+          ),
         })
       })
       setRowData(rowDataList)
     })
   }
 
-
-  useEffect(()=>{
+  useEffect(() => {
     loadVehicleInspectionTable()
-  },[])
-
-
+  }, [])
 
   const columns = [
     {
@@ -97,6 +91,7 @@ const VInspection = () => {
       name: 'Screen Duration',
       selector: (row) => row.Screen_Duration,
       center: true,
+      sortable: true,
     },
     {
       name: ' Overall Duration',
@@ -109,12 +104,18 @@ const VInspection = () => {
       center: true,
     },
   ]
-
+  {
+  }
 
   return (
     <CCard className="mt-4">
       <CContainer className="mt-2">
-        <CustomTable columns={columns} data={rowData} />
+        <CustomTable
+          columns={columns}
+          data={rowData}
+          feildName={'Driver_Name'}
+          showSearchFilter={true}
+        />
       </CContainer>
     </CCard>
   )
